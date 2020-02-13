@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: Yort.Laybuy.InStore
+  commentId: N:Yort.Laybuy.InStore
+  id: Yort.Laybuy.InStore
+  children:
+  - Yort.Laybuy.InStore.LaybuyClient
+  langs:
+  - csharp
+  - vb
+  name: Yort.Laybuy.InStore
+  nameWithType: Yort.Laybuy.InStore
+  fullName: Yort.Laybuy.InStore
+  type: Namespace
+  assemblies:
+  - Yort.Laybuy.InStore
+references:
+- uid: Yort.Laybuy.InStore.LaybuyClient
+  commentId: T:Yort.Laybuy.InStore.LaybuyClient
+  name: LaybuyClient
+  nameWithType: LaybuyClient
+  fullName: Yort.Laybuy.InStore.LaybuyClient

@@ -1,0 +1,15 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Yort.Laybuy.InStore
+  name: Yort.Laybuy.InStore
+  href: api/Yort.Laybuy.InStore.html
+  commentId: N:Yort.Laybuy.InStore
+  fullName: Yort.Laybuy.InStore
+  nameWithType: Yort.Laybuy.InStore
+- uid: Yort.Laybuy.InStore.LaybuyClient
+  name: LaybuyClient
+  href: api/Yort.Laybuy.InStore.LaybuyClient.html
+  commentId: T:Yort.Laybuy.InStore.LaybuyClient
+  fullName: Yort.Laybuy.InStore.LaybuyClient
+  nameWithType: LaybuyClient

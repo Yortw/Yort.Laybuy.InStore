@@ -10,9 +10,19 @@
     <LangVersion>8.0</LangVersion>
     <Nullable>enable</Nullable>
     <PackageIcon>projecticon128.png</PackageIcon>
-    <RepositoryUrl>https://github.com/Yortw/LibraryName</RepositoryUrl>
+    <RepositoryUrl>https://github.com/Yortw/Yort.Laybuy.InStore</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageProjectUrl>https://yortw.github.io/LibraryName/</PackageProjectUrl>
+    <PackageProjectUrl>https://yortw.github.io/Yort.Laybuy.InStore/</PackageProjectUrl>
+    <PackageTags>laybuy pos payments netstandard20 net45 instore</PackageTags>
+    <Description>An unofficial .Net client library for the Laybuy payments POS API (https://integrations.laybuy.com/reference#point-of-sale-integration-flow)</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+    <DocumentationFile>Yort.Laybuy.InStore.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
+    <DocumentationFile>Yort.Laybuy.InStore.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -25,6 +35,7 @@
     <None Remove="articles\**" />
     <None Remove="images\**" />
     <None Remove="_site\**" />
+    <None Remove="log.txt" />
     <None Include="images\projecticon128.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>

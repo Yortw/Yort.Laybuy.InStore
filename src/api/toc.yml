@@ -1,0 +1,6 @@
+### YamlMime:TableOfContent
+- uid: Yort.Laybuy.InStore
+  name: Yort.Laybuy.InStore
+  items:
+  - uid: Yort.Laybuy.InStore.LaybuyClient
+    name: LaybuyClient
