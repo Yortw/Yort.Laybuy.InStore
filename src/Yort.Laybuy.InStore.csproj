@@ -14,7 +14,7 @@
     <RepositoryType>git</RepositoryType>
     <PackageProjectUrl>https://yortw.github.io/Yort.Laybuy.InStore/</PackageProjectUrl>
     <PackageTags>laybuy pos payments netstandard20 net45 instore</PackageTags>
-    <Description>An unofficial .Net client library for the Laybuy payments POS API (https://integrations.laybuy.com/reference#point-of-sale-integration-flow)</Description>
+    <Description>An unofficial .Net client library for the Laybuy payments POS API (https://integrations.Laybuy/reference#point-of-sale-integration-flow)</Description>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
@@ -49,12 +49,13 @@
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
+		<PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
 		<PackageReference Include="System.Net.Http" Version="4.3.4" />
-		<PackageReference Include="memberpage" Version="2.48.1" />
-		<PackageReference Include="docfx.console" Version="2.48.1">
+		<PackageReference Include="memberpage" Version="2.49.0" />
+		<PackageReference Include="docfx.console" Version="2.49.0">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
@@ -65,17 +66,17 @@
 	</ItemGroup>
 
 	<ItemGroup>
-    <Compile Update="ErrorMessage.Designer.cs">
+    <Compile Update="ErrorMessages.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>ErrorMessage.resx</DependentUpon>
+      <DependentUpon>ErrorMessages.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="ErrorMessage.resx">
+    <EmbeddedResource Update="ErrorMessages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>ErrorMessage.Designer.cs</LastGenOutput>
+      <LastGenOutput>ErrorMessages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

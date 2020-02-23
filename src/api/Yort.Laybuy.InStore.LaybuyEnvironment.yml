@@ -1,0 +1,118 @@
+### YamlMime:ManagedReference
+items:
+- uid: Yort.Laybuy.InStore.LaybuyEnvironment
+  commentId: T:Yort.Laybuy.InStore.LaybuyEnvironment
+  id: LaybuyEnvironment
+  parent: Yort.Laybuy.InStore
+  children:
+  - Yort.Laybuy.InStore.LaybuyEnvironment.Production
+  - Yort.Laybuy.InStore.LaybuyEnvironment.Sandbox
+  langs:
+  - csharp
+  - vb
+  name: LaybuyEnvironment
+  nameWithType: LaybuyEnvironment
+  fullName: Yort.Laybuy.InStore.LaybuyEnvironment
+  type: Enum
+  source:
+    remote:
+      path: src/LaybuyClientConfiguration.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: LaybuyEnvironment
+    path: LaybuyClientConfiguration.cs
+    startLine: 105
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nRepresents the possible environments for Laybuy.\n"
+  example: []
+  syntax:
+    content: public enum LaybuyEnvironment
+    content.vb: Public Enum LaybuyEnvironment
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Yort.Laybuy.InStore.LaybuyEnvironment.Sandbox
+  commentId: F:Yort.Laybuy.InStore.LaybuyEnvironment.Sandbox
+  id: Sandbox
+  parent: Yort.Laybuy.InStore.LaybuyEnvironment
+  langs:
+  - csharp
+  - vb
+  name: Sandbox
+  nameWithType: LaybuyEnvironment.Sandbox
+  fullName: Yort.Laybuy.InStore.LaybuyEnvironment.Sandbox
+  type: Field
+  source:
+    remote:
+      path: src/LaybuyClientConfiguration.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: Sandbox
+    path: LaybuyClientConfiguration.cs
+    startLine: 110
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nTest environment.\n"
+  example: []
+  syntax:
+    content: Sandbox = 0
+    return:
+      type: Yort.Laybuy.InStore.LaybuyEnvironment
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Yort.Laybuy.InStore.LaybuyEnvironment.Production
+  commentId: F:Yort.Laybuy.InStore.LaybuyEnvironment.Production
+  id: Production
+  parent: Yort.Laybuy.InStore.LaybuyEnvironment
+  langs:
+  - csharp
+  - vb
+  name: Production
+  nameWithType: LaybuyEnvironment.Production
+  fullName: Yort.Laybuy.InStore.LaybuyEnvironment.Production
+  type: Field
+  source:
+    remote:
+      path: src/LaybuyClientConfiguration.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: Production
+    path: LaybuyClientConfiguration.cs
+    startLine: 114
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nLive/production environment.\n"
+  example: []
+  syntax:
+    content: Production = 1
+    return:
+      type: Yort.Laybuy.InStore.LaybuyEnvironment
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Yort.Laybuy.InStore
+  commentId: N:Yort.Laybuy.InStore
+  name: Yort.Laybuy.InStore
+  nameWithType: Yort.Laybuy.InStore
+  fullName: Yort.Laybuy.InStore
+- uid: Yort.Laybuy.InStore.LaybuyEnvironment
+  commentId: T:Yort.Laybuy.InStore.LaybuyEnvironment
+  parent: Yort.Laybuy.InStore
+  name: LaybuyEnvironment
+  nameWithType: LaybuyEnvironment
+  fullName: Yort.Laybuy.InStore.LaybuyEnvironment

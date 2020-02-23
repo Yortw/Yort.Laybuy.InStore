@@ -4,7 +4,13 @@ items:
   commentId: T:Yort.Laybuy.InStore.LaybuyClient
   id: LaybuyClient
   parent: Yort.Laybuy.InStore
-  children: []
+  children:
+  - Yort.Laybuy.InStore.LaybuyClient.#ctor(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+  - Yort.Laybuy.InStore.LaybuyClient.Cancel(Yort.Laybuy.InStore.CancelOrderRequest)
+  - Yort.Laybuy.InStore.LaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)
+  - Yort.Laybuy.InStore.LaybuyClient.Dispose
+  - Yort.Laybuy.InStore.LaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+  - Yort.Laybuy.InStore.LaybuyClient.Refund(Yort.Laybuy.InStore.RefundRequest)
   langs:
   - csharp
   - vb
@@ -19,15 +25,22 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: LaybuyClient
     path: LaybuyClient.cs
-    startLine: 4
+    startLine: 10
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
+  summary: "\nProvides access to the REST endpoints exposed by Laybuy API using an idiomatic .Net, object-oriented model.\n"
+  example: []
   syntax:
-    content: public class LaybuyClient
-    content.vb: Public Class LaybuyClient
+    content: 'public sealed class LaybuyClient : ILaybuyClient, IDisposable'
+    content.vb: >-
+      Public NotInheritable Class LaybuyClient
+          Implements ILaybuyClient, IDisposable
   inheritance:
   - System.Object
+  implements:
+  - Yort.Laybuy.InStore.ILaybuyClient
+  - System.IDisposable
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -38,10 +51,276 @@ items:
   - System.Object.ToString
   modifiers.csharp:
   - public
+  - sealed
   - class
   modifiers.vb:
   - Public
+  - NotInheritable
   - Class
+- uid: Yort.Laybuy.InStore.LaybuyClient.#ctor(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+  commentId: M:Yort.Laybuy.InStore.LaybuyClient.#ctor(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+  id: '#ctor(Yort.Laybuy.InStore.LaybuyClientConfiguration)'
+  parent: Yort.Laybuy.InStore.LaybuyClient
+  langs:
+  - csharp
+  - vb
+  name: LaybuyClient(LaybuyClientConfiguration)
+  nameWithType: LaybuyClient.LaybuyClient(LaybuyClientConfiguration)
+  fullName: Yort.Laybuy.InStore.LaybuyClient.LaybuyClient(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+  type: Constructor
+  source:
+    remote:
+      path: src/LaybuyClient.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: .ctor
+    path: LaybuyClient.cs
+    startLine: 27
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nFull constructor.\n"
+  example: []
+  syntax:
+    content: public LaybuyClient(LaybuyClientConfiguration settings)
+    parameters:
+    - id: settings
+      type: Yort.Laybuy.InStore.LaybuyClientConfiguration
+      description: A <xref href="Yort.Laybuy.InStore.LaybuyClientConfiguration" data-throw-if-not-resolved="false"></xref> instance containing configuration details.
+    content.vb: Public Sub New(settings As LaybuyClientConfiguration)
+  overload: Yort.Laybuy.InStore.LaybuyClient.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Yort.Laybuy.InStore.LaybuyClient.Cancel(Yort.Laybuy.InStore.CancelOrderRequest)
+  commentId: M:Yort.Laybuy.InStore.LaybuyClient.Cancel(Yort.Laybuy.InStore.CancelOrderRequest)
+  id: Cancel(Yort.Laybuy.InStore.CancelOrderRequest)
+  parent: Yort.Laybuy.InStore.LaybuyClient
+  langs:
+  - csharp
+  - vb
+  name: Cancel(CancelOrderRequest)
+  nameWithType: LaybuyClient.Cancel(CancelOrderRequest)
+  fullName: Yort.Laybuy.InStore.LaybuyClient.Cancel(Yort.Laybuy.InStore.CancelOrderRequest)
+  type: Method
+  source:
+    remote:
+      path: src/LaybuyClient.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: Cancel
+    path: LaybuyClient.cs
+    startLine: 73
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nCancels a Laybuy previously created via the <xref href=\"Yort.Laybuy.InStore.LaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)\" data-throw-if-not-resolved=\"false\"></xref> method.\n"
+  remarks: "\n<p>An error will be returned if the Laybuy is already confirmed.</p>\n"
+  example: []
+  syntax:
+    content: public Task<CancelOrderResponse> Cancel(CancelOrderRequest request)
+    parameters:
+    - id: request
+      type: Yort.Laybuy.InStore.CancelOrderRequest
+      description: A <xref href="Yort.Laybuy.InStore.CancelOrderRequest" data-throw-if-not-resolved="false"></xref> instance containing details of the Laybuy to cancel.
+    return:
+      type: System.Threading.Tasks.Task{Yort.Laybuy.InStore.CancelOrderResponse}
+      description: A <xref href="Yort.Laybuy.InStore.CancelOrderResponse" data-throw-if-not-resolved="false"></xref> indicating success if the Laybuy was cancelled ok, otherwise error details.
+    content.vb: Public Function Cancel(request As CancelOrderRequest) As Task(Of CancelOrderResponse)
+  overload: Yort.Laybuy.InStore.LaybuyClient.Cancel*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown if <xref href="Yort.Laybuy.InStore.CancelOrderRequest.Token" data-throw-if-not-resolved="false"></xref> is null.
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if <xref href="Yort.Laybuy.InStore.CancelOrderRequest.Token" data-throw-if-not-resolved="false"></xref> is an empty string or only whitespace.
+  seealso:
+  - linkId: Yort.Laybuy.InStore.LaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)
+    commentId: M:Yort.Laybuy.InStore.LaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)
+  implements:
+  - Yort.Laybuy.InStore.ILaybuyClient.Cancel(Yort.Laybuy.InStore.CancelOrderRequest)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Yort.Laybuy.InStore.LaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)
+  commentId: M:Yort.Laybuy.InStore.LaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)
+  id: Create(Yort.Laybuy.InStore.CreateOrderRequest)
+  parent: Yort.Laybuy.InStore.LaybuyClient
+  langs:
+  - csharp
+  - vb
+  name: Create(CreateOrderRequest)
+  nameWithType: LaybuyClient.Create(CreateOrderRequest)
+  fullName: Yort.Laybuy.InStore.LaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)
+  type: Method
+  source:
+    remote:
+      path: src/LaybuyClient.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: Create
+    path: LaybuyClient.cs
+    startLine: 94
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nCreates a new order at Laybuy.\n"
+  remarks: "\n<p>If <xref href=\"Yort.Laybuy.InStore.CreateOrderRequest.OriginData\" data-throw-if-not-resolved=\"false\"></xref> is null and <xref href=\"Yort.Laybuy.InStore.LaybuyClientConfiguration.CallbackUrlTemplate\" data-throw-if-not-resolved=\"false\"></xref> and/or \n<xref href=\"Yort.Laybuy.InStore.LaybuyClientConfiguration.DefaultBranch\" data-throw-if-not-resolved=\"false\"></xref> are non empty in the settings object used to construct this client then a \nnew <xref href=\"Yort.Laybuy.InStore.StandardOriginData\" data-throw-if-not-resolved=\"false\"></xref> instance is automatically created with appropriate values and applied to the request. If no default \nvalue can be applied then <xref href=\"System.ArgumentNullException\" data-throw-if-not-resolved=\"false\"></xref> is thrown.</p>\n"
+  example: []
+  syntax:
+    content: public Task<CreateOrderResponse> Create(CreateOrderRequest request)
+    parameters:
+    - id: request
+      type: Yort.Laybuy.InStore.CreateOrderRequest
+      description: A <xref href="Yort.Laybuy.InStore.CreateOrderRequest" data-throw-if-not-resolved="false"></xref> with details of the order to create.
+    return:
+      type: System.Threading.Tasks.Task{Yort.Laybuy.InStore.CreateOrderResponse}
+      description: A <xref href="Yort.Laybuy.InStore.CreateOrderResponse" data-throw-if-not-resolved="false"></xref> indicating the outcome of the request.
+    content.vb: Public Function Create(request As CreateOrderRequest) As Task(Of CreateOrderResponse)
+  overload: Yort.Laybuy.InStore.LaybuyClient.Create*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown if request, <xref href="Yort.Laybuy.InStore.CreateOrderRequest.Origin" data-throw-if-not-resolved="false"></xref>, <xref href="Yort.Laybuy.InStore.CreateOrderRequest.OriginData" data-throw-if-not-resolved="false"></xref>, <xref href="Yort.Laybuy.InStore.CreateOrderRequest.Customer" data-throw-if-not-resolved="false"></xref> or <xref href="Yort.Laybuy.InStore.CreateOrderRequest.MerchantReference" data-throw-if-not-resolved="false"></xref> is null.
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if request, <xref href="Yort.Laybuy.InStore.CreateOrderRequest.Origin" data-throw-if-not-resolved="false"></xref>, <xref href="Yort.Laybuy.InStore.CreateOrderRequest.OriginData" data-throw-if-not-resolved="false"></xref>, <xref href="Yort.Laybuy.InStore.CreateOrderRequest.MerchantReference" data-throw-if-not-resolved="false"></xref> or <see cref="!:RequestLaybuyCustomer.Phone"></see> is an empty string or only whitespace. Also thrown if <xref href="Yort.Laybuy.InStore.CreateOrderRequest.Amount" data-throw-if-not-resolved="false"></xref> is zero or negative.
+  implements:
+  - Yort.Laybuy.InStore.ILaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Yort.Laybuy.InStore.LaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+  commentId: M:Yort.Laybuy.InStore.LaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+  id: GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+  parent: Yort.Laybuy.InStore.LaybuyClient
+  langs:
+  - csharp
+  - vb
+  name: GetStatus(OrderStatusRequest)
+  nameWithType: LaybuyClient.GetStatus(OrderStatusRequest)
+  fullName: Yort.Laybuy.InStore.LaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+  type: Method
+  source:
+    remote:
+      path: src/LaybuyClient.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: GetStatus
+    path: LaybuyClient.cs
+    startLine: 105
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nGets the status of a Laybuy previously created via <xref href=\"Yort.Laybuy.InStore.LaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public Task<OrderStatusResponse> GetStatus(OrderStatusRequest request)
+    parameters:
+    - id: request
+      type: Yort.Laybuy.InStore.OrderStatusRequest
+      description: A <xref href="Yort.Laybuy.InStore.OrderStatusRequest" data-throw-if-not-resolved="false"></xref> with details of the Laybuy to retrieve the status of.
+    return:
+      type: System.Threading.Tasks.Task{Yort.Laybuy.InStore.OrderStatusResponse}
+      description: A <xref href="Yort.Laybuy.InStore.OrderStatusResponse" data-throw-if-not-resolved="false"></xref> indicating the outcome of the request.
+    content.vb: Public Function GetStatus(request As OrderStatusRequest) As Task(Of OrderStatusResponse)
+  overload: Yort.Laybuy.InStore.LaybuyClient.GetStatus*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if <xref href="Yort.Laybuy.InStore.OrderStatusRequest.MerchantReference" data-throw-if-not-resolved="false"></xref> and <xref href="Yort.Laybuy.InStore.OrderStatusRequest.OrderId" data-throw-if-not-resolved="false"></xref> are both null, empty or whitespace. Also thrown if <xref href="Yort.Laybuy.InStore.OrderStatusRequest.OrderId" data-throw-if-not-resolved="false"></xref> is zero or negative.
+  implements:
+  - Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Yort.Laybuy.InStore.LaybuyClient.Refund(Yort.Laybuy.InStore.RefundRequest)
+  commentId: M:Yort.Laybuy.InStore.LaybuyClient.Refund(Yort.Laybuy.InStore.RefundRequest)
+  id: Refund(Yort.Laybuy.InStore.RefundRequest)
+  parent: Yort.Laybuy.InStore.LaybuyClient
+  langs:
+  - csharp
+  - vb
+  name: Refund(RefundRequest)
+  nameWithType: LaybuyClient.Refund(RefundRequest)
+  fullName: Yort.Laybuy.InStore.LaybuyClient.Refund(Yort.Laybuy.InStore.RefundRequest)
+  type: Method
+  source:
+    remote:
+      path: src/LaybuyClient.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: Refund
+    path: LaybuyClient.cs
+    startLine: 122
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nRefunds an amount of money against a Laybuy previously created via <xref href=\"Yort.Laybuy.InStore.LaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public Task<RefundResponse> Refund(RefundRequest request)
+    parameters:
+    - id: request
+      type: Yort.Laybuy.InStore.RefundRequest
+      description: A <xref href="Yort.Laybuy.InStore.RefundRequest" data-throw-if-not-resolved="false"></xref> with details of the refund to make.
+    return:
+      type: System.Threading.Tasks.Task{Yort.Laybuy.InStore.RefundResponse}
+      description: A <xref href="Yort.Laybuy.InStore.RefundResponse" data-throw-if-not-resolved="false"></xref> indicating the outcome of the request.
+    content.vb: Public Function Refund(request As RefundRequest) As Task(Of RefundResponse)
+  overload: Yort.Laybuy.InStore.LaybuyClient.Refund*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown if <xref href="Yort.Laybuy.InStore.RefundRequest.RefundReference" data-throw-if-not-resolved="false"></xref> is null.
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if <xref href="Yort.Laybuy.InStore.RefundRequest.OrderId" data-throw-if-not-resolved="false"></xref> or <xref href="Yort.Laybuy.InStore.RefundRequest.Amount" data-throw-if-not-resolved="false"></xref> are zero or negative. Also thrown if <xref href="Yort.Laybuy.InStore.RefundRequest.RefundReference" data-throw-if-not-resolved="false"></xref> is empty or whitespace.
+  implements:
+  - Yort.Laybuy.InStore.ILaybuyClient.Refund(Yort.Laybuy.InStore.RefundRequest)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Yort.Laybuy.InStore.LaybuyClient.Dispose
+  commentId: M:Yort.Laybuy.InStore.LaybuyClient.Dispose
+  id: Dispose
+  parent: Yort.Laybuy.InStore.LaybuyClient
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: LaybuyClient.Dispose()
+  fullName: Yort.Laybuy.InStore.LaybuyClient.Dispose()
+  type: Method
+  source:
+    remote:
+      path: src/LaybuyClient.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: Dispose
+    path: LaybuyClient.cs
+    startLine: 134
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nDisposes this instance and all internal resources.\n"
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose
+  overload: Yort.Laybuy.InStore.LaybuyClient.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: Yort.Laybuy.InStore
   commentId: N:Yort.Laybuy.InStore
@@ -55,6 +334,19 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: Yort.Laybuy.InStore.ILaybuyClient
+  commentId: T:Yort.Laybuy.InStore.ILaybuyClient
+  parent: Yort.Laybuy.InStore
+  name: ILaybuyClient
+  nameWithType: ILaybuyClient
+  fullName: Yort.Laybuy.InStore.ILaybuyClient
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -340,3 +632,524 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: Yort.Laybuy.InStore.LaybuyClientConfiguration
+  commentId: T:Yort.Laybuy.InStore.LaybuyClientConfiguration
+  parent: Yort.Laybuy.InStore
+  name: LaybuyClientConfiguration
+  nameWithType: LaybuyClientConfiguration
+  fullName: Yort.Laybuy.InStore.LaybuyClientConfiguration
+- uid: Yort.Laybuy.InStore.LaybuyClient.#ctor*
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyClient.#ctor
+  name: LaybuyClient
+  nameWithType: LaybuyClient.LaybuyClient
+  fullName: Yort.Laybuy.InStore.LaybuyClient.LaybuyClient
+- uid: Yort.Laybuy.InStore.LaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)
+  commentId: M:Yort.Laybuy.InStore.LaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)
+  isExternal: true
+- uid: Yort.Laybuy.InStore.CancelOrderRequest
+  commentId: T:Yort.Laybuy.InStore.CancelOrderRequest
+  parent: Yort.Laybuy.InStore
+  name: CancelOrderRequest
+  nameWithType: CancelOrderRequest
+  fullName: Yort.Laybuy.InStore.CancelOrderRequest
+- uid: Yort.Laybuy.InStore.CancelOrderResponse
+  commentId: T:Yort.Laybuy.InStore.CancelOrderResponse
+  name: CancelOrderResponse
+  nameWithType: CancelOrderResponse
+  fullName: Yort.Laybuy.InStore.CancelOrderResponse
+- uid: Yort.Laybuy.InStore.CancelOrderRequest.Token
+  commentId: P:Yort.Laybuy.InStore.CancelOrderRequest.Token
+  isExternal: true
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+- uid: Yort.Laybuy.InStore.LaybuyClient.Cancel*
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyClient.Cancel
+  name: Cancel
+  nameWithType: LaybuyClient.Cancel
+  fullName: Yort.Laybuy.InStore.LaybuyClient.Cancel
+- uid: Yort.Laybuy.InStore.ILaybuyClient.Cancel(Yort.Laybuy.InStore.CancelOrderRequest)
+  commentId: M:Yort.Laybuy.InStore.ILaybuyClient.Cancel(Yort.Laybuy.InStore.CancelOrderRequest)
+  parent: Yort.Laybuy.InStore.ILaybuyClient
+  name: Cancel(CancelOrderRequest)
+  nameWithType: ILaybuyClient.Cancel(CancelOrderRequest)
+  fullName: Yort.Laybuy.InStore.ILaybuyClient.Cancel(Yort.Laybuy.InStore.CancelOrderRequest)
+  spec.csharp:
+  - uid: Yort.Laybuy.InStore.ILaybuyClient.Cancel(Yort.Laybuy.InStore.CancelOrderRequest)
+    name: Cancel
+    nameWithType: ILaybuyClient.Cancel
+    fullName: Yort.Laybuy.InStore.ILaybuyClient.Cancel
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Yort.Laybuy.InStore.CancelOrderRequest
+    name: CancelOrderRequest
+    nameWithType: CancelOrderRequest
+    fullName: Yort.Laybuy.InStore.CancelOrderRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Yort.Laybuy.InStore.ILaybuyClient.Cancel(Yort.Laybuy.InStore.CancelOrderRequest)
+    name: Cancel
+    nameWithType: ILaybuyClient.Cancel
+    fullName: Yort.Laybuy.InStore.ILaybuyClient.Cancel
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Yort.Laybuy.InStore.CancelOrderRequest
+    name: CancelOrderRequest
+    nameWithType: CancelOrderRequest
+    fullName: Yort.Laybuy.InStore.CancelOrderRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task{Yort.Laybuy.InStore.CancelOrderResponse}
+  commentId: T:System.Threading.Tasks.Task{Yort.Laybuy.InStore.CancelOrderResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<CancelOrderResponse>
+  nameWithType: Task<CancelOrderResponse>
+  fullName: System.Threading.Tasks.Task<Yort.Laybuy.InStore.CancelOrderResponse>
+  nameWithType.vb: Task(Of CancelOrderResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Yort.Laybuy.InStore.CancelOrderResponse)
+  name.vb: Task(Of CancelOrderResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Yort.Laybuy.InStore.CancelOrderResponse
+    name: CancelOrderResponse
+    nameWithType: CancelOrderResponse
+    fullName: Yort.Laybuy.InStore.CancelOrderResponse
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Yort.Laybuy.InStore.CancelOrderResponse
+    name: CancelOrderResponse
+    nameWithType: CancelOrderResponse
+    fullName: Yort.Laybuy.InStore.CancelOrderResponse
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: Yort.Laybuy.InStore.CreateOrderRequest
+  commentId: T:Yort.Laybuy.InStore.CreateOrderRequest
+  parent: Yort.Laybuy.InStore
+  name: CreateOrderRequest
+  nameWithType: CreateOrderRequest
+  fullName: Yort.Laybuy.InStore.CreateOrderRequest
+- uid: Yort.Laybuy.InStore.CreateOrderRequest.OriginData
+  commentId: P:Yort.Laybuy.InStore.CreateOrderRequest.OriginData
+  isExternal: true
+- uid: Yort.Laybuy.InStore.LaybuyClientConfiguration.CallbackUrlTemplate
+  commentId: P:Yort.Laybuy.InStore.LaybuyClientConfiguration.CallbackUrlTemplate
+  isExternal: true
+- uid: Yort.Laybuy.InStore.LaybuyClientConfiguration.DefaultBranch
+  commentId: P:Yort.Laybuy.InStore.LaybuyClientConfiguration.DefaultBranch
+  isExternal: true
+- uid: Yort.Laybuy.InStore.StandardOriginData
+  commentId: T:Yort.Laybuy.InStore.StandardOriginData
+  name: StandardOriginData
+  nameWithType: StandardOriginData
+  fullName: Yort.Laybuy.InStore.StandardOriginData
+- uid: Yort.Laybuy.InStore.CreateOrderResponse
+  commentId: T:Yort.Laybuy.InStore.CreateOrderResponse
+  name: CreateOrderResponse
+  nameWithType: CreateOrderResponse
+  fullName: Yort.Laybuy.InStore.CreateOrderResponse
+- uid: Yort.Laybuy.InStore.CreateOrderRequest.Origin
+  commentId: P:Yort.Laybuy.InStore.CreateOrderRequest.Origin
+  isExternal: true
+- uid: Yort.Laybuy.InStore.CreateOrderRequest.Customer
+  commentId: P:Yort.Laybuy.InStore.CreateOrderRequest.Customer
+  isExternal: true
+- uid: Yort.Laybuy.InStore.CreateOrderRequest.MerchantReference
+  commentId: P:Yort.Laybuy.InStore.CreateOrderRequest.MerchantReference
+  isExternal: true
+- uid: Yort.Laybuy.InStore.CreateOrderRequest.Amount
+  commentId: P:Yort.Laybuy.InStore.CreateOrderRequest.Amount
+  isExternal: true
+- uid: Yort.Laybuy.InStore.LaybuyClient.Create*
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyClient.Create
+  name: Create
+  nameWithType: LaybuyClient.Create
+  fullName: Yort.Laybuy.InStore.LaybuyClient.Create
+- uid: Yort.Laybuy.InStore.ILaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)
+  commentId: M:Yort.Laybuy.InStore.ILaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)
+  parent: Yort.Laybuy.InStore.ILaybuyClient
+  name: Create(CreateOrderRequest)
+  nameWithType: ILaybuyClient.Create(CreateOrderRequest)
+  fullName: Yort.Laybuy.InStore.ILaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)
+  spec.csharp:
+  - uid: Yort.Laybuy.InStore.ILaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)
+    name: Create
+    nameWithType: ILaybuyClient.Create
+    fullName: Yort.Laybuy.InStore.ILaybuyClient.Create
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Yort.Laybuy.InStore.CreateOrderRequest
+    name: CreateOrderRequest
+    nameWithType: CreateOrderRequest
+    fullName: Yort.Laybuy.InStore.CreateOrderRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Yort.Laybuy.InStore.ILaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)
+    name: Create
+    nameWithType: ILaybuyClient.Create
+    fullName: Yort.Laybuy.InStore.ILaybuyClient.Create
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Yort.Laybuy.InStore.CreateOrderRequest
+    name: CreateOrderRequest
+    nameWithType: CreateOrderRequest
+    fullName: Yort.Laybuy.InStore.CreateOrderRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task{Yort.Laybuy.InStore.CreateOrderResponse}
+  commentId: T:System.Threading.Tasks.Task{Yort.Laybuy.InStore.CreateOrderResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<CreateOrderResponse>
+  nameWithType: Task<CreateOrderResponse>
+  fullName: System.Threading.Tasks.Task<Yort.Laybuy.InStore.CreateOrderResponse>
+  nameWithType.vb: Task(Of CreateOrderResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Yort.Laybuy.InStore.CreateOrderResponse)
+  name.vb: Task(Of CreateOrderResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Yort.Laybuy.InStore.CreateOrderResponse
+    name: CreateOrderResponse
+    nameWithType: CreateOrderResponse
+    fullName: Yort.Laybuy.InStore.CreateOrderResponse
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Yort.Laybuy.InStore.CreateOrderResponse
+    name: CreateOrderResponse
+    nameWithType: CreateOrderResponse
+    fullName: Yort.Laybuy.InStore.CreateOrderResponse
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Yort.Laybuy.InStore.OrderStatusRequest
+  commentId: T:Yort.Laybuy.InStore.OrderStatusRequest
+  parent: Yort.Laybuy.InStore
+  name: OrderStatusRequest
+  nameWithType: OrderStatusRequest
+  fullName: Yort.Laybuy.InStore.OrderStatusRequest
+- uid: Yort.Laybuy.InStore.OrderStatusResponse
+  commentId: T:Yort.Laybuy.InStore.OrderStatusResponse
+  name: OrderStatusResponse
+  nameWithType: OrderStatusResponse
+  fullName: Yort.Laybuy.InStore.OrderStatusResponse
+- uid: Yort.Laybuy.InStore.OrderStatusRequest.MerchantReference
+  commentId: P:Yort.Laybuy.InStore.OrderStatusRequest.MerchantReference
+  isExternal: true
+- uid: Yort.Laybuy.InStore.OrderStatusRequest.OrderId
+  commentId: P:Yort.Laybuy.InStore.OrderStatusRequest.OrderId
+  isExternal: true
+- uid: Yort.Laybuy.InStore.LaybuyClient.GetStatus*
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyClient.GetStatus
+  name: GetStatus
+  nameWithType: LaybuyClient.GetStatus
+  fullName: Yort.Laybuy.InStore.LaybuyClient.GetStatus
+- uid: Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+  commentId: M:Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+  parent: Yort.Laybuy.InStore.ILaybuyClient
+  name: GetStatus(OrderStatusRequest)
+  nameWithType: ILaybuyClient.GetStatus(OrderStatusRequest)
+  fullName: Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+  spec.csharp:
+  - uid: Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+    name: GetStatus
+    nameWithType: ILaybuyClient.GetStatus
+    fullName: Yort.Laybuy.InStore.ILaybuyClient.GetStatus
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Yort.Laybuy.InStore.OrderStatusRequest
+    name: OrderStatusRequest
+    nameWithType: OrderStatusRequest
+    fullName: Yort.Laybuy.InStore.OrderStatusRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+    name: GetStatus
+    nameWithType: ILaybuyClient.GetStatus
+    fullName: Yort.Laybuy.InStore.ILaybuyClient.GetStatus
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Yort.Laybuy.InStore.OrderStatusRequest
+    name: OrderStatusRequest
+    nameWithType: OrderStatusRequest
+    fullName: Yort.Laybuy.InStore.OrderStatusRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task{Yort.Laybuy.InStore.OrderStatusResponse}
+  commentId: T:System.Threading.Tasks.Task{Yort.Laybuy.InStore.OrderStatusResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<OrderStatusResponse>
+  nameWithType: Task<OrderStatusResponse>
+  fullName: System.Threading.Tasks.Task<Yort.Laybuy.InStore.OrderStatusResponse>
+  nameWithType.vb: Task(Of OrderStatusResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Yort.Laybuy.InStore.OrderStatusResponse)
+  name.vb: Task(Of OrderStatusResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Yort.Laybuy.InStore.OrderStatusResponse
+    name: OrderStatusResponse
+    nameWithType: OrderStatusResponse
+    fullName: Yort.Laybuy.InStore.OrderStatusResponse
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Yort.Laybuy.InStore.OrderStatusResponse
+    name: OrderStatusResponse
+    nameWithType: OrderStatusResponse
+    fullName: Yort.Laybuy.InStore.OrderStatusResponse
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Yort.Laybuy.InStore.RefundRequest
+  commentId: T:Yort.Laybuy.InStore.RefundRequest
+  parent: Yort.Laybuy.InStore
+  name: RefundRequest
+  nameWithType: RefundRequest
+  fullName: Yort.Laybuy.InStore.RefundRequest
+- uid: Yort.Laybuy.InStore.RefundResponse
+  commentId: T:Yort.Laybuy.InStore.RefundResponse
+  name: RefundResponse
+  nameWithType: RefundResponse
+  fullName: Yort.Laybuy.InStore.RefundResponse
+- uid: Yort.Laybuy.InStore.RefundRequest.RefundReference
+  commentId: P:Yort.Laybuy.InStore.RefundRequest.RefundReference
+  isExternal: true
+- uid: Yort.Laybuy.InStore.RefundRequest.OrderId
+  commentId: P:Yort.Laybuy.InStore.RefundRequest.OrderId
+  isExternal: true
+- uid: Yort.Laybuy.InStore.RefundRequest.Amount
+  commentId: P:Yort.Laybuy.InStore.RefundRequest.Amount
+  isExternal: true
+- uid: Yort.Laybuy.InStore.LaybuyClient.Refund*
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyClient.Refund
+  name: Refund
+  nameWithType: LaybuyClient.Refund
+  fullName: Yort.Laybuy.InStore.LaybuyClient.Refund
+- uid: Yort.Laybuy.InStore.ILaybuyClient.Refund(Yort.Laybuy.InStore.RefundRequest)
+  commentId: M:Yort.Laybuy.InStore.ILaybuyClient.Refund(Yort.Laybuy.InStore.RefundRequest)
+  parent: Yort.Laybuy.InStore.ILaybuyClient
+  name: Refund(RefundRequest)
+  nameWithType: ILaybuyClient.Refund(RefundRequest)
+  fullName: Yort.Laybuy.InStore.ILaybuyClient.Refund(Yort.Laybuy.InStore.RefundRequest)
+  spec.csharp:
+  - uid: Yort.Laybuy.InStore.ILaybuyClient.Refund(Yort.Laybuy.InStore.RefundRequest)
+    name: Refund
+    nameWithType: ILaybuyClient.Refund
+    fullName: Yort.Laybuy.InStore.ILaybuyClient.Refund
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Yort.Laybuy.InStore.RefundRequest
+    name: RefundRequest
+    nameWithType: RefundRequest
+    fullName: Yort.Laybuy.InStore.RefundRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Yort.Laybuy.InStore.ILaybuyClient.Refund(Yort.Laybuy.InStore.RefundRequest)
+    name: Refund
+    nameWithType: ILaybuyClient.Refund
+    fullName: Yort.Laybuy.InStore.ILaybuyClient.Refund
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Yort.Laybuy.InStore.RefundRequest
+    name: RefundRequest
+    nameWithType: RefundRequest
+    fullName: Yort.Laybuy.InStore.RefundRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task{Yort.Laybuy.InStore.RefundResponse}
+  commentId: T:System.Threading.Tasks.Task{Yort.Laybuy.InStore.RefundResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<RefundResponse>
+  nameWithType: Task<RefundResponse>
+  fullName: System.Threading.Tasks.Task<Yort.Laybuy.InStore.RefundResponse>
+  nameWithType.vb: Task(Of RefundResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Yort.Laybuy.InStore.RefundResponse)
+  name.vb: Task(Of RefundResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Yort.Laybuy.InStore.RefundResponse
+    name: RefundResponse
+    nameWithType: RefundResponse
+    fullName: Yort.Laybuy.InStore.RefundResponse
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Yort.Laybuy.InStore.RefundResponse
+    name: RefundResponse
+    nameWithType: RefundResponse
+    fullName: Yort.Laybuy.InStore.RefundResponse
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Yort.Laybuy.InStore.LaybuyClient.Dispose*
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyClient.Dispose
+  name: Dispose
+  nameWithType: LaybuyClient.Dispose
+  fullName: Yort.Laybuy.InStore.LaybuyClient.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )

@@ -1,0 +1,779 @@
+### YamlMime:ManagedReference
+items:
+- uid: Yort.Laybuy.InStore.OrderStatusRequest
+  commentId: T:Yort.Laybuy.InStore.OrderStatusRequest
+  id: OrderStatusRequest
+  parent: Yort.Laybuy.InStore
+  children:
+  - Yort.Laybuy.InStore.OrderStatusRequest.MerchantReference
+  - Yort.Laybuy.InStore.OrderStatusRequest.OrderId
+  - Yort.Laybuy.InStore.OrderStatusRequest.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+  - Yort.Laybuy.InStore.OrderStatusRequest.Validate
+  langs:
+  - csharp
+  - vb
+  name: OrderStatusRequest
+  nameWithType: OrderStatusRequest
+  fullName: Yort.Laybuy.InStore.OrderStatusRequest
+  type: Class
+  source:
+    remote:
+      path: src/OrderStatusRequest.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: OrderStatusRequest
+    path: OrderStatusRequest.cs
+    startLine: 13
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nRepresents arguments passed to <xref href=\"Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: 'public class OrderStatusRequest : LaybuyRequestBase'
+    content.vb: >-
+      Public Class OrderStatusRequest
+          Inherits LaybuyRequestBase
+  seealso:
+  - linkId: Yort.Laybuy.InStore.OrderStatusResponse
+    commentId: T:Yort.Laybuy.InStore.OrderStatusResponse
+  - linkId: Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+    commentId: M:Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+  inheritance:
+  - System.Object
+  - Yort.Laybuy.InStore.LaybuyRequestBase
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Yort.Laybuy.InStore.OrderStatusRequest.OrderId
+  commentId: P:Yort.Laybuy.InStore.OrderStatusRequest.OrderId
+  id: OrderId
+  parent: Yort.Laybuy.InStore.OrderStatusRequest
+  langs:
+  - csharp
+  - vb
+  name: OrderId
+  nameWithType: OrderStatusRequest.OrderId
+  fullName: Yort.Laybuy.InStore.OrderStatusRequest.OrderId
+  type: Property
+  source:
+    remote:
+      path: src/OrderStatusRequest.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: OrderId
+    path: OrderStatusRequest.cs
+    startLine: 18
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nThe unique Laybuy id of the Laybuy order to retrieve. Can be null if <xref href=\"Yort.Laybuy.InStore.OrderStatusRequest.MerchantReference\" data-throw-if-not-resolved=\"false\"></xref> is provided.\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("orderId")]
+
+      public long? OrderId { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int64}
+    content.vb: >-
+      <JsonProperty("orderId")>
+
+      Public Property OrderId As Long?
+  overload: Yort.Laybuy.InStore.OrderStatusRequest.OrderId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: orderId
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Yort.Laybuy.InStore.OrderStatusRequest.MerchantReference
+  commentId: P:Yort.Laybuy.InStore.OrderStatusRequest.MerchantReference
+  id: MerchantReference
+  parent: Yort.Laybuy.InStore.OrderStatusRequest
+  langs:
+  - csharp
+  - vb
+  name: MerchantReference
+  nameWithType: OrderStatusRequest.MerchantReference
+  fullName: Yort.Laybuy.InStore.OrderStatusRequest.MerchantReference
+  type: Property
+  source:
+    remote:
+      path: src/OrderStatusRequest.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: MerchantReference
+    path: OrderStatusRequest.cs
+    startLine: 23
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nThe unique merchant reference of the Laybuy order to retrieve. Can be null if <xref href=\"Yort.Laybuy.InStore.OrderStatusRequest.OrderId\" data-throw-if-not-resolved=\"false\"></xref> is provided.\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("merchantReference")]
+
+      public string MerchantReference { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("merchantReference")>
+
+      Public Property MerchantReference As String
+  overload: Yort.Laybuy.InStore.OrderStatusRequest.MerchantReference*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: merchantReference
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Yort.Laybuy.InStore.OrderStatusRequest.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+  commentId: M:Yort.Laybuy.InStore.OrderStatusRequest.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+  id: SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+  parent: Yort.Laybuy.InStore.OrderStatusRequest
+  langs:
+  - csharp
+  - vb
+  name: SetDefaults(LaybuyClientConfiguration)
+  nameWithType: OrderStatusRequest.SetDefaults(LaybuyClientConfiguration)
+  fullName: Yort.Laybuy.InStore.OrderStatusRequest.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+  type: Method
+  source:
+    remote:
+      path: src/OrderStatusRequest.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: SetDefaults
+    path: OrderStatusRequest.cs
+    startLine: 30
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nSets any properties on this object that are null to the appropriate defaults, if possible.\n"
+  example: []
+  syntax:
+    content: protected override void SetDefaults(LaybuyClientConfiguration settings)
+    parameters:
+    - id: settings
+      type: Yort.Laybuy.InStore.LaybuyClientConfiguration
+      description: The settings used to construct the <xref href="Yort.Laybuy.InStore.LaybuyClient" data-throw-if-not-resolved="false"></xref> instance that is about to send this request.
+    content.vb: Protected Overrides Sub SetDefaults(settings As LaybuyClientConfiguration)
+  overridden: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+  overload: Yort.Laybuy.InStore.OrderStatusRequest.SetDefaults*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: Yort.Laybuy.InStore.OrderStatusRequest.Validate
+  commentId: M:Yort.Laybuy.InStore.OrderStatusRequest.Validate
+  id: Validate
+  parent: Yort.Laybuy.InStore.OrderStatusRequest
+  langs:
+  - csharp
+  - vb
+  name: Validate()
+  nameWithType: OrderStatusRequest.Validate()
+  fullName: Yort.Laybuy.InStore.OrderStatusRequest.Validate()
+  type: Method
+  source:
+    remote:
+      path: src/OrderStatusRequest.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: Validate
+    path: OrderStatusRequest.cs
+    startLine: 41
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nValidates the properties for this instance are valid before sending the request to the API.\n"
+  remarks: "\nProvides simple client side validation, such as required fields beign provided and fields under maximum lengths etc.\n"
+  example: []
+  syntax:
+    content: protected override void Validate()
+    content.vb: Protected Overrides Sub Validate
+  overridden: Yort.Laybuy.InStore.LaybuyRequestBase.Validate
+  overload: Yort.Laybuy.InStore.OrderStatusRequest.Validate*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+references:
+- uid: Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+  commentId: M:Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+  parent: Yort.Laybuy.InStore.ILaybuyClient
+  name: GetStatus(OrderStatusRequest)
+  nameWithType: ILaybuyClient.GetStatus(OrderStatusRequest)
+  fullName: Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+  spec.csharp:
+  - uid: Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+    name: GetStatus
+    nameWithType: ILaybuyClient.GetStatus
+    fullName: Yort.Laybuy.InStore.ILaybuyClient.GetStatus
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Yort.Laybuy.InStore.OrderStatusRequest
+    name: OrderStatusRequest
+    nameWithType: OrderStatusRequest
+    fullName: Yort.Laybuy.InStore.OrderStatusRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+    name: GetStatus
+    nameWithType: ILaybuyClient.GetStatus
+    fullName: Yort.Laybuy.InStore.ILaybuyClient.GetStatus
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Yort.Laybuy.InStore.OrderStatusRequest
+    name: OrderStatusRequest
+    nameWithType: OrderStatusRequest
+    fullName: Yort.Laybuy.InStore.OrderStatusRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Yort.Laybuy.InStore.OrderStatusResponse
+  commentId: T:Yort.Laybuy.InStore.OrderStatusResponse
+  name: OrderStatusResponse
+  nameWithType: OrderStatusResponse
+  fullName: Yort.Laybuy.InStore.OrderStatusResponse
+- uid: Yort.Laybuy.InStore
+  commentId: N:Yort.Laybuy.InStore
+  name: Yort.Laybuy.InStore
+  nameWithType: Yort.Laybuy.InStore
+  fullName: Yort.Laybuy.InStore
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Yort.Laybuy.InStore.LaybuyRequestBase
+  commentId: T:Yort.Laybuy.InStore.LaybuyRequestBase
+  parent: Yort.Laybuy.InStore
+  name: LaybuyRequestBase
+  nameWithType: LaybuyRequestBase
+  fullName: Yort.Laybuy.InStore.LaybuyRequestBase
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Yort.Laybuy.InStore.ILaybuyClient
+  commentId: T:Yort.Laybuy.InStore.ILaybuyClient
+  parent: Yort.Laybuy.InStore
+  name: ILaybuyClient
+  nameWithType: ILaybuyClient
+  fullName: Yort.Laybuy.InStore.ILaybuyClient
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Yort.Laybuy.InStore.OrderStatusRequest.MerchantReference
+  commentId: P:Yort.Laybuy.InStore.OrderStatusRequest.MerchantReference
+  isExternal: true
+- uid: Yort.Laybuy.InStore.OrderStatusRequest.OrderId*
+  commentId: Overload:Yort.Laybuy.InStore.OrderStatusRequest.OrderId
+  name: OrderId
+  nameWithType: OrderStatusRequest.OrderId
+  fullName: Yort.Laybuy.InStore.OrderStatusRequest.OrderId
+- uid: System.Nullable{System.Int64}
+  commentId: T:System.Nullable{System.Int64}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Int64>
+  nameWithType: Nullable<Int64>
+  fullName: System.Nullable<System.Int64>
+  nameWithType.vb: Nullable(Of Int64)
+  fullName.vb: System.Nullable(Of System.Int64)
+  name.vb: Nullable(Of Int64)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Yort.Laybuy.InStore.OrderStatusRequest.OrderId
+  commentId: P:Yort.Laybuy.InStore.OrderStatusRequest.OrderId
+  isExternal: true
+- uid: Yort.Laybuy.InStore.OrderStatusRequest.MerchantReference*
+  commentId: Overload:Yort.Laybuy.InStore.OrderStatusRequest.MerchantReference
+  name: MerchantReference
+  nameWithType: OrderStatusRequest.MerchantReference
+  fullName: Yort.Laybuy.InStore.OrderStatusRequest.MerchantReference
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Yort.Laybuy.InStore.LaybuyClient
+  commentId: T:Yort.Laybuy.InStore.LaybuyClient
+  name: LaybuyClient
+  nameWithType: LaybuyClient
+  fullName: Yort.Laybuy.InStore.LaybuyClient
+- uid: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+  commentId: M:Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+  parent: Yort.Laybuy.InStore.LaybuyRequestBase
+  name: SetDefaults(LaybuyClientConfiguration)
+  nameWithType: LaybuyRequestBase.SetDefaults(LaybuyClientConfiguration)
+  fullName: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+  spec.csharp:
+  - uid: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+    name: SetDefaults
+    nameWithType: LaybuyRequestBase.SetDefaults
+    fullName: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Yort.Laybuy.InStore.LaybuyClientConfiguration
+    name: LaybuyClientConfiguration
+    nameWithType: LaybuyClientConfiguration
+    fullName: Yort.Laybuy.InStore.LaybuyClientConfiguration
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+    name: SetDefaults
+    nameWithType: LaybuyRequestBase.SetDefaults
+    fullName: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Yort.Laybuy.InStore.LaybuyClientConfiguration
+    name: LaybuyClientConfiguration
+    nameWithType: LaybuyClientConfiguration
+    fullName: Yort.Laybuy.InStore.LaybuyClientConfiguration
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Yort.Laybuy.InStore.OrderStatusRequest.SetDefaults*
+  commentId: Overload:Yort.Laybuy.InStore.OrderStatusRequest.SetDefaults
+  name: SetDefaults
+  nameWithType: OrderStatusRequest.SetDefaults
+  fullName: Yort.Laybuy.InStore.OrderStatusRequest.SetDefaults
+- uid: Yort.Laybuy.InStore.LaybuyClientConfiguration
+  commentId: T:Yort.Laybuy.InStore.LaybuyClientConfiguration
+  parent: Yort.Laybuy.InStore
+  name: LaybuyClientConfiguration
+  nameWithType: LaybuyClientConfiguration
+  fullName: Yort.Laybuy.InStore.LaybuyClientConfiguration
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+- uid: Yort.Laybuy.InStore.LaybuyRequestBase.Validate
+  commentId: M:Yort.Laybuy.InStore.LaybuyRequestBase.Validate
+  parent: Yort.Laybuy.InStore.LaybuyRequestBase
+  name: Validate()
+  nameWithType: LaybuyRequestBase.Validate()
+  fullName: Yort.Laybuy.InStore.LaybuyRequestBase.Validate()
+  spec.csharp:
+  - uid: Yort.Laybuy.InStore.LaybuyRequestBase.Validate
+    name: Validate
+    nameWithType: LaybuyRequestBase.Validate
+    fullName: Yort.Laybuy.InStore.LaybuyRequestBase.Validate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Yort.Laybuy.InStore.LaybuyRequestBase.Validate
+    name: Validate
+    nameWithType: LaybuyRequestBase.Validate
+    fullName: Yort.Laybuy.InStore.LaybuyRequestBase.Validate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Yort.Laybuy.InStore.OrderStatusRequest.Validate*
+  commentId: Overload:Yort.Laybuy.InStore.OrderStatusRequest.Validate
+  name: Validate
+  nameWithType: OrderStatusRequest.Validate
+  fullName: Yort.Laybuy.InStore.OrderStatusRequest.Validate

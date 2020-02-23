@@ -1,0 +1,548 @@
+### YamlMime:ManagedReference
+items:
+- uid: Yort.Laybuy.InStore.CreateOrderResponse
+  commentId: T:Yort.Laybuy.InStore.CreateOrderResponse
+  id: CreateOrderResponse
+  parent: Yort.Laybuy.InStore
+  children:
+  - Yort.Laybuy.InStore.CreateOrderResponse.PaymentUrl
+  - Yort.Laybuy.InStore.CreateOrderResponse.Token
+  langs:
+  - csharp
+  - vb
+  name: CreateOrderResponse
+  nameWithType: CreateOrderResponse
+  fullName: Yort.Laybuy.InStore.CreateOrderResponse
+  type: Class
+  source:
+    remote:
+      path: src/CreateOrderResponse.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: CreateOrderResponse
+    path: CreateOrderResponse.cs
+    startLine: 12
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nRepresents the response from a <xref href=\"Yort.Laybuy.InStore.ILaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: 'public class CreateOrderResponse : LaybuyApiResponseBase'
+    content.vb: >-
+      Public Class CreateOrderResponse
+          Inherits LaybuyApiResponseBase
+  seealso:
+  - linkId: Yort.Laybuy.InStore.CreateOrderRequest
+    commentId: T:Yort.Laybuy.InStore.CreateOrderRequest
+  - linkId: Yort.Laybuy.InStore.ILaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)
+    commentId: M:Yort.Laybuy.InStore.ILaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)
+  inheritance:
+  - System.Object
+  - Yort.Laybuy.InStore.LaybuyApiResponseBase
+  inheritedMembers:
+  - Yort.Laybuy.InStore.LaybuyApiResponseBase.Result
+  - Yort.Laybuy.InStore.LaybuyApiResponseBase.Error
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Yort.Laybuy.InStore.CreateOrderResponse.Token
+  commentId: P:Yort.Laybuy.InStore.CreateOrderResponse.Token
+  id: Token
+  parent: Yort.Laybuy.InStore.CreateOrderResponse
+  langs:
+  - csharp
+  - vb
+  name: Token
+  nameWithType: CreateOrderResponse.Token
+  fullName: Yort.Laybuy.InStore.CreateOrderResponse.Token
+  type: Property
+  source:
+    remote:
+      path: src/CreateOrderResponse.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: Token
+    path: CreateOrderResponse.cs
+    startLine: 18
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nThe Laybuy payment token for the payment. Populated when the result is SUCCESS.\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("token")]
+
+      public string Token { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("token")>
+
+      Public Property Token As String
+  overload: Yort.Laybuy.InStore.CreateOrderResponse.Token*
+  seealso:
+  - linkId: Yort.Laybuy.InStore.LaybuyStatus
+    commentId: T:Yort.Laybuy.InStore.LaybuyStatus
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: token
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Yort.Laybuy.InStore.CreateOrderResponse.PaymentUrl
+  commentId: P:Yort.Laybuy.InStore.CreateOrderResponse.PaymentUrl
+  id: PaymentUrl
+  parent: Yort.Laybuy.InStore.CreateOrderResponse
+  langs:
+  - csharp
+  - vb
+  name: PaymentUrl
+  nameWithType: CreateOrderResponse.PaymentUrl
+  fullName: Yort.Laybuy.InStore.CreateOrderResponse.PaymentUrl
+  type: Property
+  source:
+    remote:
+      path: src/CreateOrderResponse.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: PaymentUrl
+    path: CreateOrderResponse.cs
+    startLine: 24
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nThe URL to use that begins the Laybuy payment process. Populated when the result is SUCCESS.\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("paymentUrl")]
+
+      public string PaymentUrl { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("paymentUrl")>
+
+      Public Property PaymentUrl As String
+  overload: Yort.Laybuy.InStore.CreateOrderResponse.PaymentUrl*
+  seealso:
+  - linkId: Yort.Laybuy.InStore.LaybuyStatus
+    commentId: T:Yort.Laybuy.InStore.LaybuyStatus
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: paymentUrl
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Yort.Laybuy.InStore.ILaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)
+  commentId: M:Yort.Laybuy.InStore.ILaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)
+  parent: Yort.Laybuy.InStore.ILaybuyClient
+  name: Create(CreateOrderRequest)
+  nameWithType: ILaybuyClient.Create(CreateOrderRequest)
+  fullName: Yort.Laybuy.InStore.ILaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)
+  spec.csharp:
+  - uid: Yort.Laybuy.InStore.ILaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)
+    name: Create
+    nameWithType: ILaybuyClient.Create
+    fullName: Yort.Laybuy.InStore.ILaybuyClient.Create
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Yort.Laybuy.InStore.CreateOrderRequest
+    name: CreateOrderRequest
+    nameWithType: CreateOrderRequest
+    fullName: Yort.Laybuy.InStore.CreateOrderRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Yort.Laybuy.InStore.ILaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)
+    name: Create
+    nameWithType: ILaybuyClient.Create
+    fullName: Yort.Laybuy.InStore.ILaybuyClient.Create
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Yort.Laybuy.InStore.CreateOrderRequest
+    name: CreateOrderRequest
+    nameWithType: CreateOrderRequest
+    fullName: Yort.Laybuy.InStore.CreateOrderRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Yort.Laybuy.InStore.CreateOrderRequest
+  commentId: T:Yort.Laybuy.InStore.CreateOrderRequest
+  parent: Yort.Laybuy.InStore
+  name: CreateOrderRequest
+  nameWithType: CreateOrderRequest
+  fullName: Yort.Laybuy.InStore.CreateOrderRequest
+- uid: Yort.Laybuy.InStore
+  commentId: N:Yort.Laybuy.InStore
+  name: Yort.Laybuy.InStore
+  nameWithType: Yort.Laybuy.InStore
+  fullName: Yort.Laybuy.InStore
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Yort.Laybuy.InStore.LaybuyApiResponseBase
+  commentId: T:Yort.Laybuy.InStore.LaybuyApiResponseBase
+  parent: Yort.Laybuy.InStore
+  name: LaybuyApiResponseBase
+  nameWithType: LaybuyApiResponseBase
+  fullName: Yort.Laybuy.InStore.LaybuyApiResponseBase
+- uid: Yort.Laybuy.InStore.LaybuyApiResponseBase.Result
+  commentId: P:Yort.Laybuy.InStore.LaybuyApiResponseBase.Result
+  parent: Yort.Laybuy.InStore.LaybuyApiResponseBase
+  name: Result
+  nameWithType: LaybuyApiResponseBase.Result
+  fullName: Yort.Laybuy.InStore.LaybuyApiResponseBase.Result
+- uid: Yort.Laybuy.InStore.LaybuyApiResponseBase.Error
+  commentId: P:Yort.Laybuy.InStore.LaybuyApiResponseBase.Error
+  parent: Yort.Laybuy.InStore.LaybuyApiResponseBase
+  name: Error
+  nameWithType: LaybuyApiResponseBase.Error
+  fullName: Yort.Laybuy.InStore.LaybuyApiResponseBase.Error
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Yort.Laybuy.InStore.ILaybuyClient
+  commentId: T:Yort.Laybuy.InStore.ILaybuyClient
+  parent: Yort.Laybuy.InStore
+  name: ILaybuyClient
+  nameWithType: ILaybuyClient
+  fullName: Yort.Laybuy.InStore.ILaybuyClient
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Yort.Laybuy.InStore.LaybuyStatus
+  commentId: T:Yort.Laybuy.InStore.LaybuyStatus
+  name: LaybuyStatus
+  nameWithType: LaybuyStatus
+  fullName: Yort.Laybuy.InStore.LaybuyStatus
+- uid: Yort.Laybuy.InStore.CreateOrderResponse.Token*
+  commentId: Overload:Yort.Laybuy.InStore.CreateOrderResponse.Token
+  name: Token
+  nameWithType: CreateOrderResponse.Token
+  fullName: Yort.Laybuy.InStore.CreateOrderResponse.Token
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Yort.Laybuy.InStore.CreateOrderResponse.PaymentUrl*
+  commentId: Overload:Yort.Laybuy.InStore.CreateOrderResponse.PaymentUrl
+  name: PaymentUrl
+  nameWithType: CreateOrderResponse.PaymentUrl
+  fullName: Yort.Laybuy.InStore.CreateOrderResponse.PaymentUrl

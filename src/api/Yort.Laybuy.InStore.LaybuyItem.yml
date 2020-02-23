@@ -1,0 +1,597 @@
+### YamlMime:ManagedReference
+items:
+- uid: Yort.Laybuy.InStore.LaybuyItem
+  commentId: T:Yort.Laybuy.InStore.LaybuyItem
+  id: LaybuyItem
+  parent: Yort.Laybuy.InStore
+  children:
+  - Yort.Laybuy.InStore.LaybuyItem.Description
+  - Yort.Laybuy.InStore.LaybuyItem.Id
+  - Yort.Laybuy.InStore.LaybuyItem.Price
+  - Yort.Laybuy.InStore.LaybuyItem.Quantity
+  langs:
+  - csharp
+  - vb
+  name: LaybuyItem
+  nameWithType: LaybuyItem
+  fullName: Yort.Laybuy.InStore.LaybuyItem
+  type: Class
+  source:
+    remote:
+      path: src/LaybuyItem.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: LaybuyItem
+    path: LaybuyItem.cs
+    startLine: 11
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nRepresents an item purchased via Laybuy.\n"
+  example: []
+  syntax:
+    content: public class LaybuyItem
+    content.vb: Public Class LaybuyItem
+  seealso:
+  - linkId: Yort.Laybuy.InStore.CreateOrderRequest.Items
+    commentId: P:Yort.Laybuy.InStore.CreateOrderRequest.Items
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Yort.Laybuy.InStore.LaybuyItem.Id
+  commentId: P:Yort.Laybuy.InStore.LaybuyItem.Id
+  id: Id
+  parent: Yort.Laybuy.InStore.LaybuyItem
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: LaybuyItem.Id
+  fullName: Yort.Laybuy.InStore.LaybuyItem.Id
+  type: Property
+  source:
+    remote:
+      path: src/LaybuyItem.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: Id
+    path: LaybuyItem.cs
+    startLine: 16
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nThe merchant&apos;s unique identifier (id, PLU/SKU, barcode, etc.) for the product.\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("id")]
+
+      public string Id { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("id")>
+
+      Public Property Id As String
+  overload: Yort.Laybuy.InStore.LaybuyItem.Id*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: id
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Yort.Laybuy.InStore.LaybuyItem.Description
+  commentId: P:Yort.Laybuy.InStore.LaybuyItem.Description
+  id: Description
+  parent: Yort.Laybuy.InStore.LaybuyItem
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: LaybuyItem.Description
+  fullName: Yort.Laybuy.InStore.LaybuyItem.Description
+  type: Property
+  source:
+    remote:
+      path: src/LaybuyItem.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: Description
+    path: LaybuyItem.cs
+    startLine: 21
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nThe description of the product.\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("description")]
+
+      public string Description { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("description")>
+
+      Public Property Description As String
+  overload: Yort.Laybuy.InStore.LaybuyItem.Description*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: description
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Yort.Laybuy.InStore.LaybuyItem.Quantity
+  commentId: P:Yort.Laybuy.InStore.LaybuyItem.Quantity
+  id: Quantity
+  parent: Yort.Laybuy.InStore.LaybuyItem
+  langs:
+  - csharp
+  - vb
+  name: Quantity
+  nameWithType: LaybuyItem.Quantity
+  fullName: Yort.Laybuy.InStore.LaybuyItem.Quantity
+  type: Property
+  source:
+    remote:
+      path: src/LaybuyItem.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: Quantity
+    path: LaybuyItem.cs
+    startLine: 26
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nThe quantity of the item purchased.\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("quantity")]
+
+      public int Quantity { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <JsonProperty("quantity")>
+
+      Public Property Quantity As Integer
+  overload: Yort.Laybuy.InStore.LaybuyItem.Quantity*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: quantity
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Yort.Laybuy.InStore.LaybuyItem.Price
+  commentId: P:Yort.Laybuy.InStore.LaybuyItem.Price
+  id: Price
+  parent: Yort.Laybuy.InStore.LaybuyItem
+  langs:
+  - csharp
+  - vb
+  name: Price
+  nameWithType: LaybuyItem.Price
+  fullName: Yort.Laybuy.InStore.LaybuyItem.Price
+  type: Property
+  source:
+    remote:
+      path: src/LaybuyItem.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: Price
+    path: LaybuyItem.cs
+    startLine: 31
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nThe unit price of the product, in the currency specified on the <xref href=\"Yort.Laybuy.InStore.CreateOrderRequest\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("price")]
+
+      public decimal Price { get; set; }
+    parameters: []
+    return:
+      type: System.Decimal
+    content.vb: >-
+      <JsonProperty("price")>
+
+      Public Property Price As Decimal
+  overload: Yort.Laybuy.InStore.LaybuyItem.Price*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: price
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Yort.Laybuy.InStore.CreateOrderRequest.Items
+  commentId: P:Yort.Laybuy.InStore.CreateOrderRequest.Items
+  isExternal: true
+- uid: Yort.Laybuy.InStore
+  commentId: N:Yort.Laybuy.InStore
+  name: Yort.Laybuy.InStore
+  nameWithType: Yort.Laybuy.InStore
+  fullName: Yort.Laybuy.InStore
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Yort.Laybuy.InStore.LaybuyItem.Id*
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyItem.Id
+  name: Id
+  nameWithType: LaybuyItem.Id
+  fullName: Yort.Laybuy.InStore.LaybuyItem.Id
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Yort.Laybuy.InStore.LaybuyItem.Description*
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyItem.Description
+  name: Description
+  nameWithType: LaybuyItem.Description
+  fullName: Yort.Laybuy.InStore.LaybuyItem.Description
+- uid: Yort.Laybuy.InStore.LaybuyItem.Quantity*
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyItem.Quantity
+  name: Quantity
+  nameWithType: LaybuyItem.Quantity
+  fullName: Yort.Laybuy.InStore.LaybuyItem.Quantity
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Yort.Laybuy.InStore.CreateOrderRequest
+  commentId: T:Yort.Laybuy.InStore.CreateOrderRequest
+  parent: Yort.Laybuy.InStore
+  name: CreateOrderRequest
+  nameWithType: CreateOrderRequest
+  fullName: Yort.Laybuy.InStore.CreateOrderRequest
+- uid: Yort.Laybuy.InStore.LaybuyItem.Price*
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyItem.Price
+  name: Price
+  nameWithType: LaybuyItem.Price
+  fullName: Yort.Laybuy.InStore.LaybuyItem.Price
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  name: Decimal
+  nameWithType: Decimal
+  fullName: System.Decimal

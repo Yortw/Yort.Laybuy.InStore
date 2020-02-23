@@ -1,0 +1,814 @@
+### YamlMime:ManagedReference
+items:
+- uid: Yort.Laybuy.InStore.RefundRequest
+  commentId: T:Yort.Laybuy.InStore.RefundRequest
+  id: RefundRequest
+  parent: Yort.Laybuy.InStore
+  children:
+  - Yort.Laybuy.InStore.RefundRequest.Amount
+  - Yort.Laybuy.InStore.RefundRequest.Note
+  - Yort.Laybuy.InStore.RefundRequest.OrderId
+  - Yort.Laybuy.InStore.RefundRequest.RefundReference
+  - Yort.Laybuy.InStore.RefundRequest.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+  - Yort.Laybuy.InStore.RefundRequest.Validate
+  langs:
+  - csharp
+  - vb
+  name: RefundRequest
+  nameWithType: RefundRequest
+  fullName: Yort.Laybuy.InStore.RefundRequest
+  type: Class
+  source:
+    remote:
+      path: src/RefundRequest.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: RefundRequest
+    path: RefundRequest.cs
+    startLine: 13
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nRepresents the arguments passed to <xref href=\"Yort.Laybuy.InStore.ILaybuyClient.Refund(Yort.Laybuy.InStore.RefundRequest)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: 'public class RefundRequest : LaybuyRequestBase'
+    content.vb: >-
+      Public Class RefundRequest
+          Inherits LaybuyRequestBase
+  seealso:
+  - linkId: Yort.Laybuy.InStore.RefundResponse
+    commentId: T:Yort.Laybuy.InStore.RefundResponse
+  - linkId: Yort.Laybuy.InStore.ILaybuyClient.Refund(Yort.Laybuy.InStore.RefundRequest)
+    commentId: M:Yort.Laybuy.InStore.ILaybuyClient.Refund(Yort.Laybuy.InStore.RefundRequest)
+  inheritance:
+  - System.Object
+  - Yort.Laybuy.InStore.LaybuyRequestBase
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Yort.Laybuy.InStore.RefundRequest.OrderId
+  commentId: P:Yort.Laybuy.InStore.RefundRequest.OrderId
+  id: OrderId
+  parent: Yort.Laybuy.InStore.RefundRequest
+  langs:
+  - csharp
+  - vb
+  name: OrderId
+  nameWithType: RefundRequest.OrderId
+  fullName: Yort.Laybuy.InStore.RefundRequest.OrderId
+  type: Property
+  source:
+    remote:
+      path: src/RefundRequest.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: OrderId
+    path: RefundRequest.cs
+    startLine: 18
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nThe unique id of the Laybuy order to refund against.\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("orderId")]
+
+      public long OrderId { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: >-
+      <JsonProperty("orderId")>
+
+      Public Property OrderId As Long
+  overload: Yort.Laybuy.InStore.RefundRequest.OrderId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: orderId
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Yort.Laybuy.InStore.RefundRequest.RefundReference
+  commentId: P:Yort.Laybuy.InStore.RefundRequest.RefundReference
+  id: RefundReference
+  parent: Yort.Laybuy.InStore.RefundRequest
+  langs:
+  - csharp
+  - vb
+  name: RefundReference
+  nameWithType: RefundRequest.RefundReference
+  fullName: Yort.Laybuy.InStore.RefundRequest.RefundReference
+  type: Property
+  source:
+    remote:
+      path: src/RefundRequest.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: RefundReference
+    path: RefundRequest.cs
+    startLine: 23
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nA unique client generated reference for the refund request, used to ensure idempotency.\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("refundReference")]
+
+      public string RefundReference { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("refundReference")>
+
+      Public Property RefundReference As String
+  overload: Yort.Laybuy.InStore.RefundRequest.RefundReference*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: refundReference
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Yort.Laybuy.InStore.RefundRequest.Amount
+  commentId: P:Yort.Laybuy.InStore.RefundRequest.Amount
+  id: Amount
+  parent: Yort.Laybuy.InStore.RefundRequest
+  langs:
+  - csharp
+  - vb
+  name: Amount
+  nameWithType: RefundRequest.Amount
+  fullName: Yort.Laybuy.InStore.RefundRequest.Amount
+  type: Property
+  source:
+    remote:
+      path: src/RefundRequest.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: Amount
+    path: RefundRequest.cs
+    startLine: 28
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nThe amount of the refund.\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("amount")]
+
+      public decimal Amount { get; set; }
+    parameters: []
+    return:
+      type: System.Decimal
+    content.vb: >-
+      <JsonProperty("amount")>
+
+      Public Property Amount As Decimal
+  overload: Yort.Laybuy.InStore.RefundRequest.Amount*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: amount
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Yort.Laybuy.InStore.RefundRequest.Note
+  commentId: P:Yort.Laybuy.InStore.RefundRequest.Note
+  id: Note
+  parent: Yort.Laybuy.InStore.RefundRequest
+  langs:
+  - csharp
+  - vb
+  name: Note
+  nameWithType: RefundRequest.Note
+  fullName: Yort.Laybuy.InStore.RefundRequest.Note
+  type: Property
+  source:
+    remote:
+      path: src/RefundRequest.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: Note
+    path: RefundRequest.cs
+    startLine: 33
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nAn optional, humand readable note sent to the recipient of the refund.\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("note")]
+
+      public string Note { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("note")>
+
+      Public Property Note As String
+  overload: Yort.Laybuy.InStore.RefundRequest.Note*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: note
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Yort.Laybuy.InStore.RefundRequest.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+  commentId: M:Yort.Laybuy.InStore.RefundRequest.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+  id: SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+  parent: Yort.Laybuy.InStore.RefundRequest
+  langs:
+  - csharp
+  - vb
+  name: SetDefaults(LaybuyClientConfiguration)
+  nameWithType: RefundRequest.SetDefaults(LaybuyClientConfiguration)
+  fullName: Yort.Laybuy.InStore.RefundRequest.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+  type: Method
+  source:
+    remote:
+      path: src/RefundRequest.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: SetDefaults
+    path: RefundRequest.cs
+    startLine: 40
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nSets any properties on this object that are null to the appropriate defaults, if possible.\n"
+  example: []
+  syntax:
+    content: protected override void SetDefaults(LaybuyClientConfiguration settings)
+    parameters:
+    - id: settings
+      type: Yort.Laybuy.InStore.LaybuyClientConfiguration
+      description: The settings used to construct the <xref href="Yort.Laybuy.InStore.LaybuyClient" data-throw-if-not-resolved="false"></xref> instance that is about to send this request.
+    content.vb: Protected Overrides Sub SetDefaults(settings As LaybuyClientConfiguration)
+  overridden: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+  overload: Yort.Laybuy.InStore.RefundRequest.SetDefaults*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: Yort.Laybuy.InStore.RefundRequest.Validate
+  commentId: M:Yort.Laybuy.InStore.RefundRequest.Validate
+  id: Validate
+  parent: Yort.Laybuy.InStore.RefundRequest
+  langs:
+  - csharp
+  - vb
+  name: Validate()
+  nameWithType: RefundRequest.Validate()
+  fullName: Yort.Laybuy.InStore.RefundRequest.Validate()
+  type: Method
+  source:
+    remote:
+      path: src/RefundRequest.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: Validate
+    path: RefundRequest.cs
+    startLine: 51
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nValidates the properties for this instance are valid before sending the request to the API.\n"
+  remarks: "\nProvides simple client side validation, such as required fields beign provided and fields under maximum lengths etc.\n"
+  example: []
+  syntax:
+    content: protected override void Validate()
+    content.vb: Protected Overrides Sub Validate
+  overridden: Yort.Laybuy.InStore.LaybuyRequestBase.Validate
+  overload: Yort.Laybuy.InStore.RefundRequest.Validate*
+  exceptions:
+  - type: System.NotImplementedException
+    commentId: T:System.NotImplementedException
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+references:
+- uid: Yort.Laybuy.InStore.ILaybuyClient.Refund(Yort.Laybuy.InStore.RefundRequest)
+  commentId: M:Yort.Laybuy.InStore.ILaybuyClient.Refund(Yort.Laybuy.InStore.RefundRequest)
+  parent: Yort.Laybuy.InStore.ILaybuyClient
+  name: Refund(RefundRequest)
+  nameWithType: ILaybuyClient.Refund(RefundRequest)
+  fullName: Yort.Laybuy.InStore.ILaybuyClient.Refund(Yort.Laybuy.InStore.RefundRequest)
+  spec.csharp:
+  - uid: Yort.Laybuy.InStore.ILaybuyClient.Refund(Yort.Laybuy.InStore.RefundRequest)
+    name: Refund
+    nameWithType: ILaybuyClient.Refund
+    fullName: Yort.Laybuy.InStore.ILaybuyClient.Refund
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Yort.Laybuy.InStore.RefundRequest
+    name: RefundRequest
+    nameWithType: RefundRequest
+    fullName: Yort.Laybuy.InStore.RefundRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Yort.Laybuy.InStore.ILaybuyClient.Refund(Yort.Laybuy.InStore.RefundRequest)
+    name: Refund
+    nameWithType: ILaybuyClient.Refund
+    fullName: Yort.Laybuy.InStore.ILaybuyClient.Refund
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Yort.Laybuy.InStore.RefundRequest
+    name: RefundRequest
+    nameWithType: RefundRequest
+    fullName: Yort.Laybuy.InStore.RefundRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Yort.Laybuy.InStore.RefundResponse
+  commentId: T:Yort.Laybuy.InStore.RefundResponse
+  name: RefundResponse
+  nameWithType: RefundResponse
+  fullName: Yort.Laybuy.InStore.RefundResponse
+- uid: Yort.Laybuy.InStore
+  commentId: N:Yort.Laybuy.InStore
+  name: Yort.Laybuy.InStore
+  nameWithType: Yort.Laybuy.InStore
+  fullName: Yort.Laybuy.InStore
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Yort.Laybuy.InStore.LaybuyRequestBase
+  commentId: T:Yort.Laybuy.InStore.LaybuyRequestBase
+  parent: Yort.Laybuy.InStore
+  name: LaybuyRequestBase
+  nameWithType: LaybuyRequestBase
+  fullName: Yort.Laybuy.InStore.LaybuyRequestBase
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Yort.Laybuy.InStore.ILaybuyClient
+  commentId: T:Yort.Laybuy.InStore.ILaybuyClient
+  parent: Yort.Laybuy.InStore
+  name: ILaybuyClient
+  nameWithType: ILaybuyClient
+  fullName: Yort.Laybuy.InStore.ILaybuyClient
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Yort.Laybuy.InStore.RefundRequest.OrderId*
+  commentId: Overload:Yort.Laybuy.InStore.RefundRequest.OrderId
+  name: OrderId
+  nameWithType: RefundRequest.OrderId
+  fullName: Yort.Laybuy.InStore.RefundRequest.OrderId
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: Yort.Laybuy.InStore.RefundRequest.RefundReference*
+  commentId: Overload:Yort.Laybuy.InStore.RefundRequest.RefundReference
+  name: RefundReference
+  nameWithType: RefundRequest.RefundReference
+  fullName: Yort.Laybuy.InStore.RefundRequest.RefundReference
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Yort.Laybuy.InStore.RefundRequest.Amount*
+  commentId: Overload:Yort.Laybuy.InStore.RefundRequest.Amount
+  name: Amount
+  nameWithType: RefundRequest.Amount
+  fullName: Yort.Laybuy.InStore.RefundRequest.Amount
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  name: Decimal
+  nameWithType: Decimal
+  fullName: System.Decimal
+- uid: Yort.Laybuy.InStore.RefundRequest.Note*
+  commentId: Overload:Yort.Laybuy.InStore.RefundRequest.Note
+  name: Note
+  nameWithType: RefundRequest.Note
+  fullName: Yort.Laybuy.InStore.RefundRequest.Note
+- uid: Yort.Laybuy.InStore.LaybuyClient
+  commentId: T:Yort.Laybuy.InStore.LaybuyClient
+  name: LaybuyClient
+  nameWithType: LaybuyClient
+  fullName: Yort.Laybuy.InStore.LaybuyClient
+- uid: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+  commentId: M:Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+  parent: Yort.Laybuy.InStore.LaybuyRequestBase
+  name: SetDefaults(LaybuyClientConfiguration)
+  nameWithType: LaybuyRequestBase.SetDefaults(LaybuyClientConfiguration)
+  fullName: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+  spec.csharp:
+  - uid: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+    name: SetDefaults
+    nameWithType: LaybuyRequestBase.SetDefaults
+    fullName: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Yort.Laybuy.InStore.LaybuyClientConfiguration
+    name: LaybuyClientConfiguration
+    nameWithType: LaybuyClientConfiguration
+    fullName: Yort.Laybuy.InStore.LaybuyClientConfiguration
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+    name: SetDefaults
+    nameWithType: LaybuyRequestBase.SetDefaults
+    fullName: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Yort.Laybuy.InStore.LaybuyClientConfiguration
+    name: LaybuyClientConfiguration
+    nameWithType: LaybuyClientConfiguration
+    fullName: Yort.Laybuy.InStore.LaybuyClientConfiguration
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Yort.Laybuy.InStore.RefundRequest.SetDefaults*
+  commentId: Overload:Yort.Laybuy.InStore.RefundRequest.SetDefaults
+  name: SetDefaults
+  nameWithType: RefundRequest.SetDefaults
+  fullName: Yort.Laybuy.InStore.RefundRequest.SetDefaults
+- uid: Yort.Laybuy.InStore.LaybuyClientConfiguration
+  commentId: T:Yort.Laybuy.InStore.LaybuyClientConfiguration
+  parent: Yort.Laybuy.InStore
+  name: LaybuyClientConfiguration
+  nameWithType: LaybuyClientConfiguration
+  fullName: Yort.Laybuy.InStore.LaybuyClientConfiguration
+- uid: System.NotImplementedException
+  commentId: T:System.NotImplementedException
+  isExternal: true
+- uid: Yort.Laybuy.InStore.LaybuyRequestBase.Validate
+  commentId: M:Yort.Laybuy.InStore.LaybuyRequestBase.Validate
+  parent: Yort.Laybuy.InStore.LaybuyRequestBase
+  name: Validate()
+  nameWithType: LaybuyRequestBase.Validate()
+  fullName: Yort.Laybuy.InStore.LaybuyRequestBase.Validate()
+  spec.csharp:
+  - uid: Yort.Laybuy.InStore.LaybuyRequestBase.Validate
+    name: Validate
+    nameWithType: LaybuyRequestBase.Validate
+    fullName: Yort.Laybuy.InStore.LaybuyRequestBase.Validate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Yort.Laybuy.InStore.LaybuyRequestBase.Validate
+    name: Validate
+    nameWithType: LaybuyRequestBase.Validate
+    fullName: Yort.Laybuy.InStore.LaybuyRequestBase.Validate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Yort.Laybuy.InStore.RefundRequest.Validate*
+  commentId: Overload:Yort.Laybuy.InStore.RefundRequest.Validate
+  name: Validate
+  nameWithType: RefundRequest.Validate
+  fullName: Yort.Laybuy.InStore.RefundRequest.Validate

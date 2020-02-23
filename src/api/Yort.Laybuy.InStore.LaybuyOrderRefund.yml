@@ -1,0 +1,714 @@
+### YamlMime:ManagedReference
+items:
+- uid: Yort.Laybuy.InStore.LaybuyOrderRefund
+  commentId: T:Yort.Laybuy.InStore.LaybuyOrderRefund
+  id: LaybuyOrderRefund
+  parent: Yort.Laybuy.InStore
+  children:
+  - Yort.Laybuy.InStore.LaybuyOrderRefund.Amount
+  - Yort.Laybuy.InStore.LaybuyOrderRefund.DateTime
+  - Yort.Laybuy.InStore.LaybuyOrderRefund.RefundId
+  - Yort.Laybuy.InStore.LaybuyOrderRefund.RefundReference
+  - Yort.Laybuy.InStore.LaybuyOrderRefund.User
+  - Yort.Laybuy.InStore.LaybuyOrderRefund.UserNote
+  langs:
+  - csharp
+  - vb
+  name: LaybuyOrderRefund
+  nameWithType: LaybuyOrderRefund
+  fullName: Yort.Laybuy.InStore.LaybuyOrderRefund
+  type: Class
+  source:
+    remote:
+      path: src/LaybuyOrderRefund.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: LaybuyOrderRefund
+    path: LaybuyOrderRefund.cs
+    startLine: 11
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nRepresents a refund previously made against an order.\n"
+  example: []
+  syntax:
+    content: public class LaybuyOrderRefund
+    content.vb: Public Class LaybuyOrderRefund
+  seealso:
+  - linkId: Yort.Laybuy.InStore.OrderStatusResponse.Refunds
+    commentId: P:Yort.Laybuy.InStore.OrderStatusResponse.Refunds
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Yort.Laybuy.InStore.LaybuyOrderRefund.RefundId
+  commentId: P:Yort.Laybuy.InStore.LaybuyOrderRefund.RefundId
+  id: RefundId
+  parent: Yort.Laybuy.InStore.LaybuyOrderRefund
+  langs:
+  - csharp
+  - vb
+  name: RefundId
+  nameWithType: LaybuyOrderRefund.RefundId
+  fullName: Yort.Laybuy.InStore.LaybuyOrderRefund.RefundId
+  type: Property
+  source:
+    remote:
+      path: src/LaybuyOrderRefund.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: RefundId
+    path: LaybuyOrderRefund.cs
+    startLine: 19
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nGets or sets the refund identifier.\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("refundId")]
+
+      public int RefundId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: "\nThe refund identifier.\n"
+    content.vb: >-
+      <JsonProperty("refundId")>
+
+      Public Property RefundId As Integer
+  overload: Yort.Laybuy.InStore.LaybuyOrderRefund.RefundId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: refundId
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Yort.Laybuy.InStore.LaybuyOrderRefund.DateTime
+  commentId: P:Yort.Laybuy.InStore.LaybuyOrderRefund.DateTime
+  id: DateTime
+  parent: Yort.Laybuy.InStore.LaybuyOrderRefund
+  langs:
+  - csharp
+  - vb
+  name: DateTime
+  nameWithType: LaybuyOrderRefund.DateTime
+  fullName: Yort.Laybuy.InStore.LaybuyOrderRefund.DateTime
+  type: Property
+  source:
+    remote:
+      path: src/LaybuyOrderRefund.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: DateTime
+    path: LaybuyOrderRefund.cs
+    startLine: 27
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nGets or sets the date time at which the refund occurred.\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("dateTime")]
+
+      public DateTime DateTime { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+      description: "\nThe date time.\n"
+    content.vb: >-
+      <JsonProperty("dateTime")>
+
+      Public Property DateTime As Date
+  overload: Yort.Laybuy.InStore.LaybuyOrderRefund.DateTime*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: dateTime
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Yort.Laybuy.InStore.LaybuyOrderRefund.Amount
+  commentId: P:Yort.Laybuy.InStore.LaybuyOrderRefund.Amount
+  id: Amount
+  parent: Yort.Laybuy.InStore.LaybuyOrderRefund
+  langs:
+  - csharp
+  - vb
+  name: Amount
+  nameWithType: LaybuyOrderRefund.Amount
+  fullName: Yort.Laybuy.InStore.LaybuyOrderRefund.Amount
+  type: Property
+  source:
+    remote:
+      path: src/LaybuyOrderRefund.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: Amount
+    path: LaybuyOrderRefund.cs
+    startLine: 35
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nGets or sets the amount of the refund.\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("amount")]
+
+      public decimal Amount { get; set; }
+    parameters: []
+    return:
+      type: System.Decimal
+      description: "\nThe amount.\n"
+    content.vb: >-
+      <JsonProperty("amount")>
+
+      Public Property Amount As Decimal
+  overload: Yort.Laybuy.InStore.LaybuyOrderRefund.Amount*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: amount
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Yort.Laybuy.InStore.LaybuyOrderRefund.RefundReference
+  commentId: P:Yort.Laybuy.InStore.LaybuyOrderRefund.RefundReference
+  id: RefundReference
+  parent: Yort.Laybuy.InStore.LaybuyOrderRefund
+  langs:
+  - csharp
+  - vb
+  name: RefundReference
+  nameWithType: LaybuyOrderRefund.RefundReference
+  fullName: Yort.Laybuy.InStore.LaybuyOrderRefund.RefundReference
+  type: Property
+  source:
+    remote:
+      path: src/LaybuyOrderRefund.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: RefundReference
+    path: LaybuyOrderRefund.cs
+    startLine: 43
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nGets or sets the refund reference.\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("refundReference")]
+
+      public string RefundReference { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: "\nThe refund reference.\n"
+    content.vb: >-
+      <JsonProperty("refundReference")>
+
+      Public Property RefundReference As String
+  overload: Yort.Laybuy.InStore.LaybuyOrderRefund.RefundReference*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: refundReference
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Yort.Laybuy.InStore.LaybuyOrderRefund.User
+  commentId: P:Yort.Laybuy.InStore.LaybuyOrderRefund.User
+  id: User
+  parent: Yort.Laybuy.InStore.LaybuyOrderRefund
+  langs:
+  - csharp
+  - vb
+  name: User
+  nameWithType: LaybuyOrderRefund.User
+  fullName: Yort.Laybuy.InStore.LaybuyOrderRefund.User
+  type: Property
+  source:
+    remote:
+      path: src/LaybuyOrderRefund.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: User
+    path: LaybuyOrderRefund.cs
+    startLine: 51
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nGets or sets the user that made the refund.\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("user")]
+
+      public string User { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: "\nThe user.\n"
+    content.vb: >-
+      <JsonProperty("user")>
+
+      Public Property User As String
+  overload: Yort.Laybuy.InStore.LaybuyOrderRefund.User*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: user
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Yort.Laybuy.InStore.LaybuyOrderRefund.UserNote
+  commentId: P:Yort.Laybuy.InStore.LaybuyOrderRefund.UserNote
+  id: UserNote
+  parent: Yort.Laybuy.InStore.LaybuyOrderRefund
+  langs:
+  - csharp
+  - vb
+  name: UserNote
+  nameWithType: LaybuyOrderRefund.UserNote
+  fullName: Yort.Laybuy.InStore.LaybuyOrderRefund.UserNote
+  type: Property
+  source:
+    remote:
+      path: src/LaybuyOrderRefund.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: UserNote
+    path: LaybuyOrderRefund.cs
+    startLine: 59
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nGets or sets the user entered note of the refund.\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("userNote")]
+
+      public string UserNote { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: "\nThe user note.\n"
+    content.vb: >-
+      <JsonProperty("userNote")>
+
+      Public Property UserNote As String
+  overload: Yort.Laybuy.InStore.LaybuyOrderRefund.UserNote*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: userNote
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Yort.Laybuy.InStore.OrderStatusResponse.Refunds
+  commentId: P:Yort.Laybuy.InStore.OrderStatusResponse.Refunds
+  isExternal: true
+- uid: Yort.Laybuy.InStore
+  commentId: N:Yort.Laybuy.InStore
+  name: Yort.Laybuy.InStore
+  nameWithType: Yort.Laybuy.InStore
+  fullName: Yort.Laybuy.InStore
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Yort.Laybuy.InStore.LaybuyOrderRefund.RefundId*
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyOrderRefund.RefundId
+  name: RefundId
+  nameWithType: LaybuyOrderRefund.RefundId
+  fullName: Yort.Laybuy.InStore.LaybuyOrderRefund.RefundId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Yort.Laybuy.InStore.LaybuyOrderRefund.DateTime*
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyOrderRefund.DateTime
+  name: DateTime
+  nameWithType: LaybuyOrderRefund.DateTime
+  fullName: Yort.Laybuy.InStore.LaybuyOrderRefund.DateTime
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: Yort.Laybuy.InStore.LaybuyOrderRefund.Amount*
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyOrderRefund.Amount
+  name: Amount
+  nameWithType: LaybuyOrderRefund.Amount
+  fullName: Yort.Laybuy.InStore.LaybuyOrderRefund.Amount
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  name: Decimal
+  nameWithType: Decimal
+  fullName: System.Decimal
+- uid: Yort.Laybuy.InStore.LaybuyOrderRefund.RefundReference*
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyOrderRefund.RefundReference
+  name: RefundReference
+  nameWithType: LaybuyOrderRefund.RefundReference
+  fullName: Yort.Laybuy.InStore.LaybuyOrderRefund.RefundReference
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Yort.Laybuy.InStore.LaybuyOrderRefund.User*
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyOrderRefund.User
+  name: User
+  nameWithType: LaybuyOrderRefund.User
+  fullName: Yort.Laybuy.InStore.LaybuyOrderRefund.User
+- uid: Yort.Laybuy.InStore.LaybuyOrderRefund.UserNote*
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyOrderRefund.UserNote
+  name: UserNote
+  nameWithType: LaybuyOrderRefund.UserNote
+  fullName: Yort.Laybuy.InStore.LaybuyOrderRefund.UserNote

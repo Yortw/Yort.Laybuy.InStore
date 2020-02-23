@@ -4,21 +4,854 @@
         <name>Yort.Laybuy.InStore</name>
     </assembly>
     <members>
-        <member name="T:OssLibrary.ErrorMessage">
+        <member name="T:Yort.Laybuy.InStore.CancelOrderRequest">
+            <summary>
+            Provides details of a request to cancel a Laybuy previously created via <see cref="M:Yort.Laybuy.InStore.ILaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)"/>.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.CancelOrderRequest.Token">
+            <summary>
+            Required. The token value returned by the <see cref="M:Yort.Laybuy.InStore.ILaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)"/> method, used to uniquely identify the Laybuy to cancel.
+            </summary>
+        </member>
+        <member name="M:Yort.Laybuy.InStore.CancelOrderRequest.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)">
+            <summary>
+            Sets any properties on this object that are null to the appropriate defaults, if possible.
+            </summary>
+            <param name="settings">The settings used to construct the <see cref="T:Yort.Laybuy.InStore.LaybuyClient" /> instance that is about to send this request.</param>
+        </member>
+        <member name="M:Yort.Laybuy.InStore.CancelOrderRequest.Validate">
+            <summary>
+            Validates the properties for this instance are valid before sending the request to the API.
+            </summary>
+            <remarks>
+            Provides simple client side validation, such as required fields beign provided and fields under maximum lengths etc.
+            </remarks>
+        </member>
+        <member name="T:Yort.Laybuy.InStore.CancelOrderResponse">
+            <summary>
+            Provides details of the result of calling <see cref="M:Yort.Laybuy.InStore.ILaybuyClient.Cancel(Yort.Laybuy.InStore.CancelOrderRequest)"/>.
+            </summary>
+        </member>
+        <member name="T:Yort.Laybuy.InStore.CreateOrderRequest">
+            <summary>
+            Contains the values/arguments to the <see cref="M:Yort.Laybuy.InStore.ILaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)"/> call.
+            </summary>
+            <seealso cref="T:Yort.Laybuy.InStore.CreateOrderResponse"/>
+            <seealso cref="M:Yort.Laybuy.InStore.ILaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)"/>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.CreateOrderRequest.Amount">
+            <summary>
+            Required. The amount of money to request.
+            </summary>
+            <remarks>
+            <para>The total for the customer to pay. This amount is validated against the sum of the amounts in the items attribute.</para>
+            </remarks>
+            <seealso cref="P:Yort.Laybuy.InStore.CreateOrderRequest.Currency"/>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.CreateOrderRequest.Tax">
+            <summary>
+            Optional. The tax included in <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.Amount"/>.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.CreateOrderRequest.Currency">
+            <summary>
+            Optional (but recommended). The currency the <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.Amount"/> is in.
+            </summary>
+            <remarks>
+            <para>If omitted then the default currency associated with the merchant id is used. It is highly recommended a specific currency be provided rather than relying on defaults.</para>
+            </remarks>
+            <seealso cref="P:Yort.Laybuy.InStore.CreateOrderRequest.Amount"/>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.CreateOrderRequest.MerchantReference">
+            <summary>
+            Required. A client generated reference for this request, used for idempotency.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.CreateOrderRequest.Origin">
+            <summary>
+            Required. A string identifying the calling system. Must be pre-registered with Laybuy.
+            </summary>
+            <remarks>
+            <para>Uses a default of POS if not specified and no default is specified via the <see cref="P:Yort.Laybuy.InStore.LaybuyClientConfiguration.Origin"/> value.</para>
+            </remarks>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.CreateOrderRequest.OriginData">
+            <summary>
+            Required. An object to be serialised as json containing data specific to the <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.Origin"/> value provided.
+            </summary>
+            <seealso cref="T:Yort.Laybuy.InStore.StandardOriginData"/>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.CreateOrderRequest.Customer">
+            <summary>
+            Required (must provide <see cref="P:Yort.Laybuy.InStore.LaybuyCustomerBase.Phone"/>). Sets or returns a <see cref="T:Yort.Laybuy.InStore.RequestLaybuyCustomer"/> instance representing details of the customer for this request.
+            </summary>
+            <remarks>
+            <para>Requests made by systems for physical stores/branches *must* provide a value for the customer phone number.</para>
+            </remarks>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.CreateOrderRequest.Items">
+            <summary>
+            Optional. Null or a collection of <see cref="T:Yort.Laybuy.InStore.LaybuyItem"/> objects being purchased. Default value is null.
+            </summary>
+        </member>
+        <member name="M:Yort.Laybuy.InStore.CreateOrderRequest.Validate">
+            <summary>
+            Validates the properties for this instance are valid before sending the request to the API.
+            </summary>
+            <remarks>
+            Provides simple client side validation, such as required fields beign provided and fields under maximum lengths etc.
+            </remarks>
+        </member>
+        <member name="M:Yort.Laybuy.InStore.CreateOrderRequest.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)">
+            <summary>
+            Sets any properties on this object that are null to the appropriate defaults, if possible.
+            </summary>
+            <param name="settings">The settings used to construct the <see cref="T:Yort.Laybuy.InStore.LaybuyClient" /> instance that is about to send this request.</param>
+        </member>
+        <member name="T:Yort.Laybuy.InStore.CreateOrderResponse">
+            <summary>
+            Represents the response from a <see cref="M:Yort.Laybuy.InStore.ILaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)"/>.
+            </summary>
+            <seealso cref="T:Yort.Laybuy.InStore.CreateOrderRequest"/>
+            <seealso cref="M:Yort.Laybuy.InStore.ILaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)"/>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.CreateOrderResponse.Token">
+            <summary>
+            The Laybuy payment token for the payment. Populated when the result is SUCCESS.
+            </summary>
+            <seealso cref="T:Yort.Laybuy.InStore.LaybuyStatus"/>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.CreateOrderResponse.PaymentUrl">
+            <summary>
+            The URL to use that begins the Laybuy payment process. Populated when the result is SUCCESS.
+            </summary>
+            <seealso cref="T:Yort.Laybuy.InStore.LaybuyStatus"/>
+        </member>
+        <member name="T:Yort.Laybuy.InStore.ErrorMessages">
             <summary>
               A strongly-typed resource class, for looking up localized strings, etc.
             </summary>
         </member>
-        <member name="P:OssLibrary.ErrorMessage.ResourceManager">
+        <member name="P:Yort.Laybuy.InStore.ErrorMessages.ResourceManager">
             <summary>
               Returns the cached ResourceManager instance used by this class.
             </summary>
         </member>
-        <member name="P:OssLibrary.ErrorMessage.Culture">
+        <member name="P:Yort.Laybuy.InStore.ErrorMessages.Culture">
             <summary>
               Overrides the current thread's CurrentUICulture property for all
               resource lookups using this strongly typed resource class.
             </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.ErrorMessages.OrderIdOrMerchantReferenceRequired">
+            <summary>
+              Looks up a localized string similar to You must specify either OrderId or MerchantReference.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.ErrorMessages.UnspecifiedError">
+            <summary>
+              Looks up a localized string similar to No error message returned from API..
+            </summary>
+        </member>
+        <member name="T:Yort.Laybuy.InStore.ILaybuyClient">
+            <summary>
+            Interface for components that actually communicate with the Laybuy API. Provided to enable mocking/stubbing/faking in test scenarios.
+            </summary>
+            <remarks>
+            <para>Application code should declare references to hold <see cref="T:Yort.Laybuy.InStore.LaybuyClient"/> instance as <see cref="T:Yort.Laybuy.InStore.ILaybuyClient"/> to help enable unit testing.</para>
+            </remarks>
+        </member>
+        <member name="M:Yort.Laybuy.InStore.ILaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)">
+            <summary>
+            Creates a new Laybuy (order) at Laybuy.
+            </summary>
+            <param name="request">A <see cref="T:Yort.Laybuy.InStore.CreateOrderRequest"/> with details of the Laybuy to create.</param>
+            <returns>A <see cref="T:Yort.Laybuy.InStore.CreateOrderResponse"/> indicating the outcome of the request.</returns>
+            <exception cref="T:Yort.Laybuy.InStore.LaybuyApiException">Thrown if Laybuy sends a valid response but the response itself indicates an error. See the exception's message property for details.</exception>
+            <seealso cref="M:Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)"/>
+            <seealso cref="M:Yort.Laybuy.InStore.ILaybuyClient.Cancel(Yort.Laybuy.InStore.CancelOrderRequest)"/>
+            <seealso cref="M:Yort.Laybuy.InStore.ILaybuyClient.Refund(Yort.Laybuy.InStore.RefundRequest)"/>
+        </member>
+        <member name="M:Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)">
+            <summary>
+            Gets the status of a Laybuy previously created via <see cref="M:Yort.Laybuy.InStore.ILaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)"/>.
+            </summary>
+            <param name="request">A <see cref="T:Yort.Laybuy.InStore.OrderStatusRequest"/> with details of the Laybuy to retrieve the status of.</param>
+            <returns>A <see cref="T:Yort.Laybuy.InStore.OrderStatusResponse"/> indicating the outcome of the request.</returns>
+            <exception cref="T:Yort.Laybuy.InStore.LaybuyApiException">Thrown if Laybuy sends a valid response but the response itself indicates an error. See the exception's message property for details.</exception>
+        </member>
+        <member name="M:Yort.Laybuy.InStore.ILaybuyClient.Refund(Yort.Laybuy.InStore.RefundRequest)">
+            <summary>
+            Refunds an amount of money against a Laybuy previously created via <see cref="M:Yort.Laybuy.InStore.ILaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)"/>.
+            </summary>
+            <param name="request">A <see cref="T:Yort.Laybuy.InStore.RefundRequest"/> with details of the refund to make.</param>
+            <returns>A <see cref="T:Yort.Laybuy.InStore.RefundResponse"/> indicating the outcome of the request.</returns>
+            <exception cref="T:Yort.Laybuy.InStore.LaybuyApiException">Thrown if Laybuy sends a valid response but the response itself indicates an error. See the exception's message property for details.</exception>
+        </member>
+        <member name="M:Yort.Laybuy.InStore.ILaybuyClient.Cancel(Yort.Laybuy.InStore.CancelOrderRequest)">
+            <summary>
+            Cancels a Laybuy previously created via the <see cref="M:Yort.Laybuy.InStore.ILaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)"/> method.
+            </summary>
+            <remarks>
+            <para>An error will be returned if the Laybuy is already confirmed.</para>
+            </remarks>
+            <param name="request">A <see cref="T:Yort.Laybuy.InStore.CancelOrderRequest"/> instance containing details of the Laybuy to cancel.</param>
+            <returns>A <see cref="T:Yort.Laybuy.InStore.CancelOrderResponse"/> indicating success if the Laybuy was cancelled ok, otherwise error details.</returns>
+            <seealso cref="M:Yort.Laybuy.InStore.ILaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)"/>
+        </member>
+        <member name="T:Yort.Laybuy.InStore.LaybuyApiException">
+            <summary>
+            Represents an exception thrown when a Laybuy API returns a non-successful result.
+            </summary>
+        </member>
+        <member name="M:Yort.Laybuy.InStore.LaybuyApiException.#ctor">
+            <summary>
+            Default constructor. Not recommended, used <see cref="M:Yort.Laybuy.InStore.LaybuyApiException.#ctor(System.String)"/>.
+            </summary>
+        </member>
+        <member name="M:Yort.Laybuy.InStore.LaybuyApiException.#ctor(System.String)">
+            <summary>
+            Partial constructor.
+            </summary>
+            <param name="message">The error message associated with the exception.</param>
+        </member>
+        <member name="M:Yort.Laybuy.InStore.LaybuyApiException.#ctor(System.String,System.Exception)">
+            <summary>
+            Full constructor.
+            </summary>
+            <param name="message">The error message associated with the exception.</param>
+            <param name="inner">Another exception wrapped by this one.</param>
+        </member>
+        <member name="M:Yort.Laybuy.InStore.LaybuyApiException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Deserialisation constructor.
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="T:Yort.Laybuy.InStore.LaybuyApiResponseBase">
+            <summary>
+            Provides properties for values that (can) appear on all (any) API responses.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.LaybuyApiResponseBase.Result">
+            <summary>
+            The result of the API call, usually one of the <see cref="T:Yort.Laybuy.InStore.LaybuyStatus"/> for success or failure.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.LaybuyApiResponseBase.Error">
+            <summary>
+            A human readable description of the error that occurred.
+            </summary>
+        </member>
+        <member name="T:Yort.Laybuy.InStore.LaybuyClient">
+            <summary>
+            Provides access to the REST endpoints exposed by Laybuy API using an idiomatic .Net, object-oriented model.
+            </summary>
+        </member>
+        <member name="M:Yort.Laybuy.InStore.LaybuyClient.#ctor(Yort.Laybuy.InStore.LaybuyClientConfiguration)">
+            <summary>
+            Full constructor.
+            </summary>
+            <param name="settings">A <see cref="T:Yort.Laybuy.InStore.LaybuyClientConfiguration"/> instance containing configuration details.</param>
+        </member>
+        <member name="M:Yort.Laybuy.InStore.LaybuyClient.Cancel(Yort.Laybuy.InStore.CancelOrderRequest)">
+            <summary>
+            Cancels a Laybuy previously created via the <see cref="M:Yort.Laybuy.InStore.LaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)"/> method.
+            </summary>
+            <remarks>
+            <para>An error will be returned if the Laybuy is already confirmed.</para>
+            </remarks>
+            <param name="request">A <see cref="T:Yort.Laybuy.InStore.CancelOrderRequest"/> instance containing details of the Laybuy to cancel.</param>
+            <returns>A <see cref="T:Yort.Laybuy.InStore.CancelOrderResponse"/> indicating success if the Laybuy was cancelled ok, otherwise error details.</returns>
+            <seealso cref="M:Yort.Laybuy.InStore.LaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)"/>
+            <exception cref="T:System.ArgumentNullException">Thrown if <see cref="P:Yort.Laybuy.InStore.CancelOrderRequest.Token"/> is null.</exception>
+            <exception cref="T:System.ArgumentException">Thrown if <see cref="P:Yort.Laybuy.InStore.CancelOrderRequest.Token"/> is an empty string or only whitespace.</exception>
+        </member>
+        <member name="M:Yort.Laybuy.InStore.LaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)">
+            <summary>
+            Creates a new order at Laybuy.
+            </summary>
+            <param name="request">A <see cref="T:Yort.Laybuy.InStore.CreateOrderRequest"/> with details of the order to create.</param>
+            <remarks>
+            <para>If <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.OriginData"/> is null and <see cref="P:Yort.Laybuy.InStore.LaybuyClientConfiguration.CallbackUrlTemplate"/> and/or 
+            <see cref="P:Yort.Laybuy.InStore.LaybuyClientConfiguration.DefaultBranch"/> are non empty in the settings object used to construct this client then a 
+            new <see cref="T:Yort.Laybuy.InStore.StandardOriginData"/> instance is automatically created with appropriate values and applied to the request. If no default 
+            value can be applied then <see cref="T:System.ArgumentNullException"/> is thrown.</para>
+            </remarks>
+            <returns>A <see cref="T:Yort.Laybuy.InStore.CreateOrderResponse"/> indicating the outcome of the request.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown if request, <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.Origin"/>, <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.OriginData"/>, <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.Customer"/> or <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.MerchantReference"/> is null.</exception>
+            <exception cref="T:System.ArgumentException">Thrown if request, <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.Origin"/>, <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.OriginData"/>, <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.MerchantReference"/> or <see cref="!:RequestLaybuyCustomer.Phone"/> is an empty string or only whitespace. Also thrown if <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.Amount"/> is zero or negative.</exception>
+        </member>
+        <member name="M:Yort.Laybuy.InStore.LaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)">
+            <summary>
+            Gets the status of a Laybuy previously created via <see cref="M:Yort.Laybuy.InStore.LaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)"/>.
+            </summary>
+            <param name="request">A <see cref="T:Yort.Laybuy.InStore.OrderStatusRequest"/> with details of the Laybuy to retrieve the status of.</param>
+            <returns>A <see cref="T:Yort.Laybuy.InStore.OrderStatusResponse"/> indicating the outcome of the request.</returns>
+            <exception cref="T:System.ArgumentException">Thrown if <see cref="P:Yort.Laybuy.InStore.OrderStatusRequest.MerchantReference"/> and <see cref="P:Yort.Laybuy.InStore.OrderStatusRequest.OrderId"/> are both null, empty or whitespace. Also thrown if <see cref="P:Yort.Laybuy.InStore.OrderStatusRequest.OrderId"/> is zero or negative.</exception>
+        </member>
+        <member name="M:Yort.Laybuy.InStore.LaybuyClient.Refund(Yort.Laybuy.InStore.RefundRequest)">
+            <summary>
+            Refunds an amount of money against a Laybuy previously created via <see cref="M:Yort.Laybuy.InStore.LaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)"/>.
+            </summary>
+            <param name="request">A <see cref="T:Yort.Laybuy.InStore.RefundRequest"/> with details of the refund to make.</param>
+            <returns>A <see cref="T:Yort.Laybuy.InStore.RefundResponse"/> indicating the outcome of the request.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown if <see cref="P:Yort.Laybuy.InStore.RefundRequest.RefundReference"/> is null.</exception>
+            <exception cref="T:System.ArgumentException">Thrown if <see cref="P:Yort.Laybuy.InStore.RefundRequest.OrderId"/> or <see cref="P:Yort.Laybuy.InStore.RefundRequest.Amount"/> are zero or negative. Also thrown if <see cref="P:Yort.Laybuy.InStore.RefundRequest.RefundReference"/> is empty or whitespace.</exception>
+        </member>
+        <member name="M:Yort.Laybuy.InStore.LaybuyClient.Dispose">
+            <summary>
+            Disposes this instance and all internal resources.
+            </summary>
+        </member>
+        <member name="T:Yort.Laybuy.InStore.LaybuyClientConfiguration">
+            <summary>
+            Provides configuration settings for <see cref="T:Yort.Laybuy.InStore.ILaybuyClient"/> and default values for some requests..
+            </summary>
+        </member>
+        <member name="M:Yort.Laybuy.InStore.LaybuyClientConfiguration.#ctor(Yort.Laybuy.InStore.LaybuyCredentials)">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.LaybuyClientConfiguration.Environment">
+            <summary>
+            Gets or sets a value from the <see cref="T:Yort.Laybuy.InStore.LaybuyEnvironment"/> enum specifying whether this client connects to the production or sandboxed (test) Laybuy API.
+            </summary>
+            <remarks>
+            <para>The default value is <see cref="F:Yort.Laybuy.InStore.LaybuyEnvironment.Sandbox"/> to prevent accidental live transactions. Production systems must specify <see cref="F:Yort.Laybuy.InStore.LaybuyEnvironment.Production"/> for real payments to occur.</para>
+            </remarks>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.LaybuyClientConfiguration.Credentials">
+            <summary>
+            Gets or sets a <see cref="T:Yort.Laybuy.InStore.LaybuyCredentials"/> instance used to authenticate to the Laybuy API.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.LaybuyClientConfiguration.Origin">
+            <summary>
+            Gets or sets the origin value to pass on all calls to Laybuy.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.LaybuyClientConfiguration.CallbackUrlTemplate">
+            <summary>
+            Gets or sets a string containing a template used to automatically generate callback urls for <see cref="T:Yort.Laybuy.InStore.CreateOrderRequest"/>.
+            </summary>
+            <remarks>
+            <para>You can use the (case-sensitive) tag {merchantReference} in the template string, it will be replaced with the merchant reference of the request the url is generated for.</para>
+            <para>Sample: https://www.mydomain.com/callbacks/laybuy/{merchantReference} </para>
+            </remarks>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.LaybuyClientConfiguration.HttpClientFactory">
+            <summary>
+            Gets or sets a function that create an <see cref="T:System.Net.Http.HttpClient"/> to be used to communicate with Laybuy. Can be null, in which case the system will create it's own instance.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.LaybuyClientConfiguration.DefaultOrigin">
+            <summary>
+            Gets or sets the default <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.Origin"/> value.
+            </summary>
+            <value>
+            The default origin.
+            </value>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.LaybuyClientConfiguration.DefaultBranch">
+            <summary>
+            Gets or sets the default value for <see cref="P:Yort.Laybuy.InStore.StandardOriginData.Branch"/> which is applied if no origin data is specified on a <see cref="T:Yort.Laybuy.InStore.CreateOrderRequest"/>.
+            </summary>
+            <value>
+            The default branch identifier (usually name).
+            </value>
+        </member>
+        <member name="T:Yort.Laybuy.InStore.LaybuyEnvironment">
+            <summary>
+            Represents the possible environments for Laybuy.
+            </summary>
+        </member>
+        <member name="F:Yort.Laybuy.InStore.LaybuyEnvironment.Sandbox">
+            <summary>
+            Test environment.
+            </summary>
+        </member>
+        <member name="F:Yort.Laybuy.InStore.LaybuyEnvironment.Production">
+            <summary>
+            Live/production environment.
+            </summary>
+        </member>
+        <member name="T:Yort.Laybuy.InStore.LaybuyCredentials">
+            <summary>
+            Provides the credentials required to authentication to the Laybuy API.
+            </summary>
+        </member>
+        <member name="M:Yort.Laybuy.InStore.LaybuyCredentials.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Yort.Laybuy.InStore.LaybuyCredentials"/> class.
+            </summary>
+            <param name="merchantId">The merchant identifier.</param>
+            <param name="apiKey">The API key.</param>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.LaybuyCredentials.MerchantId">
+            <summary>
+            Gets or sets the merchant identifier.
+            </summary>
+            <value>
+            The merchant identifier.
+            </value>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.LaybuyCredentials.ApiKey">
+            <summary>
+            Gets or sets the API key.
+            </summary>
+            <value>
+            The API key.
+            </value>
+            <remarks>
+            <para>This is a "secret" value and should be stored securely, and protected from unauthorised access.</para>
+            </remarks>
+        </member>
+        <member name="T:Yort.Laybuy.InStore.LaybuyCustomerAddress">
+            <summary>
+            Represent a billing or shipping address for a <see cref="T:Yort.Laybuy.InStore.RequestLaybuyCustomer"/>.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.LaybuyCustomerAddress.Name">
+            <summary>
+            The name of the person associated with the address, the person/department receiving the bill or the goods, 
+            depending on whether this is a billing or shipping address. If not specified, the customer's name will be used.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.LaybuyCustomerAddress.Phone">
+            <summary>
+            The phone number of the contact person or department for this address.
+            </summary>
+            <remarks>
+            <para>If not provided the customer's phone number is used.</para>
+            </remarks>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.LaybuyCustomerAddress.Address1">
+            <summary>
+            The first line of address for the customer.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.LaybuyCustomerAddress.Address2">
+            <summary>
+            The second line of address for the customer, if any.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.LaybuyCustomerAddress.Suburb">
+            <summary>
+            The suburb asssociated with the customer's address.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.LaybuyCustomerAddress.City">
+            <summary>
+            The city asssociated with the customer's address.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.LaybuyCustomerAddress.State">
+            <summary>
+            The state asssociated with the customer's address.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.LaybuyCustomerAddress.Postcode">
+            <summary>
+            The post code asssociated with the customer's address.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.LaybuyCustomerAddress.Country">
+            <summary>
+            The country asssociated with the customer's address.
+            </summary>
+        </member>
+        <member name="T:Yort.Laybuy.InStore.LaybuyCustomerBase">
+            <summary>
+            Provides details about a customer to/from Laybuy.
+            </summary>
+            <remarks>
+            <para>Unfortunately the Laybuy API isn't consistent in it's format of customer entities, with the shape of the entity varying when it's used on a request 
+            vs. a response. This class provided properties common to a Laybuy customer entity in either direction. See <see cref="T:Yort.Laybuy.InStore.RequestLaybuyCustomer"/> 
+            and <see cref="T:Yort.Laybuy.InStore.ResponseLaybuyCustomer"/> classes for the full entities.
+            </para>
+            </remarks>
+            <seealso cref="T:Yort.Laybuy.InStore.RequestLaybuyCustomer"/>
+            <seealso cref="T:Yort.Laybuy.InStore.ResponseLaybuyCustomer"/>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.LaybuyCustomerBase.FirstName">
+            <summary>
+            The first name of the customer.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.LaybuyCustomerBase.LastName">
+            <summary>
+            The surname of the customer.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.LaybuyCustomerBase.Email">
+            <summary>
+            The email address of the customer.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.LaybuyCustomerBase.Phone">
+            <summary>
+            Required. The mobile phone number of the customer.
+            </summary>
+            <remarks>
+            <para>The customer's mobile phone number must be provided for <see cref="T:Yort.Laybuy.InStore.CreateOrderRequest"/> requests so the can be sent the payment link via SMS.</para>
+            </remarks>
+        </member>
+        <member name="T:Yort.Laybuy.InStore.LaybuyItem">
+            <summary>
+            Represents an item purchased via Laybuy.
+            </summary>
+            <seealso cref="P:Yort.Laybuy.InStore.CreateOrderRequest.Items"/>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.LaybuyItem.Id">
+            <summary>
+            The merchant's unique identifier (id, PLU/SKU, barcode, etc.) for the product.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.LaybuyItem.Description">
+            <summary>
+            The description of the product.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.LaybuyItem.Quantity">
+            <summary>
+            The quantity of the item purchased.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.LaybuyItem.Price">
+            <summary>
+            The unit price of the product, in the currency specified on the <seealso cref="T:Yort.Laybuy.InStore.CreateOrderRequest"/>.
+            </summary>
+        </member>
+        <member name="T:Yort.Laybuy.InStore.LaybuyOrderRefund">
+            <summary>
+            Represents a refund previously made against an order.
+            </summary>
+            <seealso cref="P:Yort.Laybuy.InStore.OrderStatusResponse.Refunds"/>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.LaybuyOrderRefund.RefundId">
+            <summary>
+            Gets or sets the refund identifier.
+            </summary>
+            <value>
+            The refund identifier.
+            </value>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.LaybuyOrderRefund.DateTime">
+            <summary>
+            Gets or sets the date time at which the refund occurred.
+            </summary>
+            <value>
+            The date time.
+            </value>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.LaybuyOrderRefund.Amount">
+            <summary>
+            Gets or sets the amount of the refund.
+            </summary>
+            <value>
+            The amount.
+            </value>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.LaybuyOrderRefund.RefundReference">
+            <summary>
+            Gets or sets the refund reference.
+            </summary>
+            <value>
+            The refund reference.
+            </value>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.LaybuyOrderRefund.User">
+            <summary>
+            Gets or sets the user that made the refund.
+            </summary>
+            <value>
+            The user.
+            </value>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.LaybuyOrderRefund.UserNote">
+            <summary>
+            Gets or sets the user entered note of the refund.
+            </summary>
+            <value>
+            The user note.
+            </value>
+        </member>
+        <member name="T:Yort.Laybuy.InStore.LaybuyRequestBase">
+            <summary>
+            Base class for request objects, used to provide some internal plumbing. Not intended for use from application code.
+            </summary>
+        </member>
+        <member name="M:Yort.Laybuy.InStore.LaybuyRequestBase.Validate">
+            <summary>
+            Validates the properties for this instance are valid before sending the request to the API.
+            </summary>
+            <remarks>
+            <para>Provides simple client side validation, such as required fields beign provided and fields under maximum lengths etc.</para>
+            </remarks>
+        </member>
+        <member name="M:Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)">
+            <summary>
+            Sets any properties on this object that are null to the appropriate defaults, if possible.
+            </summary>
+            <param name="settings">The settings used to construct the <see cref="T:Yort.Laybuy.InStore.LaybuyClient"/> instance that is about to send this request.</param>
+        </member>
+        <member name="T:Yort.Laybuy.InStore.LaybuyStatus">
+            <summary>
+            Provides various constant values used by/with Laybuy.
+            </summary>
+        </member>
+        <member name="F:Yort.Laybuy.InStore.LaybuyStatus.Success">
+            <summary>
+            Indicates a successful call to the Laybuy API (see	<see cref="P:Yort.Laybuy.InStore.LaybuyApiResponseBase.Result"/>).
+            </summary>
+        </member>
+        <member name="F:Yort.Laybuy.InStore.LaybuyStatus.Error">
+            <summary>
+            Indicates an unsuccessful call to the Laybuy API (see	<see cref="P:Yort.Laybuy.InStore.LaybuyApiResponseBase.Result"/>).
+            </summary>
+        </member>
+        <member name="F:Yort.Laybuy.InStore.LaybuyStatus.Cancelled">
+            <summary>
+            Indicates a transaction has been cancelled.
+            </summary>
+        </member>
+        <member name="T:Yort.Laybuy.InStore.OrderStatusRequest">
+            <summary>
+            Represents arguments passed to <see cref="M:Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)"/>.
+            </summary>
+            <seealso cref="T:Yort.Laybuy.InStore.OrderStatusResponse"/>
+            <seealso cref="M:Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)"/>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.OrderStatusRequest.OrderId">
+            <summary>
+            The unique Laybuy id of the Laybuy order to retrieve. Can be null if <see cref="P:Yort.Laybuy.InStore.OrderStatusRequest.MerchantReference"/> is provided.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.OrderStatusRequest.MerchantReference">
+            <summary>
+            The unique merchant reference of the Laybuy order to retrieve. Can be null if <see cref="P:Yort.Laybuy.InStore.OrderStatusRequest.OrderId"/> is provided.
+            </summary>
+        </member>
+        <member name="M:Yort.Laybuy.InStore.OrderStatusRequest.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)">
+            <summary>
+            Sets any properties on this object that are null to the appropriate defaults, if possible.
+            </summary>
+            <param name="settings">The settings used to construct the <see cref="T:Yort.Laybuy.InStore.LaybuyClient" /> instance that is about to send this request.</param>
+        </member>
+        <member name="M:Yort.Laybuy.InStore.OrderStatusRequest.Validate">
+            <summary>
+            Validates the properties for this instance are valid before sending the request to the API.
+            </summary>
+            <exception cref="T:System.ArgumentException"></exception>
+            <remarks>
+            Provides simple client side validation, such as required fields beign provided and fields under maximum lengths etc.
+            </remarks>
+        </member>
+        <member name="T:Yort.Laybuy.InStore.OrderStatusResponse">
+            <summary>
+            Provides details about a Laybuy order, returned by <see cref="M:Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)"/>.
+            </summary>
+            <seealso cref="T:Yort.Laybuy.InStore.OrderStatusRequest"/>
+            <seealso cref="M:Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)"/>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.OrderStatusResponse.OrderId">
+            <summary>
+            The unique id of the order used by Laybuy.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.OrderStatusResponse.Token">
+            <summary>
+            The payment token associated with the order.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.OrderStatusResponse.Amount">
+            <summary>
+            The total value of the order.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.OrderStatusResponse.Currency">
+            <summary>
+            The currency associated with <see cref="P:Yort.Laybuy.InStore.OrderStatusResponse.Amount"/>.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.OrderStatusResponse.MerchantReference">
+            <summary>
+            The unique client reference generated by the merchant to refer to this transaction and help ensure idempotency.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.OrderStatusResponse.Processed">
+            <summary>
+            The date and time this order was processed, or null if it has not been confirmed.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.OrderStatusResponse.Customer">
+            <summary>
+            A <see cref="T:Yort.Laybuy.InStore.ResponseLaybuyCustomer"/> instance containing details of the customer associated with the order.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.OrderStatusResponse.Refunds">
+            <summary>
+            Gets or sets any refunds previously made against this order.
+            </summary>
+            <value>
+            The refunds.
+            </value>
+        </member>
+        <member name="T:Yort.Laybuy.InStore.RefundRequest">
+            <summary>
+            Represents the arguments passed to <see cref="M:Yort.Laybuy.InStore.ILaybuyClient.Refund(Yort.Laybuy.InStore.RefundRequest)"/>.
+            </summary>
+            <seealso cref="T:Yort.Laybuy.InStore.RefundResponse"/>
+            <seealso cref="M:Yort.Laybuy.InStore.ILaybuyClient.Refund(Yort.Laybuy.InStore.RefundRequest)"/>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.RefundRequest.OrderId">
+            <summary>
+            The unique id of the Laybuy order to refund against.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.RefundRequest.RefundReference">
+            <summary>
+            A unique client generated reference for the refund request, used to ensure idempotency.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.RefundRequest.Amount">
+            <summary>
+            The amount of the refund.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.RefundRequest.Note">
+            <summary>
+            An optional, humand readable note sent to the recipient of the refund.
+            </summary>
+        </member>
+        <member name="M:Yort.Laybuy.InStore.RefundRequest.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)">
+            <summary>
+            Sets any properties on this object that are null to the appropriate defaults, if possible.
+            </summary>
+            <param name="settings">The settings used to construct the <see cref="T:Yort.Laybuy.InStore.LaybuyClient" /> instance that is about to send this request.</param>
+        </member>
+        <member name="M:Yort.Laybuy.InStore.RefundRequest.Validate">
+            <summary>
+            Validates the properties for this instance are valid before sending the request to the API.
+            </summary>
+            <exception cref="T:System.NotImplementedException"></exception>
+            <remarks>
+            Provides simple client side validation, such as required fields beign provided and fields under maximum lengths etc.
+            </remarks>
+        </member>
+        <member name="T:Yort.Laybuy.InStore.RefundResponse">
+            <summary>
+            Represents the values returned by a call to <see cref="M:Yort.Laybuy.InStore.ILaybuyClient.Refund(Yort.Laybuy.InStore.RefundRequest)"/>.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.RefundResponse.RefundId">
+            <summary>
+            The unique id of the refund transaction created.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.RefundResponse.MerchantReference">
+            <summary>
+            The merchant reference of the Laybuy order that was refunded against.
+            </summary>
+        </member>
+        <member name="T:Yort.Laybuy.InStore.RequestLaybuyCustomer">
+            <summary>
+            A customer entity used on Laybuy API requests.
+            </summary>
+            <seealso cref="T:Yort.Laybuy.InStore.LaybuyCustomerBase" />
+            <seealso cref="T:Yort.Laybuy.InStore.CreateOrderRequest"/>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.RequestLaybuyCustomer.BillingAddress">
+            <summary>
+            Optional. Gets or sets the billing address.
+            </summary>
+            <value>
+            The billing address.
+            </value>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.RequestLaybuyCustomer.ShippingAddress">
+            <summary>
+            Optional. Gets or sets the shipping address.
+            </summary>
+            <value>
+            The shipping address.
+            </value>
+        </member>
+        <member name="T:Yort.Laybuy.InStore.ResponseLaybuyCustomer">
+            <summary>
+            A customer entity as returned by the Laybuy API.
+            </summary>
+            <seealso cref="T:Yort.Laybuy.InStore.LaybuyCustomerBase" />
+            <seealso cref="T:Yort.Laybuy.InStore.ResponseLaybuyCustomer"/>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.ResponseLaybuyCustomer.CustomerId">
+            <summary>
+            The unique id Laybuy knows this customer as.
+            </summary>
+            <remarks>
+            <para>This value is normally returned from Laybuy, and not provided as an input to it.</para>
+            </remarks>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.ResponseLaybuyCustomer.Address1">
+            <summary>
+            The first line of address for the customer.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.ResponseLaybuyCustomer.Address2">
+            <summary>
+            The second line of address for the customer, if any.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.ResponseLaybuyCustomer.Suburb">
+            <summary>
+            The suburb asssociated with the customer's address.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.ResponseLaybuyCustomer.City">
+            <summary>
+            The city asssociated with the customer's address.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.ResponseLaybuyCustomer.State">
+            <summary>
+            The state asssociated with the customer's address.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.ResponseLaybuyCustomer.Postcode">
+            <summary>
+            The post code asssociated with the customer's address.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.ResponseLaybuyCustomer.Country">
+            <summary>
+            The country asssociated with the customer's address.
+            </summary>
+        </member>
+        <member name="T:Yort.Laybuy.InStore.StandardOriginData">
+            <summary>
+            Represents origin data normally used with a <see cref="T:Yort.Laybuy.InStore.CreateOrderRequest"/>.
+            </summary>
+            <remarks>
+            <para>Origin data required/expected can vary based on the <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.Origin"/> provided and the details of the specific
+            implementation. This class provides the origin data used with *most* integrations.</para>
+            </remarks>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.StandardOriginData.CallbackUrl">
+            <summary>
+            The absoulte URL to callback to when the payment process is complete.
+            </summary>
+        </member>
+        <member name="P:Yort.Laybuy.InStore.StandardOriginData.Branch">
+            <summary>
+            Gets or sets the name or identifier of the branch the POS making the request belongs to.
+            </summary>
+            <value>
+            The branch identifier (usually name).
+            </value>
         </member>
     </members>
 </doc>

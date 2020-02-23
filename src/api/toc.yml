@@ -2,5 +2,51 @@
 - uid: Yort.Laybuy.InStore
   name: Yort.Laybuy.InStore
   items:
+  - uid: Yort.Laybuy.InStore.CancelOrderRequest
+    name: CancelOrderRequest
+  - uid: Yort.Laybuy.InStore.CancelOrderResponse
+    name: CancelOrderResponse
+  - uid: Yort.Laybuy.InStore.CreateOrderRequest
+    name: CreateOrderRequest
+  - uid: Yort.Laybuy.InStore.CreateOrderResponse
+    name: CreateOrderResponse
+  - uid: Yort.Laybuy.InStore.ILaybuyClient
+    name: ILaybuyClient
+  - uid: Yort.Laybuy.InStore.LaybuyApiException
+    name: LaybuyApiException
+  - uid: Yort.Laybuy.InStore.LaybuyApiResponseBase
+    name: LaybuyApiResponseBase
   - uid: Yort.Laybuy.InStore.LaybuyClient
     name: LaybuyClient
+  - uid: Yort.Laybuy.InStore.LaybuyClientConfiguration
+    name: LaybuyClientConfiguration
+  - uid: Yort.Laybuy.InStore.LaybuyCredentials
+    name: LaybuyCredentials
+  - uid: Yort.Laybuy.InStore.LaybuyCustomerAddress
+    name: LaybuyCustomerAddress
+  - uid: Yort.Laybuy.InStore.LaybuyCustomerBase
+    name: LaybuyCustomerBase
+  - uid: Yort.Laybuy.InStore.LaybuyEnvironment
+    name: LaybuyEnvironment
+  - uid: Yort.Laybuy.InStore.LaybuyItem
+    name: LaybuyItem
+  - uid: Yort.Laybuy.InStore.LaybuyOrderRefund
+    name: LaybuyOrderRefund
+  - uid: Yort.Laybuy.InStore.LaybuyRequestBase
+    name: LaybuyRequestBase
+  - uid: Yort.Laybuy.InStore.LaybuyStatus
+    name: LaybuyStatus
+  - uid: Yort.Laybuy.InStore.OrderStatusRequest
+    name: OrderStatusRequest
+  - uid: Yort.Laybuy.InStore.OrderStatusResponse
+    name: OrderStatusResponse
+  - uid: Yort.Laybuy.InStore.RefundRequest
+    name: RefundRequest
+  - uid: Yort.Laybuy.InStore.RefundResponse
+    name: RefundResponse
+  - uid: Yort.Laybuy.InStore.RequestLaybuyCustomer
+    name: RequestLaybuyCustomer
+  - uid: Yort.Laybuy.InStore.ResponseLaybuyCustomer
+    name: ResponseLaybuyCustomer
+  - uid: Yort.Laybuy.InStore.StandardOriginData
+    name: StandardOriginData

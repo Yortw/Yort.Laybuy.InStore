@@ -14,11 +14,287 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Yort.Laybuy.InStore.CancelOrderRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Yort.Laybuy.InStore.CancelOrderRequest.html",
+          "hash": "dSJZrRdCE+v70K08CHqUsg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Yort.Laybuy.InStore.CancelOrderResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Yort.Laybuy.InStore.CancelOrderResponse.html",
+          "hash": "/QyT5irgOvXvHtyVPcRlfw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Yort.Laybuy.InStore.CreateOrderRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Yort.Laybuy.InStore.CreateOrderRequest.html",
+          "hash": "43VPsOKV4tOwjrFsybBStA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Yort.Laybuy.InStore.CreateOrderResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Yort.Laybuy.InStore.CreateOrderResponse.html",
+          "hash": "cj+1BBRfp1p03+z5U90K4w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Yort.Laybuy.InStore.ILaybuyClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Yort.Laybuy.InStore.ILaybuyClient.html",
+          "hash": "sqhGemYMaZJ3WMefLGtYNA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Yort.Laybuy.InStore.LaybuyApiException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Yort.Laybuy.InStore.LaybuyApiException.html",
+          "hash": "5eDEQ/LTVoRNWj2vPZsmPg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Yort.Laybuy.InStore.LaybuyApiResponseBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Yort.Laybuy.InStore.LaybuyApiResponseBase.html",
+          "hash": "ryFhs8Mg+giX5g5gLgjSJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Yort.Laybuy.InStore.LaybuyClient.yml",
       "output": {
         ".html": {
           "relative_path": "api/Yort.Laybuy.InStore.LaybuyClient.html",
-          "hash": "KrCzFyqRFv2kICZYW6ZfyQ=="
+          "hash": "1OjXyKCGSeyTuHRCZ2J0oA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Yort.Laybuy.InStore.LaybuyClientConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Yort.Laybuy.InStore.LaybuyClientConfiguration.html",
+          "hash": "ysftPzDZ+ISSqaAB3SnbZg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Yort.Laybuy.InStore.LaybuyCredentials.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Yort.Laybuy.InStore.LaybuyCredentials.html",
+          "hash": "bJ09OcqSQEwfpUgY1XEyTA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Yort.Laybuy.InStore.LaybuyCustomerAddress.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Yort.Laybuy.InStore.LaybuyCustomerAddress.html",
+          "hash": "cRhDOVhoFsMXItiEgVMWXg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Yort.Laybuy.InStore.LaybuyCustomerBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Yort.Laybuy.InStore.LaybuyCustomerBase.html",
+          "hash": "DhMAtHihzyuF4ADjv81HDw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Yort.Laybuy.InStore.LaybuyEnvironment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Yort.Laybuy.InStore.LaybuyEnvironment.html",
+          "hash": "hbvpYVLVWouyye2F2xq/bQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Yort.Laybuy.InStore.LaybuyItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Yort.Laybuy.InStore.LaybuyItem.html",
+          "hash": "5uCaAp/N9gK7CBrd/tuCaw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Yort.Laybuy.InStore.LaybuyOrderRefund.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Yort.Laybuy.InStore.LaybuyOrderRefund.html",
+          "hash": "dFmRTjrGWNAXbJVDPrSy/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Yort.Laybuy.InStore.LaybuyRequestBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Yort.Laybuy.InStore.LaybuyRequestBase.html",
+          "hash": "cP4lY1cox9qFDviPQVJtcQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Yort.Laybuy.InStore.LaybuyStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Yort.Laybuy.InStore.LaybuyStatus.html",
+          "hash": "NB1ySSWlfiqtRTd0Xz06kw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Yort.Laybuy.InStore.OrderStatusRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Yort.Laybuy.InStore.OrderStatusRequest.html",
+          "hash": "Latzau8dGZ/G+np86gFn1A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Yort.Laybuy.InStore.OrderStatusResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Yort.Laybuy.InStore.OrderStatusResponse.html",
+          "hash": "qfK7xxmdag4CHx/OmvXBGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Yort.Laybuy.InStore.RefundRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Yort.Laybuy.InStore.RefundRequest.html",
+          "hash": "a/NFtYT3qt5Vmm08y4BMHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Yort.Laybuy.InStore.RefundResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Yort.Laybuy.InStore.RefundResponse.html",
+          "hash": "O0APmFisrfZYXoAsN2HugQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Yort.Laybuy.InStore.RequestLaybuyCustomer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Yort.Laybuy.InStore.RequestLaybuyCustomer.html",
+          "hash": "bgeYcwGgZQE3wTdOfK5fnQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Yort.Laybuy.InStore.ResponseLaybuyCustomer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Yort.Laybuy.InStore.ResponseLaybuyCustomer.html",
+          "hash": "IGgELFmBLl5bdH3sVpyiTg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Yort.Laybuy.InStore.StandardOriginData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Yort.Laybuy.InStore.StandardOriginData.html",
+          "hash": "GTcqqrKtaY6w5AEfORpcpw=="
         }
       },
       "is_incremental": false,
@@ -30,7 +306,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Yort.Laybuy.InStore.html",
-          "hash": "l4TNQ/dyfiTsi916kRTl3w=="
+          "hash": "OFsdYUUrOVV/QA//8IgRuA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "vBbHfklCsOmI4a22s1mwwA=="
         }
       },
       "is_incremental": false,
@@ -42,7 +330,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "ZQp2ZwFvGOBJ0UbDQ2lLug=="
+          "hash": "TdM4QYvO90yr99j/4yjWXw=="
         }
       },
       "is_incremental": false,
@@ -69,28 +357,28 @@
         "skipped_file_count": 0
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 25,
+          "skipped_file_count": 23
+        },
+        "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 2,
           "skipped_file_count": 2
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 1,
-          "skipped_file_count": 1
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0

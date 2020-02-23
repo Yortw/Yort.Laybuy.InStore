@@ -1,0 +1,853 @@
+### YamlMime:ManagedReference
+items:
+- uid: Yort.Laybuy.InStore.LaybuyCustomerAddress
+  commentId: T:Yort.Laybuy.InStore.LaybuyCustomerAddress
+  id: LaybuyCustomerAddress
+  parent: Yort.Laybuy.InStore
+  children:
+  - Yort.Laybuy.InStore.LaybuyCustomerAddress.Address1
+  - Yort.Laybuy.InStore.LaybuyCustomerAddress.Address2
+  - Yort.Laybuy.InStore.LaybuyCustomerAddress.City
+  - Yort.Laybuy.InStore.LaybuyCustomerAddress.Country
+  - Yort.Laybuy.InStore.LaybuyCustomerAddress.Name
+  - Yort.Laybuy.InStore.LaybuyCustomerAddress.Phone
+  - Yort.Laybuy.InStore.LaybuyCustomerAddress.Postcode
+  - Yort.Laybuy.InStore.LaybuyCustomerAddress.State
+  - Yort.Laybuy.InStore.LaybuyCustomerAddress.Suburb
+  langs:
+  - csharp
+  - vb
+  name: LaybuyCustomerAddress
+  nameWithType: LaybuyCustomerAddress
+  fullName: Yort.Laybuy.InStore.LaybuyCustomerAddress
+  type: Class
+  source:
+    remote:
+      path: src/LaybuyCustomerAddress.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: LaybuyCustomerAddress
+    path: LaybuyCustomerAddress.cs
+    startLine: 10
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nRepresent a billing or shipping address for a <xref href=\"Yort.Laybuy.InStore.RequestLaybuyCustomer\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public class LaybuyCustomerAddress
+    content.vb: Public Class LaybuyCustomerAddress
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Yort.Laybuy.InStore.LaybuyCustomerAddress.Name
+  commentId: P:Yort.Laybuy.InStore.LaybuyCustomerAddress.Name
+  id: Name
+  parent: Yort.Laybuy.InStore.LaybuyCustomerAddress
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: LaybuyCustomerAddress.Name
+  fullName: Yort.Laybuy.InStore.LaybuyCustomerAddress.Name
+  type: Property
+  source:
+    remote:
+      path: src/LaybuyCustomerAddress.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: Name
+    path: LaybuyCustomerAddress.cs
+    startLine: 16
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nThe name of the person associated with the address, the person/department receiving the bill or the goods, \ndepending on whether this is a billing or shipping address. If not specified, the customer&apos;s name will be used.\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("name")]
+
+      public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("name")>
+
+      Public Property Name As String
+  overload: Yort.Laybuy.InStore.LaybuyCustomerAddress.Name*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: name
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Yort.Laybuy.InStore.LaybuyCustomerAddress.Phone
+  commentId: P:Yort.Laybuy.InStore.LaybuyCustomerAddress.Phone
+  id: Phone
+  parent: Yort.Laybuy.InStore.LaybuyCustomerAddress
+  langs:
+  - csharp
+  - vb
+  name: Phone
+  nameWithType: LaybuyCustomerAddress.Phone
+  fullName: Yort.Laybuy.InStore.LaybuyCustomerAddress.Phone
+  type: Property
+  source:
+    remote:
+      path: src/LaybuyCustomerAddress.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: Phone
+    path: LaybuyCustomerAddress.cs
+    startLine: 24
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nThe phone number of the contact person or department for this address.\n"
+  remarks: "\n<p>If not provided the customer&apos;s phone number is used.</p>\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("phone")]
+
+      public string Phone { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("phone")>
+
+      Public Property Phone As String
+  overload: Yort.Laybuy.InStore.LaybuyCustomerAddress.Phone*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: phone
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Yort.Laybuy.InStore.LaybuyCustomerAddress.Address1
+  commentId: P:Yort.Laybuy.InStore.LaybuyCustomerAddress.Address1
+  id: Address1
+  parent: Yort.Laybuy.InStore.LaybuyCustomerAddress
+  langs:
+  - csharp
+  - vb
+  name: Address1
+  nameWithType: LaybuyCustomerAddress.Address1
+  fullName: Yort.Laybuy.InStore.LaybuyCustomerAddress.Address1
+  type: Property
+  source:
+    remote:
+      path: src/LaybuyCustomerAddress.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: Address1
+    path: LaybuyCustomerAddress.cs
+    startLine: 30
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nThe first line of address for the customer.\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("address1")]
+
+      public string Address1 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("address1")>
+
+      Public Property Address1 As String
+  overload: Yort.Laybuy.InStore.LaybuyCustomerAddress.Address1*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: address1
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Yort.Laybuy.InStore.LaybuyCustomerAddress.Address2
+  commentId: P:Yort.Laybuy.InStore.LaybuyCustomerAddress.Address2
+  id: Address2
+  parent: Yort.Laybuy.InStore.LaybuyCustomerAddress
+  langs:
+  - csharp
+  - vb
+  name: Address2
+  nameWithType: LaybuyCustomerAddress.Address2
+  fullName: Yort.Laybuy.InStore.LaybuyCustomerAddress.Address2
+  type: Property
+  source:
+    remote:
+      path: src/LaybuyCustomerAddress.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: Address2
+    path: LaybuyCustomerAddress.cs
+    startLine: 35
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nThe second line of address for the customer, if any.\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("address2")]
+
+      public string Address2 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("address2")>
+
+      Public Property Address2 As String
+  overload: Yort.Laybuy.InStore.LaybuyCustomerAddress.Address2*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: address2
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Yort.Laybuy.InStore.LaybuyCustomerAddress.Suburb
+  commentId: P:Yort.Laybuy.InStore.LaybuyCustomerAddress.Suburb
+  id: Suburb
+  parent: Yort.Laybuy.InStore.LaybuyCustomerAddress
+  langs:
+  - csharp
+  - vb
+  name: Suburb
+  nameWithType: LaybuyCustomerAddress.Suburb
+  fullName: Yort.Laybuy.InStore.LaybuyCustomerAddress.Suburb
+  type: Property
+  source:
+    remote:
+      path: src/LaybuyCustomerAddress.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: Suburb
+    path: LaybuyCustomerAddress.cs
+    startLine: 40
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nThe suburb asssociated with the customer&apos;s address.\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("suburb")]
+
+      public string Suburb { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("suburb")>
+
+      Public Property Suburb As String
+  overload: Yort.Laybuy.InStore.LaybuyCustomerAddress.Suburb*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: suburb
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Yort.Laybuy.InStore.LaybuyCustomerAddress.City
+  commentId: P:Yort.Laybuy.InStore.LaybuyCustomerAddress.City
+  id: City
+  parent: Yort.Laybuy.InStore.LaybuyCustomerAddress
+  langs:
+  - csharp
+  - vb
+  name: City
+  nameWithType: LaybuyCustomerAddress.City
+  fullName: Yort.Laybuy.InStore.LaybuyCustomerAddress.City
+  type: Property
+  source:
+    remote:
+      path: src/LaybuyCustomerAddress.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: City
+    path: LaybuyCustomerAddress.cs
+    startLine: 45
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nThe city asssociated with the customer&apos;s address.\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("city")]
+
+      public string City { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("city")>
+
+      Public Property City As String
+  overload: Yort.Laybuy.InStore.LaybuyCustomerAddress.City*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: city
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Yort.Laybuy.InStore.LaybuyCustomerAddress.State
+  commentId: P:Yort.Laybuy.InStore.LaybuyCustomerAddress.State
+  id: State
+  parent: Yort.Laybuy.InStore.LaybuyCustomerAddress
+  langs:
+  - csharp
+  - vb
+  name: State
+  nameWithType: LaybuyCustomerAddress.State
+  fullName: Yort.Laybuy.InStore.LaybuyCustomerAddress.State
+  type: Property
+  source:
+    remote:
+      path: src/LaybuyCustomerAddress.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: State
+    path: LaybuyCustomerAddress.cs
+    startLine: 50
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nThe state asssociated with the customer&apos;s address.\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("state")]
+
+      public string State { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("state")>
+
+      Public Property State As String
+  overload: Yort.Laybuy.InStore.LaybuyCustomerAddress.State*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: state
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Yort.Laybuy.InStore.LaybuyCustomerAddress.Postcode
+  commentId: P:Yort.Laybuy.InStore.LaybuyCustomerAddress.Postcode
+  id: Postcode
+  parent: Yort.Laybuy.InStore.LaybuyCustomerAddress
+  langs:
+  - csharp
+  - vb
+  name: Postcode
+  nameWithType: LaybuyCustomerAddress.Postcode
+  fullName: Yort.Laybuy.InStore.LaybuyCustomerAddress.Postcode
+  type: Property
+  source:
+    remote:
+      path: src/LaybuyCustomerAddress.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: Postcode
+    path: LaybuyCustomerAddress.cs
+    startLine: 55
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nThe post code asssociated with the customer&apos;s address.\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("postcode")]
+
+      public string Postcode { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("postcode")>
+
+      Public Property Postcode As String
+  overload: Yort.Laybuy.InStore.LaybuyCustomerAddress.Postcode*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: postcode
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Yort.Laybuy.InStore.LaybuyCustomerAddress.Country
+  commentId: P:Yort.Laybuy.InStore.LaybuyCustomerAddress.Country
+  id: Country
+  parent: Yort.Laybuy.InStore.LaybuyCustomerAddress
+  langs:
+  - csharp
+  - vb
+  name: Country
+  nameWithType: LaybuyCustomerAddress.Country
+  fullName: Yort.Laybuy.InStore.LaybuyCustomerAddress.Country
+  type: Property
+  source:
+    remote:
+      path: src/LaybuyCustomerAddress.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: Country
+    path: LaybuyCustomerAddress.cs
+    startLine: 60
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nThe country asssociated with the customer&apos;s address.\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("country")]
+
+      public string Country { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("country")>
+
+      Public Property Country As String
+  overload: Yort.Laybuy.InStore.LaybuyCustomerAddress.Country*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: country
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Yort.Laybuy.InStore.RequestLaybuyCustomer
+  commentId: T:Yort.Laybuy.InStore.RequestLaybuyCustomer
+  parent: Yort.Laybuy.InStore
+  name: RequestLaybuyCustomer
+  nameWithType: RequestLaybuyCustomer
+  fullName: Yort.Laybuy.InStore.RequestLaybuyCustomer
+- uid: Yort.Laybuy.InStore
+  commentId: N:Yort.Laybuy.InStore
+  name: Yort.Laybuy.InStore
+  nameWithType: Yort.Laybuy.InStore
+  fullName: Yort.Laybuy.InStore
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Yort.Laybuy.InStore.LaybuyCustomerAddress.Name*
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyCustomerAddress.Name
+  name: Name
+  nameWithType: LaybuyCustomerAddress.Name
+  fullName: Yort.Laybuy.InStore.LaybuyCustomerAddress.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Yort.Laybuy.InStore.LaybuyCustomerAddress.Phone*
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyCustomerAddress.Phone
+  name: Phone
+  nameWithType: LaybuyCustomerAddress.Phone
+  fullName: Yort.Laybuy.InStore.LaybuyCustomerAddress.Phone
+- uid: Yort.Laybuy.InStore.LaybuyCustomerAddress.Address1*
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyCustomerAddress.Address1
+  name: Address1
+  nameWithType: LaybuyCustomerAddress.Address1
+  fullName: Yort.Laybuy.InStore.LaybuyCustomerAddress.Address1
+- uid: Yort.Laybuy.InStore.LaybuyCustomerAddress.Address2*
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyCustomerAddress.Address2
+  name: Address2
+  nameWithType: LaybuyCustomerAddress.Address2
+  fullName: Yort.Laybuy.InStore.LaybuyCustomerAddress.Address2
+- uid: Yort.Laybuy.InStore.LaybuyCustomerAddress.Suburb*
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyCustomerAddress.Suburb
+  name: Suburb
+  nameWithType: LaybuyCustomerAddress.Suburb
+  fullName: Yort.Laybuy.InStore.LaybuyCustomerAddress.Suburb
+- uid: Yort.Laybuy.InStore.LaybuyCustomerAddress.City*
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyCustomerAddress.City
+  name: City
+  nameWithType: LaybuyCustomerAddress.City
+  fullName: Yort.Laybuy.InStore.LaybuyCustomerAddress.City
+- uid: Yort.Laybuy.InStore.LaybuyCustomerAddress.State*
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyCustomerAddress.State
+  name: State
+  nameWithType: LaybuyCustomerAddress.State
+  fullName: Yort.Laybuy.InStore.LaybuyCustomerAddress.State
+- uid: Yort.Laybuy.InStore.LaybuyCustomerAddress.Postcode*
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyCustomerAddress.Postcode
+  name: Postcode
+  nameWithType: LaybuyCustomerAddress.Postcode
+  fullName: Yort.Laybuy.InStore.LaybuyCustomerAddress.Postcode
+- uid: Yort.Laybuy.InStore.LaybuyCustomerAddress.Country*
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyCustomerAddress.Country
+  name: Country
+  nameWithType: LaybuyCustomerAddress.Country
+  fullName: Yort.Laybuy.InStore.LaybuyCustomerAddress.Country
