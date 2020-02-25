@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title> | Yort.Laybuy.InStore </title>
+    <title>Production Implementation Requirements | Yort.Laybuy.InStore </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content=" | Yort.Laybuy.InStore ">
+    <meta name="title" content="Production Implementation Requirements | Yort.Laybuy.InStore ">
     <meta name="generator" content="docfx 2.49.0.0">
     
     <link rel="shortcut icon" href="../images/projecticon.ico">
@@ -106,7 +106,43 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
+<h1 id="production-implementation-requirements">Production Implementation Requirements</h1>
 
+<p>In order to provide a production quality integration with Laybuy the application developer must undertake a number of steps.</p>
+<h2 id="power-failurecrash-recovery">Power Failure/Crash Recovery</h2>
+<p>A reliable integration must handle situation where the POS process dies while a Laybuy order (or refund) is pending, due to a power/hardware failure, OS restart, bug etc. In this case the usual pattern is:</p>
+<ul>
+<li>On start-up, or another suitable event, check a persistent store for a list of outstanding requests. For each pending request, recover at least the <em>MerchantReference</em>, and optionally other data such as when the request was made.
+<ul>
+<li>If a pending order is found, begin polling for the status of that order. If the order is still pending after the first check, either continue polling or cancel immediately. When a final state is reached the POS should relate this answer back to the pending POS transaction, provide some way for the user to apply it to a new transaction or perform an automatic refund depending on how the POS is designed.</li>
+<li>If a pending refund is found, retry the refund request using the same merchant reference if you want to ensure the refund occurred. If you want to check whether it occurred, perform a status poll for the order and check the list of refunds in the order status response.</li>
+</ul>
+</li>
+<li>Before sending a <a href="../api/Yort.Laybuy.InStore.LaybuyClient.html#Yort_Laybuy_InStore_LaybuyClient_Create_Yort_Laybuy_InStore_CreateOrderRequest_">Create</a> or <a href="../api/Yort.Laybuy.InStore.LaybuyClient.html#Yort_Laybuy_InStore_LaybuyClient_Refund_Yort_Laybuy_InStore_RefundRequest_">Refund</a> request, generate a unique MerchantReference to be used on that request and save it to persistent storage so it can be used for crash recovery (see above)</li>
+<li>When a POS transaction is completed (or next persisted to permanent storage) with an order or refund that has reached a final status, remove that requests reference from the persistent store of pending requests so it will no longer be rechecked on a restart (see previous steps).</li>
+</ul>
+<h2 id="error-handling">Error Handling</h2>
+<p>All methods in the <a href="../api/Yort.Laybuy.InStore.LaybuyClient.html">LaybuyClient</a> class might throw exceptions. Some exceptions such as System.ArgumentException and System.ArgumentNullException occur before the request is sent, if the request data doesn't meet the minimum known requirements for Laybuy. These should be handled probably presented to the user to tell them what is missing.</p>
+<p>In addition, any error normally throwing by the .Net HttpClient class, including System.TaskCanceledException or HttpRequestException could be re-thrown from these methods. TaskCanceled and timeout exceptions should may require special handling. For example if these exceptions are thrown during a <a href="../api/Yort.Laybuy.InStore.LaybuyClient.html#Yort_Laybuy_InStore_LaybuyClient_Create_Yort_Laybuy_InStore_CreateOrderRequest_">Create</a> call and the POS is not going to try again then another call should be made to <a href="">Cancel</a> to ensure the order is subsequently accepted by the user.</p>
+<p>HttpResponseExceptions may indicate a transient error, such as the network being briefly down, or a service unavailable/too many requests response from the server. In this case the POS should wait a short period and then retry the operation.</p>
+<h2 id="polling-timeout">Polling Timeout</h2>
+<p>It's possible that due to a long network outage or similar problem that a create order request may never reach an approved or declined state and cannot be immediately cancelled. In this case the POS should have a timeout where it gives up polling. This timeout should not be too short, or should prompt the operator to ask if it should give up, as new customers  can sometimes take several minutes to complete the sign up process. It is up to the POS to decide how to behave, but the usual logic is:</p>
+<ul>
+<li>Treat the request as declined</li>
+<li>Store the request somewhere to be rechecked at a later time when the network is available again.</li>
+<li>If the customer still wants to make payment they will have to choose another payment method (since the network is not available and Laybuy cannot be used)</li>
+<li>On recheck:
+<ul>
+<li>If the payment is pending, cancel it.</li>
+<li>If the payment is approved, refund it.</li>
+<li>If the payment is cancelled or declined, there is nothing to do except remove it from the list of rechecks</li>
+</ul>
+</li>
+</ul>
+<h2 id="manual-cancellation">Manual Cancellation</h2>
+<p>An operator may mis-key the customer's email address or payment amount (if split payments are allowed). It's also possible the cutomer's device may run out of batter, have no network connection to receive the payment request, or get dropped and damaged etc. In any of these cases where the payment cannot be processed for a known reason the POS user should have the option to manually cancel the request without waiting for a long timeout.  This needs to use the <a href="../api/Yort.Laybuy.InStore.LaybuyClient.html#Yort_Laybuy_InStore_LaybuyClient_Cancel_Yort_Laybuy_InStore_CancelOrderRequest_">Cancel</a> method to notify Laybuy of the cancellation, and only treat the payment as cancelled if the cancellation request is successful.</p>
+<h2 id="cancelling-orders">Cancelling Orders</h2>
+<p>When making a <a href="../api/Yort.Laybuy.InStore.LaybuyClient.html#Yort_Laybuy_InStore_LaybuyClient_Cancel_Yort_Laybuy_InStore_CancelOrderRequest_">Cancel</a> order request an error response will be returned if the order has been accepted or declined already. This can happen even if you just polled for the status of the order and were told it is pending, due to race conditions between your poll and the user or payment back end providing a final response. Therefore, any cancellation request must have it's result checked and if an error is returned the order status should be polled again to ensure it is not now accepted/declined.</p>
 </article>
           </div>
           
