@@ -73,7 +73,7 @@
             Required. A string identifying the calling system. Must be pre-registered with Laybuy.
             </summary>
             <remarks>
-            <para>Uses a default of POS if not specified and no default is specified via the <see cref="P:Yort.Laybuy.InStore.LaybuyClientConfiguration.Origin"/> value.</para>
+            <para>Uses a default of POS if not specified and no default is specified via the <see cref="P:Yort.Laybuy.InStore.LaybuyClientConfiguration.DefaultOrigin"/> value.</para>
             </remarks>
         </member>
         <member name="P:Yort.Laybuy.InStore.CreateOrderRequest.OriginData">
@@ -279,10 +279,13 @@
             <see cref="P:Yort.Laybuy.InStore.LaybuyClientConfiguration.DefaultBranch"/> are non empty in the settings object used to construct this client then a 
             new <see cref="T:Yort.Laybuy.InStore.StandardOriginData"/> instance is automatically created with appropriate values and applied to the request. If no default 
             value can be applied then <see cref="T:System.ArgumentNullException"/> is thrown.</para>
+            <para>
+            See the Laybuy documenation at: https://integrations.laybuy.com/reference#post_order-create-1
+            </para>
             </remarks>
             <returns>A <see cref="T:Yort.Laybuy.InStore.CreateOrderResponse"/> indicating the outcome of the request.</returns>
             <exception cref="T:System.ArgumentNullException">Thrown if request, <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.Origin"/>, <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.OriginData"/>, <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.Customer"/> or <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.MerchantReference"/> is null.</exception>
-            <exception cref="T:System.ArgumentException">Thrown if request, <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.Origin"/>, <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.OriginData"/>, <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.MerchantReference"/> or <see cref="!:RequestLaybuyCustomer.Phone"/> is an empty string or only whitespace. Also thrown if <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.Amount"/> is zero or negative.</exception>
+            <exception cref="T:System.ArgumentException">Thrown if request, <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.Origin"/>, <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.OriginData"/>, <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.MerchantReference"/> or <see cref="P:Yort.Laybuy.InStore.LaybuyCustomerBase.Phone"/> is an empty string or only whitespace. Also thrown if <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.Amount"/> is zero or negative.</exception>
         </member>
         <member name="M:Yort.Laybuy.InStore.LaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)">
             <summary>
@@ -327,11 +330,6 @@
         <member name="P:Yort.Laybuy.InStore.LaybuyClientConfiguration.Credentials">
             <summary>
             Gets or sets a <see cref="T:Yort.Laybuy.InStore.LaybuyCredentials"/> instance used to authenticate to the Laybuy API.
-            </summary>
-        </member>
-        <member name="P:Yort.Laybuy.InStore.LaybuyClientConfiguration.Origin">
-            <summary>
-            Gets or sets the origin value to pass on all calls to Laybuy.
             </summary>
         </member>
         <member name="P:Yort.Laybuy.InStore.LaybuyClientConfiguration.CallbackUrlTemplate">

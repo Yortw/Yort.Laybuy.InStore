@@ -50,11 +50,6 @@ namespace Yort.Laybuy.InStore
 		public LaybuyCredentials Credentials { get; private set; }
 
 		/// <summary>
-		/// Gets or sets the origin value to pass on all calls to Laybuy.
-		/// </summary>
-		public string? Origin { get; set; }
-
-		/// <summary>
 		/// Gets or sets a string containing a template used to automatically generate callback urls for <see cref="CreateOrderRequest"/>.
 		/// </summary>
 		/// <remarks>
@@ -76,6 +71,9 @@ namespace Yort.Laybuy.InStore
 		/// <value>
 		/// The default origin.
 		/// </value>
+		/// <remarks>
+		/// <para>The default value is "POS".</para>
+		/// </remarks>
 		public string? DefaultOrigin { get; set; }
 
 		/// <summary>
@@ -94,9 +92,9 @@ namespace Yort.Laybuy.InStore
 		private Uri GetRootUri()
 		{
 			if (_Environment == LaybuyEnvironment.Production)
-				return new Uri("https://api.Laybuy/");
+				return new Uri("https://api.laybuy.com/");
 
-			return new Uri("https://sandbox-api.Laybuy/");
+			return new Uri("https://sandbox-api.laybuy.com/");
 		}
 	}
 

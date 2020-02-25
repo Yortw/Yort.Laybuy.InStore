@@ -71,6 +71,9 @@ namespace Yort.Laybuy.InStore
 		/// <seealso cref="Create(CreateOrderRequest)"/>
 		/// <exception cref="System.ArgumentNullException">Thrown if <see cref="CancelOrderRequest.Token"/> is null.</exception>
 		/// <exception cref="System.ArgumentException">Thrown if <see cref="CancelOrderRequest.Token"/> is an empty string or only whitespace.</exception>
+		/// <exception cref="System.Threading.Tasks.TaskCanceledException">May be thrown in the event of a timeout calling the Laybuy API.</exception>
+		/// <exception cref="System.TimeoutException">May be thrown in the event of a timeout calling the Laybuy API.</exception>
+		/// <exception cref="System.Net.Http.HttpRequestException">Thrown if the call to the Laybuy API returns an error response code. The Laybuy API does not use HTTP response codes for 'business level errors', such as 'order not found' or 'declined', so this type of exception typically represents a problem such as bad credentials, a bad gateway/DNS, server unavailable etc.</exception>
 		public async Task<CancelOrderResponse> Cancel(CancelOrderRequest request)
 		{
 			request.GuardNull(nameof(request));
@@ -88,13 +91,19 @@ namespace Yort.Laybuy.InStore
 		/// <see cref="LaybuyClientConfiguration.DefaultBranch"/> are non empty in the settings object used to construct this client then a 
 		/// new <see cref="StandardOriginData"/> instance is automatically created with appropriate values and applied to the request. If no default 
 		/// value can be applied then <see cref="System.ArgumentNullException"/> is thrown.</para>
+		/// <para>
+		/// See the Laybuy documenation at: https://integrations.laybuy.com/reference#post_order-create-1
+		/// </para>
 		/// </remarks>
 		/// <returns>A <see cref="CreateOrderResponse"/> indicating the outcome of the request.</returns>
 		/// <exception cref="System.ArgumentNullException">Thrown if request, <see cref="CreateOrderRequest.Origin"/>, <see cref="CreateOrderRequest.OriginData"/>, <see cref="CreateOrderRequest.Customer"/> or <see cref="CreateOrderRequest.MerchantReference"/> is null.</exception>
-		/// <exception cref="System.ArgumentException">Thrown if request, <see cref="CreateOrderRequest.Origin"/>, <see cref="CreateOrderRequest.OriginData"/>, <see cref="CreateOrderRequest.MerchantReference"/> or <see cref="RequestLaybuyCustomer.Phone"/> is an empty string or only whitespace. Also thrown if <see cref="CreateOrderRequest.Amount"/> is zero or negative.</exception>
-		public async Task<CreateOrderResponse> Create(CreateOrderRequest request)
+		/// <exception cref="System.ArgumentException">Thrown if request, <see cref="CreateOrderRequest.Origin"/>, <see cref="CreateOrderRequest.OriginData"/>, <see cref="CreateOrderRequest.MerchantReference"/> or <see cref="LaybuyCustomerBase.Phone"/> is an empty string or only whitespace. Also thrown if <see cref="CreateOrderRequest.Amount"/> is zero or negative.</exception>
+		/// <exception cref="System.Threading.Tasks.TaskCanceledException">May be thrown in the event of a timeout calling the Laybuy API.</exception>
+		/// <exception cref="System.TimeoutException">May be thrown in the event of a timeout calling the Laybuy API.</exception>
+		/// <exception cref="System.Net.Http.HttpRequestException">Thrown if the call to the Laybuy API returns an error response code. The Laybuy API does not use HTTP response codes for 'business level errors', such as 'order not found' or 'declined', so this type of exception typically represents a problem such as bad credentials, a bad gateway/DNS, server unavailable etc.</exception>
+		public Task<CreateOrderResponse> Create(CreateOrderRequest request)
 		{
-			return await PostAsync<CreateOrderRequest, CreateOrderResponse>(request, "order/create").ConfigureAwait(false);
+			return PostAsync<CreateOrderRequest, CreateOrderResponse>(request, "order/create");
 		}
 
 		/// <summary>
@@ -103,14 +112,17 @@ namespace Yort.Laybuy.InStore
 		/// <param name="request">A <see cref="OrderStatusRequest"/> with details of the Laybuy to retrieve the status of.</param>
 		/// <returns>A <see cref="OrderStatusResponse"/> indicating the outcome of the request.</returns>
 		/// <exception cref="System.ArgumentException">Thrown if <see cref="OrderStatusRequest.MerchantReference"/> and <see cref="OrderStatusRequest.OrderId"/> are both null, empty or whitespace. Also thrown if <see cref="OrderStatusRequest.OrderId"/> is zero or negative.</exception>
-		public async Task<OrderStatusResponse> GetStatus(OrderStatusRequest request)
+		/// <exception cref="System.Threading.Tasks.TaskCanceledException">May be thrown in the event of a timeout calling the Laybuy API.</exception>
+		/// <exception cref="System.TimeoutException">May be thrown in the event of a timeout calling the Laybuy API.</exception>
+		/// <exception cref="System.Net.Http.HttpRequestException">Thrown if the call to the Laybuy API returns an error response code. The Laybuy API does not use HTTP response codes for 'business level errors', such as 'order not found' or 'declined', so this type of exception typically represents a problem such as bad credentials, a bad gateway/DNS, server unavailable etc.</exception>
+		public Task<OrderStatusResponse> GetStatus(OrderStatusRequest request)
 		{
 			request.GuardNull(nameof(request));
 
 			if (!String.IsNullOrWhiteSpace(request.MerchantReference))
-				return await GetAsync<OrderStatusResponse>("order/merchant/" + request.MerchantReference).ConfigureAwait(false);
+				return GetAsync<OrderStatusResponse>("order/merchant/" + request.MerchantReference);
 
-			return await GetAsync<OrderStatusResponse>("order/" + request.OrderId).ConfigureAwait(false);
+			return GetAsync<OrderStatusResponse>("order/" + request.OrderId);
 		}
 
 		/// <summary>
@@ -120,6 +132,9 @@ namespace Yort.Laybuy.InStore
 		/// <returns>A <see cref="RefundResponse"/> indicating the outcome of the request.</returns>
 		/// <exception cref="System.ArgumentNullException">Thrown if <see cref="RefundRequest.RefundReference"/> is null.</exception>
 		/// <exception cref="System.ArgumentException">Thrown if <see cref="RefundRequest.OrderId"/> or <see cref="RefundRequest.Amount"/> are zero or negative. Also thrown if <see cref="RefundRequest.RefundReference"/> is empty or whitespace.</exception>
+		/// <exception cref="System.Threading.Tasks.TaskCanceledException">May be thrown in the event of a timeout calling the Laybuy API.</exception>
+		/// <exception cref="System.TimeoutException">May be thrown in the event of a timeout calling the Laybuy API.</exception>
+		/// <exception cref="System.Net.Http.HttpRequestException">Thrown if the call to the Laybuy API returns an error response code. The Laybuy API does not use HTTP response codes for 'business level errors', such as 'order not found' or 'declined', so this type of exception typically represents a problem such as bad credentials, a bad gateway/DNS, server unavailable etc.</exception>
 		public Task<RefundResponse> Refund(RefundRequest request)
 		{
 			return PostAsync<RefundRequest, RefundResponse>(request, "order/refund");
@@ -174,28 +189,6 @@ namespace Yort.Laybuy.InStore
 			}
 		}
 
-		private static HttpContent ToHttpContent<T>(T request)
-		{
-			return new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(request, Newtonsoft.Json.Formatting.None));
-		}
-
-		private static async Task<T> DeserialiseResponse<T>(HttpResponseMessage response)
-		{
-			response.EnsureSuccessStatusCode();
-
-			var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-			try
-			{
-				return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(content);
-			}
-			catch (Newtonsoft.Json.JsonException je)
-			{
-				je.Data["ResponseContentType"] = (response?.Content?.Headers?.ContentType?.MediaType ?? String.Empty);
-				je.Data["ResponseContent"] = content;
-				throw;
-			}
-		}
-
 		private async Task<TResponseType> PostAsync<TRequestType, TResponseType>(TRequestType? request, string relativePath) where TRequestType : LaybuyRequestBase where TResponseType : LaybuyApiResponseBase
 		{
 			request.GuardNull(nameof(request));
@@ -222,6 +215,28 @@ namespace Yort.Laybuy.InStore
 		{
 			var response = await _Client.GetAsync(new System.Uri(_Settings.RootUri, relativePath)).ConfigureAwait(false);
 			return await DeserialiseResponse<TResponseType>(response).ConfigureAwait(false);
+		}
+
+		private static HttpContent ToHttpContent<T>(T request)
+		{
+			return new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(request, Newtonsoft.Json.Formatting.None));
+		}
+
+		private static async Task<T> DeserialiseResponse<T>(HttpResponseMessage response)
+		{
+			response.EnsureSuccessStatusCode();
+
+			var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+			try
+			{
+				return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(content);
+			}
+			catch (Newtonsoft.Json.JsonException je)
+			{
+				je.Data["ResponseContentType"] = (response?.Content?.Headers?.ContentType?.MediaType ?? String.Empty);
+				je.Data["ResponseContent"] = content;
+				throw;
+			}
 		}
 
 		#endregion

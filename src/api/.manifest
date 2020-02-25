@@ -47,7 +47,6 @@
   "Yort.Laybuy.InStore.LaybuyClientConfiguration.DefaultOrigin": "Yort.Laybuy.InStore.LaybuyClientConfiguration.yml",
   "Yort.Laybuy.InStore.LaybuyClientConfiguration.Environment": "Yort.Laybuy.InStore.LaybuyClientConfiguration.yml",
   "Yort.Laybuy.InStore.LaybuyClientConfiguration.HttpClientFactory": "Yort.Laybuy.InStore.LaybuyClientConfiguration.yml",
-  "Yort.Laybuy.InStore.LaybuyClientConfiguration.Origin": "Yort.Laybuy.InStore.LaybuyClientConfiguration.yml",
   "Yort.Laybuy.InStore.LaybuyCredentials": "Yort.Laybuy.InStore.LaybuyCredentials.yml",
   "Yort.Laybuy.InStore.LaybuyCredentials.#ctor(System.String,System.String)": "Yort.Laybuy.InStore.LaybuyCredentials.yml",
   "Yort.Laybuy.InStore.LaybuyCredentials.ApiKey": "Yort.Laybuy.InStore.LaybuyCredentials.yml",

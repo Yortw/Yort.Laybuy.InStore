@@ -534,19 +534,6 @@ references:
   isSpec: "True"
   fullName: Yort.Laybuy.InStore.LaybuyClientConfiguration.HttpClientFactory
   nameWithType: LaybuyClientConfiguration.HttpClientFactory
-- uid: Yort.Laybuy.InStore.LaybuyClientConfiguration.Origin
-  name: Origin
-  href: api/Yort.Laybuy.InStore.LaybuyClientConfiguration.html#Yort_Laybuy_InStore_LaybuyClientConfiguration_Origin
-  commentId: P:Yort.Laybuy.InStore.LaybuyClientConfiguration.Origin
-  fullName: Yort.Laybuy.InStore.LaybuyClientConfiguration.Origin
-  nameWithType: LaybuyClientConfiguration.Origin
-- uid: Yort.Laybuy.InStore.LaybuyClientConfiguration.Origin*
-  name: Origin
-  href: api/Yort.Laybuy.InStore.LaybuyClientConfiguration.html#Yort_Laybuy_InStore_LaybuyClientConfiguration_Origin_
-  commentId: Overload:Yort.Laybuy.InStore.LaybuyClientConfiguration.Origin
-  isSpec: "True"
-  fullName: Yort.Laybuy.InStore.LaybuyClientConfiguration.Origin
-  nameWithType: LaybuyClientConfiguration.Origin
 - uid: Yort.Laybuy.InStore.LaybuyCredentials
   name: LaybuyCredentials
   href: api/Yort.Laybuy.InStore.LaybuyCredentials.html

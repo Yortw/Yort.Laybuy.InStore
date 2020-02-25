@@ -12,7 +12,6 @@ items:
   - Yort.Laybuy.InStore.LaybuyClientConfiguration.DefaultOrigin
   - Yort.Laybuy.InStore.LaybuyClientConfiguration.Environment
   - Yort.Laybuy.InStore.LaybuyClientConfiguration.HttpClientFactory
-  - Yort.Laybuy.InStore.LaybuyClientConfiguration.Origin
   langs:
   - csharp
   - vb
@@ -162,43 +161,6 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: Yort.Laybuy.InStore.LaybuyClientConfiguration.Origin
-  commentId: P:Yort.Laybuy.InStore.LaybuyClientConfiguration.Origin
-  id: Origin
-  parent: Yort.Laybuy.InStore.LaybuyClientConfiguration
-  langs:
-  - csharp
-  - vb
-  name: Origin
-  nameWithType: LaybuyClientConfiguration.Origin
-  fullName: Yort.Laybuy.InStore.LaybuyClientConfiguration.Origin
-  type: Property
-  source:
-    remote:
-      path: src/LaybuyClientConfiguration.cs
-      branch: master
-      repo: https://github.com/Yortw/Yort.Laybuy.InStore
-    id: Origin
-    path: LaybuyClientConfiguration.cs
-    startLine: 54
-  assemblies:
-  - Yort.Laybuy.InStore
-  namespace: Yort.Laybuy.InStore
-  summary: "\nGets or sets the origin value to pass on all calls to Laybuy.\n"
-  example: []
-  syntax:
-    content: public string Origin { get; set; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: Public Property Origin As String
-  overload: Yort.Laybuy.InStore.LaybuyClientConfiguration.Origin*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
 - uid: Yort.Laybuy.InStore.LaybuyClientConfiguration.CallbackUrlTemplate
   commentId: P:Yort.Laybuy.InStore.LaybuyClientConfiguration.CallbackUrlTemplate
   id: CallbackUrlTemplate
@@ -217,7 +179,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: CallbackUrlTemplate
     path: LaybuyClientConfiguration.cs
-    startLine: 64
+    startLine: 59
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -255,7 +217,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: HttpClientFactory
     path: LaybuyClientConfiguration.cs
-    startLine: 70
+    startLine: 65
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -292,7 +254,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: DefaultOrigin
     path: LaybuyClientConfiguration.cs
-    startLine: 78
+    startLine: 73
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -330,7 +292,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: DefaultBranch
     path: LaybuyClientConfiguration.cs
-    startLine: 86
+    startLine: 81
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -687,18 +649,6 @@ references:
   name: Credentials
   nameWithType: LaybuyClientConfiguration.Credentials
   fullName: Yort.Laybuy.InStore.LaybuyClientConfiguration.Credentials
-- uid: Yort.Laybuy.InStore.LaybuyClientConfiguration.Origin*
-  commentId: Overload:Yort.Laybuy.InStore.LaybuyClientConfiguration.Origin
-  name: Origin
-  nameWithType: LaybuyClientConfiguration.Origin
-  fullName: Yort.Laybuy.InStore.LaybuyClientConfiguration.Origin
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String
 - uid: Yort.Laybuy.InStore.CreateOrderRequest
   commentId: T:Yort.Laybuy.InStore.CreateOrderRequest
   parent: Yort.Laybuy.InStore
@@ -710,6 +660,13 @@ references:
   name: CallbackUrlTemplate
   nameWithType: LaybuyClientConfiguration.CallbackUrlTemplate
   fullName: Yort.Laybuy.InStore.LaybuyClientConfiguration.CallbackUrlTemplate
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: System.Net.Http.HttpClient
   commentId: T:System.Net.Http.HttpClient
   isExternal: true

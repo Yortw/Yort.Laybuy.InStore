@@ -45,7 +45,7 @@ namespace Yort.Laybuy.InStore
 		/// Required. A string identifying the calling system. Must be pre-registered with Laybuy.
 		/// </summary>
 		/// <remarks>
-		/// <para>Uses a default of POS if not specified and no default is specified via the <see cref="LaybuyClientConfiguration.Origin"/> value.</para>
+		/// <para>Uses a default of POS if not specified and no default is specified via the <see cref="LaybuyClientConfiguration.DefaultOrigin"/> value.</para>
 		/// </remarks>
 		[JsonProperty("origin")]
 		public string? Origin { get; set; } = "POS";
@@ -96,7 +96,7 @@ namespace Yort.Laybuy.InStore
 			if (settings == null) return;
 
 			if (String.IsNullOrWhiteSpace(this.Origin))
-				this.Origin = settings.Origin.GuardNullOrWhiteSpace("request", nameof(Origin));
+				this.Origin = settings.DefaultOrigin.GuardNullOrWhiteSpace("request", nameof(Origin));
 
 			if (OriginData == null)
 			{
@@ -105,7 +105,7 @@ namespace Yort.Laybuy.InStore
 					this.OriginData = new StandardOriginData()
 					{
 						Branch = settings.DefaultBranch,
-						CallbackUrl = new Uri(settings.CallbackUrlTemplate?.Replace("{merchantReference}", this.MerchantReference))
+						CallbackUrl = String.IsNullOrEmpty(settings.CallbackUrlTemplate) ? null : new Uri(settings.CallbackUrlTemplate?.Replace("{merchantReference}", this.MerchantReference))
 					};
 				}
 				else

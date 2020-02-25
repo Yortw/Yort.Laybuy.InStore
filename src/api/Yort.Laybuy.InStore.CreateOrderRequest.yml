@@ -289,7 +289,7 @@ items:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
   summary: "\nRequired. A string identifying the calling system. Must be pre-registered with Laybuy.\n"
-  remarks: "\n<p>Uses a default of POS if not specified and no default is specified via the <xref href=\"Yort.Laybuy.InStore.LaybuyClientConfiguration.Origin\" data-throw-if-not-resolved=\"false\"></xref> value.</p>\n"
+  remarks: "\n<p>Uses a default of POS if not specified and no default is specified via the <xref href=\"Yort.Laybuy.InStore.LaybuyClientConfiguration.DefaultOrigin\" data-throw-if-not-resolved=\"false\"></xref> value.</p>\n"
   example: []
   syntax:
     content: >-
@@ -933,8 +933,8 @@ references:
   name: MerchantReference
   nameWithType: CreateOrderRequest.MerchantReference
   fullName: Yort.Laybuy.InStore.CreateOrderRequest.MerchantReference
-- uid: Yort.Laybuy.InStore.LaybuyClientConfiguration.Origin
-  commentId: P:Yort.Laybuy.InStore.LaybuyClientConfiguration.Origin
+- uid: Yort.Laybuy.InStore.LaybuyClientConfiguration.DefaultOrigin
+  commentId: P:Yort.Laybuy.InStore.LaybuyClientConfiguration.DefaultOrigin
   isExternal: true
 - uid: Yort.Laybuy.InStore.CreateOrderRequest.Origin*
   commentId: Overload:Yort.Laybuy.InStore.CreateOrderRequest.Origin
