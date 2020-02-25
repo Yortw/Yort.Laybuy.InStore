@@ -53,6 +53,9 @@ namespace Yort.Laybuy.InStore
 		/// Gets or sets a string containing a template used to automatically generate callback urls for <see cref="CreateOrderRequest"/>.
 		/// </summary>
 		/// <remarks>
+		/// <para>This value can be left null if you do not require callbacks. The default value is null. Callbacks are not typically used with the in store process 
+		/// (normally they used as part of an e-commerce workflow) but they are referred to in the Laybuy documenation for the POS API so they've been implemented in this 
+		/// library where mentions by that documentation.</para>
 		/// <para>You can use the (case-sensitive) tag {merchantReference} in the template string, it will be replaced with the merchant reference of the request the url is generated for.</para>
 		/// <para>Sample: https://www.mydomain.com/callbacks/laybuy/{merchantReference} </para>
 		/// </remarks>

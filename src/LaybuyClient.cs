@@ -8,6 +8,15 @@ namespace Yort.Laybuy.InStore
 	/// <summary>
 	/// Provides access to the REST endpoints exposed by Laybuy API using an idiomatic .Net, object-oriented model.
 	/// </summary>
+	/// <remarks>
+	/// <para>Instances of this class are thread-safe if that you can send requests through the same instance from multiple threads for different orders (MerchantReferences).
+	/// Sending different requests for the same merchant reference simulatenously should be thread-safe in terms of this library code, but will be prone to potential race conditons 
+	/// on the API back end. Sending a cancel request for a client reference that is still being polled for on another thread is allowed, as the polling mechansim should repeat until 
+	/// the Laybuy API returns a cancelled status and no race condition should be present.</para>
+	/// <para>Instances of this class should be kept and reused as this allows HTTP connection pooling and improves performance. Instances should only be disposed when you no longer intend 
+	/// to use the instance again, such as on process shutdown or if changing the configuration of the client.</para>
+	/// <para><see cref="LaybuyClientConfiguration"/> instances should not be modified after being passed into the construtor of an instance of this class.</para>
+	/// </remarks>
 	public sealed class LaybuyClient : ILaybuyClient
 	{
 
@@ -130,6 +139,10 @@ namespace Yort.Laybuy.InStore
 		/// </summary>
 		/// <param name="request">A <see cref="RefundRequest"/> with details of the refund to make.</param>
 		/// <returns>A <see cref="RefundResponse"/> indicating the outcome of the request.</returns>
+		/// <remarks>
+		/// <para>If you need to retry a refund due to a transient error or interruption (power failure/crash) ensure the same *RefundReference*
+		/// is used on each retry attempt. This should ensure idempotency and prevent multiple refunds being issued by mistake.</para>
+		/// </remarks>
 		/// <exception cref="System.ArgumentNullException">Thrown if <see cref="RefundRequest.RefundReference"/> is null.</exception>
 		/// <exception cref="System.ArgumentException">Thrown if <see cref="RefundRequest.OrderId"/> or <see cref="RefundRequest.Amount"/> are zero or negative. Also thrown if <see cref="RefundRequest.RefundReference"/> is empty or whitespace.</exception>
 		/// <exception cref="System.Threading.Tasks.TaskCanceledException">May be thrown in the event of a timeout calling the Laybuy API.</exception>

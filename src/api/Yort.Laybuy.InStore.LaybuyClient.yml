@@ -25,11 +25,12 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: LaybuyClient
     path: LaybuyClient.cs
-    startLine: 10
+    startLine: 19
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
   summary: "\nProvides access to the REST endpoints exposed by Laybuy API using an idiomatic .Net, object-oriented model.\n"
+  remarks: "\n<p>Instances of this class are thread-safe if that you can send requests through the same instance from multiple threads for different orders (MerchantReferences).\nSending different requests for the same merchant reference simulatenously should be thread-safe in terms of this library code, but will be prone to potential race conditons \non the API back end. Sending a cancel request for a client reference that is still being polled for on another thread is allowed, as the polling mechansim should repeat until \nthe Laybuy API returns a cancelled status and no race condition should be present.</p>\n<p>Instances of this class should be kept and reused as this allows HTTP connection pooling and improves performance. Instances should only be disposed when you no longer intend \nto use the instance again, such as on process shutdown or if changing the configuration of the client.</p>\n<p><xref href=\"Yort.Laybuy.InStore.LaybuyClientConfiguration\" data-throw-if-not-resolved=\"false\"></xref> instances should not be modified after being passed into the construtor of an instance of this class.</p>\n"
   example: []
   syntax:
     content: 'public sealed class LaybuyClient : ILaybuyClient, IDisposable'
@@ -75,7 +76,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: .ctor
     path: LaybuyClient.cs
-    startLine: 27
+    startLine: 36
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -111,7 +112,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Cancel
     path: LaybuyClient.cs
-    startLine: 73
+    startLine: 85
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -136,6 +137,15 @@ items:
   - type: System.ArgumentException
     commentId: T:System.ArgumentException
     description: Thrown if <xref href="Yort.Laybuy.InStore.CancelOrderRequest.Token" data-throw-if-not-resolved="false"></xref> is an empty string or only whitespace.
+  - type: System.Threading.Tasks.TaskCanceledException
+    commentId: T:System.Threading.Tasks.TaskCanceledException
+    description: May be thrown in the event of a timeout calling the Laybuy API.
+  - type: System.TimeoutException
+    commentId: T:System.TimeoutException
+    description: May be thrown in the event of a timeout calling the Laybuy API.
+  - type: System.Net.Http.HttpRequestException
+    commentId: T:System.Net.Http.HttpRequestException
+    description: Thrown if the call to the Laybuy API returns an error response code. The Laybuy API does not use HTTP response codes for &apos;business level errors&apos;, such as &apos;order not found&apos; or &apos;declined&apos;, so this type of exception typically represents a problem such as bad credentials, a bad gateway/DNS, server unavailable etc.
   seealso:
   - linkId: Yort.Laybuy.InStore.LaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)
     commentId: M:Yort.Laybuy.InStore.LaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)
@@ -163,7 +173,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Create
     path: LaybuyClient.cs
-    startLine: 97
+    startLine: 112
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -188,6 +198,15 @@ items:
   - type: System.ArgumentException
     commentId: T:System.ArgumentException
     description: Thrown if request, <xref href="Yort.Laybuy.InStore.CreateOrderRequest.Origin" data-throw-if-not-resolved="false"></xref>, <xref href="Yort.Laybuy.InStore.CreateOrderRequest.OriginData" data-throw-if-not-resolved="false"></xref>, <xref href="Yort.Laybuy.InStore.CreateOrderRequest.MerchantReference" data-throw-if-not-resolved="false"></xref> or <xref href="Yort.Laybuy.InStore.LaybuyCustomerBase.Phone" data-throw-if-not-resolved="false"></xref> is an empty string or only whitespace. Also thrown if <xref href="Yort.Laybuy.InStore.CreateOrderRequest.Amount" data-throw-if-not-resolved="false"></xref> is zero or negative.
+  - type: System.Threading.Tasks.TaskCanceledException
+    commentId: T:System.Threading.Tasks.TaskCanceledException
+    description: May be thrown in the event of a timeout calling the Laybuy API.
+  - type: System.TimeoutException
+    commentId: T:System.TimeoutException
+    description: May be thrown in the event of a timeout calling the Laybuy API.
+  - type: System.Net.Http.HttpRequestException
+    commentId: T:System.Net.Http.HttpRequestException
+    description: Thrown if the call to the Laybuy API returns an error response code. The Laybuy API does not use HTTP response codes for &apos;business level errors&apos;, such as &apos;order not found&apos; or &apos;declined&apos;, so this type of exception typically represents a problem such as bad credentials, a bad gateway/DNS, server unavailable etc.
   implements:
   - Yort.Laybuy.InStore.ILaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)
   modifiers.csharp:
@@ -212,7 +231,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: GetStatus
     path: LaybuyClient.cs
-    startLine: 108
+    startLine: 126
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -233,6 +252,15 @@ items:
   - type: System.ArgumentException
     commentId: T:System.ArgumentException
     description: Thrown if <xref href="Yort.Laybuy.InStore.OrderStatusRequest.MerchantReference" data-throw-if-not-resolved="false"></xref> and <xref href="Yort.Laybuy.InStore.OrderStatusRequest.OrderId" data-throw-if-not-resolved="false"></xref> are both null, empty or whitespace. Also thrown if <xref href="Yort.Laybuy.InStore.OrderStatusRequest.OrderId" data-throw-if-not-resolved="false"></xref> is zero or negative.
+  - type: System.Threading.Tasks.TaskCanceledException
+    commentId: T:System.Threading.Tasks.TaskCanceledException
+    description: May be thrown in the event of a timeout calling the Laybuy API.
+  - type: System.TimeoutException
+    commentId: T:System.TimeoutException
+    description: May be thrown in the event of a timeout calling the Laybuy API.
+  - type: System.Net.Http.HttpRequestException
+    commentId: T:System.Net.Http.HttpRequestException
+    description: Thrown if the call to the Laybuy API returns an error response code. The Laybuy API does not use HTTP response codes for &apos;business level errors&apos;, such as &apos;order not found&apos; or &apos;declined&apos;, so this type of exception typically represents a problem such as bad credentials, a bad gateway/DNS, server unavailable etc.
   implements:
   - Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
   modifiers.csharp:
@@ -257,11 +285,12 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Refund
     path: LaybuyClient.cs
-    startLine: 125
+    startLine: 150
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
   summary: "\nRefunds an amount of money against a Laybuy previously created via <xref href=\"Yort.Laybuy.InStore.LaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  remarks: "\n<p>If you need to retry a refund due to a transient error or interruption (power failure/crash) ensure the same *RefundReference*\nis used on each retry attempt. This should ensure idempotency and prevent multiple refunds being issued by mistake.</p>\n"
   example: []
   syntax:
     content: public Task<RefundResponse> Refund(RefundRequest request)
@@ -281,6 +310,15 @@ items:
   - type: System.ArgumentException
     commentId: T:System.ArgumentException
     description: Thrown if <xref href="Yort.Laybuy.InStore.RefundRequest.OrderId" data-throw-if-not-resolved="false"></xref> or <xref href="Yort.Laybuy.InStore.RefundRequest.Amount" data-throw-if-not-resolved="false"></xref> are zero or negative. Also thrown if <xref href="Yort.Laybuy.InStore.RefundRequest.RefundReference" data-throw-if-not-resolved="false"></xref> is empty or whitespace.
+  - type: System.Threading.Tasks.TaskCanceledException
+    commentId: T:System.Threading.Tasks.TaskCanceledException
+    description: May be thrown in the event of a timeout calling the Laybuy API.
+  - type: System.TimeoutException
+    commentId: T:System.TimeoutException
+    description: May be thrown in the event of a timeout calling the Laybuy API.
+  - type: System.Net.Http.HttpRequestException
+    commentId: T:System.Net.Http.HttpRequestException
+    description: Thrown if the call to the Laybuy API returns an error response code. The Laybuy API does not use HTTP response codes for &apos;business level errors&apos;, such as &apos;order not found&apos; or &apos;declined&apos;, so this type of exception typically represents a problem such as bad credentials, a bad gateway/DNS, server unavailable etc.
   implements:
   - Yort.Laybuy.InStore.ILaybuyClient.Refund(Yort.Laybuy.InStore.RefundRequest)
   modifiers.csharp:
@@ -305,7 +343,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Dispose
     path: LaybuyClient.cs
-    startLine: 137
+    startLine: 162
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -322,6 +360,12 @@ items:
   modifiers.vb:
   - Public
 references:
+- uid: Yort.Laybuy.InStore.LaybuyClientConfiguration
+  commentId: T:Yort.Laybuy.InStore.LaybuyClientConfiguration
+  parent: Yort.Laybuy.InStore
+  name: LaybuyClientConfiguration
+  nameWithType: LaybuyClientConfiguration
+  fullName: Yort.Laybuy.InStore.LaybuyClientConfiguration
 - uid: Yort.Laybuy.InStore
   commentId: N:Yort.Laybuy.InStore
   name: Yort.Laybuy.InStore
@@ -632,12 +676,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Yort.Laybuy.InStore.LaybuyClientConfiguration
-  commentId: T:Yort.Laybuy.InStore.LaybuyClientConfiguration
-  parent: Yort.Laybuy.InStore
-  name: LaybuyClientConfiguration
-  nameWithType: LaybuyClientConfiguration
-  fullName: Yort.Laybuy.InStore.LaybuyClientConfiguration
 - uid: Yort.Laybuy.InStore.LaybuyClient.#ctor*
   commentId: Overload:Yort.Laybuy.InStore.LaybuyClient.#ctor
   name: LaybuyClient
@@ -665,6 +703,15 @@ references:
   isExternal: true
 - uid: System.ArgumentException
   commentId: T:System.ArgumentException
+  isExternal: true
+- uid: System.Threading.Tasks.TaskCanceledException
+  commentId: T:System.Threading.Tasks.TaskCanceledException
+  isExternal: true
+- uid: System.TimeoutException
+  commentId: T:System.TimeoutException
+  isExternal: true
+- uid: System.Net.Http.HttpRequestException
+  commentId: T:System.Net.Http.HttpRequestException
   isExternal: true
 - uid: Yort.Laybuy.InStore.LaybuyClient.Cancel*
   commentId: Overload:Yort.Laybuy.InStore.LaybuyClient.Cancel

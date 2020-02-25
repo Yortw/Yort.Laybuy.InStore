@@ -249,6 +249,15 @@
             <summary>
             Provides access to the REST endpoints exposed by Laybuy API using an idiomatic .Net, object-oriented model.
             </summary>
+            <remarks>
+            <para>Instances of this class are thread-safe if that you can send requests through the same instance from multiple threads for different orders (MerchantReferences).
+            Sending different requests for the same merchant reference simulatenously should be thread-safe in terms of this library code, but will be prone to potential race conditons 
+            on the API back end. Sending a cancel request for a client reference that is still being polled for on another thread is allowed, as the polling mechansim should repeat until 
+            the Laybuy API returns a cancelled status and no race condition should be present.</para>
+            <para>Instances of this class should be kept and reused as this allows HTTP connection pooling and improves performance. Instances should only be disposed when you no longer intend 
+            to use the instance again, such as on process shutdown or if changing the configuration of the client.</para>
+            <para><see cref="T:Yort.Laybuy.InStore.LaybuyClientConfiguration"/> instances should not be modified after being passed into the construtor of an instance of this class.</para>
+            </remarks>
         </member>
         <member name="M:Yort.Laybuy.InStore.LaybuyClient.#ctor(Yort.Laybuy.InStore.LaybuyClientConfiguration)">
             <summary>
@@ -268,6 +277,9 @@
             <seealso cref="M:Yort.Laybuy.InStore.LaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)"/>
             <exception cref="T:System.ArgumentNullException">Thrown if <see cref="P:Yort.Laybuy.InStore.CancelOrderRequest.Token"/> is null.</exception>
             <exception cref="T:System.ArgumentException">Thrown if <see cref="P:Yort.Laybuy.InStore.CancelOrderRequest.Token"/> is an empty string or only whitespace.</exception>
+            <exception cref="T:System.Threading.Tasks.TaskCanceledException">May be thrown in the event of a timeout calling the Laybuy API.</exception>
+            <exception cref="T:System.TimeoutException">May be thrown in the event of a timeout calling the Laybuy API.</exception>
+            <exception cref="T:System.Net.Http.HttpRequestException">Thrown if the call to the Laybuy API returns an error response code. The Laybuy API does not use HTTP response codes for 'business level errors', such as 'order not found' or 'declined', so this type of exception typically represents a problem such as bad credentials, a bad gateway/DNS, server unavailable etc.</exception>
         </member>
         <member name="M:Yort.Laybuy.InStore.LaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)">
             <summary>
@@ -286,6 +298,9 @@
             <returns>A <see cref="T:Yort.Laybuy.InStore.CreateOrderResponse"/> indicating the outcome of the request.</returns>
             <exception cref="T:System.ArgumentNullException">Thrown if request, <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.Origin"/>, <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.OriginData"/>, <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.Customer"/> or <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.MerchantReference"/> is null.</exception>
             <exception cref="T:System.ArgumentException">Thrown if request, <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.Origin"/>, <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.OriginData"/>, <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.MerchantReference"/> or <see cref="P:Yort.Laybuy.InStore.LaybuyCustomerBase.Phone"/> is an empty string or only whitespace. Also thrown if <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.Amount"/> is zero or negative.</exception>
+            <exception cref="T:System.Threading.Tasks.TaskCanceledException">May be thrown in the event of a timeout calling the Laybuy API.</exception>
+            <exception cref="T:System.TimeoutException">May be thrown in the event of a timeout calling the Laybuy API.</exception>
+            <exception cref="T:System.Net.Http.HttpRequestException">Thrown if the call to the Laybuy API returns an error response code. The Laybuy API does not use HTTP response codes for 'business level errors', such as 'order not found' or 'declined', so this type of exception typically represents a problem such as bad credentials, a bad gateway/DNS, server unavailable etc.</exception>
         </member>
         <member name="M:Yort.Laybuy.InStore.LaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)">
             <summary>
@@ -294,6 +309,9 @@
             <param name="request">A <see cref="T:Yort.Laybuy.InStore.OrderStatusRequest"/> with details of the Laybuy to retrieve the status of.</param>
             <returns>A <see cref="T:Yort.Laybuy.InStore.OrderStatusResponse"/> indicating the outcome of the request.</returns>
             <exception cref="T:System.ArgumentException">Thrown if <see cref="P:Yort.Laybuy.InStore.OrderStatusRequest.MerchantReference"/> and <see cref="P:Yort.Laybuy.InStore.OrderStatusRequest.OrderId"/> are both null, empty or whitespace. Also thrown if <see cref="P:Yort.Laybuy.InStore.OrderStatusRequest.OrderId"/> is zero or negative.</exception>
+            <exception cref="T:System.Threading.Tasks.TaskCanceledException">May be thrown in the event of a timeout calling the Laybuy API.</exception>
+            <exception cref="T:System.TimeoutException">May be thrown in the event of a timeout calling the Laybuy API.</exception>
+            <exception cref="T:System.Net.Http.HttpRequestException">Thrown if the call to the Laybuy API returns an error response code. The Laybuy API does not use HTTP response codes for 'business level errors', such as 'order not found' or 'declined', so this type of exception typically represents a problem such as bad credentials, a bad gateway/DNS, server unavailable etc.</exception>
         </member>
         <member name="M:Yort.Laybuy.InStore.LaybuyClient.Refund(Yort.Laybuy.InStore.RefundRequest)">
             <summary>
@@ -301,8 +319,15 @@
             </summary>
             <param name="request">A <see cref="T:Yort.Laybuy.InStore.RefundRequest"/> with details of the refund to make.</param>
             <returns>A <see cref="T:Yort.Laybuy.InStore.RefundResponse"/> indicating the outcome of the request.</returns>
+            <remarks>
+            <para>If you need to retry a refund due to a transient error or interruption (power failure/crash) ensure the same *RefundReference*
+            is used on each retry attempt. This should ensure idempotency and prevent multiple refunds being issued by mistake.</para>
+            </remarks>
             <exception cref="T:System.ArgumentNullException">Thrown if <see cref="P:Yort.Laybuy.InStore.RefundRequest.RefundReference"/> is null.</exception>
             <exception cref="T:System.ArgumentException">Thrown if <see cref="P:Yort.Laybuy.InStore.RefundRequest.OrderId"/> or <see cref="P:Yort.Laybuy.InStore.RefundRequest.Amount"/> are zero or negative. Also thrown if <see cref="P:Yort.Laybuy.InStore.RefundRequest.RefundReference"/> is empty or whitespace.</exception>
+            <exception cref="T:System.Threading.Tasks.TaskCanceledException">May be thrown in the event of a timeout calling the Laybuy API.</exception>
+            <exception cref="T:System.TimeoutException">May be thrown in the event of a timeout calling the Laybuy API.</exception>
+            <exception cref="T:System.Net.Http.HttpRequestException">Thrown if the call to the Laybuy API returns an error response code. The Laybuy API does not use HTTP response codes for 'business level errors', such as 'order not found' or 'declined', so this type of exception typically represents a problem such as bad credentials, a bad gateway/DNS, server unavailable etc.</exception>
         </member>
         <member name="M:Yort.Laybuy.InStore.LaybuyClient.Dispose">
             <summary>
@@ -337,6 +362,9 @@
             Gets or sets a string containing a template used to automatically generate callback urls for <see cref="T:Yort.Laybuy.InStore.CreateOrderRequest"/>.
             </summary>
             <remarks>
+            <para>This value can be left null if you do not require callbacks. The default value is null. Callbacks are not typically used with the in store process 
+            (normally they used as part of an e-commerce workflow) but they are referred to in the Laybuy documenation for the POS API so they've been implemented in this 
+            library where mentions by that documentation.</para>
             <para>You can use the (case-sensitive) tag {merchantReference} in the template string, it will be replaced with the merchant reference of the request the url is generated for.</para>
             <para>Sample: https://www.mydomain.com/callbacks/laybuy/{merchantReference} </para>
             </remarks>
@@ -353,6 +381,9 @@
             <value>
             The default origin.
             </value>
+            <remarks>
+            <para>The default value is "POS".</para>
+            </remarks>
         </member>
         <member name="P:Yort.Laybuy.InStore.LaybuyClientConfiguration.DefaultBranch">
             <summary>

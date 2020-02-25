@@ -179,12 +179,12 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: CallbackUrlTemplate
     path: LaybuyClientConfiguration.cs
-    startLine: 59
+    startLine: 62
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
   summary: "\nGets or sets a string containing a template used to automatically generate callback urls for <xref href=\"Yort.Laybuy.InStore.CreateOrderRequest\" data-throw-if-not-resolved=\"false\"></xref>.\n"
-  remarks: "\n<p>You can use the (case-sensitive) tag {merchantReference} in the template string, it will be replaced with the merchant reference of the request the url is generated for.</p>\n<p>Sample: https://www.mydomain.com/callbacks/laybuy/{merchantReference} </p>\n"
+  remarks: "\n<p>This value can be left null if you do not require callbacks. The default value is null. Callbacks are not typically used with the in store process \n(normally they used as part of an e-commerce workflow) but they are referred to in the Laybuy documenation for the POS API so they&apos;ve been implemented in this \nlibrary where mentions by that documentation.</p>\n<p>You can use the (case-sensitive) tag {merchantReference} in the template string, it will be replaced with the merchant reference of the request the url is generated for.</p>\n<p>Sample: https://www.mydomain.com/callbacks/laybuy/{merchantReference} </p>\n"
   example: []
   syntax:
     content: public string CallbackUrlTemplate { get; set; }
@@ -217,7 +217,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: HttpClientFactory
     path: LaybuyClientConfiguration.cs
-    startLine: 65
+    startLine: 68
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -254,11 +254,12 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: DefaultOrigin
     path: LaybuyClientConfiguration.cs
-    startLine: 73
+    startLine: 79
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
   summary: "\nGets or sets the default <xref href=\"Yort.Laybuy.InStore.CreateOrderRequest.Origin\" data-throw-if-not-resolved=\"false\"></xref> value.\n"
+  remarks: "\n<p>The default value is &quot;POS&quot;.</p>\n"
   example: []
   syntax:
     content: public string DefaultOrigin { get; set; }
@@ -292,7 +293,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: DefaultBranch
     path: LaybuyClientConfiguration.cs
-    startLine: 81
+    startLine: 87
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore

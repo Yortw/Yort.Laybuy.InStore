@@ -17,11 +17,11 @@ items:
   type: Class
   source:
     remote:
-      path: src/CancelLaybuyRequest.cs
+      path: src/CancelOrderRequest.cs
       branch: master
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: CancelOrderRequest
-    path: CancelLaybuyRequest.cs
+    path: CancelOrderRequest.cs
     startLine: 10
   assemblies:
   - Yort.Laybuy.InStore
@@ -63,11 +63,11 @@ items:
   type: Property
   source:
     remote:
-      path: src/CancelLaybuyRequest.cs
+      path: src/CancelOrderRequest.cs
       branch: master
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Token
-    path: CancelLaybuyRequest.cs
+    path: CancelOrderRequest.cs
     startLine: 15
   assemblies:
   - Yort.Laybuy.InStore
@@ -100,11 +100,11 @@ items:
   type: Method
   source:
     remote:
-      path: src/CancelLaybuyRequest.cs
+      path: src/CancelOrderRequest.cs
       branch: master
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: SetDefaults
-    path: CancelLaybuyRequest.cs
+    path: CancelOrderRequest.cs
     startLine: 21
   assemblies:
   - Yort.Laybuy.InStore
@@ -139,11 +139,11 @@ items:
   type: Method
   source:
     remote:
-      path: src/CancelLaybuyRequest.cs
+      path: src/CancelOrderRequest.cs
       branch: master
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Validate
-    path: CancelLaybuyRequest.cs
+    path: CancelOrderRequest.cs
     startLine: 31
   assemblies:
   - Yort.Laybuy.InStore

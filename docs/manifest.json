@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Yort.Laybuy.InStore.CancelOrderRequest.html",
-          "hash": "dSJZrRdCE+v70K08CHqUsg=="
+          "hash": "9Le5iLqHwjg7LYHjk5+oTw=="
         }
       },
       "is_incremental": false,
@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Yort.Laybuy.InStore.CancelOrderResponse.html",
-          "hash": "/QyT5irgOvXvHtyVPcRlfw=="
+          "hash": "ns2kAmvygOV1MS7t2aOKtQ=="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Yort.Laybuy.InStore.CreateOrderRequest.html",
-          "hash": "UZUPaF3D3rBjMZiAznC1NA=="
+          "hash": "uy+mDIESWlpcAQyo7UYgGg=="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Yort.Laybuy.InStore.CreateOrderResponse.html",
-          "hash": "cj+1BBRfp1p03+z5U90K4w=="
+          "hash": "Zz2fKqv+/y8En8ezf4J0YQ=="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Yort.Laybuy.InStore.ILaybuyClient.html",
-          "hash": "sqhGemYMaZJ3WMefLGtYNA=="
+          "hash": "NTwtHKtF/1qzoG5xhpkgiA=="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Yort.Laybuy.InStore.LaybuyApiException.html",
-          "hash": "5eDEQ/LTVoRNWj2vPZsmPg=="
+          "hash": "4uBEGunL+ysrdCe0a3WZDA=="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Yort.Laybuy.InStore.LaybuyApiResponseBase.html",
-          "hash": "ryFhs8Mg+giX5g5gLgjSJQ=="
+          "hash": "oxQlLWY3slq8zlT2+vmKuA=="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Yort.Laybuy.InStore.LaybuyClient.html",
-          "hash": "vgnSKZJxkGTC79B76rzXxg=="
+          "hash": "6oUcL9yK7xDxjXau+d4W2g=="
         }
       },
       "is_incremental": false,
@@ -114,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Yort.Laybuy.InStore.LaybuyClientConfiguration.html",
-          "hash": "ny9rLia1q7nq5c5T3Qq8ig=="
+          "hash": "Q7IbFh2l/RTOch7362SxJA=="
         }
       },
       "is_incremental": false,
@@ -126,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Yort.Laybuy.InStore.LaybuyCredentials.html",
-          "hash": "bJ09OcqSQEwfpUgY1XEyTA=="
+          "hash": "B3+yISfgGdIJOv2M5R0JlQ=="
         }
       },
       "is_incremental": false,
@@ -138,7 +138,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Yort.Laybuy.InStore.LaybuyCustomerAddress.html",
-          "hash": "cRhDOVhoFsMXItiEgVMWXg=="
+          "hash": "+J0XhFYHHKWlXjIpzHHPyQ=="
         }
       },
       "is_incremental": false,
@@ -150,7 +150,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Yort.Laybuy.InStore.LaybuyCustomerBase.html",
-          "hash": "DhMAtHihzyuF4ADjv81HDw=="
+          "hash": "VbmjWB+FbNLSvCN8unnc6w=="
         }
       },
       "is_incremental": false,
@@ -162,7 +162,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Yort.Laybuy.InStore.LaybuyEnvironment.html",
-          "hash": "ZT0zah2XHyC7Cx+oXBaXWw=="
+          "hash": "SmY1PucgWZ1Xau0aGbb5rg=="
         }
       },
       "is_incremental": false,
@@ -174,7 +174,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Yort.Laybuy.InStore.LaybuyItem.html",
-          "hash": "5uCaAp/N9gK7CBrd/tuCaw=="
+          "hash": "R61ReeCTjn1omS2ERW2pWg=="
         }
       },
       "is_incremental": false,
@@ -186,7 +186,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Yort.Laybuy.InStore.LaybuyOrderRefund.html",
-          "hash": "dFmRTjrGWNAXbJVDPrSy/g=="
+          "hash": "mmyOnnQuDwireJudzay8kg=="
         }
       },
       "is_incremental": false,
@@ -198,7 +198,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Yort.Laybuy.InStore.LaybuyRequestBase.html",
-          "hash": "cP4lY1cox9qFDviPQVJtcQ=="
+          "hash": "iAdfyTFzsV13VGVqgNj2MA=="
         }
       },
       "is_incremental": false,
@@ -210,7 +210,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Yort.Laybuy.InStore.LaybuyStatus.html",
-          "hash": "NB1ySSWlfiqtRTd0Xz06kw=="
+          "hash": "+K0XWx1slrDETZda70Q6Qg=="
         }
       },
       "is_incremental": false,
@@ -222,7 +222,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Yort.Laybuy.InStore.OrderStatusRequest.html",
-          "hash": "Latzau8dGZ/G+np86gFn1A=="
+          "hash": "hSLmleceL29237KRJ8g1jQ=="
         }
       },
       "is_incremental": false,
@@ -234,7 +234,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Yort.Laybuy.InStore.OrderStatusResponse.html",
-          "hash": "qfK7xxmdag4CHx/OmvXBGg=="
+          "hash": "vvJOgrhp+wxi8OpcG2aDfQ=="
         }
       },
       "is_incremental": false,
@@ -246,7 +246,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Yort.Laybuy.InStore.RefundRequest.html",
-          "hash": "a/NFtYT3qt5Vmm08y4BMHA=="
+          "hash": "sKOSgsIszFj+Vyn8XUrQDQ=="
         }
       },
       "is_incremental": false,
@@ -258,7 +258,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Yort.Laybuy.InStore.RefundResponse.html",
-          "hash": "O0APmFisrfZYXoAsN2HugQ=="
+          "hash": "MvvflkFAVM20isJvG4T40w=="
         }
       },
       "is_incremental": false,
@@ -270,7 +270,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Yort.Laybuy.InStore.RequestLaybuyCustomer.html",
-          "hash": "bgeYcwGgZQE3wTdOfK5fnQ=="
+          "hash": "29kxVLLspBGI9H0GV16rmg=="
         }
       },
       "is_incremental": false,
@@ -282,7 +282,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Yort.Laybuy.InStore.ResponseLaybuyCustomer.html",
-          "hash": "IGgELFmBLl5bdH3sVpyiTg=="
+          "hash": "8eA91PJWf0j4SJcTCm1uqw=="
         }
       },
       "is_incremental": false,
@@ -294,7 +294,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Yort.Laybuy.InStore.StandardOriginData.html",
-          "hash": "GTcqqrKtaY6w5AEfORpcpw=="
+          "hash": "t1wMYoavoI0R0VH4JbLsTg=="
         }
       },
       "is_incremental": false,
@@ -306,19 +306,52 @@
       "output": {
         ".html": {
           "relative_path": "api/Yort.Laybuy.InStore.html",
-          "hash": "OFsdYUUrOVV/QA//8IgRuA=="
+          "hash": "tlWT7dGKvtbH1iZZ/k3ENw=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "api/index.md",
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "vBbHfklCsOmI4a22s1mwwA=="
+          "hash": "1yH0eeZB3+2wvlqvoDeAmQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "api/quickstart.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/quickstart.html",
+          "hash": "cBUJ8H/BLFBgGWNdJDqP+g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "+52ai7RzDajdDghpOhg98w=="
         }
       },
       "is_incremental": false,
@@ -326,11 +359,22 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/intro.md",
+      "source_relative_path": "articles/productionrequirements.md",
       "output": {
         ".html": {
-          "relative_path": "articles/intro.html",
-          "hash": "TdM4QYvO90yr99j/4yjWXw=="
+          "relative_path": "articles/productionrequirements.html",
+          "hash": "HDXbdZGfShJOZoDkhZJnnA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/projecticon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/projecticon.ico"
         }
       },
       "is_incremental": false,
@@ -346,15 +390,29 @@
       },
       "is_incremental": false,
       "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "oX5nxIL+YiYmzm17q5Mh7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
     }
   ],
   "incremental_info": [
     {
       "status": {
-        "can_incremental": true,
+        "can_incremental": false,
+        "details": "Disable incremental build by force rebuild option.",
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0
+        "skipped_file_count": 0,
+        "full_build_reason_code": "ForceRebuild"
       },
       "processors": {
         "TocDocumentProcessor": {
@@ -372,16 +430,16 @@
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 25,
-          "skipped_file_count": 25
+          "skipped_file_count": 0
         },
         "ConceptualDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 2,
-          "skipped_file_count": 2
+          "total_file_count": 5,
+          "skipped_file_count": 0
         }
       }
     },
