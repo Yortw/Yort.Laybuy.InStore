@@ -8,8 +8,6 @@
 # Documentation
 
 See the [Laybuy API documentation](https://integrations.laybuy.com/reference) for the low level details and what the API is capable of.
-For getting started, samples and API reference for this library [see the docs](https://yortw.github.io/Yort.Laybuy.InStore/docs/index.html)
+For getting started, samples and API reference for this library [see the docs](https://yortw.github.io/Yort.Laybuy.InStore/docs/articles/intro.html)
 
-# TODO
-    * Setup test secrets if required and edit in  .github/workflows/build.yml or remove sample test secret at top
-    
+   
