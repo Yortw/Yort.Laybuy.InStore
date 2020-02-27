@@ -11,7 +11,9 @@ jobs:
 
     runs-on: windows-latest
     env:
-      TestSecret: ${{ secrets.TestSecret }}    
+      Yort_Laybuy_InStore_TestMobileNumber: ${{ secrets.Yort_Laybuy_InStore_TestMobileNumber }}    
+      Yort_Laybuy_InStore_SandboxMerchantId: ${{ secrets.Yort_Laybuy_InStore_SandboxMerchantId }}    
+      Yort_Laybuy_InStore_SandboxApiKey: ${{ secrets.Yort_Laybuy_InStore_SandboxApiKey }}    
       Coveralls_Token: ${{ secrets.Coveralls_Token }}   
 
     steps:
