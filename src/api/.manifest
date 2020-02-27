@@ -106,7 +106,7 @@
   "Yort.Laybuy.InStore.RefundRequest.Amount": "Yort.Laybuy.InStore.RefundRequest.yml",
   "Yort.Laybuy.InStore.RefundRequest.Note": "Yort.Laybuy.InStore.RefundRequest.yml",
   "Yort.Laybuy.InStore.RefundRequest.OrderId": "Yort.Laybuy.InStore.RefundRequest.yml",
-  "Yort.Laybuy.InStore.RefundRequest.RefundReference": "Yort.Laybuy.InStore.RefundRequest.yml",
+  "Yort.Laybuy.InStore.RefundRequest.RefundMerchantReference": "Yort.Laybuy.InStore.RefundRequest.yml",
   "Yort.Laybuy.InStore.RefundRequest.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)": "Yort.Laybuy.InStore.RefundRequest.yml",
   "Yort.Laybuy.InStore.RefundRequest.Validate": "Yort.Laybuy.InStore.RefundRequest.yml",
   "Yort.Laybuy.InStore.RefundResponse": "Yort.Laybuy.InStore.RefundResponse.yml",

@@ -22,7 +22,7 @@ namespace Yort.Laybuy.InStore
 		/// A unique client generated reference for the refund request, used to ensure idempotency.
 		/// </summary>
 		[JsonProperty("refundReference")]
-		public string? RefundReference { get; set; }
+		public string? RefundMerchantReference { get; set; }
 		/// <summary>
 		/// The amount of the refund.
 		/// </summary>
@@ -51,7 +51,7 @@ namespace Yort.Laybuy.InStore
 		/// </remarks>
 		public override void Validate()
 		{
-			RefundReference.GuardNullOrWhiteSpace(nameof(RefundReference));
+			RefundMerchantReference.GuardNullOrWhiteSpace(nameof(RefundMerchantReference));
 			OrderId.GuardZeroOrNegative(nameof(OrderId));
 			Amount.GuardZeroOrNegative(nameof(Amount));
 		}

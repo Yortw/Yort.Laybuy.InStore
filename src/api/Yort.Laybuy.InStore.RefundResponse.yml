@@ -122,7 +122,7 @@ items:
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
-  summary: "\nThe merchant reference of the Laybuy order that was refunded against.\n"
+  summary: "\nThe merchant reference of the (original) Laybuy order that was refunded against.\n"
   example: []
   syntax:
     content: >-

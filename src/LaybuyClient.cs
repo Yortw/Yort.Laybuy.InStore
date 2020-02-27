@@ -144,8 +144,8 @@ namespace Yort.Laybuy.InStore
 		/// <para>If you need to retry a refund due to a transient error or interruption (power failure/crash) ensure the same *RefundReference*
 		/// is used on each retry attempt. This should ensure idempotency and prevent multiple refunds being issued by mistake.</para>
 		/// </remarks>
-		/// <exception cref="System.ArgumentNullException">Thrown if <see cref="RefundRequest.RefundReference"/> is null.</exception>
-		/// <exception cref="System.ArgumentException">Thrown if <see cref="RefundRequest.OrderId"/> or <see cref="RefundRequest.Amount"/> are zero or negative. Also thrown if <see cref="RefundRequest.RefundReference"/> is empty or whitespace.</exception>
+		/// <exception cref="System.ArgumentNullException">Thrown if <see cref="RefundRequest.RefundMerchantReference"/> is null.</exception>
+		/// <exception cref="System.ArgumentException">Thrown if <see cref="RefundRequest.OrderId"/> or <see cref="RefundRequest.Amount"/> are zero or negative. Also thrown if <see cref="RefundRequest.RefundMerchantReference"/> is empty or whitespace.</exception>
 		/// <exception cref="System.Threading.Tasks.TaskCanceledException">May be thrown in the event of a timeout calling the Laybuy API.</exception>
 		/// <exception cref="System.TimeoutException">May be thrown in the event of a timeout calling the Laybuy API.</exception>
 		/// <exception cref="System.Net.Http.HttpRequestException">Thrown if the call to the Laybuy API returns an error response code. The Laybuy API does not use HTTP response codes for 'business level errors', such as 'order not found' or 'declined', so this type of exception typically represents a problem such as bad credentials, a bad gateway/DNS, server unavailable etc.</exception>

@@ -1189,19 +1189,19 @@ references:
   isSpec: "True"
   fullName: Yort.Laybuy.InStore.RefundRequest.OrderId
   nameWithType: RefundRequest.OrderId
-- uid: Yort.Laybuy.InStore.RefundRequest.RefundReference
-  name: RefundReference
-  href: api/Yort.Laybuy.InStore.RefundRequest.html#Yort_Laybuy_InStore_RefundRequest_RefundReference
-  commentId: P:Yort.Laybuy.InStore.RefundRequest.RefundReference
-  fullName: Yort.Laybuy.InStore.RefundRequest.RefundReference
-  nameWithType: RefundRequest.RefundReference
-- uid: Yort.Laybuy.InStore.RefundRequest.RefundReference*
-  name: RefundReference
-  href: api/Yort.Laybuy.InStore.RefundRequest.html#Yort_Laybuy_InStore_RefundRequest_RefundReference_
-  commentId: Overload:Yort.Laybuy.InStore.RefundRequest.RefundReference
+- uid: Yort.Laybuy.InStore.RefundRequest.RefundMerchantReference
+  name: RefundMerchantReference
+  href: api/Yort.Laybuy.InStore.RefundRequest.html#Yort_Laybuy_InStore_RefundRequest_RefundMerchantReference
+  commentId: P:Yort.Laybuy.InStore.RefundRequest.RefundMerchantReference
+  fullName: Yort.Laybuy.InStore.RefundRequest.RefundMerchantReference
+  nameWithType: RefundRequest.RefundMerchantReference
+- uid: Yort.Laybuy.InStore.RefundRequest.RefundMerchantReference*
+  name: RefundMerchantReference
+  href: api/Yort.Laybuy.InStore.RefundRequest.html#Yort_Laybuy_InStore_RefundRequest_RefundMerchantReference_
+  commentId: Overload:Yort.Laybuy.InStore.RefundRequest.RefundMerchantReference
   isSpec: "True"
-  fullName: Yort.Laybuy.InStore.RefundRequest.RefundReference
-  nameWithType: RefundRequest.RefundReference
+  fullName: Yort.Laybuy.InStore.RefundRequest.RefundMerchantReference
+  nameWithType: RefundRequest.RefundMerchantReference
 - uid: Yort.Laybuy.InStore.RefundRequest.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
   name: SetDefaults(LaybuyClientConfiguration)
   href: api/Yort.Laybuy.InStore.RefundRequest.html#Yort_Laybuy_InStore_RefundRequest_SetDefaults_Yort_Laybuy_InStore_LaybuyClientConfiguration_

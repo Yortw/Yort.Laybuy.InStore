@@ -8,7 +8,7 @@ items:
   - Yort.Laybuy.InStore.RefundRequest.Amount
   - Yort.Laybuy.InStore.RefundRequest.Note
   - Yort.Laybuy.InStore.RefundRequest.OrderId
-  - Yort.Laybuy.InStore.RefundRequest.RefundReference
+  - Yort.Laybuy.InStore.RefundRequest.RefundMerchantReference
   - Yort.Laybuy.InStore.RefundRequest.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
   - Yort.Laybuy.InStore.RefundRequest.Validate
   langs:
@@ -107,23 +107,23 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: Yort.Laybuy.InStore.RefundRequest.RefundReference
-  commentId: P:Yort.Laybuy.InStore.RefundRequest.RefundReference
-  id: RefundReference
+- uid: Yort.Laybuy.InStore.RefundRequest.RefundMerchantReference
+  commentId: P:Yort.Laybuy.InStore.RefundRequest.RefundMerchantReference
+  id: RefundMerchantReference
   parent: Yort.Laybuy.InStore.RefundRequest
   langs:
   - csharp
   - vb
-  name: RefundReference
-  nameWithType: RefundRequest.RefundReference
-  fullName: Yort.Laybuy.InStore.RefundRequest.RefundReference
+  name: RefundMerchantReference
+  nameWithType: RefundRequest.RefundMerchantReference
+  fullName: Yort.Laybuy.InStore.RefundRequest.RefundMerchantReference
   type: Property
   source:
     remote:
       path: src/RefundRequest.cs
       branch: master
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
-    id: RefundReference
+    id: RefundMerchantReference
     path: RefundRequest.cs
     startLine: 23
   assemblies:
@@ -135,15 +135,15 @@ items:
     content: >-
       [JsonProperty("refundReference")]
 
-      public string RefundReference { get; set; }
+      public string RefundMerchantReference { get; set; }
     parameters: []
     return:
       type: System.String
     content.vb: >-
       <JsonProperty("refundReference")>
 
-      Public Property RefundReference As String
-  overload: Yort.Laybuy.InStore.RefundRequest.RefundReference*
+      Public Property RefundMerchantReference As String
+  overload: Yort.Laybuy.InStore.RefundRequest.RefundMerchantReference*
   attributes:
   - type: Newtonsoft.Json.JsonPropertyAttribute
     ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
@@ -695,11 +695,11 @@ references:
   name: Int64
   nameWithType: Int64
   fullName: System.Int64
-- uid: Yort.Laybuy.InStore.RefundRequest.RefundReference*
-  commentId: Overload:Yort.Laybuy.InStore.RefundRequest.RefundReference
-  name: RefundReference
-  nameWithType: RefundRequest.RefundReference
-  fullName: Yort.Laybuy.InStore.RefundRequest.RefundReference
+- uid: Yort.Laybuy.InStore.RefundRequest.RefundMerchantReference*
+  commentId: Overload:Yort.Laybuy.InStore.RefundRequest.RefundMerchantReference
+  name: RefundMerchantReference
+  nameWithType: RefundRequest.RefundMerchantReference
+  fullName: Yort.Laybuy.InStore.RefundRequest.RefundMerchantReference
 - uid: System.String
   commentId: T:System.String
   parent: System

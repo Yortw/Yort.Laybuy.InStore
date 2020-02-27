@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Yort.Laybuy.InStore;
@@ -32,35 +33,53 @@ namespace Yort.Laybuy.InStore.Tests
 			};
 			System.Diagnostics.Trace.WriteLine("Merchant Ref: " + createRequest.MerchantReference);
 
-			var result = await client.Create(createRequest).ConfigureAwait(false);
+			var createOrderResponse = await client.Create(createRequest).ConfigureAwait(false);
 
-			Assert.IsNotNull(result);
-			Assert.AreEqual(result.Result, LaybuyStatus.Success);
-			Assert.IsFalse(String.IsNullOrWhiteSpace(result.Token));
+			Assert.IsNotNull(createOrderResponse);
+			Assert.AreEqual(createOrderResponse.Result, LaybuyStatus.Success);
+			Assert.IsFalse(String.IsNullOrWhiteSpace(createOrderResponse.Token));
+			Assert.IsNotNull(String.IsNullOrWhiteSpace(createOrderResponse.Error));
 
 			//Poll until 'order' reaches a final status
 			var done = false;
 			var started = DateTime.Now;
 			var statusRequest = new OrderStatusRequest() { MerchantReference = createRequest.MerchantReference };
-			OrderStatusResponse status = null;
+			OrderStatusResponse statusResponse = null;
 			while (!done)
 			{
 				await Task.Delay(1000);
-				status = await client.GetStatus(statusRequest).ConfigureAwait(false);
-				done = status.Result == LaybuyStatus.Success || status.Result == LaybuyStatus.Cancelled;
+				statusResponse = await client.GetStatus(statusRequest).ConfigureAwait(false);
+				done = statusResponse.Result == LaybuyStatus.Success || statusResponse.Result == LaybuyStatus.Cancelled;
 				if (DateTime.Now.Subtract(started).TotalMinutes > 5) throw new TimeoutException("Order not accepted after 5 minutes.");
+				if (!done)
+					Assert.IsNotNull(statusResponse.Error);
 			}
 
-			Assert.AreEqual(status.Result, LaybuyStatus.Success);
-			System.Diagnostics.Trace.WriteLine("Order Id: " + status.OrderId);
-			System.Diagnostics.Trace.WriteLine("Payment token: " + status.Token);
+			Assert.AreEqual(statusResponse.Result, LaybuyStatus.Success);
+			System.Diagnostics.Trace.WriteLine("Order Id: " + statusResponse.OrderId);
+			System.Diagnostics.Trace.WriteLine("Payment token: " + statusResponse.Token);
+			Assert.IsNotNull(statusResponse.Refunds);
+			Assert.IsFalse(String.IsNullOrEmpty(statusResponse.Currency));
+			Assert.IsNotNull(statusResponse.Processed);
+			Assert.IsTrue(statusResponse.OrderId > 0);
+			Assert.AreEqual(statusResponse.MerchantReference, createRequest.MerchantReference);
+			//TODO: Laybuy doesn't actually return this here?
+			//Assert.AreEqual(statusResponse.Token, createOrderResponse.Token);
 
 			//Refund the order
-			var refundRequest = new RefundRequest() { RefundReference = System.Guid.NewGuid().ToString(), OrderId = status.OrderId, Amount = status.Amount, Note = "Test refund" };
-			System.Diagnostics.Trace.WriteLine("Refund Ref: " + refundRequest.RefundReference);
-			var refundResult = await client.Refund(refundRequest).ConfigureAwait(false);
-			Assert.IsNotNull(refundResult);
-			Assert.AreEqual(refundResult.Result, LaybuyStatus.Success);
+			var refundRequest = new RefundRequest() { RefundMerchantReference = System.Guid.NewGuid().ToString(), OrderId = statusResponse.OrderId, Amount = statusResponse.Amount, Note = "Test refund" };
+			System.Diagnostics.Trace.WriteLine("Refund Ref: " + refundRequest.RefundMerchantReference);
+			var refundResponse = await client.Refund(refundRequest).ConfigureAwait(false);
+			Assert.IsNotNull(refundResponse);
+			Assert.AreEqual(refundResponse.Result, LaybuyStatus.Success);
+			Assert.IsTrue(refundResponse.RefundId > 0);
+			Assert.AreEqual(createRequest.MerchantReference, refundResponse.MerchantReference);
+
+			//Can get the order status by order id
+			statusRequest = new OrderStatusRequest() { OrderId = statusResponse.OrderId };
+			statusResponse = await client.GetStatus(statusRequest).ConfigureAwait(false);
+			Assert.AreEqual(statusResponse.Result, LaybuyStatus.Success);
+			Assert.AreEqual(1, statusResponse.Refunds.Count());
 		}
 
 		[TestCategory("Integration")]

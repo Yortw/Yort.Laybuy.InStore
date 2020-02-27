@@ -309,10 +309,10 @@ items:
   exceptions:
   - type: System.ArgumentNullException
     commentId: T:System.ArgumentNullException
-    description: Thrown if <xref href="Yort.Laybuy.InStore.RefundRequest.RefundReference" data-throw-if-not-resolved="false"></xref> is null.
+    description: Thrown if <xref href="Yort.Laybuy.InStore.RefundRequest.RefundMerchantReference" data-throw-if-not-resolved="false"></xref> is null.
   - type: System.ArgumentException
     commentId: T:System.ArgumentException
-    description: Thrown if <xref href="Yort.Laybuy.InStore.RefundRequest.OrderId" data-throw-if-not-resolved="false"></xref> or <xref href="Yort.Laybuy.InStore.RefundRequest.Amount" data-throw-if-not-resolved="false"></xref> are zero or negative. Also thrown if <xref href="Yort.Laybuy.InStore.RefundRequest.RefundReference" data-throw-if-not-resolved="false"></xref> is empty or whitespace.
+    description: Thrown if <xref href="Yort.Laybuy.InStore.RefundRequest.OrderId" data-throw-if-not-resolved="false"></xref> or <xref href="Yort.Laybuy.InStore.RefundRequest.Amount" data-throw-if-not-resolved="false"></xref> are zero or negative. Also thrown if <xref href="Yort.Laybuy.InStore.RefundRequest.RefundMerchantReference" data-throw-if-not-resolved="false"></xref> is empty or whitespace.
   - type: System.Threading.Tasks.TaskCanceledException
     commentId: T:System.Threading.Tasks.TaskCanceledException
     description: May be thrown in the event of a timeout calling the Laybuy API.
@@ -1090,8 +1090,8 @@ references:
   name: RefundResponse
   nameWithType: RefundResponse
   fullName: Yort.Laybuy.InStore.RefundResponse
-- uid: Yort.Laybuy.InStore.RefundRequest.RefundReference
-  commentId: P:Yort.Laybuy.InStore.RefundRequest.RefundReference
+- uid: Yort.Laybuy.InStore.RefundRequest.RefundMerchantReference
+  commentId: P:Yort.Laybuy.InStore.RefundRequest.RefundMerchantReference
   isExternal: true
 - uid: Yort.Laybuy.InStore.RefundRequest.OrderId
   commentId: P:Yort.Laybuy.InStore.RefundRequest.OrderId

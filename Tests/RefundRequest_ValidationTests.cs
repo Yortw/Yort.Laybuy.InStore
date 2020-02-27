@@ -14,7 +14,7 @@ namespace Yort.Laybuy.InStore.Tests
 		{
 			var request = new RefundRequest()
 			{
-				RefundReference = System.Guid.NewGuid().ToString(),
+				RefundMerchantReference = System.Guid.NewGuid().ToString(),
 				Amount = 10,
 				OrderId = 0,
 				Note = "Test refund"
@@ -49,7 +49,7 @@ namespace Yort.Laybuy.InStore.Tests
 		{
 			var request = new RefundRequest()
 			{
-				RefundReference = null,
+				RefundMerchantReference = null,
 				Amount = 10,
 				OrderId = 123456,
 				Note = "Test refund"
@@ -64,7 +64,7 @@ namespace Yort.Laybuy.InStore.Tests
 				}
 			);
 
-			request.RefundReference = String.Empty;
+			request.RefundMerchantReference = String.Empty;
 			//Throws when RefundReference is empty string
 			Assert.ThrowsException<ArgumentException>
 			(
@@ -75,7 +75,7 @@ namespace Yort.Laybuy.InStore.Tests
 			);
 
 			//Does not throw when RefundReference is not empty
-			request.RefundReference = System.Guid.NewGuid().ToString();
+			request.RefundMerchantReference = System.Guid.NewGuid().ToString();
 			request.Validate();
 		}
 
@@ -84,7 +84,7 @@ namespace Yort.Laybuy.InStore.Tests
 		{
 			var request = new RefundRequest()
 			{
-				RefundReference = System.Guid.NewGuid().ToString(),
+				RefundMerchantReference = System.Guid.NewGuid().ToString(),
 				Amount = 0,
 				OrderId = 123456,
 				Note = "Test refund"

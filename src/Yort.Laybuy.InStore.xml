@@ -324,8 +324,8 @@
             <para>If you need to retry a refund due to a transient error or interruption (power failure/crash) ensure the same *RefundReference*
             is used on each retry attempt. This should ensure idempotency and prevent multiple refunds being issued by mistake.</para>
             </remarks>
-            <exception cref="T:System.ArgumentNullException">Thrown if <see cref="P:Yort.Laybuy.InStore.RefundRequest.RefundReference"/> is null.</exception>
-            <exception cref="T:System.ArgumentException">Thrown if <see cref="P:Yort.Laybuy.InStore.RefundRequest.OrderId"/> or <see cref="P:Yort.Laybuy.InStore.RefundRequest.Amount"/> are zero or negative. Also thrown if <see cref="P:Yort.Laybuy.InStore.RefundRequest.RefundReference"/> is empty or whitespace.</exception>
+            <exception cref="T:System.ArgumentNullException">Thrown if <see cref="P:Yort.Laybuy.InStore.RefundRequest.RefundMerchantReference"/> is null.</exception>
+            <exception cref="T:System.ArgumentException">Thrown if <see cref="P:Yort.Laybuy.InStore.RefundRequest.OrderId"/> or <see cref="P:Yort.Laybuy.InStore.RefundRequest.Amount"/> are zero or negative. Also thrown if <see cref="P:Yort.Laybuy.InStore.RefundRequest.RefundMerchantReference"/> is empty or whitespace.</exception>
             <exception cref="T:System.Threading.Tasks.TaskCanceledException">May be thrown in the event of a timeout calling the Laybuy API.</exception>
             <exception cref="T:System.TimeoutException">May be thrown in the event of a timeout calling the Laybuy API.</exception>
             <exception cref="T:System.Net.Http.HttpRequestException">Thrown if the call to the Laybuy API returns an error response code. The Laybuy API does not use HTTP response codes for 'business level errors', such as 'order not found' or 'declined', so this type of exception typically represents a problem such as bad credentials, a bad gateway/DNS, server unavailable etc.</exception>
@@ -743,7 +743,7 @@
             The unique id of the Laybuy order to refund against.
             </summary>
         </member>
-        <member name="P:Yort.Laybuy.InStore.RefundRequest.RefundReference">
+        <member name="P:Yort.Laybuy.InStore.RefundRequest.RefundMerchantReference">
             <summary>
             A unique client generated reference for the refund request, used to ensure idempotency.
             </summary>
@@ -785,7 +785,7 @@
         </member>
         <member name="P:Yort.Laybuy.InStore.RefundResponse.MerchantReference">
             <summary>
-            The merchant reference of the Laybuy order that was refunded against.
+            The merchant reference of the (original) Laybuy order that was refunded against.
             </summary>
         </member>
         <member name="T:Yort.Laybuy.InStore.RequestLaybuyCustomer">

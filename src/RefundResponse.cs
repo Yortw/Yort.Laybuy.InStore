@@ -16,7 +16,7 @@ namespace Yort.Laybuy.InStore
 		[JsonProperty("refundId")]
 		public long RefundId { get; set; }
 		/// <summary>
-		/// The merchant reference of the Laybuy order that was refunded against.
+		/// The merchant reference of the (original) Laybuy order that was refunded against.
 		/// </summary>
 		[JsonProperty("merchantReference")]
 		public string? MerchantReference { get; set; }
