@@ -106,7 +106,8 @@ namespace Yort.Laybuy.InStore
 		/// </remarks>
 		/// <returns>A <see cref="CreateOrderResponse"/> indicating the outcome of the request.</returns>
 		/// <exception cref="System.ArgumentNullException">Thrown if request, <see cref="CreateOrderRequest.Origin"/>, <see cref="CreateOrderRequest.OriginData"/>, <see cref="CreateOrderRequest.Customer"/> or <see cref="CreateOrderRequest.MerchantReference"/> is null.</exception>
-		/// <exception cref="System.ArgumentException">Thrown if request, <see cref="CreateOrderRequest.Origin"/>, <see cref="CreateOrderRequest.OriginData"/>, <see cref="CreateOrderRequest.MerchantReference"/> or <see cref="LaybuyCustomerBase.Phone"/> is an empty string or only whitespace. Also thrown if <see cref="CreateOrderRequest.Amount"/> is zero or negative.</exception>
+		/// <exception cref="System.ArgumentException">Thrown if request, <see cref="CreateOrderRequest.Origin"/>, <see cref="CreateOrderRequest.OriginData"/>, <see cref="CreateOrderRequest.MerchantReference"/> or <see cref="LaybuyCustomerBase.Phone"/> is an empty string or only whitespace..</exception>
+		/// <exception cref="System.ArgumentOutOfRangeException">Thrown if <see cref="CreateOrderRequest.Amount"/> is zero or negative.</exception>
 		/// <exception cref="System.Threading.Tasks.TaskCanceledException">May be thrown in the event of a timeout calling the Laybuy API.</exception>
 		/// <exception cref="System.TimeoutException">May be thrown in the event of a timeout calling the Laybuy API.</exception>
 		/// <exception cref="System.Net.Http.HttpRequestException">Thrown if the call to the Laybuy API returns an error response code. The Laybuy API does not use HTTP response codes for 'business level errors', such as 'order not found' or 'declined', so this type of exception typically represents a problem such as bad credentials, a bad gateway/DNS, server unavailable etc.</exception>

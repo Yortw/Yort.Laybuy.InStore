@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Yort.Laybuy.InStore;
 
-namespace Tests
+namespace Yort.Laybuy.InStore.Tests
 {
 	[TestClass]
 	public class LaybuyClient_Integration_Tests
@@ -61,6 +61,44 @@ namespace Tests
 			var refundResult = await client.Refund(refundRequest).ConfigureAwait(false);
 			Assert.IsNotNull(refundResult);
 			Assert.AreEqual(refundResult.Result, LaybuyStatus.Success);
+		}
+
+		[TestCategory("Integration")]
+		[TestMethod]
+		public async Task Sandbox_Payment_CanCancel()
+		{
+			//This is an integration test, it requires user interaction to complete.
+			//You need to set the environment variable Yort_Laybuy_InStore_TestMobileNumber to a valid mobile phone number.
+			//It will create an order in the Laybuy sandbox environment
+			//Poll until the order reaches success or declined status (requires user to login to sandbox portal and accept payment)
+			//Refund the order in full
+
+			var client = CreateClient();
+
+			// Create the 'order'
+			var createRequest = new CreateOrderRequest()
+			{
+				Amount = 10,
+				MerchantReference = System.Guid.NewGuid().ToString(),
+				Customer = new RequestLaybuyCustomer()
+				{
+					Phone = Environment.GetEnvironmentVariable("Yort_Laybuy_InStore_TestMobileNumber")
+				}
+			};
+			System.Diagnostics.Trace.WriteLine("Merchant Ref: " + createRequest.MerchantReference);
+
+			var result = await client.Create(createRequest).ConfigureAwait(false);
+
+			Assert.IsNotNull(result);
+			Assert.AreEqual(result.Result, LaybuyStatus.Success);
+			Assert.IsFalse(String.IsNullOrWhiteSpace(result.Token));
+
+			//Poll until 'order' reaches a final status
+			await Task.Delay(2000).ConfigureAwait(false);
+			var response = await client.Cancel(new CancelOrderRequest() { Token = result.Token }).ConfigureAwait(false);
+
+			Assert.IsNotNull(response);
+			Assert.AreEqual(response.Result, LaybuyStatus.Success);
 		}
 
 		private Yort.Laybuy.InStore.ILaybuyClient CreateClient()

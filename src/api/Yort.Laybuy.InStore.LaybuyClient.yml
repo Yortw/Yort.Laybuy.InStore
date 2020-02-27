@@ -173,7 +173,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Create
     path: LaybuyClient.cs
-    startLine: 112
+    startLine: 113
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -197,7 +197,10 @@ items:
     description: Thrown if request, <xref href="Yort.Laybuy.InStore.CreateOrderRequest.Origin" data-throw-if-not-resolved="false"></xref>, <xref href="Yort.Laybuy.InStore.CreateOrderRequest.OriginData" data-throw-if-not-resolved="false"></xref>, <xref href="Yort.Laybuy.InStore.CreateOrderRequest.Customer" data-throw-if-not-resolved="false"></xref> or <xref href="Yort.Laybuy.InStore.CreateOrderRequest.MerchantReference" data-throw-if-not-resolved="false"></xref> is null.
   - type: System.ArgumentException
     commentId: T:System.ArgumentException
-    description: Thrown if request, <xref href="Yort.Laybuy.InStore.CreateOrderRequest.Origin" data-throw-if-not-resolved="false"></xref>, <xref href="Yort.Laybuy.InStore.CreateOrderRequest.OriginData" data-throw-if-not-resolved="false"></xref>, <xref href="Yort.Laybuy.InStore.CreateOrderRequest.MerchantReference" data-throw-if-not-resolved="false"></xref> or <xref href="Yort.Laybuy.InStore.LaybuyCustomerBase.Phone" data-throw-if-not-resolved="false"></xref> is an empty string or only whitespace. Also thrown if <xref href="Yort.Laybuy.InStore.CreateOrderRequest.Amount" data-throw-if-not-resolved="false"></xref> is zero or negative.
+    description: Thrown if request, <xref href="Yort.Laybuy.InStore.CreateOrderRequest.Origin" data-throw-if-not-resolved="false"></xref>, <xref href="Yort.Laybuy.InStore.CreateOrderRequest.OriginData" data-throw-if-not-resolved="false"></xref>, <xref href="Yort.Laybuy.InStore.CreateOrderRequest.MerchantReference" data-throw-if-not-resolved="false"></xref> or <xref href="Yort.Laybuy.InStore.LaybuyCustomerBase.Phone" data-throw-if-not-resolved="false"></xref> is an empty string or only whitespace..
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: Thrown if <xref href="Yort.Laybuy.InStore.CreateOrderRequest.Amount" data-throw-if-not-resolved="false"></xref> is zero or negative.
   - type: System.Threading.Tasks.TaskCanceledException
     commentId: T:System.Threading.Tasks.TaskCanceledException
     description: May be thrown in the event of a timeout calling the Laybuy API.
@@ -231,7 +234,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: GetStatus
     path: LaybuyClient.cs
-    startLine: 126
+    startLine: 127
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -285,7 +288,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Refund
     path: LaybuyClient.cs
-    startLine: 150
+    startLine: 151
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -343,7 +346,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Dispose
     path: LaybuyClient.cs
-    startLine: 162
+    startLine: 163
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -883,6 +886,9 @@ references:
   fullName: Yort.Laybuy.InStore.LaybuyCustomerBase.Phone
 - uid: Yort.Laybuy.InStore.CreateOrderRequest.Amount
   commentId: P:Yort.Laybuy.InStore.CreateOrderRequest.Amount
+  isExternal: true
+- uid: System.ArgumentOutOfRangeException
+  commentId: T:System.ArgumentOutOfRangeException
   isExternal: true
 - uid: Yort.Laybuy.InStore.LaybuyClient.Create*
   commentId: Overload:Yort.Laybuy.InStore.LaybuyClient.Create

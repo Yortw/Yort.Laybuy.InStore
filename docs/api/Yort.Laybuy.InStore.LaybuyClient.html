@@ -369,7 +369,7 @@ to use the instance again, such as on process shutdown or if changing the config
     <a href="https://github.com/Yortw/Yort.Laybuy.InStore/new/master/apiSpec/new?filename=Yort_Laybuy_InStore_LaybuyClient_Create_Yort_Laybuy_InStore_CreateOrderRequest_.md&amp;value=---%0Auid%3A%20Yort.Laybuy.InStore.LaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Yortw/Yort.Laybuy.InStore/blob/master/src/LaybuyClient.cs/#L113">View Source</a>
+    <a href="https://github.com/Yortw/Yort.Laybuy.InStore/blob/master/src/LaybuyClient.cs/#L114">View Source</a>
   </span>
   <a id="Yort_Laybuy_InStore_LaybuyClient_Create_" data-uid="Yort.Laybuy.InStore.LaybuyClient.Create*"></a>
   <h4 id="Yort_Laybuy_InStore_LaybuyClient_Create_Yort_Laybuy_InStore_CreateOrderRequest_" data-uid="Yort.Laybuy.InStore.LaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)">Create(CreateOrderRequest)</h4>
@@ -439,7 +439,12 @@ See the Laybuy documenation at: https://integrations.laybuy.com/reference#post_o
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
-        <td><p>Thrown if request, <a class="xref" href="Yort.Laybuy.InStore.CreateOrderRequest.html#Yort_Laybuy_InStore_CreateOrderRequest_Origin">Origin</a>, <a class="xref" href="Yort.Laybuy.InStore.CreateOrderRequest.html#Yort_Laybuy_InStore_CreateOrderRequest_OriginData">OriginData</a>, <a class="xref" href="Yort.Laybuy.InStore.CreateOrderRequest.html#Yort_Laybuy_InStore_CreateOrderRequest_MerchantReference">MerchantReference</a> or <a class="xref" href="Yort.Laybuy.InStore.LaybuyCustomerBase.html#Yort_Laybuy_InStore_LaybuyCustomerBase_Phone">Phone</a> is an empty string or only whitespace. Also thrown if <a class="xref" href="Yort.Laybuy.InStore.CreateOrderRequest.html#Yort_Laybuy_InStore_CreateOrderRequest_Amount">Amount</a> is zero or negative.</p>
+        <td><p>Thrown if request, <a class="xref" href="Yort.Laybuy.InStore.CreateOrderRequest.html#Yort_Laybuy_InStore_CreateOrderRequest_Origin">Origin</a>, <a class="xref" href="Yort.Laybuy.InStore.CreateOrderRequest.html#Yort_Laybuy_InStore_CreateOrderRequest_OriginData">OriginData</a>, <a class="xref" href="Yort.Laybuy.InStore.CreateOrderRequest.html#Yort_Laybuy_InStore_CreateOrderRequest_MerchantReference">MerchantReference</a> or <a class="xref" href="Yort.Laybuy.InStore.LaybuyCustomerBase.html#Yort_Laybuy_InStore_LaybuyCustomerBase_Phone">Phone</a> is an empty string or only whitespace..</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
+        <td><p>Thrown if <a class="xref" href="Yort.Laybuy.InStore.CreateOrderRequest.html#Yort_Laybuy_InStore_CreateOrderRequest_Amount">Amount</a> is zero or negative.</p>
 </td>
       </tr>
       <tr>
@@ -464,7 +469,7 @@ See the Laybuy documenation at: https://integrations.laybuy.com/reference#post_o
     <a href="https://github.com/Yortw/Yort.Laybuy.InStore/new/master/apiSpec/new?filename=Yort_Laybuy_InStore_LaybuyClient_Dispose.md&amp;value=---%0Auid%3A%20Yort.Laybuy.InStore.LaybuyClient.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Yortw/Yort.Laybuy.InStore/blob/master/src/LaybuyClient.cs/#L163">View Source</a>
+    <a href="https://github.com/Yortw/Yort.Laybuy.InStore/blob/master/src/LaybuyClient.cs/#L164">View Source</a>
   </span>
   <a id="Yort_Laybuy_InStore_LaybuyClient_Dispose_" data-uid="Yort.Laybuy.InStore.LaybuyClient.Dispose*"></a>
   <h4 id="Yort_Laybuy_InStore_LaybuyClient_Dispose" data-uid="Yort.Laybuy.InStore.LaybuyClient.Dispose">Dispose()</h4>
@@ -480,7 +485,7 @@ See the Laybuy documenation at: https://integrations.laybuy.com/reference#post_o
     <a href="https://github.com/Yortw/Yort.Laybuy.InStore/new/master/apiSpec/new?filename=Yort_Laybuy_InStore_LaybuyClient_GetStatus_Yort_Laybuy_InStore_OrderStatusRequest_.md&amp;value=---%0Auid%3A%20Yort.Laybuy.InStore.LaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Yortw/Yort.Laybuy.InStore/blob/master/src/LaybuyClient.cs/#L127">View Source</a>
+    <a href="https://github.com/Yortw/Yort.Laybuy.InStore/blob/master/src/LaybuyClient.cs/#L128">View Source</a>
   </span>
   <a id="Yort_Laybuy_InStore_LaybuyClient_GetStatus_" data-uid="Yort.Laybuy.InStore.LaybuyClient.GetStatus*"></a>
   <h4 id="Yort_Laybuy_InStore_LaybuyClient_GetStatus_Yort_Laybuy_InStore_OrderStatusRequest_" data-uid="Yort.Laybuy.InStore.LaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)">GetStatus(OrderStatusRequest)</h4>
@@ -561,7 +566,7 @@ See the Laybuy documenation at: https://integrations.laybuy.com/reference#post_o
     <a href="https://github.com/Yortw/Yort.Laybuy.InStore/new/master/apiSpec/new?filename=Yort_Laybuy_InStore_LaybuyClient_Refund_Yort_Laybuy_InStore_RefundRequest_.md&amp;value=---%0Auid%3A%20Yort.Laybuy.InStore.LaybuyClient.Refund(Yort.Laybuy.InStore.RefundRequest)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Yortw/Yort.Laybuy.InStore/blob/master/src/LaybuyClient.cs/#L151">View Source</a>
+    <a href="https://github.com/Yortw/Yort.Laybuy.InStore/blob/master/src/LaybuyClient.cs/#L152">View Source</a>
   </span>
   <a id="Yort_Laybuy_InStore_LaybuyClient_Refund_" data-uid="Yort.Laybuy.InStore.LaybuyClient.Refund*"></a>
   <h4 id="Yort_Laybuy_InStore_LaybuyClient_Refund_Yort_Laybuy_InStore_RefundRequest_" data-uid="Yort.Laybuy.InStore.LaybuyClient.Refund(Yort.Laybuy.InStore.RefundRequest)">Refund(RefundRequest)</h4>

@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Yort.Laybuy.InStore.CancelOrderRequest.html",
-          "hash": "9Le5iLqHwjg7LYHjk5+oTw=="
+          "hash": "y3j9CI+yWfPlBQ8dZLnzNg=="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Yort.Laybuy.InStore.CreateOrderRequest.html",
-          "hash": "uy+mDIESWlpcAQyo7UYgGg=="
+          "hash": "vomEHhdup7tkSfajcmlpuA=="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Yort.Laybuy.InStore.LaybuyClient.html",
-          "hash": "6oUcL9yK7xDxjXau+d4W2g=="
+          "hash": "7emKXiNHoD8GIXSTV3xx4A=="
         }
       },
       "is_incremental": false,
@@ -198,7 +198,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Yort.Laybuy.InStore.LaybuyRequestBase.html",
-          "hash": "iAdfyTFzsV13VGVqgNj2MA=="
+          "hash": "ZuLggu2wdDerFyZAVHjJkQ=="
         }
       },
       "is_incremental": false,
@@ -222,7 +222,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Yort.Laybuy.InStore.OrderStatusRequest.html",
-          "hash": "hSLmleceL29237KRJ8g1jQ=="
+          "hash": "trSnNiqJNHafML5mMm4Esw=="
         }
       },
       "is_incremental": false,
@@ -246,7 +246,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Yort.Laybuy.InStore.RefundRequest.html",
-          "hash": "sKOSgsIszFj+Vyn8XUrQDQ=="
+          "hash": "Dh6qxY2QVlwM+TIc7JPxmw=="
         }
       },
       "is_incremental": false,

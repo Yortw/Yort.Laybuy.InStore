@@ -79,14 +79,14 @@ items:
   remarks: "\n<p>Provides simple client side validation, such as required fields beign provided and fields under maximum lengths etc.</p>\n"
   example: []
   syntax:
-    content: protected abstract void Validate()
-    content.vb: Protected MustOverride Sub Validate
+    content: public abstract void Validate()
+    content.vb: Public MustOverride Sub Validate
   overload: Yort.Laybuy.InStore.LaybuyRequestBase.Validate*
   modifiers.csharp:
-  - protected
+  - public
   - abstract
   modifiers.vb:
-  - Protected
+  - Public
   - MustOverride
 - uid: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
   commentId: M:Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
@@ -113,18 +113,18 @@ items:
   summary: "\nSets any properties on this object that are null to the appropriate defaults, if possible.\n"
   example: []
   syntax:
-    content: protected abstract void SetDefaults(LaybuyClientConfiguration settings)
+    content: public abstract void SetDefaults(LaybuyClientConfiguration settings)
     parameters:
     - id: settings
       type: Yort.Laybuy.InStore.LaybuyClientConfiguration
       description: The settings used to construct the <xref href="Yort.Laybuy.InStore.LaybuyClient" data-throw-if-not-resolved="false"></xref> instance that is about to send this request.
-    content.vb: Protected MustOverride Sub SetDefaults(settings As LaybuyClientConfiguration)
+    content.vb: Public MustOverride Sub SetDefaults(settings As LaybuyClientConfiguration)
   overload: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults*
   modifiers.csharp:
-  - protected
+  - public
   - abstract
   modifiers.vb:
-  - Protected
+  - Public
   - MustOverride
 references:
 - uid: Yort.Laybuy.InStore

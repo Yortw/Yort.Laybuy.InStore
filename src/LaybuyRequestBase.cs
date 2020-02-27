@@ -15,12 +15,12 @@ namespace Yort.Laybuy.InStore
 		/// <remarks>
 		/// <para>Provides simple client side validation, such as required fields beign provided and fields under maximum lengths etc.</para>
 		/// </remarks>
-		protected internal abstract void Validate();
+		public abstract void Validate();
 
 		/// <summary>
 		/// Sets any properties on this object that are null to the appropriate defaults, if possible.
 		/// </summary>
 		/// <param name="settings">The settings used to construct the <see cref="LaybuyClient"/> instance that is about to send this request.</param>
-		protected internal abstract void SetDefaults(LaybuyClientConfiguration settings);
+		public abstract void SetDefaults(LaybuyClientConfiguration settings);
 	}
 }

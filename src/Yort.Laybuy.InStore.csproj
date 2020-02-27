@@ -35,7 +35,11 @@
     <None Remove="articles\**" />
     <None Remove="images\**" />
     <None Remove="_site\**" />
+    <None Remove="docfx.json" />
+    <None Remove="index.md" />
     <None Remove="log.txt" />
+    <None Remove="toc.yml" />
+    <None Remove="Yort.Laybuy.InStore.xml" />
     <None Include="images\projecticon128.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>

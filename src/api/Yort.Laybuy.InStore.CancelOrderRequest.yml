@@ -112,19 +112,19 @@ items:
   summary: "\nSets any properties on this object that are null to the appropriate defaults, if possible.\n"
   example: []
   syntax:
-    content: protected override void SetDefaults(LaybuyClientConfiguration settings)
+    content: public override void SetDefaults(LaybuyClientConfiguration settings)
     parameters:
     - id: settings
       type: Yort.Laybuy.InStore.LaybuyClientConfiguration
       description: The settings used to construct the <xref href="Yort.Laybuy.InStore.LaybuyClient" data-throw-if-not-resolved="false"></xref> instance that is about to send this request.
-    content.vb: Protected Overrides Sub SetDefaults(settings As LaybuyClientConfiguration)
+    content.vb: Public Overrides Sub SetDefaults(settings As LaybuyClientConfiguration)
   overridden: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
   overload: Yort.Laybuy.InStore.CancelOrderRequest.SetDefaults*
   modifiers.csharp:
-  - protected
+  - public
   - override
   modifiers.vb:
-  - Protected
+  - Public
   - Overrides
 - uid: Yort.Laybuy.InStore.CancelOrderRequest.Validate
   commentId: M:Yort.Laybuy.InStore.CancelOrderRequest.Validate
@@ -152,15 +152,15 @@ items:
   remarks: "\nProvides simple client side validation, such as required fields beign provided and fields under maximum lengths etc.\n"
   example: []
   syntax:
-    content: protected override void Validate()
-    content.vb: Protected Overrides Sub Validate
+    content: public override void Validate()
+    content.vb: Public Overrides Sub Validate
   overridden: Yort.Laybuy.InStore.LaybuyRequestBase.Validate
   overload: Yort.Laybuy.InStore.CancelOrderRequest.Validate*
   modifiers.csharp:
-  - protected
+  - public
   - override
   modifiers.vb:
-  - Protected
+  - Public
   - Overrides
 references:
 - uid: Yort.Laybuy.InStore.ILaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)
