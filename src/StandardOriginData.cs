@@ -14,13 +14,6 @@ namespace Yort.Laybuy.InStore
 	/// </remarks>
 	public class StandardOriginData
 	{
-
-		/// <summary>
-		/// The absoulte URL to callback to when the payment process is complete.
-		/// </summary>
-		[JsonProperty("callbackUrl")]
-		public Uri? CallbackUrl { get; set; }
-
 		/// <summary>
 		/// Gets or sets the name or identifier of the branch the POS making the request belongs to.
 		/// </summary>

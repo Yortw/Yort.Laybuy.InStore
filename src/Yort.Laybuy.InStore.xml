@@ -287,8 +287,7 @@
             </summary>
             <param name="request">A <see cref="T:Yort.Laybuy.InStore.CreateOrderRequest"/> with details of the order to create.</param>
             <remarks>
-            <para>If <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.OriginData"/> is null and <see cref="P:Yort.Laybuy.InStore.LaybuyClientConfiguration.CallbackUrlTemplate"/> and/or 
-            <see cref="P:Yort.Laybuy.InStore.LaybuyClientConfiguration.DefaultBranch"/> are non empty in the settings object used to construct this client then a 
+            <para>If <see cref="P:Yort.Laybuy.InStore.LaybuyClientConfiguration.DefaultBranch"/> is non empty in the settings object used to construct this client then a 
             new <see cref="T:Yort.Laybuy.InStore.StandardOriginData"/> instance is automatically created with appropriate values and applied to the request. If no default 
             value can be applied then <see cref="T:System.ArgumentNullException"/> is thrown.</para>
             <para>
@@ -357,18 +356,6 @@
             <summary>
             Gets or sets a <see cref="T:Yort.Laybuy.InStore.LaybuyCredentials"/> instance used to authenticate to the Laybuy API.
             </summary>
-        </member>
-        <member name="P:Yort.Laybuy.InStore.LaybuyClientConfiguration.CallbackUrlTemplate">
-            <summary>
-            Gets or sets a string containing a template used to automatically generate callback urls for <see cref="T:Yort.Laybuy.InStore.CreateOrderRequest"/>.
-            </summary>
-            <remarks>
-            <para>This value can be left null if you do not require callbacks. The default value is null. Callbacks are not typically used with the in store process 
-            (normally they used as part of an e-commerce workflow) but they are referred to in the Laybuy documenation for the POS API so they've been implemented in this 
-            library where mentions by that documentation.</para>
-            <para>You can use the (case-sensitive) tag {merchantReference} in the template string, it will be replaced with the merchant reference of the request the url is generated for.</para>
-            <para>Sample: https://www.mydomain.com/callbacks/laybuy/{merchantReference} </para>
-            </remarks>
         </member>
         <member name="P:Yort.Laybuy.InStore.LaybuyClientConfiguration.HttpClientFactory">
             <summary>
@@ -869,11 +856,6 @@
             <para>Origin data required/expected can vary based on the <see cref="P:Yort.Laybuy.InStore.CreateOrderRequest.Origin"/> provided and the details of the specific
             implementation. This class provides the origin data used with *most* integrations.</para>
             </remarks>
-        </member>
-        <member name="P:Yort.Laybuy.InStore.StandardOriginData.CallbackUrl">
-            <summary>
-            The absoulte URL to callback to when the payment process is complete.
-            </summary>
         </member>
         <member name="P:Yort.Laybuy.InStore.StandardOriginData.Branch">
             <summary>

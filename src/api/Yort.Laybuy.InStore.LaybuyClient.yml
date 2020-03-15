@@ -173,12 +173,12 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Create
     path: LaybuyClient.cs
-    startLine: 113
+    startLine: 112
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
   summary: "\nCreates a new order at Laybuy.\n"
-  remarks: "\n<p>If <xref href=\"Yort.Laybuy.InStore.CreateOrderRequest.OriginData\" data-throw-if-not-resolved=\"false\"></xref> is null and <xref href=\"Yort.Laybuy.InStore.LaybuyClientConfiguration.CallbackUrlTemplate\" data-throw-if-not-resolved=\"false\"></xref> and/or \n<xref href=\"Yort.Laybuy.InStore.LaybuyClientConfiguration.DefaultBranch\" data-throw-if-not-resolved=\"false\"></xref> are non empty in the settings object used to construct this client then a \nnew <xref href=\"Yort.Laybuy.InStore.StandardOriginData\" data-throw-if-not-resolved=\"false\"></xref> instance is automatically created with appropriate values and applied to the request. If no default \nvalue can be applied then <xref href=\"System.ArgumentNullException\" data-throw-if-not-resolved=\"false\"></xref> is thrown.</p>\n<p>\nSee the Laybuy documenation at: https://integrations.laybuy.com/reference#post_order-create-1\n</p>\n"
+  remarks: "\n<p>If <xref href=\"Yort.Laybuy.InStore.LaybuyClientConfiguration.DefaultBranch\" data-throw-if-not-resolved=\"false\"></xref> is non empty in the settings object used to construct this client then a \nnew <xref href=\"Yort.Laybuy.InStore.StandardOriginData\" data-throw-if-not-resolved=\"false\"></xref> instance is automatically created with appropriate values and applied to the request. If no default \nvalue can be applied then <xref href=\"System.ArgumentNullException\" data-throw-if-not-resolved=\"false\"></xref> is thrown.</p>\n<p>\nSee the Laybuy documenation at: https://integrations.laybuy.com/reference#post_order-create-1\n</p>\n"
   example: []
   syntax:
     content: public Task<CreateOrderResponse> Create(CreateOrderRequest request)
@@ -234,7 +234,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: GetStatus
     path: LaybuyClient.cs
-    startLine: 127
+    startLine: 126
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -288,7 +288,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Refund
     path: LaybuyClient.cs
-    startLine: 151
+    startLine: 150
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -346,7 +346,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Dispose
     path: LaybuyClient.cs
-    startLine: 163
+    startLine: 162
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -850,12 +850,6 @@ references:
   name: CreateOrderRequest
   nameWithType: CreateOrderRequest
   fullName: Yort.Laybuy.InStore.CreateOrderRequest
-- uid: Yort.Laybuy.InStore.CreateOrderRequest.OriginData
-  commentId: P:Yort.Laybuy.InStore.CreateOrderRequest.OriginData
-  isExternal: true
-- uid: Yort.Laybuy.InStore.LaybuyClientConfiguration.CallbackUrlTemplate
-  commentId: P:Yort.Laybuy.InStore.LaybuyClientConfiguration.CallbackUrlTemplate
-  isExternal: true
 - uid: Yort.Laybuy.InStore.LaybuyClientConfiguration.DefaultBranch
   commentId: P:Yort.Laybuy.InStore.LaybuyClientConfiguration.DefaultBranch
   isExternal: true
@@ -871,6 +865,9 @@ references:
   fullName: Yort.Laybuy.InStore.CreateOrderResponse
 - uid: Yort.Laybuy.InStore.CreateOrderRequest.Origin
   commentId: P:Yort.Laybuy.InStore.CreateOrderRequest.Origin
+  isExternal: true
+- uid: Yort.Laybuy.InStore.CreateOrderRequest.OriginData
+  commentId: P:Yort.Laybuy.InStore.CreateOrderRequest.OriginData
   isExternal: true
 - uid: Yort.Laybuy.InStore.CreateOrderRequest.Customer
   commentId: P:Yort.Laybuy.InStore.CreateOrderRequest.Customer

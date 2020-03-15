@@ -100,12 +100,11 @@ namespace Yort.Laybuy.InStore
 
 			if (OriginData == null)
 			{
-				if (!String.IsNullOrEmpty(settings.DefaultBranch) || !String.IsNullOrEmpty(settings.CallbackUrlTemplate))
+				if (!String.IsNullOrEmpty(settings.DefaultBranch))
 				{
 					this.OriginData = new StandardOriginData()
 					{
-						Branch = settings.DefaultBranch,
-						CallbackUrl = String.IsNullOrEmpty(settings.CallbackUrlTemplate) ? null : new Uri(settings.CallbackUrlTemplate?.Replace("{merchantReference}", this.MerchantReference))
+						Branch = settings.DefaultBranch
 					};
 				}
 				else

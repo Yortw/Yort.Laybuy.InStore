@@ -41,7 +41,6 @@
   "Yort.Laybuy.InStore.LaybuyClient.Refund(Yort.Laybuy.InStore.RefundRequest)": "Yort.Laybuy.InStore.LaybuyClient.yml",
   "Yort.Laybuy.InStore.LaybuyClientConfiguration": "Yort.Laybuy.InStore.LaybuyClientConfiguration.yml",
   "Yort.Laybuy.InStore.LaybuyClientConfiguration.#ctor(Yort.Laybuy.InStore.LaybuyCredentials)": "Yort.Laybuy.InStore.LaybuyClientConfiguration.yml",
-  "Yort.Laybuy.InStore.LaybuyClientConfiguration.CallbackUrlTemplate": "Yort.Laybuy.InStore.LaybuyClientConfiguration.yml",
   "Yort.Laybuy.InStore.LaybuyClientConfiguration.Credentials": "Yort.Laybuy.InStore.LaybuyClientConfiguration.yml",
   "Yort.Laybuy.InStore.LaybuyClientConfiguration.DefaultBranch": "Yort.Laybuy.InStore.LaybuyClientConfiguration.yml",
   "Yort.Laybuy.InStore.LaybuyClientConfiguration.DefaultOrigin": "Yort.Laybuy.InStore.LaybuyClientConfiguration.yml",
@@ -125,6 +124,5 @@
   "Yort.Laybuy.InStore.ResponseLaybuyCustomer.State": "Yort.Laybuy.InStore.ResponseLaybuyCustomer.yml",
   "Yort.Laybuy.InStore.ResponseLaybuyCustomer.Suburb": "Yort.Laybuy.InStore.ResponseLaybuyCustomer.yml",
   "Yort.Laybuy.InStore.StandardOriginData": "Yort.Laybuy.InStore.StandardOriginData.yml",
-  "Yort.Laybuy.InStore.StandardOriginData.Branch": "Yort.Laybuy.InStore.StandardOriginData.yml",
-  "Yort.Laybuy.InStore.StandardOriginData.CallbackUrl": "Yort.Laybuy.InStore.StandardOriginData.yml"
+  "Yort.Laybuy.InStore.StandardOriginData.Branch": "Yort.Laybuy.InStore.StandardOriginData.yml"
 }

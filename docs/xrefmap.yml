@@ -456,19 +456,6 @@ references:
   isSpec: "True"
   fullName: Yort.Laybuy.InStore.LaybuyClientConfiguration.LaybuyClientConfiguration
   nameWithType: LaybuyClientConfiguration.LaybuyClientConfiguration
-- uid: Yort.Laybuy.InStore.LaybuyClientConfiguration.CallbackUrlTemplate
-  name: CallbackUrlTemplate
-  href: api/Yort.Laybuy.InStore.LaybuyClientConfiguration.html#Yort_Laybuy_InStore_LaybuyClientConfiguration_CallbackUrlTemplate
-  commentId: P:Yort.Laybuy.InStore.LaybuyClientConfiguration.CallbackUrlTemplate
-  fullName: Yort.Laybuy.InStore.LaybuyClientConfiguration.CallbackUrlTemplate
-  nameWithType: LaybuyClientConfiguration.CallbackUrlTemplate
-- uid: Yort.Laybuy.InStore.LaybuyClientConfiguration.CallbackUrlTemplate*
-  name: CallbackUrlTemplate
-  href: api/Yort.Laybuy.InStore.LaybuyClientConfiguration.html#Yort_Laybuy_InStore_LaybuyClientConfiguration_CallbackUrlTemplate_
-  commentId: Overload:Yort.Laybuy.InStore.LaybuyClientConfiguration.CallbackUrlTemplate
-  isSpec: "True"
-  fullName: Yort.Laybuy.InStore.LaybuyClientConfiguration.CallbackUrlTemplate
-  nameWithType: LaybuyClientConfiguration.CallbackUrlTemplate
 - uid: Yort.Laybuy.InStore.LaybuyClientConfiguration.Credentials
   name: Credentials
   href: api/Yort.Laybuy.InStore.LaybuyClientConfiguration.html#Yort_Laybuy_InStore_LaybuyClientConfiguration_Credentials
@@ -1421,16 +1408,3 @@ references:
   isSpec: "True"
   fullName: Yort.Laybuy.InStore.StandardOriginData.Branch
   nameWithType: StandardOriginData.Branch
-- uid: Yort.Laybuy.InStore.StandardOriginData.CallbackUrl
-  name: CallbackUrl
-  href: api/Yort.Laybuy.InStore.StandardOriginData.html#Yort_Laybuy_InStore_StandardOriginData_CallbackUrl
-  commentId: P:Yort.Laybuy.InStore.StandardOriginData.CallbackUrl
-  fullName: Yort.Laybuy.InStore.StandardOriginData.CallbackUrl
-  nameWithType: StandardOriginData.CallbackUrl
-- uid: Yort.Laybuy.InStore.StandardOriginData.CallbackUrl*
-  name: CallbackUrl
-  href: api/Yort.Laybuy.InStore.StandardOriginData.html#Yort_Laybuy_InStore_StandardOriginData_CallbackUrl_
-  commentId: Overload:Yort.Laybuy.InStore.StandardOriginData.CallbackUrl
-  isSpec: "True"
-  fullName: Yort.Laybuy.InStore.StandardOriginData.CallbackUrl
-  nameWithType: StandardOriginData.CallbackUrl

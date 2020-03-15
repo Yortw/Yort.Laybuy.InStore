@@ -6,7 +6,6 @@ items:
   parent: Yort.Laybuy.InStore
   children:
   - Yort.Laybuy.InStore.LaybuyClientConfiguration.#ctor(Yort.Laybuy.InStore.LaybuyCredentials)
-  - Yort.Laybuy.InStore.LaybuyClientConfiguration.CallbackUrlTemplate
   - Yort.Laybuy.InStore.LaybuyClientConfiguration.Credentials
   - Yort.Laybuy.InStore.LaybuyClientConfiguration.DefaultBranch
   - Yort.Laybuy.InStore.LaybuyClientConfiguration.DefaultOrigin
@@ -161,44 +160,6 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: Yort.Laybuy.InStore.LaybuyClientConfiguration.CallbackUrlTemplate
-  commentId: P:Yort.Laybuy.InStore.LaybuyClientConfiguration.CallbackUrlTemplate
-  id: CallbackUrlTemplate
-  parent: Yort.Laybuy.InStore.LaybuyClientConfiguration
-  langs:
-  - csharp
-  - vb
-  name: CallbackUrlTemplate
-  nameWithType: LaybuyClientConfiguration.CallbackUrlTemplate
-  fullName: Yort.Laybuy.InStore.LaybuyClientConfiguration.CallbackUrlTemplate
-  type: Property
-  source:
-    remote:
-      path: src/LaybuyClientConfiguration.cs
-      branch: master
-      repo: https://github.com/Yortw/Yort.Laybuy.InStore
-    id: CallbackUrlTemplate
-    path: LaybuyClientConfiguration.cs
-    startLine: 62
-  assemblies:
-  - Yort.Laybuy.InStore
-  namespace: Yort.Laybuy.InStore
-  summary: "\nGets or sets a string containing a template used to automatically generate callback urls for <xref href=\"Yort.Laybuy.InStore.CreateOrderRequest\" data-throw-if-not-resolved=\"false\"></xref>.\n"
-  remarks: "\n<p>This value can be left null if you do not require callbacks. The default value is null. Callbacks are not typically used with the in store process \n(normally they used as part of an e-commerce workflow) but they are referred to in the Laybuy documenation for the POS API so they&apos;ve been implemented in this \nlibrary where mentions by that documentation.</p>\n<p>You can use the (case-sensitive) tag {merchantReference} in the template string, it will be replaced with the merchant reference of the request the url is generated for.</p>\n<p>Sample: https://www.mydomain.com/callbacks/laybuy/{merchantReference} </p>\n"
-  example: []
-  syntax:
-    content: public string CallbackUrlTemplate { get; set; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: Public Property CallbackUrlTemplate As String
-  overload: Yort.Laybuy.InStore.LaybuyClientConfiguration.CallbackUrlTemplate*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
 - uid: Yort.Laybuy.InStore.LaybuyClientConfiguration.HttpClientFactory
   commentId: P:Yort.Laybuy.InStore.LaybuyClientConfiguration.HttpClientFactory
   id: HttpClientFactory
@@ -217,7 +178,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: HttpClientFactory
     path: LaybuyClientConfiguration.cs
-    startLine: 68
+    startLine: 54
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -254,7 +215,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: DefaultOrigin
     path: LaybuyClientConfiguration.cs
-    startLine: 79
+    startLine: 65
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -293,7 +254,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: DefaultBranch
     path: LaybuyClientConfiguration.cs
-    startLine: 87
+    startLine: 73
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -650,24 +611,6 @@ references:
   name: Credentials
   nameWithType: LaybuyClientConfiguration.Credentials
   fullName: Yort.Laybuy.InStore.LaybuyClientConfiguration.Credentials
-- uid: Yort.Laybuy.InStore.CreateOrderRequest
-  commentId: T:Yort.Laybuy.InStore.CreateOrderRequest
-  parent: Yort.Laybuy.InStore
-  name: CreateOrderRequest
-  nameWithType: CreateOrderRequest
-  fullName: Yort.Laybuy.InStore.CreateOrderRequest
-- uid: Yort.Laybuy.InStore.LaybuyClientConfiguration.CallbackUrlTemplate*
-  commentId: Overload:Yort.Laybuy.InStore.LaybuyClientConfiguration.CallbackUrlTemplate
-  name: CallbackUrlTemplate
-  nameWithType: LaybuyClientConfiguration.CallbackUrlTemplate
-  fullName: Yort.Laybuy.InStore.LaybuyClientConfiguration.CallbackUrlTemplate
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String
 - uid: System.Net.Http.HttpClient
   commentId: T:System.Net.Http.HttpClient
   isExternal: true
@@ -767,9 +710,22 @@ references:
   name: DefaultOrigin
   nameWithType: LaybuyClientConfiguration.DefaultOrigin
   fullName: Yort.Laybuy.InStore.LaybuyClientConfiguration.DefaultOrigin
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: Yort.Laybuy.InStore.StandardOriginData.Branch
   commentId: P:Yort.Laybuy.InStore.StandardOriginData.Branch
   isExternal: true
+- uid: Yort.Laybuy.InStore.CreateOrderRequest
+  commentId: T:Yort.Laybuy.InStore.CreateOrderRequest
+  parent: Yort.Laybuy.InStore
+  name: CreateOrderRequest
+  nameWithType: CreateOrderRequest
+  fullName: Yort.Laybuy.InStore.CreateOrderRequest
 - uid: Yort.Laybuy.InStore.LaybuyClientConfiguration.DefaultBranch*
   commentId: Overload:Yort.Laybuy.InStore.LaybuyClientConfiguration.DefaultBranch
   name: DefaultBranch

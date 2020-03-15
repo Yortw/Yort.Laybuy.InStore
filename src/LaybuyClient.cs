@@ -96,8 +96,7 @@ namespace Yort.Laybuy.InStore
 		/// </summary>
 		/// <param name="request">A <see cref="CreateOrderRequest"/> with details of the order to create.</param>
 		/// <remarks>
-		/// <para>If <see cref="CreateOrderRequest.OriginData"/> is null and <see cref="LaybuyClientConfiguration.CallbackUrlTemplate"/> and/or 
-		/// <see cref="LaybuyClientConfiguration.DefaultBranch"/> are non empty in the settings object used to construct this client then a 
+		/// <para>If <see cref="LaybuyClientConfiguration.DefaultBranch"/> is non empty in the settings object used to construct this client then a 
 		/// new <see cref="StandardOriginData"/> instance is automatically created with appropriate values and applied to the request. If no default 
 		/// value can be applied then <see cref="System.ArgumentNullException"/> is thrown.</para>
 		/// <para>

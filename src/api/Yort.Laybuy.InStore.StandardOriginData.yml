@@ -6,7 +6,6 @@ items:
   parent: Yort.Laybuy.InStore
   children:
   - Yort.Laybuy.InStore.StandardOriginData.Branch
-  - Yort.Laybuy.InStore.StandardOriginData.CallbackUrl
   langs:
   - csharp
   - vb
@@ -47,55 +46,6 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Yort.Laybuy.InStore.StandardOriginData.CallbackUrl
-  commentId: P:Yort.Laybuy.InStore.StandardOriginData.CallbackUrl
-  id: CallbackUrl
-  parent: Yort.Laybuy.InStore.StandardOriginData
-  langs:
-  - csharp
-  - vb
-  name: CallbackUrl
-  nameWithType: StandardOriginData.CallbackUrl
-  fullName: Yort.Laybuy.InStore.StandardOriginData.CallbackUrl
-  type: Property
-  source:
-    remote:
-      path: src/StandardOriginData.cs
-      branch: master
-      repo: https://github.com/Yortw/Yort.Laybuy.InStore
-    id: CallbackUrl
-    path: StandardOriginData.cs
-    startLine: 20
-  assemblies:
-  - Yort.Laybuy.InStore
-  namespace: Yort.Laybuy.InStore
-  summary: "\nThe absoulte URL to callback to when the payment process is complete.\n"
-  example: []
-  syntax:
-    content: >-
-      [JsonProperty("callbackUrl")]
-
-      public Uri CallbackUrl { get; set; }
-    parameters: []
-    return:
-      type: System.Uri
-    content.vb: >-
-      <JsonProperty("callbackUrl")>
-
-      Public Property CallbackUrl As Uri
-  overload: Yort.Laybuy.InStore.StandardOriginData.CallbackUrl*
-  attributes:
-  - type: Newtonsoft.Json.JsonPropertyAttribute
-    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
-    arguments:
-    - type: System.String
-      value: callbackUrl
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
 - uid: Yort.Laybuy.InStore.StandardOriginData.Branch
   commentId: P:Yort.Laybuy.InStore.StandardOriginData.Branch
   id: Branch
@@ -114,7 +64,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Branch
     path: StandardOriginData.cs
-    startLine: 29
+    startLine: 22
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -453,18 +403,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Yort.Laybuy.InStore.StandardOriginData.CallbackUrl*
-  commentId: Overload:Yort.Laybuy.InStore.StandardOriginData.CallbackUrl
-  name: CallbackUrl
-  nameWithType: StandardOriginData.CallbackUrl
-  fullName: Yort.Laybuy.InStore.StandardOriginData.CallbackUrl
-- uid: System.Uri
-  commentId: T:System.Uri
-  parent: System
-  isExternal: true
-  name: Uri
-  nameWithType: Uri
-  fullName: System.Uri
 - uid: Yort.Laybuy.InStore.StandardOriginData.Branch*
   commentId: Overload:Yort.Laybuy.InStore.StandardOriginData.Branch
   name: Branch
