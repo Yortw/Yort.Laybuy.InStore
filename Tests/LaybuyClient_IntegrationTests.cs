@@ -55,7 +55,8 @@ namespace Yort.Laybuy.InStore.Tests
 			Assert.IsNotNull(createOrderResponse);
 			Assert.AreEqual(createOrderResponse.Result, LaybuyStatus.Success);
 			Assert.IsFalse(String.IsNullOrWhiteSpace(createOrderResponse.Token));
-			Assert.IsNotNull(String.IsNullOrWhiteSpace(createOrderResponse.Error));
+			Assert.IsTrue(String.IsNullOrWhiteSpace(createOrderResponse.Error));
+			Assert.IsNotNull(createOrderResponse.PaymentUrl);
 
 			//Poll until 'order' reaches a final status
 			var done = false;
