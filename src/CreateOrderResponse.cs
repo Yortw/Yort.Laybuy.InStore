@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 using Newtonsoft.Json;
 
@@ -16,6 +17,7 @@ namespace Yort.Laybuy.InStore
 		/// The Laybuy payment token for the payment. Populated when the result is SUCCESS.
 		/// </summary>
 		/// <seealso cref="LaybuyStatus"/>
+		[ExcludeFromCodeCoverage]
 		[JsonProperty("token")]
 		public string? Token { get; set; }
 		/// <summary>
@@ -23,6 +25,7 @@ namespace Yort.Laybuy.InStore
 		/// </summary>
 		/// <seealso cref="LaybuyStatus"/>
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1056:UriPropertiesShouldNotBeStrings")]
+		[ExcludeFromCodeCoverage]
 		[JsonProperty("paymentUrl")]
 		public string? PaymentUrl { get; set; }
 	}

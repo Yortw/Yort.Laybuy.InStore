@@ -20,7 +20,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: StandardOriginData
     path: StandardOriginData.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -64,7 +64,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Branch
     path: StandardOriginData.cs
-    startLine: 22
+    startLine: 23
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore

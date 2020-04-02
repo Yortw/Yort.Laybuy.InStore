@@ -27,7 +27,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: ResponseLaybuyCustomer
     path: ResponseLaybuyCustomer.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -82,7 +82,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: CustomerId
     path: ResponseLaybuyCustomer.cs
-    startLine: 20
+    startLine: 21
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -132,7 +132,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Address1
     path: ResponseLaybuyCustomer.cs
-    startLine: 27
+    startLine: 29
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -181,7 +181,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Address2
     path: ResponseLaybuyCustomer.cs
-    startLine: 32
+    startLine: 35
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -230,7 +230,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Suburb
     path: ResponseLaybuyCustomer.cs
-    startLine: 37
+    startLine: 41
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -279,7 +279,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: City
     path: ResponseLaybuyCustomer.cs
-    startLine: 42
+    startLine: 47
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -328,7 +328,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: State
     path: ResponseLaybuyCustomer.cs
-    startLine: 47
+    startLine: 53
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -377,7 +377,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Postcode
     path: ResponseLaybuyCustomer.cs
-    startLine: 52
+    startLine: 59
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -426,7 +426,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Country
     path: ResponseLaybuyCustomer.cs
-    startLine: 57
+    startLine: 65
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore

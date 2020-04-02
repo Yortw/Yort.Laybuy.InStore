@@ -21,7 +21,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: LaybuyApiResponseBase
     path: LaybuyApiResponseBase.cs
-    startLine: 10
+    startLine: 11
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -72,7 +72,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Result
     path: LaybuyApiResponseBase.cs
-    startLine: 15
+    startLine: 16
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -121,7 +121,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Error
     path: LaybuyApiResponseBase.cs
-    startLine: 20
+    startLine: 22
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore

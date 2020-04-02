@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 using Newtonsoft.Json;
 
@@ -18,6 +19,7 @@ namespace Yort.Laybuy.InStore
 		/// The refund identifier.
 		/// </value>
 		[JsonProperty("refundId")]
+		[ExcludeFromCodeCoverage]
 		public int RefundId { get; set; }
 		/// <summary>
 		/// Gets or sets the date time at which the refund occurred.
@@ -25,6 +27,7 @@ namespace Yort.Laybuy.InStore
 		/// <value>
 		/// The date time.
 		/// </value>
+		[ExcludeFromCodeCoverage]
 		[JsonProperty("dateTime")]
 		public DateTime DateTime { get; set; }
 		/// <summary>
@@ -33,6 +36,7 @@ namespace Yort.Laybuy.InStore
 		/// <value>
 		/// The amount.
 		/// </value>
+		[ExcludeFromCodeCoverage]
 		[JsonProperty("amount")]
 		public decimal Amount { get; set; }
 		/// <summary>
@@ -41,6 +45,7 @@ namespace Yort.Laybuy.InStore
 		/// <value>
 		/// The refund reference.
 		/// </value>
+		[ExcludeFromCodeCoverage]
 		[JsonProperty("refundReference")]
 		public string? RefundReference { get; set; }
 		/// <summary>
@@ -49,6 +54,7 @@ namespace Yort.Laybuy.InStore
 		/// <value>
 		/// The user.
 		/// </value>
+		[ExcludeFromCodeCoverage]
 		[JsonProperty("user")]
 		public string? User { get; set; }
 		/// <summary>
@@ -57,6 +63,7 @@ namespace Yort.Laybuy.InStore
 		/// <value>
 		/// The user note.
 		/// </value>
+		[ExcludeFromCodeCoverage]
 		[JsonProperty("userNote")]
 		public string? UserNote { get; set; }
 	}

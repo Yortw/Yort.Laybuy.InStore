@@ -27,7 +27,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: OrderResponse
     path: OrderResponse.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -80,7 +80,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: OrderId
     path: OrderResponse.cs
-    startLine: 20
+    startLine: 21
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -129,7 +129,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Token
     path: OrderResponse.cs
-    startLine: 25
+    startLine: 27
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -178,7 +178,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Amount
     path: OrderResponse.cs
-    startLine: 30
+    startLine: 33
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -227,7 +227,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Currency
     path: OrderResponse.cs
-    startLine: 35
+    startLine: 39
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -276,7 +276,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: MerchantReference
     path: OrderResponse.cs
-    startLine: 40
+    startLine: 45
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -325,7 +325,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Processed
     path: OrderResponse.cs
-    startLine: 45
+    startLine: 51
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -374,7 +374,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Customer
     path: OrderResponse.cs
-    startLine: 50
+    startLine: 57
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -423,7 +423,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Refunds
     path: OrderResponse.cs
-    startLine: 58
+    startLine: 66
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore

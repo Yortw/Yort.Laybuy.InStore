@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 using Newtonsoft.Json;
 
@@ -14,6 +15,7 @@ namespace Yort.Laybuy.InStore
 		/// The name of the person associated with the address, the person/department receiving the bill or the goods, 
 		/// depending on whether this is a billing or shipping address. If not specified, the customer's name will be used.
 		/// </summary>
+		[ExcludeFromCodeCoverage]
 		[JsonProperty("name")]
 		public string? Name { get; set; }
 		/// <summary>
@@ -22,42 +24,50 @@ namespace Yort.Laybuy.InStore
 		/// <remarks>
 		/// <para>If not provided the customer's phone number is used.</para>
 		/// </remarks>
+		[ExcludeFromCodeCoverage]
 		[JsonProperty("phone")]
 		public string? Phone { get; set; }
 
 		/// <summary>
 		/// The first line of address for the customer.
 		/// </summary>
+		[ExcludeFromCodeCoverage]
 		[JsonProperty("address1")]
 		public string? Address1 { get; set; }
 		/// <summary>
 		/// The second line of address for the customer, if any.
 		/// </summary>
+		[ExcludeFromCodeCoverage]
 		[JsonProperty("address2")]
 		public string? Address2 { get; set; }
 		/// <summary>
 		/// The suburb asssociated with the customer's address.
 		/// </summary>
+		[ExcludeFromCodeCoverage]
 		[JsonProperty("suburb")]
 		public string? Suburb { get; set; }
 		/// <summary>
 		/// The city asssociated with the customer's address.
 		/// </summary>
+		[ExcludeFromCodeCoverage]
 		[JsonProperty("city")]
 		public string? City { get; set; }
 		/// <summary>
 		/// The state asssociated with the customer's address.
 		/// </summary>
+		[ExcludeFromCodeCoverage]
 		[JsonProperty("state")]
 		public string? State { get; set; }
 		/// <summary>
 		/// The post code asssociated with the customer's address.
 		/// </summary>
+		[ExcludeFromCodeCoverage]
 		[JsonProperty("postcode")]
 		public string? Postcode { get; set; }
 		/// <summary>
 		/// The country asssociated with the customer's address.
 		/// </summary>
+		[ExcludeFromCodeCoverage]
 		[JsonProperty("country")]
 		public string? Country { get; set; }
 	}

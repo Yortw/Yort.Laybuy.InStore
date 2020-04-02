@@ -25,7 +25,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: LaybuyClientConfiguration
     path: LaybuyClientConfiguration.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -68,7 +68,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: .ctor
     path: LaybuyClientConfiguration.cs
-    startLine: 20
+    startLine: 21
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -103,7 +103,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Environment
     path: LaybuyClientConfiguration.cs
-    startLine: 33
+    startLine: 34
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -141,7 +141,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Credentials
     path: LaybuyClientConfiguration.cs
-    startLine: 49
+    startLine: 51
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -178,7 +178,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: HttpClientFactory
     path: LaybuyClientConfiguration.cs
-    startLine: 54
+    startLine: 56
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -215,7 +215,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: DefaultOrigin
     path: LaybuyClientConfiguration.cs
-    startLine: 65
+    startLine: 68
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -254,7 +254,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: DefaultBranch
     path: LaybuyClientConfiguration.cs
-    startLine: 73
+    startLine: 77
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore

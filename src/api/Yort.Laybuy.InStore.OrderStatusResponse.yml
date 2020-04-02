@@ -20,7 +20,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: OrderStatusResponse
     path: OrderStatusResponse.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -73,7 +73,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Status
     path: OrderStatusResponse.cs
-    startLine: 20
+    startLine: 21
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore

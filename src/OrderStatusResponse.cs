@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 using Newtonsoft.Json;
 
@@ -18,6 +19,7 @@ namespace Yort.Laybuy.InStore
 		/// <value>
 		/// A string containing the status.
 		/// </value>
+		[ExcludeFromCodeCoverage]
 		[JsonProperty("status")]
 		public string? Status { get; set; }
 	}

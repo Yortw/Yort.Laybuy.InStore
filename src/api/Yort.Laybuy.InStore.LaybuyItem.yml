@@ -23,7 +23,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: LaybuyItem
     path: LaybuyItem.cs
-    startLine: 11
+    startLine: 12
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -69,7 +69,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Id
     path: LaybuyItem.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -118,7 +118,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Description
     path: LaybuyItem.cs
-    startLine: 21
+    startLine: 23
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -167,7 +167,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Quantity
     path: LaybuyItem.cs
-    startLine: 26
+    startLine: 29
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -216,7 +216,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Price
     path: LaybuyItem.cs
-    startLine: 31
+    startLine: 35
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore

@@ -62,7 +62,7 @@ namespace Yort.Laybuy.InStore.Tests
 			var done = false;
 			var started = DateTime.Now;
 			var statusRequest = new OrderStatusRequest() { MerchantReference = createRequest.MerchantReference };
-			OrderStatusResponse statusResponse = null;
+			OrderStatusResponse statusResponse;
 			while (!done)
 			{
 				await Task.Delay(5000); //Laybuy say poll every 5-10 seconds

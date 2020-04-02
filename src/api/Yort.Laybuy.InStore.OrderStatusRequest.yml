@@ -21,7 +21,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: OrderStatusRequest
     path: OrderStatusRequest.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -73,7 +73,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: MerchantReference
     path: OrderStatusRequest.cs
-    startLine: 18
+    startLine: 19
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -122,7 +122,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Validate
     path: OrderStatusRequest.cs
-    startLine: 28
+    startLine: 30
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore

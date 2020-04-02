@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 using Newtonsoft.Json;
 
@@ -20,6 +21,7 @@ namespace Yort.Laybuy.InStore
 		/// <value>
 		/// The branch identifier (usually name).
 		/// </value>
+		[ExcludeFromCodeCoverage]
 		[JsonProperty("branch")]
 		public string? Branch { get; set; }
 	}

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 using Ladon;
 using Newtonsoft.Json;
@@ -16,21 +17,25 @@ namespace Yort.Laybuy.InStore
 		/// <summary>
 		/// The unique id of the Laybuy order to refund against.
 		/// </summary>
+		[ExcludeFromCodeCoverage]
 		[JsonProperty("orderId")]
 		public long OrderId { get; set; }
 		/// <summary>
 		/// A unique client generated reference for the refund request, used to ensure idempotency.
 		/// </summary>
+		[ExcludeFromCodeCoverage]
 		[JsonProperty("refundReference")]
 		public string? RefundMerchantReference { get; set; }
 		/// <summary>
 		/// The amount of the refund.
 		/// </summary>
+		[ExcludeFromCodeCoverage]
 		[JsonProperty("amount")]
 		public decimal Amount { get; set; }
 		/// <summary>
 		/// An optional, humand readable note sent to the recipient of the refund.
 		/// </summary>
+		[ExcludeFromCodeCoverage]
 		[JsonProperty("note")]
 		public string? Note { get; set; }
 

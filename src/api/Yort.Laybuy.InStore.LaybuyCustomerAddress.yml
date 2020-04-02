@@ -28,7 +28,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: LaybuyCustomerAddress
     path: LaybuyCustomerAddress.cs
-    startLine: 10
+    startLine: 11
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -71,7 +71,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Name
     path: LaybuyCustomerAddress.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -120,7 +120,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Phone
     path: LaybuyCustomerAddress.cs
-    startLine: 24
+    startLine: 26
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -170,7 +170,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Address1
     path: LaybuyCustomerAddress.cs
-    startLine: 30
+    startLine: 33
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -219,7 +219,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Address2
     path: LaybuyCustomerAddress.cs
-    startLine: 35
+    startLine: 39
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -268,7 +268,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Suburb
     path: LaybuyCustomerAddress.cs
-    startLine: 40
+    startLine: 45
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -317,7 +317,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: City
     path: LaybuyCustomerAddress.cs
-    startLine: 45
+    startLine: 51
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -366,7 +366,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: State
     path: LaybuyCustomerAddress.cs
-    startLine: 50
+    startLine: 57
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -415,7 +415,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Postcode
     path: LaybuyCustomerAddress.cs
-    startLine: 55
+    startLine: 63
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -464,7 +464,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Country
     path: LaybuyCustomerAddress.cs
-    startLine: 60
+    startLine: 69
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore

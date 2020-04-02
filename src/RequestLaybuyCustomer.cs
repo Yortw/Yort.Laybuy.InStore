@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 using Newtonsoft.Json;
 
@@ -18,6 +19,7 @@ namespace Yort.Laybuy.InStore
 		/// <value>
 		/// The billing address.
 		/// </value>
+		[ExcludeFromCodeCoverage]
 		[JsonProperty("billingAddress")]
 		public LaybuyCustomerAddress? BillingAddress { get; set; }
 
@@ -27,6 +29,7 @@ namespace Yort.Laybuy.InStore
 		/// <value>
 		/// The shipping address.
 		/// </value>
+		[ExcludeFromCodeCoverage]
 		[JsonProperty("shippingAddress")]
 		public LaybuyCustomerAddress? ShippingAddress { get; set; }
 	}

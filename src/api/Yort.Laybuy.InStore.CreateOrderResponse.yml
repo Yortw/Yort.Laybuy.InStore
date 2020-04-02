@@ -21,7 +21,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: CreateOrderResponse
     path: CreateOrderResponse.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -74,7 +74,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Token
     path: CreateOrderResponse.cs
-    startLine: 18
+    startLine: 19
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -126,7 +126,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: PaymentUrl
     path: CreateOrderResponse.cs
-    startLine: 24
+    startLine: 26
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore

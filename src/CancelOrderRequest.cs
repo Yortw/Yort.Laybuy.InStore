@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 using Ladon;
 
@@ -13,6 +14,7 @@ namespace Yort.Laybuy.InStore
 		/// <summary>
 		/// Required. The token value returned by the <see cref="ILaybuyClient.Create(CreateOrderRequest)"/> method, used to uniquely identify the Laybuy to cancel.
 		/// </summary>
+		[ExcludeFromCodeCoverage]
 		public string? Token { get; set; }
 
 		/// <summary>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Net.Http;
 using System.Text;
 using Ladon;
@@ -31,6 +32,7 @@ namespace Yort.Laybuy.InStore
 		/// <remarks>
 		/// <para>The default value is <see cref="LaybuyEnvironment.Sandbox"/> to prevent accidental live transactions. Production systems must specify <see cref="LaybuyEnvironment.Production"/> for real payments to occur.</para>
 		/// </remarks>
+		[ExcludeFromCodeCoverage]
 		public LaybuyEnvironment Environment
 		{
 			get { return _Environment; }
@@ -52,6 +54,7 @@ namespace Yort.Laybuy.InStore
 		/// <summary>
 		/// Gets or sets a function that create an <see cref="HttpClient"/> to be used to communicate with Laybuy. Can be null, in which case the system will create it's own instance.
 		/// </summary>
+		[ExcludeFromCodeCoverage]
 		public Func<HttpClient>? HttpClientFactory { get; set; }
 
 		/// <summary>
@@ -63,6 +66,7 @@ namespace Yort.Laybuy.InStore
 		/// <remarks>
 		/// <para>The default value is "POS".</para>
 		/// </remarks>
+		[ExcludeFromCodeCoverage]
 		public string? DefaultOrigin { get; set; }
 
 		/// <summary>
@@ -71,6 +75,7 @@ namespace Yort.Laybuy.InStore
 		/// <value>
 		/// The default branch identifier (usually name).
 		/// </value>
+		[ExcludeFromCodeCoverage]
 		public string? DefaultBranch { get; set; }
 
 		internal Uri RootUri

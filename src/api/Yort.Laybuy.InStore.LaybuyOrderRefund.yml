@@ -25,7 +25,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: LaybuyOrderRefund
     path: LaybuyOrderRefund.cs
-    startLine: 11
+    startLine: 12
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -71,7 +71,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: RefundId
     path: LaybuyOrderRefund.cs
-    startLine: 19
+    startLine: 20
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -121,7 +121,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: DateTime
     path: LaybuyOrderRefund.cs
-    startLine: 27
+    startLine: 29
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -171,7 +171,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Amount
     path: LaybuyOrderRefund.cs
-    startLine: 35
+    startLine: 38
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -221,7 +221,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: RefundReference
     path: LaybuyOrderRefund.cs
-    startLine: 43
+    startLine: 47
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -271,7 +271,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: User
     path: LaybuyOrderRefund.cs
-    startLine: 51
+    startLine: 56
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -321,7 +321,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: UserNote
     path: LaybuyOrderRefund.cs
-    startLine: 59
+    startLine: 65
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore

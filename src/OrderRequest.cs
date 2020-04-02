@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Newtonsoft.Json;
 using Ladon;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Yort.Laybuy.InStore
 {
@@ -16,11 +17,13 @@ namespace Yort.Laybuy.InStore
 		/// <summary>
 		/// The unique Laybuy id of the Laybuy order to retrieve. Can be null if <see cref="MerchantReference"/> is provided.
 		/// </summary>
+		[ExcludeFromCodeCoverage]
 		[JsonProperty("orderId")]
 		public long? OrderId { get; set; }
 		/// <summary>
 		/// The unique merchant reference of the Laybuy order to retrieve. Can be null if <see cref="OrderId"/> is provided.
 		/// </summary>
+		[ExcludeFromCodeCoverage]
 		[JsonProperty("merchantReference")]
 		public string? MerchantReference { get; set; }
 
