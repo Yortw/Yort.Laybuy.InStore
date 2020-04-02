@@ -12,7 +12,7 @@ namespace Yort.Laybuy.InStore.Tests
 		[TestMethod]
 		public void DoesNothingIfSettingsNull()
 		{
-			var request = new OrderRequest();
+			var request = new CreateOrderRequest();
 			request.SetDefaults(null);
 		}
 
