@@ -122,8 +122,22 @@ namespace Yort.Laybuy.InStore.Tests
 				MerchantReference = System.Guid.NewGuid().ToString(),
 				Customer = new RequestLaybuyCustomer()
 				{
+					FirstName = "John",
+					LastName = "Smith",
 					Email = "test@example.com",
 					BillingAddress = new LaybuyCustomerAddress()
+					{
+						Address1 = "Test Address",
+						Address2 = "1 Somewhere Place",
+						City = "Auckland",
+						Country = "New Zealand",
+						Name = "Mr John Smith",
+						Phone = "555-555",
+						Postcode = "1010",
+						State = "Auckland",
+						Suburb = "Auckland Central"
+					},
+					ShippingAddress = new LaybuyCustomerAddress()
 					{
 						Address1 = "Test Address",
 						Address2 = "1 Somewhere Place",
