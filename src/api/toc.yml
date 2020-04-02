@@ -32,10 +32,16 @@
     name: LaybuyItem
   - uid: Yort.Laybuy.InStore.LaybuyOrderRefund
     name: LaybuyOrderRefund
+  - uid: Yort.Laybuy.InStore.LaybuyOrderStatus
+    name: LaybuyOrderStatus
   - uid: Yort.Laybuy.InStore.LaybuyRequestBase
     name: LaybuyRequestBase
   - uid: Yort.Laybuy.InStore.LaybuyStatus
     name: LaybuyStatus
+  - uid: Yort.Laybuy.InStore.OrderRequest
+    name: OrderRequest
+  - uid: Yort.Laybuy.InStore.OrderResponse
+    name: OrderResponse
   - uid: Yort.Laybuy.InStore.OrderStatusRequest
     name: OrderStatusRequest
   - uid: Yort.Laybuy.InStore.OrderStatusResponse

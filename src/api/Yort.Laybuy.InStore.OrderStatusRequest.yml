@@ -6,8 +6,6 @@ items:
   parent: Yort.Laybuy.InStore
   children:
   - Yort.Laybuy.InStore.OrderStatusRequest.MerchantReference
-  - Yort.Laybuy.InStore.OrderStatusRequest.OrderId
-  - Yort.Laybuy.InStore.OrderStatusRequest.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
   - Yort.Laybuy.InStore.OrderStatusRequest.Validate
   langs:
   - csharp
@@ -27,7 +25,7 @@ items:
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
-  summary: "\nRepresents arguments passed to <xref href=\"Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nRepresents arguments passed to <xref href=\"Yort.Laybuy.InStore.ILaybuyClient.GetOrderStatus(Yort.Laybuy.InStore.OrderStatusRequest)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: 'public class OrderStatusRequest : LaybuyRequestBase'
@@ -37,12 +35,13 @@ items:
   seealso:
   - linkId: Yort.Laybuy.InStore.OrderStatusResponse
     commentId: T:Yort.Laybuy.InStore.OrderStatusResponse
-  - linkId: Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
-    commentId: M:Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+  - linkId: Yort.Laybuy.InStore.ILaybuyClient.GetOrderStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+    commentId: M:Yort.Laybuy.InStore.ILaybuyClient.GetOrderStatus(Yort.Laybuy.InStore.OrderStatusRequest)
   inheritance:
   - System.Object
   - Yort.Laybuy.InStore.LaybuyRequestBase
   inheritedMembers:
+  - Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetHashCode
@@ -56,55 +55,6 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Yort.Laybuy.InStore.OrderStatusRequest.OrderId
-  commentId: P:Yort.Laybuy.InStore.OrderStatusRequest.OrderId
-  id: OrderId
-  parent: Yort.Laybuy.InStore.OrderStatusRequest
-  langs:
-  - csharp
-  - vb
-  name: OrderId
-  nameWithType: OrderStatusRequest.OrderId
-  fullName: Yort.Laybuy.InStore.OrderStatusRequest.OrderId
-  type: Property
-  source:
-    remote:
-      path: src/OrderStatusRequest.cs
-      branch: master
-      repo: https://github.com/Yortw/Yort.Laybuy.InStore
-    id: OrderId
-    path: OrderStatusRequest.cs
-    startLine: 18
-  assemblies:
-  - Yort.Laybuy.InStore
-  namespace: Yort.Laybuy.InStore
-  summary: "\nThe unique Laybuy id of the Laybuy order to retrieve. Can be null if <xref href=\"Yort.Laybuy.InStore.OrderStatusRequest.MerchantReference\" data-throw-if-not-resolved=\"false\"></xref> is provided.\n"
-  example: []
-  syntax:
-    content: >-
-      [JsonProperty("orderId")]
-
-      public long? OrderId { get; set; }
-    parameters: []
-    return:
-      type: System.Nullable{System.Int64}
-    content.vb: >-
-      <JsonProperty("orderId")>
-
-      Public Property OrderId As Long?
-  overload: Yort.Laybuy.InStore.OrderStatusRequest.OrderId*
-  attributes:
-  - type: Newtonsoft.Json.JsonPropertyAttribute
-    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
-    arguments:
-    - type: System.String
-      value: orderId
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
 - uid: Yort.Laybuy.InStore.OrderStatusRequest.MerchantReference
   commentId: P:Yort.Laybuy.InStore.OrderStatusRequest.MerchantReference
   id: MerchantReference
@@ -123,11 +73,11 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: MerchantReference
     path: OrderStatusRequest.cs
-    startLine: 23
+    startLine: 18
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
-  summary: "\nThe unique merchant reference of the Laybuy order to retrieve. Can be null if <xref href=\"Yort.Laybuy.InStore.OrderStatusRequest.OrderId\" data-throw-if-not-resolved=\"false\"></xref> is provided.\n"
+  summary: "\nRequired. The unique merchant reference of the Laybuy order to retrieve.\n"
   example: []
   syntax:
     content: >-
@@ -154,45 +104,6 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: Yort.Laybuy.InStore.OrderStatusRequest.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
-  commentId: M:Yort.Laybuy.InStore.OrderStatusRequest.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
-  id: SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
-  parent: Yort.Laybuy.InStore.OrderStatusRequest
-  langs:
-  - csharp
-  - vb
-  name: SetDefaults(LaybuyClientConfiguration)
-  nameWithType: OrderStatusRequest.SetDefaults(LaybuyClientConfiguration)
-  fullName: Yort.Laybuy.InStore.OrderStatusRequest.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
-  type: Method
-  source:
-    remote:
-      path: src/OrderStatusRequest.cs
-      branch: master
-      repo: https://github.com/Yortw/Yort.Laybuy.InStore
-    id: SetDefaults
-    path: OrderStatusRequest.cs
-    startLine: 30
-  assemblies:
-  - Yort.Laybuy.InStore
-  namespace: Yort.Laybuy.InStore
-  summary: "\nSets any properties on this object that are null to the appropriate defaults, if possible.\n"
-  example: []
-  syntax:
-    content: public override void SetDefaults(LaybuyClientConfiguration settings)
-    parameters:
-    - id: settings
-      type: Yort.Laybuy.InStore.LaybuyClientConfiguration
-      description: The settings used to construct the <xref href="Yort.Laybuy.InStore.LaybuyClient" data-throw-if-not-resolved="false"></xref> instance that is about to send this request.
-    content.vb: Public Overrides Sub SetDefaults(settings As LaybuyClientConfiguration)
-  overridden: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
-  overload: Yort.Laybuy.InStore.OrderStatusRequest.SetDefaults*
-  modifiers.csharp:
-  - public
-  - override
-  modifiers.vb:
-  - Public
-  - Overrides
 - uid: Yort.Laybuy.InStore.OrderStatusRequest.Validate
   commentId: M:Yort.Laybuy.InStore.OrderStatusRequest.Validate
   id: Validate
@@ -211,7 +122,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Validate
     path: OrderStatusRequest.cs
-    startLine: 41
+    startLine: 28
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -233,17 +144,17 @@ items:
   - Public
   - Overrides
 references:
-- uid: Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
-  commentId: M:Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+- uid: Yort.Laybuy.InStore.ILaybuyClient.GetOrderStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+  commentId: M:Yort.Laybuy.InStore.ILaybuyClient.GetOrderStatus(Yort.Laybuy.InStore.OrderStatusRequest)
   parent: Yort.Laybuy.InStore.ILaybuyClient
-  name: GetStatus(OrderStatusRequest)
-  nameWithType: ILaybuyClient.GetStatus(OrderStatusRequest)
-  fullName: Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+  name: GetOrderStatus(OrderStatusRequest)
+  nameWithType: ILaybuyClient.GetOrderStatus(OrderStatusRequest)
+  fullName: Yort.Laybuy.InStore.ILaybuyClient.GetOrderStatus(Yort.Laybuy.InStore.OrderStatusRequest)
   spec.csharp:
-  - uid: Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
-    name: GetStatus
-    nameWithType: ILaybuyClient.GetStatus
-    fullName: Yort.Laybuy.InStore.ILaybuyClient.GetStatus
+  - uid: Yort.Laybuy.InStore.ILaybuyClient.GetOrderStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+    name: GetOrderStatus
+    nameWithType: ILaybuyClient.GetOrderStatus
+    fullName: Yort.Laybuy.InStore.ILaybuyClient.GetOrderStatus
   - name: (
     nameWithType: (
     fullName: (
@@ -255,10 +166,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
-    name: GetStatus
-    nameWithType: ILaybuyClient.GetStatus
-    fullName: Yort.Laybuy.InStore.ILaybuyClient.GetStatus
+  - uid: Yort.Laybuy.InStore.ILaybuyClient.GetOrderStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+    name: GetOrderStatus
+    nameWithType: ILaybuyClient.GetOrderStatus
+    fullName: Yort.Laybuy.InStore.ILaybuyClient.GetOrderStatus
   - name: (
     nameWithType: (
     fullName: (
@@ -292,6 +203,42 @@ references:
   name: LaybuyRequestBase
   nameWithType: LaybuyRequestBase
   fullName: Yort.Laybuy.InStore.LaybuyRequestBase
+- uid: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+  commentId: M:Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+  parent: Yort.Laybuy.InStore.LaybuyRequestBase
+  name: SetDefaults(LaybuyClientConfiguration)
+  nameWithType: LaybuyRequestBase.SetDefaults(LaybuyClientConfiguration)
+  fullName: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+  spec.csharp:
+  - uid: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+    name: SetDefaults
+    nameWithType: LaybuyRequestBase.SetDefaults
+    fullName: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Yort.Laybuy.InStore.LaybuyClientConfiguration
+    name: LaybuyClientConfiguration
+    nameWithType: LaybuyClientConfiguration
+    fullName: Yort.Laybuy.InStore.LaybuyClientConfiguration
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+    name: SetDefaults
+    nameWithType: LaybuyRequestBase.SetDefaults
+    fullName: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Yort.Laybuy.InStore.LaybuyClientConfiguration
+    name: LaybuyClientConfiguration
+    nameWithType: LaybuyClientConfiguration
+    fullName: Yort.Laybuy.InStore.LaybuyClientConfiguration
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -583,100 +530,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Yort.Laybuy.InStore.OrderStatusRequest.MerchantReference
-  commentId: P:Yort.Laybuy.InStore.OrderStatusRequest.MerchantReference
-  isExternal: true
-- uid: Yort.Laybuy.InStore.OrderStatusRequest.OrderId*
-  commentId: Overload:Yort.Laybuy.InStore.OrderStatusRequest.OrderId
-  name: OrderId
-  nameWithType: OrderStatusRequest.OrderId
-  fullName: Yort.Laybuy.InStore.OrderStatusRequest.OrderId
-- uid: System.Nullable{System.Int64}
-  commentId: T:System.Nullable{System.Int64}
-  parent: System
-  definition: System.Nullable`1
-  name: Nullable<Int64>
-  nameWithType: Nullable<Int64>
-  fullName: System.Nullable<System.Int64>
-  nameWithType.vb: Nullable(Of Int64)
-  fullName.vb: System.Nullable(Of System.Int64)
-  name.vb: Nullable(Of Int64)
-  spec.csharp:
-  - uid: System.Nullable`1
-    name: Nullable
-    nameWithType: Nullable
-    fullName: System.Nullable
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - uid: System.Int64
-    name: Int64
-    nameWithType: Int64
-    fullName: System.Int64
-    isExternal: true
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: System.Nullable`1
-    name: Nullable
-    nameWithType: Nullable
-    fullName: System.Nullable
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - uid: System.Int64
-    name: Int64
-    nameWithType: Int64
-    fullName: System.Int64
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Nullable`1
-  commentId: T:System.Nullable`1
-  isExternal: true
-  name: Nullable<T>
-  nameWithType: Nullable<T>
-  fullName: System.Nullable<T>
-  nameWithType.vb: Nullable(Of T)
-  fullName.vb: System.Nullable(Of T)
-  name.vb: Nullable(Of T)
-  spec.csharp:
-  - uid: System.Nullable`1
-    name: Nullable
-    nameWithType: Nullable
-    fullName: System.Nullable
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: System.Nullable`1
-    name: Nullable
-    nameWithType: Nullable
-    fullName: System.Nullable
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Yort.Laybuy.InStore.OrderStatusRequest.OrderId
-  commentId: P:Yort.Laybuy.InStore.OrderStatusRequest.OrderId
-  isExternal: true
 - uid: Yort.Laybuy.InStore.OrderStatusRequest.MerchantReference*
   commentId: Overload:Yort.Laybuy.InStore.OrderStatusRequest.MerchantReference
   name: MerchantReference
@@ -689,58 +542,6 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: Yort.Laybuy.InStore.LaybuyClient
-  commentId: T:Yort.Laybuy.InStore.LaybuyClient
-  name: LaybuyClient
-  nameWithType: LaybuyClient
-  fullName: Yort.Laybuy.InStore.LaybuyClient
-- uid: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
-  commentId: M:Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
-  parent: Yort.Laybuy.InStore.LaybuyRequestBase
-  name: SetDefaults(LaybuyClientConfiguration)
-  nameWithType: LaybuyRequestBase.SetDefaults(LaybuyClientConfiguration)
-  fullName: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
-  spec.csharp:
-  - uid: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
-    name: SetDefaults
-    nameWithType: LaybuyRequestBase.SetDefaults
-    fullName: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: Yort.Laybuy.InStore.LaybuyClientConfiguration
-    name: LaybuyClientConfiguration
-    nameWithType: LaybuyClientConfiguration
-    fullName: Yort.Laybuy.InStore.LaybuyClientConfiguration
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
-    name: SetDefaults
-    nameWithType: LaybuyRequestBase.SetDefaults
-    fullName: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: Yort.Laybuy.InStore.LaybuyClientConfiguration
-    name: LaybuyClientConfiguration
-    nameWithType: LaybuyClientConfiguration
-    fullName: Yort.Laybuy.InStore.LaybuyClientConfiguration
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Yort.Laybuy.InStore.OrderStatusRequest.SetDefaults*
-  commentId: Overload:Yort.Laybuy.InStore.OrderStatusRequest.SetDefaults
-  name: SetDefaults
-  nameWithType: OrderStatusRequest.SetDefaults
-  fullName: Yort.Laybuy.InStore.OrderStatusRequest.SetDefaults
-- uid: Yort.Laybuy.InStore.LaybuyClientConfiguration
-  commentId: T:Yort.Laybuy.InStore.LaybuyClientConfiguration
-  parent: Yort.Laybuy.InStore
-  name: LaybuyClientConfiguration
-  nameWithType: LaybuyClientConfiguration
-  fullName: Yort.Laybuy.InStore.LaybuyClientConfiguration
 - uid: System.ArgumentException
   commentId: T:System.ArgumentException
   isExternal: true

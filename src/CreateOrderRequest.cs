@@ -69,7 +69,7 @@ namespace Yort.Laybuy.InStore
 		/// </summary>
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
 		[JsonProperty("items")]
-		public IList<LaybuyItem>? Items { get; private set; } = new List<LaybuyItem>();
+		public IList<LaybuyItem>? Items { get; set; } = new List<LaybuyItem>();
 
 		/// <summary>
 		/// Validates the properties for this instance are valid before sending the request to the API.

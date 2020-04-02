@@ -13,7 +13,7 @@ namespace Yort.Laybuy.InStore
 		/// <summary>
 		/// Default constructor. Not recommended, used <see cref="LaybuyApiException(String)"/>.
 		/// </summary>
-		public LaybuyApiException() { }
+		public LaybuyApiException() : this(ErrorMessages.UnspecifiedError) { }
 		/// <summary>
 		/// Partial constructor.
 		/// </summary>

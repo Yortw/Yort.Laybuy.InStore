@@ -35,6 +35,7 @@ items:
   derivedClasses:
   - Yort.Laybuy.InStore.CancelOrderResponse
   - Yort.Laybuy.InStore.CreateOrderResponse
+  - Yort.Laybuy.InStore.OrderResponse
   - Yort.Laybuy.InStore.OrderStatusResponse
   - Yort.Laybuy.InStore.RefundResponse
   inheritedMembers:

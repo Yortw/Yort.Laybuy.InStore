@@ -13,19 +13,6 @@ references:
   commentId: T:Yort.Laybuy.InStore.CancelOrderRequest
   fullName: Yort.Laybuy.InStore.CancelOrderRequest
   nameWithType: CancelOrderRequest
-- uid: Yort.Laybuy.InStore.CancelOrderRequest.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
-  name: SetDefaults(LaybuyClientConfiguration)
-  href: api/Yort.Laybuy.InStore.CancelOrderRequest.html#Yort_Laybuy_InStore_CancelOrderRequest_SetDefaults_Yort_Laybuy_InStore_LaybuyClientConfiguration_
-  commentId: M:Yort.Laybuy.InStore.CancelOrderRequest.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
-  fullName: Yort.Laybuy.InStore.CancelOrderRequest.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
-  nameWithType: CancelOrderRequest.SetDefaults(LaybuyClientConfiguration)
-- uid: Yort.Laybuy.InStore.CancelOrderRequest.SetDefaults*
-  name: SetDefaults
-  href: api/Yort.Laybuy.InStore.CancelOrderRequest.html#Yort_Laybuy_InStore_CancelOrderRequest_SetDefaults_
-  commentId: Overload:Yort.Laybuy.InStore.CancelOrderRequest.SetDefaults
-  isSpec: "True"
-  fullName: Yort.Laybuy.InStore.CancelOrderRequest.SetDefaults
-  nameWithType: CancelOrderRequest.SetDefaults
 - uid: Yort.Laybuy.InStore.CancelOrderRequest.Token
   name: Token
   href: api/Yort.Laybuy.InStore.CancelOrderRequest.html#Yort_Laybuy_InStore_CancelOrderRequest_Token
@@ -258,19 +245,32 @@ references:
   isSpec: "True"
   fullName: Yort.Laybuy.InStore.ILaybuyClient.Create
   nameWithType: ILaybuyClient.Create
-- uid: Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
-  name: GetStatus(OrderStatusRequest)
-  href: api/Yort.Laybuy.InStore.ILaybuyClient.html#Yort_Laybuy_InStore_ILaybuyClient_GetStatus_Yort_Laybuy_InStore_OrderStatusRequest_
-  commentId: M:Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
-  fullName: Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
-  nameWithType: ILaybuyClient.GetStatus(OrderStatusRequest)
-- uid: Yort.Laybuy.InStore.ILaybuyClient.GetStatus*
-  name: GetStatus
-  href: api/Yort.Laybuy.InStore.ILaybuyClient.html#Yort_Laybuy_InStore_ILaybuyClient_GetStatus_
-  commentId: Overload:Yort.Laybuy.InStore.ILaybuyClient.GetStatus
+- uid: Yort.Laybuy.InStore.ILaybuyClient.GetOrder(Yort.Laybuy.InStore.OrderRequest)
+  name: GetOrder(OrderRequest)
+  href: api/Yort.Laybuy.InStore.ILaybuyClient.html#Yort_Laybuy_InStore_ILaybuyClient_GetOrder_Yort_Laybuy_InStore_OrderRequest_
+  commentId: M:Yort.Laybuy.InStore.ILaybuyClient.GetOrder(Yort.Laybuy.InStore.OrderRequest)
+  fullName: Yort.Laybuy.InStore.ILaybuyClient.GetOrder(Yort.Laybuy.InStore.OrderRequest)
+  nameWithType: ILaybuyClient.GetOrder(OrderRequest)
+- uid: Yort.Laybuy.InStore.ILaybuyClient.GetOrder*
+  name: GetOrder
+  href: api/Yort.Laybuy.InStore.ILaybuyClient.html#Yort_Laybuy_InStore_ILaybuyClient_GetOrder_
+  commentId: Overload:Yort.Laybuy.InStore.ILaybuyClient.GetOrder
   isSpec: "True"
-  fullName: Yort.Laybuy.InStore.ILaybuyClient.GetStatus
-  nameWithType: ILaybuyClient.GetStatus
+  fullName: Yort.Laybuy.InStore.ILaybuyClient.GetOrder
+  nameWithType: ILaybuyClient.GetOrder
+- uid: Yort.Laybuy.InStore.ILaybuyClient.GetOrderStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+  name: GetOrderStatus(OrderStatusRequest)
+  href: api/Yort.Laybuy.InStore.ILaybuyClient.html#Yort_Laybuy_InStore_ILaybuyClient_GetOrderStatus_Yort_Laybuy_InStore_OrderStatusRequest_
+  commentId: M:Yort.Laybuy.InStore.ILaybuyClient.GetOrderStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+  fullName: Yort.Laybuy.InStore.ILaybuyClient.GetOrderStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+  nameWithType: ILaybuyClient.GetOrderStatus(OrderStatusRequest)
+- uid: Yort.Laybuy.InStore.ILaybuyClient.GetOrderStatus*
+  name: GetOrderStatus
+  href: api/Yort.Laybuy.InStore.ILaybuyClient.html#Yort_Laybuy_InStore_ILaybuyClient_GetOrderStatus_
+  commentId: Overload:Yort.Laybuy.InStore.ILaybuyClient.GetOrderStatus
+  isSpec: "True"
+  fullName: Yort.Laybuy.InStore.ILaybuyClient.GetOrderStatus
+  nameWithType: ILaybuyClient.GetOrderStatus
 - uid: Yort.Laybuy.InStore.ILaybuyClient.Refund(Yort.Laybuy.InStore.RefundRequest)
   name: Refund(RefundRequest)
   href: api/Yort.Laybuy.InStore.ILaybuyClient.html#Yort_Laybuy_InStore_ILaybuyClient_Refund_Yort_Laybuy_InStore_RefundRequest_
@@ -411,19 +411,32 @@ references:
   isSpec: "True"
   fullName: Yort.Laybuy.InStore.LaybuyClient.Dispose
   nameWithType: LaybuyClient.Dispose
-- uid: Yort.Laybuy.InStore.LaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
-  name: GetStatus(OrderStatusRequest)
-  href: api/Yort.Laybuy.InStore.LaybuyClient.html#Yort_Laybuy_InStore_LaybuyClient_GetStatus_Yort_Laybuy_InStore_OrderStatusRequest_
-  commentId: M:Yort.Laybuy.InStore.LaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
-  fullName: Yort.Laybuy.InStore.LaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
-  nameWithType: LaybuyClient.GetStatus(OrderStatusRequest)
-- uid: Yort.Laybuy.InStore.LaybuyClient.GetStatus*
-  name: GetStatus
-  href: api/Yort.Laybuy.InStore.LaybuyClient.html#Yort_Laybuy_InStore_LaybuyClient_GetStatus_
-  commentId: Overload:Yort.Laybuy.InStore.LaybuyClient.GetStatus
+- uid: Yort.Laybuy.InStore.LaybuyClient.GetOrder(Yort.Laybuy.InStore.OrderRequest)
+  name: GetOrder(OrderRequest)
+  href: api/Yort.Laybuy.InStore.LaybuyClient.html#Yort_Laybuy_InStore_LaybuyClient_GetOrder_Yort_Laybuy_InStore_OrderRequest_
+  commentId: M:Yort.Laybuy.InStore.LaybuyClient.GetOrder(Yort.Laybuy.InStore.OrderRequest)
+  fullName: Yort.Laybuy.InStore.LaybuyClient.GetOrder(Yort.Laybuy.InStore.OrderRequest)
+  nameWithType: LaybuyClient.GetOrder(OrderRequest)
+- uid: Yort.Laybuy.InStore.LaybuyClient.GetOrder*
+  name: GetOrder
+  href: api/Yort.Laybuy.InStore.LaybuyClient.html#Yort_Laybuy_InStore_LaybuyClient_GetOrder_
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyClient.GetOrder
   isSpec: "True"
-  fullName: Yort.Laybuy.InStore.LaybuyClient.GetStatus
-  nameWithType: LaybuyClient.GetStatus
+  fullName: Yort.Laybuy.InStore.LaybuyClient.GetOrder
+  nameWithType: LaybuyClient.GetOrder
+- uid: Yort.Laybuy.InStore.LaybuyClient.GetOrderStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+  name: GetOrderStatus(OrderStatusRequest)
+  href: api/Yort.Laybuy.InStore.LaybuyClient.html#Yort_Laybuy_InStore_LaybuyClient_GetOrderStatus_Yort_Laybuy_InStore_OrderStatusRequest_
+  commentId: M:Yort.Laybuy.InStore.LaybuyClient.GetOrderStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+  fullName: Yort.Laybuy.InStore.LaybuyClient.GetOrderStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+  nameWithType: LaybuyClient.GetOrderStatus(OrderStatusRequest)
+- uid: Yort.Laybuy.InStore.LaybuyClient.GetOrderStatus*
+  name: GetOrderStatus
+  href: api/Yort.Laybuy.InStore.LaybuyClient.html#Yort_Laybuy_InStore_LaybuyClient_GetOrderStatus_
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyClient.GetOrderStatus
+  isSpec: "True"
+  fullName: Yort.Laybuy.InStore.LaybuyClient.GetOrderStatus
+  nameWithType: LaybuyClient.GetOrderStatus
 - uid: Yort.Laybuy.InStore.LaybuyClient.Refund(Yort.Laybuy.InStore.RefundRequest)
   name: Refund(RefundRequest)
   href: api/Yort.Laybuy.InStore.LaybuyClient.html#Yort_Laybuy_InStore_LaybuyClient_Refund_Yort_Laybuy_InStore_RefundRequest_
@@ -907,6 +920,93 @@ references:
   isSpec: "True"
   fullName: Yort.Laybuy.InStore.LaybuyOrderRefund.UserNote
   nameWithType: LaybuyOrderRefund.UserNote
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus
+  name: LaybuyOrderStatus
+  href: api/Yort.Laybuy.InStore.LaybuyOrderStatus.html
+  commentId: T:Yort.Laybuy.InStore.LaybuyOrderStatus
+  fullName: Yort.Laybuy.InStore.LaybuyOrderStatus
+  nameWithType: LaybuyOrderStatus
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus.Cancelled
+  name: Cancelled
+  href: api/Yort.Laybuy.InStore.LaybuyOrderStatus.html#Yort_Laybuy_InStore_LaybuyOrderStatus_Cancelled
+  commentId: F:Yort.Laybuy.InStore.LaybuyOrderStatus.Cancelled
+  fullName: Yort.Laybuy.InStore.LaybuyOrderStatus.Cancelled
+  nameWithType: LaybuyOrderStatus.Cancelled
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus.Completed
+  name: Completed
+  href: api/Yort.Laybuy.InStore.LaybuyOrderStatus.html#Yort_Laybuy_InStore_LaybuyOrderStatus_Completed
+  commentId: F:Yort.Laybuy.InStore.LaybuyOrderStatus.Completed
+  fullName: Yort.Laybuy.InStore.LaybuyOrderStatus.Completed
+  nameWithType: LaybuyOrderStatus.Completed
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus.Declined
+  name: Declined
+  href: api/Yort.Laybuy.InStore.LaybuyOrderStatus.html#Yort_Laybuy_InStore_LaybuyOrderStatus_Declined
+  commentId: F:Yort.Laybuy.InStore.LaybuyOrderStatus.Declined
+  fullName: Yort.Laybuy.InStore.LaybuyOrderStatus.Declined
+  nameWithType: LaybuyOrderStatus.Declined
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus.Error
+  name: Error
+  href: api/Yort.Laybuy.InStore.LaybuyOrderStatus.html#Yort_Laybuy_InStore_LaybuyOrderStatus_Error
+  commentId: F:Yort.Laybuy.InStore.LaybuyOrderStatus.Error
+  fullName: Yort.Laybuy.InStore.LaybuyOrderStatus.Error
+  nameWithType: LaybuyOrderStatus.Error
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus.Expired
+  name: Expired
+  href: api/Yort.Laybuy.InStore.LaybuyOrderStatus.html#Yort_Laybuy_InStore_LaybuyOrderStatus_Expired
+  commentId: F:Yort.Laybuy.InStore.LaybuyOrderStatus.Expired
+  fullName: Yort.Laybuy.InStore.LaybuyOrderStatus.Expired
+  nameWithType: LaybuyOrderStatus.Expired
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus.IsApproved(System.String)
+  name: IsApproved(String)
+  href: api/Yort.Laybuy.InStore.LaybuyOrderStatus.html#Yort_Laybuy_InStore_LaybuyOrderStatus_IsApproved_System_String_
+  commentId: M:Yort.Laybuy.InStore.LaybuyOrderStatus.IsApproved(System.String)
+  fullName: Yort.Laybuy.InStore.LaybuyOrderStatus.IsApproved(System.String)
+  nameWithType: LaybuyOrderStatus.IsApproved(String)
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus.IsApproved*
+  name: IsApproved
+  href: api/Yort.Laybuy.InStore.LaybuyOrderStatus.html#Yort_Laybuy_InStore_LaybuyOrderStatus_IsApproved_
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyOrderStatus.IsApproved
+  isSpec: "True"
+  fullName: Yort.Laybuy.InStore.LaybuyOrderStatus.IsApproved
+  nameWithType: LaybuyOrderStatus.IsApproved
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus.IsFailed(System.String)
+  name: IsFailed(String)
+  href: api/Yort.Laybuy.InStore.LaybuyOrderStatus.html#Yort_Laybuy_InStore_LaybuyOrderStatus_IsFailed_System_String_
+  commentId: M:Yort.Laybuy.InStore.LaybuyOrderStatus.IsFailed(System.String)
+  fullName: Yort.Laybuy.InStore.LaybuyOrderStatus.IsFailed(System.String)
+  nameWithType: LaybuyOrderStatus.IsFailed(String)
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus.IsFailed*
+  name: IsFailed
+  href: api/Yort.Laybuy.InStore.LaybuyOrderStatus.html#Yort_Laybuy_InStore_LaybuyOrderStatus_IsFailed_
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyOrderStatus.IsFailed
+  isSpec: "True"
+  fullName: Yort.Laybuy.InStore.LaybuyOrderStatus.IsFailed
+  nameWithType: LaybuyOrderStatus.IsFailed
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus.IsPendingStatus(System.String)
+  name: IsPendingStatus(String)
+  href: api/Yort.Laybuy.InStore.LaybuyOrderStatus.html#Yort_Laybuy_InStore_LaybuyOrderStatus_IsPendingStatus_System_String_
+  commentId: M:Yort.Laybuy.InStore.LaybuyOrderStatus.IsPendingStatus(System.String)
+  fullName: Yort.Laybuy.InStore.LaybuyOrderStatus.IsPendingStatus(System.String)
+  nameWithType: LaybuyOrderStatus.IsPendingStatus(String)
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus.IsPendingStatus*
+  name: IsPendingStatus
+  href: api/Yort.Laybuy.InStore.LaybuyOrderStatus.html#Yort_Laybuy_InStore_LaybuyOrderStatus_IsPendingStatus_
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyOrderStatus.IsPendingStatus
+  isSpec: "True"
+  fullName: Yort.Laybuy.InStore.LaybuyOrderStatus.IsPendingStatus
+  nameWithType: LaybuyOrderStatus.IsPendingStatus
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus.Processing
+  name: Processing
+  href: api/Yort.Laybuy.InStore.LaybuyOrderStatus.html#Yort_Laybuy_InStore_LaybuyOrderStatus_Processing
+  commentId: F:Yort.Laybuy.InStore.LaybuyOrderStatus.Processing
+  fullName: Yort.Laybuy.InStore.LaybuyOrderStatus.Processing
+  nameWithType: LaybuyOrderStatus.Processing
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus.Waiting
+  name: Waiting
+  href: api/Yort.Laybuy.InStore.LaybuyOrderStatus.html#Yort_Laybuy_InStore_LaybuyOrderStatus_Waiting
+  commentId: F:Yort.Laybuy.InStore.LaybuyOrderStatus.Waiting
+  fullName: Yort.Laybuy.InStore.LaybuyOrderStatus.Waiting
+  nameWithType: LaybuyOrderStatus.Waiting
 - uid: Yort.Laybuy.InStore.LaybuyRequestBase
   name: LaybuyRequestBase
   href: api/Yort.Laybuy.InStore.LaybuyRequestBase.html
@@ -945,12 +1045,6 @@ references:
   commentId: T:Yort.Laybuy.InStore.LaybuyStatus
   fullName: Yort.Laybuy.InStore.LaybuyStatus
   nameWithType: LaybuyStatus
-- uid: Yort.Laybuy.InStore.LaybuyStatus.Cancelled
-  name: Cancelled
-  href: api/Yort.Laybuy.InStore.LaybuyStatus.html#Yort_Laybuy_InStore_LaybuyStatus_Cancelled
-  commentId: F:Yort.Laybuy.InStore.LaybuyStatus.Cancelled
-  fullName: Yort.Laybuy.InStore.LaybuyStatus.Cancelled
-  nameWithType: LaybuyStatus.Cancelled
 - uid: Yort.Laybuy.InStore.LaybuyStatus.Error
   name: Error
   href: api/Yort.Laybuy.InStore.LaybuyStatus.html#Yort_Laybuy_InStore_LaybuyStatus_Error
@@ -963,6 +1057,161 @@ references:
   commentId: F:Yort.Laybuy.InStore.LaybuyStatus.Success
   fullName: Yort.Laybuy.InStore.LaybuyStatus.Success
   nameWithType: LaybuyStatus.Success
+- uid: Yort.Laybuy.InStore.OrderRequest
+  name: OrderRequest
+  href: api/Yort.Laybuy.InStore.OrderRequest.html
+  commentId: T:Yort.Laybuy.InStore.OrderRequest
+  fullName: Yort.Laybuy.InStore.OrderRequest
+  nameWithType: OrderRequest
+- uid: Yort.Laybuy.InStore.OrderRequest.MerchantReference
+  name: MerchantReference
+  href: api/Yort.Laybuy.InStore.OrderRequest.html#Yort_Laybuy_InStore_OrderRequest_MerchantReference
+  commentId: P:Yort.Laybuy.InStore.OrderRequest.MerchantReference
+  fullName: Yort.Laybuy.InStore.OrderRequest.MerchantReference
+  nameWithType: OrderRequest.MerchantReference
+- uid: Yort.Laybuy.InStore.OrderRequest.MerchantReference*
+  name: MerchantReference
+  href: api/Yort.Laybuy.InStore.OrderRequest.html#Yort_Laybuy_InStore_OrderRequest_MerchantReference_
+  commentId: Overload:Yort.Laybuy.InStore.OrderRequest.MerchantReference
+  isSpec: "True"
+  fullName: Yort.Laybuy.InStore.OrderRequest.MerchantReference
+  nameWithType: OrderRequest.MerchantReference
+- uid: Yort.Laybuy.InStore.OrderRequest.OrderId
+  name: OrderId
+  href: api/Yort.Laybuy.InStore.OrderRequest.html#Yort_Laybuy_InStore_OrderRequest_OrderId
+  commentId: P:Yort.Laybuy.InStore.OrderRequest.OrderId
+  fullName: Yort.Laybuy.InStore.OrderRequest.OrderId
+  nameWithType: OrderRequest.OrderId
+- uid: Yort.Laybuy.InStore.OrderRequest.OrderId*
+  name: OrderId
+  href: api/Yort.Laybuy.InStore.OrderRequest.html#Yort_Laybuy_InStore_OrderRequest_OrderId_
+  commentId: Overload:Yort.Laybuy.InStore.OrderRequest.OrderId
+  isSpec: "True"
+  fullName: Yort.Laybuy.InStore.OrderRequest.OrderId
+  nameWithType: OrderRequest.OrderId
+- uid: Yort.Laybuy.InStore.OrderRequest.Validate
+  name: Validate()
+  href: api/Yort.Laybuy.InStore.OrderRequest.html#Yort_Laybuy_InStore_OrderRequest_Validate
+  commentId: M:Yort.Laybuy.InStore.OrderRequest.Validate
+  fullName: Yort.Laybuy.InStore.OrderRequest.Validate()
+  nameWithType: OrderRequest.Validate()
+- uid: Yort.Laybuy.InStore.OrderRequest.Validate*
+  name: Validate
+  href: api/Yort.Laybuy.InStore.OrderRequest.html#Yort_Laybuy_InStore_OrderRequest_Validate_
+  commentId: Overload:Yort.Laybuy.InStore.OrderRequest.Validate
+  isSpec: "True"
+  fullName: Yort.Laybuy.InStore.OrderRequest.Validate
+  nameWithType: OrderRequest.Validate
+- uid: Yort.Laybuy.InStore.OrderResponse
+  name: OrderResponse
+  href: api/Yort.Laybuy.InStore.OrderResponse.html
+  commentId: T:Yort.Laybuy.InStore.OrderResponse
+  fullName: Yort.Laybuy.InStore.OrderResponse
+  nameWithType: OrderResponse
+- uid: Yort.Laybuy.InStore.OrderResponse.Amount
+  name: Amount
+  href: api/Yort.Laybuy.InStore.OrderResponse.html#Yort_Laybuy_InStore_OrderResponse_Amount
+  commentId: P:Yort.Laybuy.InStore.OrderResponse.Amount
+  fullName: Yort.Laybuy.InStore.OrderResponse.Amount
+  nameWithType: OrderResponse.Amount
+- uid: Yort.Laybuy.InStore.OrderResponse.Amount*
+  name: Amount
+  href: api/Yort.Laybuy.InStore.OrderResponse.html#Yort_Laybuy_InStore_OrderResponse_Amount_
+  commentId: Overload:Yort.Laybuy.InStore.OrderResponse.Amount
+  isSpec: "True"
+  fullName: Yort.Laybuy.InStore.OrderResponse.Amount
+  nameWithType: OrderResponse.Amount
+- uid: Yort.Laybuy.InStore.OrderResponse.Currency
+  name: Currency
+  href: api/Yort.Laybuy.InStore.OrderResponse.html#Yort_Laybuy_InStore_OrderResponse_Currency
+  commentId: P:Yort.Laybuy.InStore.OrderResponse.Currency
+  fullName: Yort.Laybuy.InStore.OrderResponse.Currency
+  nameWithType: OrderResponse.Currency
+- uid: Yort.Laybuy.InStore.OrderResponse.Currency*
+  name: Currency
+  href: api/Yort.Laybuy.InStore.OrderResponse.html#Yort_Laybuy_InStore_OrderResponse_Currency_
+  commentId: Overload:Yort.Laybuy.InStore.OrderResponse.Currency
+  isSpec: "True"
+  fullName: Yort.Laybuy.InStore.OrderResponse.Currency
+  nameWithType: OrderResponse.Currency
+- uid: Yort.Laybuy.InStore.OrderResponse.Customer
+  name: Customer
+  href: api/Yort.Laybuy.InStore.OrderResponse.html#Yort_Laybuy_InStore_OrderResponse_Customer
+  commentId: P:Yort.Laybuy.InStore.OrderResponse.Customer
+  fullName: Yort.Laybuy.InStore.OrderResponse.Customer
+  nameWithType: OrderResponse.Customer
+- uid: Yort.Laybuy.InStore.OrderResponse.Customer*
+  name: Customer
+  href: api/Yort.Laybuy.InStore.OrderResponse.html#Yort_Laybuy_InStore_OrderResponse_Customer_
+  commentId: Overload:Yort.Laybuy.InStore.OrderResponse.Customer
+  isSpec: "True"
+  fullName: Yort.Laybuy.InStore.OrderResponse.Customer
+  nameWithType: OrderResponse.Customer
+- uid: Yort.Laybuy.InStore.OrderResponse.MerchantReference
+  name: MerchantReference
+  href: api/Yort.Laybuy.InStore.OrderResponse.html#Yort_Laybuy_InStore_OrderResponse_MerchantReference
+  commentId: P:Yort.Laybuy.InStore.OrderResponse.MerchantReference
+  fullName: Yort.Laybuy.InStore.OrderResponse.MerchantReference
+  nameWithType: OrderResponse.MerchantReference
+- uid: Yort.Laybuy.InStore.OrderResponse.MerchantReference*
+  name: MerchantReference
+  href: api/Yort.Laybuy.InStore.OrderResponse.html#Yort_Laybuy_InStore_OrderResponse_MerchantReference_
+  commentId: Overload:Yort.Laybuy.InStore.OrderResponse.MerchantReference
+  isSpec: "True"
+  fullName: Yort.Laybuy.InStore.OrderResponse.MerchantReference
+  nameWithType: OrderResponse.MerchantReference
+- uid: Yort.Laybuy.InStore.OrderResponse.OrderId
+  name: OrderId
+  href: api/Yort.Laybuy.InStore.OrderResponse.html#Yort_Laybuy_InStore_OrderResponse_OrderId
+  commentId: P:Yort.Laybuy.InStore.OrderResponse.OrderId
+  fullName: Yort.Laybuy.InStore.OrderResponse.OrderId
+  nameWithType: OrderResponse.OrderId
+- uid: Yort.Laybuy.InStore.OrderResponse.OrderId*
+  name: OrderId
+  href: api/Yort.Laybuy.InStore.OrderResponse.html#Yort_Laybuy_InStore_OrderResponse_OrderId_
+  commentId: Overload:Yort.Laybuy.InStore.OrderResponse.OrderId
+  isSpec: "True"
+  fullName: Yort.Laybuy.InStore.OrderResponse.OrderId
+  nameWithType: OrderResponse.OrderId
+- uid: Yort.Laybuy.InStore.OrderResponse.Processed
+  name: Processed
+  href: api/Yort.Laybuy.InStore.OrderResponse.html#Yort_Laybuy_InStore_OrderResponse_Processed
+  commentId: P:Yort.Laybuy.InStore.OrderResponse.Processed
+  fullName: Yort.Laybuy.InStore.OrderResponse.Processed
+  nameWithType: OrderResponse.Processed
+- uid: Yort.Laybuy.InStore.OrderResponse.Processed*
+  name: Processed
+  href: api/Yort.Laybuy.InStore.OrderResponse.html#Yort_Laybuy_InStore_OrderResponse_Processed_
+  commentId: Overload:Yort.Laybuy.InStore.OrderResponse.Processed
+  isSpec: "True"
+  fullName: Yort.Laybuy.InStore.OrderResponse.Processed
+  nameWithType: OrderResponse.Processed
+- uid: Yort.Laybuy.InStore.OrderResponse.Refunds
+  name: Refunds
+  href: api/Yort.Laybuy.InStore.OrderResponse.html#Yort_Laybuy_InStore_OrderResponse_Refunds
+  commentId: P:Yort.Laybuy.InStore.OrderResponse.Refunds
+  fullName: Yort.Laybuy.InStore.OrderResponse.Refunds
+  nameWithType: OrderResponse.Refunds
+- uid: Yort.Laybuy.InStore.OrderResponse.Refunds*
+  name: Refunds
+  href: api/Yort.Laybuy.InStore.OrderResponse.html#Yort_Laybuy_InStore_OrderResponse_Refunds_
+  commentId: Overload:Yort.Laybuy.InStore.OrderResponse.Refunds
+  isSpec: "True"
+  fullName: Yort.Laybuy.InStore.OrderResponse.Refunds
+  nameWithType: OrderResponse.Refunds
+- uid: Yort.Laybuy.InStore.OrderResponse.Token
+  name: Token
+  href: api/Yort.Laybuy.InStore.OrderResponse.html#Yort_Laybuy_InStore_OrderResponse_Token
+  commentId: P:Yort.Laybuy.InStore.OrderResponse.Token
+  fullName: Yort.Laybuy.InStore.OrderResponse.Token
+  nameWithType: OrderResponse.Token
+- uid: Yort.Laybuy.InStore.OrderResponse.Token*
+  name: Token
+  href: api/Yort.Laybuy.InStore.OrderResponse.html#Yort_Laybuy_InStore_OrderResponse_Token_
+  commentId: Overload:Yort.Laybuy.InStore.OrderResponse.Token
+  isSpec: "True"
+  fullName: Yort.Laybuy.InStore.OrderResponse.Token
+  nameWithType: OrderResponse.Token
 - uid: Yort.Laybuy.InStore.OrderStatusRequest
   name: OrderStatusRequest
   href: api/Yort.Laybuy.InStore.OrderStatusRequest.html
@@ -982,32 +1231,6 @@ references:
   isSpec: "True"
   fullName: Yort.Laybuy.InStore.OrderStatusRequest.MerchantReference
   nameWithType: OrderStatusRequest.MerchantReference
-- uid: Yort.Laybuy.InStore.OrderStatusRequest.OrderId
-  name: OrderId
-  href: api/Yort.Laybuy.InStore.OrderStatusRequest.html#Yort_Laybuy_InStore_OrderStatusRequest_OrderId
-  commentId: P:Yort.Laybuy.InStore.OrderStatusRequest.OrderId
-  fullName: Yort.Laybuy.InStore.OrderStatusRequest.OrderId
-  nameWithType: OrderStatusRequest.OrderId
-- uid: Yort.Laybuy.InStore.OrderStatusRequest.OrderId*
-  name: OrderId
-  href: api/Yort.Laybuy.InStore.OrderStatusRequest.html#Yort_Laybuy_InStore_OrderStatusRequest_OrderId_
-  commentId: Overload:Yort.Laybuy.InStore.OrderStatusRequest.OrderId
-  isSpec: "True"
-  fullName: Yort.Laybuy.InStore.OrderStatusRequest.OrderId
-  nameWithType: OrderStatusRequest.OrderId
-- uid: Yort.Laybuy.InStore.OrderStatusRequest.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
-  name: SetDefaults(LaybuyClientConfiguration)
-  href: api/Yort.Laybuy.InStore.OrderStatusRequest.html#Yort_Laybuy_InStore_OrderStatusRequest_SetDefaults_Yort_Laybuy_InStore_LaybuyClientConfiguration_
-  commentId: M:Yort.Laybuy.InStore.OrderStatusRequest.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
-  fullName: Yort.Laybuy.InStore.OrderStatusRequest.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
-  nameWithType: OrderStatusRequest.SetDefaults(LaybuyClientConfiguration)
-- uid: Yort.Laybuy.InStore.OrderStatusRequest.SetDefaults*
-  name: SetDefaults
-  href: api/Yort.Laybuy.InStore.OrderStatusRequest.html#Yort_Laybuy_InStore_OrderStatusRequest_SetDefaults_
-  commentId: Overload:Yort.Laybuy.InStore.OrderStatusRequest.SetDefaults
-  isSpec: "True"
-  fullName: Yort.Laybuy.InStore.OrderStatusRequest.SetDefaults
-  nameWithType: OrderStatusRequest.SetDefaults
 - uid: Yort.Laybuy.InStore.OrderStatusRequest.Validate
   name: Validate()
   href: api/Yort.Laybuy.InStore.OrderStatusRequest.html#Yort_Laybuy_InStore_OrderStatusRequest_Validate
@@ -1027,110 +1250,19 @@ references:
   commentId: T:Yort.Laybuy.InStore.OrderStatusResponse
   fullName: Yort.Laybuy.InStore.OrderStatusResponse
   nameWithType: OrderStatusResponse
-- uid: Yort.Laybuy.InStore.OrderStatusResponse.Amount
-  name: Amount
-  href: api/Yort.Laybuy.InStore.OrderStatusResponse.html#Yort_Laybuy_InStore_OrderStatusResponse_Amount
-  commentId: P:Yort.Laybuy.InStore.OrderStatusResponse.Amount
-  fullName: Yort.Laybuy.InStore.OrderStatusResponse.Amount
-  nameWithType: OrderStatusResponse.Amount
-- uid: Yort.Laybuy.InStore.OrderStatusResponse.Amount*
-  name: Amount
-  href: api/Yort.Laybuy.InStore.OrderStatusResponse.html#Yort_Laybuy_InStore_OrderStatusResponse_Amount_
-  commentId: Overload:Yort.Laybuy.InStore.OrderStatusResponse.Amount
+- uid: Yort.Laybuy.InStore.OrderStatusResponse.Status
+  name: Status
+  href: api/Yort.Laybuy.InStore.OrderStatusResponse.html#Yort_Laybuy_InStore_OrderStatusResponse_Status
+  commentId: P:Yort.Laybuy.InStore.OrderStatusResponse.Status
+  fullName: Yort.Laybuy.InStore.OrderStatusResponse.Status
+  nameWithType: OrderStatusResponse.Status
+- uid: Yort.Laybuy.InStore.OrderStatusResponse.Status*
+  name: Status
+  href: api/Yort.Laybuy.InStore.OrderStatusResponse.html#Yort_Laybuy_InStore_OrderStatusResponse_Status_
+  commentId: Overload:Yort.Laybuy.InStore.OrderStatusResponse.Status
   isSpec: "True"
-  fullName: Yort.Laybuy.InStore.OrderStatusResponse.Amount
-  nameWithType: OrderStatusResponse.Amount
-- uid: Yort.Laybuy.InStore.OrderStatusResponse.Currency
-  name: Currency
-  href: api/Yort.Laybuy.InStore.OrderStatusResponse.html#Yort_Laybuy_InStore_OrderStatusResponse_Currency
-  commentId: P:Yort.Laybuy.InStore.OrderStatusResponse.Currency
-  fullName: Yort.Laybuy.InStore.OrderStatusResponse.Currency
-  nameWithType: OrderStatusResponse.Currency
-- uid: Yort.Laybuy.InStore.OrderStatusResponse.Currency*
-  name: Currency
-  href: api/Yort.Laybuy.InStore.OrderStatusResponse.html#Yort_Laybuy_InStore_OrderStatusResponse_Currency_
-  commentId: Overload:Yort.Laybuy.InStore.OrderStatusResponse.Currency
-  isSpec: "True"
-  fullName: Yort.Laybuy.InStore.OrderStatusResponse.Currency
-  nameWithType: OrderStatusResponse.Currency
-- uid: Yort.Laybuy.InStore.OrderStatusResponse.Customer
-  name: Customer
-  href: api/Yort.Laybuy.InStore.OrderStatusResponse.html#Yort_Laybuy_InStore_OrderStatusResponse_Customer
-  commentId: P:Yort.Laybuy.InStore.OrderStatusResponse.Customer
-  fullName: Yort.Laybuy.InStore.OrderStatusResponse.Customer
-  nameWithType: OrderStatusResponse.Customer
-- uid: Yort.Laybuy.InStore.OrderStatusResponse.Customer*
-  name: Customer
-  href: api/Yort.Laybuy.InStore.OrderStatusResponse.html#Yort_Laybuy_InStore_OrderStatusResponse_Customer_
-  commentId: Overload:Yort.Laybuy.InStore.OrderStatusResponse.Customer
-  isSpec: "True"
-  fullName: Yort.Laybuy.InStore.OrderStatusResponse.Customer
-  nameWithType: OrderStatusResponse.Customer
-- uid: Yort.Laybuy.InStore.OrderStatusResponse.MerchantReference
-  name: MerchantReference
-  href: api/Yort.Laybuy.InStore.OrderStatusResponse.html#Yort_Laybuy_InStore_OrderStatusResponse_MerchantReference
-  commentId: P:Yort.Laybuy.InStore.OrderStatusResponse.MerchantReference
-  fullName: Yort.Laybuy.InStore.OrderStatusResponse.MerchantReference
-  nameWithType: OrderStatusResponse.MerchantReference
-- uid: Yort.Laybuy.InStore.OrderStatusResponse.MerchantReference*
-  name: MerchantReference
-  href: api/Yort.Laybuy.InStore.OrderStatusResponse.html#Yort_Laybuy_InStore_OrderStatusResponse_MerchantReference_
-  commentId: Overload:Yort.Laybuy.InStore.OrderStatusResponse.MerchantReference
-  isSpec: "True"
-  fullName: Yort.Laybuy.InStore.OrderStatusResponse.MerchantReference
-  nameWithType: OrderStatusResponse.MerchantReference
-- uid: Yort.Laybuy.InStore.OrderStatusResponse.OrderId
-  name: OrderId
-  href: api/Yort.Laybuy.InStore.OrderStatusResponse.html#Yort_Laybuy_InStore_OrderStatusResponse_OrderId
-  commentId: P:Yort.Laybuy.InStore.OrderStatusResponse.OrderId
-  fullName: Yort.Laybuy.InStore.OrderStatusResponse.OrderId
-  nameWithType: OrderStatusResponse.OrderId
-- uid: Yort.Laybuy.InStore.OrderStatusResponse.OrderId*
-  name: OrderId
-  href: api/Yort.Laybuy.InStore.OrderStatusResponse.html#Yort_Laybuy_InStore_OrderStatusResponse_OrderId_
-  commentId: Overload:Yort.Laybuy.InStore.OrderStatusResponse.OrderId
-  isSpec: "True"
-  fullName: Yort.Laybuy.InStore.OrderStatusResponse.OrderId
-  nameWithType: OrderStatusResponse.OrderId
-- uid: Yort.Laybuy.InStore.OrderStatusResponse.Processed
-  name: Processed
-  href: api/Yort.Laybuy.InStore.OrderStatusResponse.html#Yort_Laybuy_InStore_OrderStatusResponse_Processed
-  commentId: P:Yort.Laybuy.InStore.OrderStatusResponse.Processed
-  fullName: Yort.Laybuy.InStore.OrderStatusResponse.Processed
-  nameWithType: OrderStatusResponse.Processed
-- uid: Yort.Laybuy.InStore.OrderStatusResponse.Processed*
-  name: Processed
-  href: api/Yort.Laybuy.InStore.OrderStatusResponse.html#Yort_Laybuy_InStore_OrderStatusResponse_Processed_
-  commentId: Overload:Yort.Laybuy.InStore.OrderStatusResponse.Processed
-  isSpec: "True"
-  fullName: Yort.Laybuy.InStore.OrderStatusResponse.Processed
-  nameWithType: OrderStatusResponse.Processed
-- uid: Yort.Laybuy.InStore.OrderStatusResponse.Refunds
-  name: Refunds
-  href: api/Yort.Laybuy.InStore.OrderStatusResponse.html#Yort_Laybuy_InStore_OrderStatusResponse_Refunds
-  commentId: P:Yort.Laybuy.InStore.OrderStatusResponse.Refunds
-  fullName: Yort.Laybuy.InStore.OrderStatusResponse.Refunds
-  nameWithType: OrderStatusResponse.Refunds
-- uid: Yort.Laybuy.InStore.OrderStatusResponse.Refunds*
-  name: Refunds
-  href: api/Yort.Laybuy.InStore.OrderStatusResponse.html#Yort_Laybuy_InStore_OrderStatusResponse_Refunds_
-  commentId: Overload:Yort.Laybuy.InStore.OrderStatusResponse.Refunds
-  isSpec: "True"
-  fullName: Yort.Laybuy.InStore.OrderStatusResponse.Refunds
-  nameWithType: OrderStatusResponse.Refunds
-- uid: Yort.Laybuy.InStore.OrderStatusResponse.Token
-  name: Token
-  href: api/Yort.Laybuy.InStore.OrderStatusResponse.html#Yort_Laybuy_InStore_OrderStatusResponse_Token
-  commentId: P:Yort.Laybuy.InStore.OrderStatusResponse.Token
-  fullName: Yort.Laybuy.InStore.OrderStatusResponse.Token
-  nameWithType: OrderStatusResponse.Token
-- uid: Yort.Laybuy.InStore.OrderStatusResponse.Token*
-  name: Token
-  href: api/Yort.Laybuy.InStore.OrderStatusResponse.html#Yort_Laybuy_InStore_OrderStatusResponse_Token_
-  commentId: Overload:Yort.Laybuy.InStore.OrderStatusResponse.Token
-  isSpec: "True"
-  fullName: Yort.Laybuy.InStore.OrderStatusResponse.Token
-  nameWithType: OrderStatusResponse.Token
+  fullName: Yort.Laybuy.InStore.OrderStatusResponse.Status
+  nameWithType: OrderStatusResponse.Status
 - uid: Yort.Laybuy.InStore.RefundRequest
   name: RefundRequest
   href: api/Yort.Laybuy.InStore.RefundRequest.html
@@ -1189,19 +1321,6 @@ references:
   isSpec: "True"
   fullName: Yort.Laybuy.InStore.RefundRequest.RefundMerchantReference
   nameWithType: RefundRequest.RefundMerchantReference
-- uid: Yort.Laybuy.InStore.RefundRequest.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
-  name: SetDefaults(LaybuyClientConfiguration)
-  href: api/Yort.Laybuy.InStore.RefundRequest.html#Yort_Laybuy_InStore_RefundRequest_SetDefaults_Yort_Laybuy_InStore_LaybuyClientConfiguration_
-  commentId: M:Yort.Laybuy.InStore.RefundRequest.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
-  fullName: Yort.Laybuy.InStore.RefundRequest.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
-  nameWithType: RefundRequest.SetDefaults(LaybuyClientConfiguration)
-- uid: Yort.Laybuy.InStore.RefundRequest.SetDefaults*
-  name: SetDefaults
-  href: api/Yort.Laybuy.InStore.RefundRequest.html#Yort_Laybuy_InStore_RefundRequest_SetDefaults_
-  commentId: Overload:Yort.Laybuy.InStore.RefundRequest.SetDefaults
-  isSpec: "True"
-  fullName: Yort.Laybuy.InStore.RefundRequest.SetDefaults
-  nameWithType: RefundRequest.SetDefaults
 - uid: Yort.Laybuy.InStore.RefundRequest.Validate
   name: Validate()
   href: api/Yort.Laybuy.InStore.RefundRequest.html#Yort_Laybuy_InStore_RefundRequest_Validate

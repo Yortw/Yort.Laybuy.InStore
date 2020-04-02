@@ -19,8 +19,11 @@ items:
   - Yort.Laybuy.InStore.LaybuyEnvironment
   - Yort.Laybuy.InStore.LaybuyItem
   - Yort.Laybuy.InStore.LaybuyOrderRefund
+  - Yort.Laybuy.InStore.LaybuyOrderStatus
   - Yort.Laybuy.InStore.LaybuyRequestBase
   - Yort.Laybuy.InStore.LaybuyStatus
+  - Yort.Laybuy.InStore.OrderRequest
+  - Yort.Laybuy.InStore.OrderResponse
   - Yort.Laybuy.InStore.OrderStatusRequest
   - Yort.Laybuy.InStore.OrderStatusResponse
   - Yort.Laybuy.InStore.RefundRequest
@@ -122,6 +125,11 @@ references:
   name: LaybuyOrderRefund
   nameWithType: LaybuyOrderRefund
   fullName: Yort.Laybuy.InStore.LaybuyOrderRefund
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus
+  commentId: T:Yort.Laybuy.InStore.LaybuyOrderStatus
+  name: LaybuyOrderStatus
+  nameWithType: LaybuyOrderStatus
+  fullName: Yort.Laybuy.InStore.LaybuyOrderStatus
 - uid: Yort.Laybuy.InStore.LaybuyRequestBase
   commentId: T:Yort.Laybuy.InStore.LaybuyRequestBase
   parent: Yort.Laybuy.InStore
@@ -133,6 +141,17 @@ references:
   name: LaybuyStatus
   nameWithType: LaybuyStatus
   fullName: Yort.Laybuy.InStore.LaybuyStatus
+- uid: Yort.Laybuy.InStore.OrderRequest
+  commentId: T:Yort.Laybuy.InStore.OrderRequest
+  parent: Yort.Laybuy.InStore
+  name: OrderRequest
+  nameWithType: OrderRequest
+  fullName: Yort.Laybuy.InStore.OrderRequest
+- uid: Yort.Laybuy.InStore.OrderResponse
+  commentId: T:Yort.Laybuy.InStore.OrderResponse
+  name: OrderResponse
+  nameWithType: OrderResponse
+  fullName: Yort.Laybuy.InStore.OrderResponse
 - uid: Yort.Laybuy.InStore.OrderStatusRequest
   commentId: T:Yort.Laybuy.InStore.OrderStatusRequest
   parent: Yort.Laybuy.InStore

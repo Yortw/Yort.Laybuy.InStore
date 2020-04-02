@@ -141,11 +141,20 @@
                           <li class="">
                             <a href="Yort.Laybuy.InStore.LaybuyOrderRefund.html" title="LaybuyOrderRefund" class="">LaybuyOrderRefund</a>
                           </li>
+                          <li class="">
+                            <a href="Yort.Laybuy.InStore.LaybuyOrderStatus.html" title="LaybuyOrderStatus" class="">LaybuyOrderStatus</a>
+                          </li>
                           <li class="active">
                             <a href="Yort.Laybuy.InStore.LaybuyRequestBase.html" title="LaybuyRequestBase" class="active">LaybuyRequestBase</a>
                           </li>
                           <li class="">
                             <a href="Yort.Laybuy.InStore.LaybuyStatus.html" title="LaybuyStatus" class="">LaybuyStatus</a>
+                          </li>
+                          <li class="">
+                            <a href="Yort.Laybuy.InStore.OrderRequest.html" title="OrderRequest" class="">OrderRequest</a>
+                          </li>
+                          <li class="">
+                            <a href="Yort.Laybuy.InStore.OrderResponse.html" title="OrderResponse" class="">OrderResponse</a>
                           </li>
                           <li class="">
                             <a href="Yort.Laybuy.InStore.OrderStatusRequest.html" title="OrderStatusRequest" class="">OrderStatusRequest</a>
@@ -190,6 +199,7 @@
     <div class="level1"><span class="xref">LaybuyRequestBase</span></div>
       <div class="level2"><a class="xref" href="Yort.Laybuy.InStore.CancelOrderRequest.html">CancelOrderRequest</a></div>
       <div class="level2"><a class="xref" href="Yort.Laybuy.InStore.CreateOrderRequest.html">CreateOrderRequest</a></div>
+      <div class="level2"><a class="xref" href="Yort.Laybuy.InStore.OrderRequest.html">OrderRequest</a></div>
       <div class="level2"><a class="xref" href="Yort.Laybuy.InStore.OrderStatusRequest.html">OrderStatusRequest</a></div>
       <div class="level2"><a class="xref" href="Yort.Laybuy.InStore.RefundRequest.html">RefundRequest</a></div>
   </div>
@@ -230,7 +240,7 @@
     <a href="https://github.com/Yortw/Yort.Laybuy.InStore/new/master/apiSpec/new?filename=Yort_Laybuy_InStore_LaybuyRequestBase_SetDefaults_Yort_Laybuy_InStore_LaybuyClientConfiguration_.md&amp;value=---%0Auid%3A%20Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Yortw/Yort.Laybuy.InStore/blob/master/src/LaybuyRequestBase.cs/#L24">View Source</a>
+    <a href="https://github.com/Yortw/Yort.Laybuy.InStore/blob/master/src/LaybuyRequestBase.cs/#L28">View Source</a>
   </span>
   <a id="Yort_Laybuy_InStore_LaybuyRequestBase_SetDefaults_" data-uid="Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults*"></a>
   <h4 id="Yort_Laybuy_InStore_LaybuyRequestBase_SetDefaults_Yort_Laybuy_InStore_LaybuyClientConfiguration_" data-uid="Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)">SetDefaults(LaybuyClientConfiguration)</h4>
@@ -239,7 +249,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void SetDefaults(LaybuyClientConfiguration settings)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void SetDefaults(LaybuyClientConfiguration settings)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -259,6 +269,10 @@
       </tr>
     </tbody>
   </table>
+  <h5 id="Yort_Laybuy_InStore_LaybuyRequestBase_SetDefaults_Yort_Laybuy_InStore_LaybuyClientConfiguration__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The base implementation of this method does nothing, it should be overriden by derived classes that have defaults which can have suitable defaults applied.
+This method is not abstract so as not to force derived classes to implement and document an empty versions when there are no defaults that can be applied.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/Yortw/Yort.Laybuy.InStore/new/master/apiSpec/new?filename=Yort_Laybuy_InStore_LaybuyRequestBase_Validate.md&amp;value=---%0Auid%3A%20Yort.Laybuy.InStore.LaybuyRequestBase.Validate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>

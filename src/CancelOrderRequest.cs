@@ -16,14 +16,6 @@ namespace Yort.Laybuy.InStore
 		public string? Token { get; set; }
 
 		/// <summary>
-		/// Sets any properties on this object that are null to the appropriate defaults, if possible.
-		/// </summary>
-		/// <param name="settings">The settings used to construct the <see cref="LaybuyClient" /> instance that is about to send this request.</param>
-		public override void SetDefaults(LaybuyClientConfiguration settings)
-		{
-		}
-
-		/// <summary>
 		/// Validates the properties for this instance are valid before sending the request to the API.
 		/// </summary>
 		/// <remarks>

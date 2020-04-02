@@ -35,8 +35,8 @@ items:
     content: public class LaybuyOrderRefund
     content.vb: Public Class LaybuyOrderRefund
   seealso:
-  - linkId: Yort.Laybuy.InStore.OrderStatusResponse.Refunds
-    commentId: P:Yort.Laybuy.InStore.OrderStatusResponse.Refunds
+  - linkId: Yort.Laybuy.InStore.OrderResponse.Refunds
+    commentId: P:Yort.Laybuy.InStore.OrderResponse.Refunds
   inheritance:
   - System.Object
   inheritedMembers:
@@ -354,8 +354,8 @@ items:
   modifiers.vb:
   - Public
 references:
-- uid: Yort.Laybuy.InStore.OrderStatusResponse.Refunds
-  commentId: P:Yort.Laybuy.InStore.OrderStatusResponse.Refunds
+- uid: Yort.Laybuy.InStore.OrderResponse.Refunds
+  commentId: P:Yort.Laybuy.InStore.OrderResponse.Refunds
   isExternal: true
 - uid: Yort.Laybuy.InStore
   commentId: N:Yort.Laybuy.InStore

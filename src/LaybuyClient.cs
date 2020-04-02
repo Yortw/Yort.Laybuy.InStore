@@ -116,22 +116,38 @@ namespace Yort.Laybuy.InStore
 		}
 
 		/// <summary>
-		/// Gets the status of a Laybuy previously created via <see cref="Create"/>.
+		/// Gets the details of a (completed) Laybuy order previously created via <see cref="Create"/>.
 		/// </summary>
-		/// <param name="request">A <see cref="OrderStatusRequest"/> with details of the Laybuy to retrieve the status of.</param>
-		/// <returns>A <see cref="OrderStatusResponse"/> indicating the outcome of the request.</returns>
-		/// <exception cref="System.ArgumentException">Thrown if <see cref="OrderStatusRequest.MerchantReference"/> and <see cref="OrderStatusRequest.OrderId"/> are both null, empty or whitespace. Also thrown if <see cref="OrderStatusRequest.OrderId"/> is zero or negative.</exception>
+		/// <param name="request">A <see cref="OrderRequest"/> with details of the Laybuy order to retrieve the status of.</param>
+		/// <returns>A <see cref="OrderResponse"/> indicating the outcome of the request.</returns>
+		/// <exception cref="System.ArgumentException">Thrown if <see cref="OrderRequest.MerchantReference"/> and <see cref="OrderRequest.OrderId"/> are both null, empty or whitespace. Also thrown if <see cref="OrderRequest.OrderId"/> is zero or negative.</exception>
 		/// <exception cref="System.Threading.Tasks.TaskCanceledException">May be thrown in the event of a timeout calling the Laybuy API.</exception>
 		/// <exception cref="System.TimeoutException">May be thrown in the event of a timeout calling the Laybuy API.</exception>
 		/// <exception cref="System.Net.Http.HttpRequestException">Thrown if the call to the Laybuy API returns an error response code. The Laybuy API does not use HTTP response codes for 'business level errors', such as 'order not found' or 'declined', so this type of exception typically represents a problem such as bad credentials, a bad gateway/DNS, server unavailable etc.</exception>
-		public Task<OrderStatusResponse> GetStatus(OrderStatusRequest request)
+		public Task<OrderResponse> GetOrder(OrderRequest request)
 		{
 			request.GuardNull(nameof(request));
 
 			if (!String.IsNullOrWhiteSpace(request.MerchantReference))
-				return GetAsync<OrderStatusResponse>("order/merchant/" + request.MerchantReference);
+				return GetAsync<OrderResponse>("order/merchant/" + request.MerchantReference);
 
-			return GetAsync<OrderStatusResponse>("order/" + request.OrderId);
+			return GetAsync<OrderResponse>("order/" + request.OrderId);
+		}
+
+		/// <summary>
+		/// Gets the current status of a Laybuy order previously created via <see cref="Create"/>.
+		/// </summary>
+		/// <param name="request">A <see cref="OrderStatusRequest"/> with details of the Laybuy order to retrieve the status of.</param>
+		/// <returns>A <see cref="OrderStatusResponse"/> indicating the outcome of the request.</returns>
+		/// <exception cref="System.ArgumentException">Thrown if <see cref="OrderRequest.MerchantReference"/> is null, empty or whitespace.</exception>
+		/// <exception cref="System.Threading.Tasks.TaskCanceledException">May be thrown in the event of a timeout calling the Laybuy API.</exception>
+		/// <exception cref="System.TimeoutException">May be thrown in the event of a timeout calling the Laybuy API.</exception>
+		/// <exception cref="System.Net.Http.HttpRequestException">Thrown if the call to the Laybuy API returns an error response code. The Laybuy API does not use HTTP response codes for 'business level errors', such as 'order not found' or 'declined', so this type of exception typically represents a problem such as bad credentials, a bad gateway/DNS, server unavailable etc.</exception>
+		public Task<OrderStatusResponse> GetOrderStatus(OrderStatusRequest request)
+		{
+			request.GuardNull(nameof(request));
+
+			return GetAsync<OrderStatusResponse>("order/status/" + request.MerchantReference);
 		}
 
 		/// <summary>
@@ -204,13 +220,13 @@ namespace Yort.Laybuy.InStore
 
 		private async Task<TResponseType> PostAsync<TRequestType, TResponseType>(TRequestType? request, string relativePath) where TRequestType : LaybuyRequestBase where TResponseType : LaybuyApiResponseBase
 		{
+			if (_IsDisposed) throw new ObjectDisposedException(nameof(LaybuyClient));
+
 			request.GuardNull(nameof(request));
 #pragma warning disable CS8602 // Dereference of a possibly null reference.
 			request.SetDefaults(_Settings);
 #pragma warning restore CS8602 // Dereference of a possibly null reference.
 			request.Validate();
-
-			if (_IsDisposed) throw new ObjectDisposedException(nameof(LaybuyClient));
 
 			var content = ToHttpContent(request);
 			var uri = new System.Uri(_Settings.RootUri, relativePath);
@@ -226,6 +242,8 @@ namespace Yort.Laybuy.InStore
 
 		private async Task<TResponseType> GetAsync<TResponseType>(string relativePath)
 		{
+			if (this._IsDisposed) throw new ObjectDisposedException(nameof(LaybuyClient));
+
 			var response = await _Client.GetAsync(new System.Uri(_Settings.RootUri, relativePath)).ConfigureAwait(false);
 			return await DeserialiseResponse<TResponseType>(response).ConfigureAwait(false);
 		}

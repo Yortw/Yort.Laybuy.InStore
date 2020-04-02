@@ -7,30 +7,17 @@ using Ladon;
 namespace Yort.Laybuy.InStore
 {
 	/// <summary>
-	/// Represents arguments passed to <see cref="ILaybuyClient.GetStatus(OrderStatusRequest)"/>.
+	/// Represents arguments passed to <see cref="ILaybuyClient.GetOrderStatus(OrderStatusRequest)"/>.
 	/// </summary>
 	/// <seealso cref="OrderStatusResponse"/>
-	/// <seealso cref="ILaybuyClient.GetStatus(OrderStatusRequest)"/>
+	/// <seealso cref="ILaybuyClient.GetOrderStatus(OrderStatusRequest)"/>
 	public class OrderStatusRequest : LaybuyRequestBase
 	{
 		/// <summary>
-		/// The unique Laybuy id of the Laybuy order to retrieve. Can be null if <see cref="MerchantReference"/> is provided.
-		/// </summary>
-		[JsonProperty("orderId")]
-		public long? OrderId { get; set; }
-		/// <summary>
-		/// The unique merchant reference of the Laybuy order to retrieve. Can be null if <see cref="OrderId"/> is provided.
+		/// Required. The unique merchant reference of the Laybuy order to retrieve.
 		/// </summary>
 		[JsonProperty("merchantReference")]
 		public string? MerchantReference { get; set; }
-
-		/// <summary>
-		/// Sets any properties on this object that are null to the appropriate defaults, if possible.
-		/// </summary>
-		/// <param name="settings">The settings used to construct the <see cref="LaybuyClient" /> instance that is about to send this request.</param>
-		public override void SetDefaults(LaybuyClientConfiguration settings)
-		{
-		}
 
 		/// <summary>
 		/// Validates the properties for this instance are valid before sending the request to the API.
@@ -41,9 +28,8 @@ namespace Yort.Laybuy.InStore
 		/// </remarks>
 		public override void Validate()
 		{
-			if (OrderId == null && String.IsNullOrEmpty(MerchantReference)) throw new ArgumentException(ErrorMessages.OrderIdOrMerchantReferenceRequired);
-			if (OrderId != null)
-				OrderId.Value.GuardZeroOrNegative(nameof(OrderId));
+			if (MerchantReference == null) throw new ArgumentNullException(ErrorMessages.MerchantReferenceRequired);
+			if (String.IsNullOrEmpty(MerchantReference)) throw new ArgumentException(ErrorMessages.MerchantReferenceRequired);
 		}
 	}
 }

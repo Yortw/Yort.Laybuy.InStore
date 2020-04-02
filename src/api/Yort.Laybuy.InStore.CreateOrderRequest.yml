@@ -446,14 +446,14 @@ items:
     content: >-
       [JsonProperty("items")]
 
-      public IList<LaybuyItem> Items { get; }
+      public IList<LaybuyItem> Items { get; set; }
     parameters: []
     return:
       type: System.Collections.Generic.IList{Yort.Laybuy.InStore.LaybuyItem}
     content.vb: >-
       <JsonProperty("items")>
 
-      Public ReadOnly Property Items As IList(Of LaybuyItem)
+      Public Property Items As IList(Of LaybuyItem)
   overload: Yort.Laybuy.InStore.CreateOrderRequest.Items*
   attributes:
   - type: Newtonsoft.Json.JsonPropertyAttribute
@@ -464,9 +464,9 @@ items:
   modifiers.csharp:
   - public
   - get
+  - set
   modifiers.vb:
   - Public
-  - ReadOnly
 - uid: Yort.Laybuy.InStore.CreateOrderRequest.Validate
   commentId: M:Yort.Laybuy.InStore.CreateOrderRequest.Validate
   id: Validate

@@ -61,7 +61,16 @@ namespace Yort.Laybuy.InStore {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You must specify either OrderId or MerchantReference.
+        ///   Looks up a localized string similar to The MerchantReference is required..
+        /// </summary>
+        internal static string MerchantReferenceRequired {
+            get {
+                return ResourceManager.GetString("MerchantReferenceRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You must specify either OrderId or MerchantReference..
         /// </summary>
         internal static string OrderIdOrMerchantReferenceRequired {
             get {

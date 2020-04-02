@@ -117,8 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="MerchantReferenceRequired" xml:space="preserve">
+    <value>The MerchantReference is required.</value>
+  </data>
   <data name="OrderIdOrMerchantReferenceRequired" xml:space="preserve">
-    <value>You must specify either OrderId or MerchantReference</value>
+    <value>You must specify either OrderId or MerchantReference.</value>
   </data>
   <data name="UnspecifiedError" xml:space="preserve">
     <value>No error message returned from API.</value>

@@ -35,6 +35,7 @@ items:
   derivedClasses:
   - Yort.Laybuy.InStore.CancelOrderRequest
   - Yort.Laybuy.InStore.CreateOrderRequest
+  - Yort.Laybuy.InStore.OrderRequest
   - Yort.Laybuy.InStore.OrderStatusRequest
   - Yort.Laybuy.InStore.RefundRequest
   inheritedMembers:
@@ -106,26 +107,27 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: SetDefaults
     path: LaybuyRequestBase.cs
-    startLine: 23
+    startLine: 27
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
   summary: "\nSets any properties on this object that are null to the appropriate defaults, if possible.\n"
+  remarks: "\n<p>The base implementation of this method does nothing, it should be overriden by derived classes that have defaults which can have suitable defaults applied.\nThis method is not abstract so as not to force derived classes to implement and document an empty versions when there are no defaults that can be applied.</p>\n"
   example: []
   syntax:
-    content: public abstract void SetDefaults(LaybuyClientConfiguration settings)
+    content: public virtual void SetDefaults(LaybuyClientConfiguration settings)
     parameters:
     - id: settings
       type: Yort.Laybuy.InStore.LaybuyClientConfiguration
       description: The settings used to construct the <xref href="Yort.Laybuy.InStore.LaybuyClient" data-throw-if-not-resolved="false"></xref> instance that is about to send this request.
-    content.vb: Public MustOverride Sub SetDefaults(settings As LaybuyClientConfiguration)
+    content.vb: Public Overridable Sub SetDefaults(settings As LaybuyClientConfiguration)
   overload: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults*
   modifiers.csharp:
   - public
-  - abstract
+  - virtual
   modifiers.vb:
   - Public
-  - MustOverride
+  - Overridable
 references:
 - uid: Yort.Laybuy.InStore
   commentId: N:Yort.Laybuy.InStore

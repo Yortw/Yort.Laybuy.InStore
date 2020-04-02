@@ -9,7 +9,8 @@ items:
   - Yort.Laybuy.InStore.LaybuyClient.Cancel(Yort.Laybuy.InStore.CancelOrderRequest)
   - Yort.Laybuy.InStore.LaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)
   - Yort.Laybuy.InStore.LaybuyClient.Dispose
-  - Yort.Laybuy.InStore.LaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+  - Yort.Laybuy.InStore.LaybuyClient.GetOrder(Yort.Laybuy.InStore.OrderRequest)
+  - Yort.Laybuy.InStore.LaybuyClient.GetOrderStatus(Yort.Laybuy.InStore.OrderStatusRequest)
   - Yort.Laybuy.InStore.LaybuyClient.Refund(Yort.Laybuy.InStore.RefundRequest)
   langs:
   - csharp
@@ -216,45 +217,45 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Yort.Laybuy.InStore.LaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
-  commentId: M:Yort.Laybuy.InStore.LaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
-  id: GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+- uid: Yort.Laybuy.InStore.LaybuyClient.GetOrder(Yort.Laybuy.InStore.OrderRequest)
+  commentId: M:Yort.Laybuy.InStore.LaybuyClient.GetOrder(Yort.Laybuy.InStore.OrderRequest)
+  id: GetOrder(Yort.Laybuy.InStore.OrderRequest)
   parent: Yort.Laybuy.InStore.LaybuyClient
   langs:
   - csharp
   - vb
-  name: GetStatus(OrderStatusRequest)
-  nameWithType: LaybuyClient.GetStatus(OrderStatusRequest)
-  fullName: Yort.Laybuy.InStore.LaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+  name: GetOrder(OrderRequest)
+  nameWithType: LaybuyClient.GetOrder(OrderRequest)
+  fullName: Yort.Laybuy.InStore.LaybuyClient.GetOrder(Yort.Laybuy.InStore.OrderRequest)
   type: Method
   source:
     remote:
       path: src/LaybuyClient.cs
       branch: master
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
-    id: GetStatus
+    id: GetOrder
     path: LaybuyClient.cs
     startLine: 126
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
-  summary: "\nGets the status of a Laybuy previously created via <xref href=\"Yort.Laybuy.InStore.LaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nGets the details of a (completed) Laybuy order previously created via <xref href=\"Yort.Laybuy.InStore.LaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
-    content: public Task<OrderStatusResponse> GetStatus(OrderStatusRequest request)
+    content: public Task<OrderResponse> GetOrder(OrderRequest request)
     parameters:
     - id: request
-      type: Yort.Laybuy.InStore.OrderStatusRequest
-      description: A <xref href="Yort.Laybuy.InStore.OrderStatusRequest" data-throw-if-not-resolved="false"></xref> with details of the Laybuy to retrieve the status of.
+      type: Yort.Laybuy.InStore.OrderRequest
+      description: A <xref href="Yort.Laybuy.InStore.OrderRequest" data-throw-if-not-resolved="false"></xref> with details of the Laybuy order to retrieve the status of.
     return:
-      type: System.Threading.Tasks.Task{Yort.Laybuy.InStore.OrderStatusResponse}
-      description: A <xref href="Yort.Laybuy.InStore.OrderStatusResponse" data-throw-if-not-resolved="false"></xref> indicating the outcome of the request.
-    content.vb: Public Function GetStatus(request As OrderStatusRequest) As Task(Of OrderStatusResponse)
-  overload: Yort.Laybuy.InStore.LaybuyClient.GetStatus*
+      type: System.Threading.Tasks.Task{Yort.Laybuy.InStore.OrderResponse}
+      description: A <xref href="Yort.Laybuy.InStore.OrderResponse" data-throw-if-not-resolved="false"></xref> indicating the outcome of the request.
+    content.vb: Public Function GetOrder(request As OrderRequest) As Task(Of OrderResponse)
+  overload: Yort.Laybuy.InStore.LaybuyClient.GetOrder*
   exceptions:
   - type: System.ArgumentException
     commentId: T:System.ArgumentException
-    description: Thrown if <xref href="Yort.Laybuy.InStore.OrderStatusRequest.MerchantReference" data-throw-if-not-resolved="false"></xref> and <xref href="Yort.Laybuy.InStore.OrderStatusRequest.OrderId" data-throw-if-not-resolved="false"></xref> are both null, empty or whitespace. Also thrown if <xref href="Yort.Laybuy.InStore.OrderStatusRequest.OrderId" data-throw-if-not-resolved="false"></xref> is zero or negative.
+    description: Thrown if <xref href="Yort.Laybuy.InStore.OrderRequest.MerchantReference" data-throw-if-not-resolved="false"></xref> and <xref href="Yort.Laybuy.InStore.OrderRequest.OrderId" data-throw-if-not-resolved="false"></xref> are both null, empty or whitespace. Also thrown if <xref href="Yort.Laybuy.InStore.OrderRequest.OrderId" data-throw-if-not-resolved="false"></xref> is zero or negative.
   - type: System.Threading.Tasks.TaskCanceledException
     commentId: T:System.Threading.Tasks.TaskCanceledException
     description: May be thrown in the event of a timeout calling the Laybuy API.
@@ -265,7 +266,61 @@ items:
     commentId: T:System.Net.Http.HttpRequestException
     description: Thrown if the call to the Laybuy API returns an error response code. The Laybuy API does not use HTTP response codes for &apos;business level errors&apos;, such as &apos;order not found&apos; or &apos;declined&apos;, so this type of exception typically represents a problem such as bad credentials, a bad gateway/DNS, server unavailable etc.
   implements:
-  - Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+  - Yort.Laybuy.InStore.ILaybuyClient.GetOrder(Yort.Laybuy.InStore.OrderRequest)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Yort.Laybuy.InStore.LaybuyClient.GetOrderStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+  commentId: M:Yort.Laybuy.InStore.LaybuyClient.GetOrderStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+  id: GetOrderStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+  parent: Yort.Laybuy.InStore.LaybuyClient
+  langs:
+  - csharp
+  - vb
+  name: GetOrderStatus(OrderStatusRequest)
+  nameWithType: LaybuyClient.GetOrderStatus(OrderStatusRequest)
+  fullName: Yort.Laybuy.InStore.LaybuyClient.GetOrderStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+  type: Method
+  source:
+    remote:
+      path: src/LaybuyClient.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: GetOrderStatus
+    path: LaybuyClient.cs
+    startLine: 145
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nGets the current status of a Laybuy order previously created via <xref href=\"Yort.Laybuy.InStore.LaybuyClient.Create(Yort.Laybuy.InStore.CreateOrderRequest)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public Task<OrderStatusResponse> GetOrderStatus(OrderStatusRequest request)
+    parameters:
+    - id: request
+      type: Yort.Laybuy.InStore.OrderStatusRequest
+      description: A <xref href="Yort.Laybuy.InStore.OrderStatusRequest" data-throw-if-not-resolved="false"></xref> with details of the Laybuy order to retrieve the status of.
+    return:
+      type: System.Threading.Tasks.Task{Yort.Laybuy.InStore.OrderStatusResponse}
+      description: A <xref href="Yort.Laybuy.InStore.OrderStatusResponse" data-throw-if-not-resolved="false"></xref> indicating the outcome of the request.
+    content.vb: Public Function GetOrderStatus(request As OrderStatusRequest) As Task(Of OrderStatusResponse)
+  overload: Yort.Laybuy.InStore.LaybuyClient.GetOrderStatus*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if <xref href="Yort.Laybuy.InStore.OrderRequest.MerchantReference" data-throw-if-not-resolved="false"></xref> is null, empty or whitespace.
+  - type: System.Threading.Tasks.TaskCanceledException
+    commentId: T:System.Threading.Tasks.TaskCanceledException
+    description: May be thrown in the event of a timeout calling the Laybuy API.
+  - type: System.TimeoutException
+    commentId: T:System.TimeoutException
+    description: May be thrown in the event of a timeout calling the Laybuy API.
+  - type: System.Net.Http.HttpRequestException
+    commentId: T:System.Net.Http.HttpRequestException
+    description: Thrown if the call to the Laybuy API returns an error response code. The Laybuy API does not use HTTP response codes for &apos;business level errors&apos;, such as &apos;order not found&apos; or &apos;declined&apos;, so this type of exception typically represents a problem such as bad credentials, a bad gateway/DNS, server unavailable etc.
+  implements:
+  - Yort.Laybuy.InStore.ILaybuyClient.GetOrderStatus(Yort.Laybuy.InStore.OrderStatusRequest)
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -288,7 +343,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Refund
     path: LaybuyClient.cs
-    startLine: 150
+    startLine: 166
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -346,7 +401,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Dispose
     path: LaybuyClient.cs
-    startLine: 162
+    startLine: 178
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -976,6 +1031,106 @@ references:
   name: LaybuyCustomerBase
   nameWithType: LaybuyCustomerBase
   fullName: Yort.Laybuy.InStore.LaybuyCustomerBase
+- uid: Yort.Laybuy.InStore.OrderRequest
+  commentId: T:Yort.Laybuy.InStore.OrderRequest
+  parent: Yort.Laybuy.InStore
+  name: OrderRequest
+  nameWithType: OrderRequest
+  fullName: Yort.Laybuy.InStore.OrderRequest
+- uid: Yort.Laybuy.InStore.OrderResponse
+  commentId: T:Yort.Laybuy.InStore.OrderResponse
+  name: OrderResponse
+  nameWithType: OrderResponse
+  fullName: Yort.Laybuy.InStore.OrderResponse
+- uid: Yort.Laybuy.InStore.OrderRequest.MerchantReference
+  commentId: P:Yort.Laybuy.InStore.OrderRequest.MerchantReference
+  isExternal: true
+- uid: Yort.Laybuy.InStore.OrderRequest.OrderId
+  commentId: P:Yort.Laybuy.InStore.OrderRequest.OrderId
+  isExternal: true
+- uid: Yort.Laybuy.InStore.LaybuyClient.GetOrder*
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyClient.GetOrder
+  name: GetOrder
+  nameWithType: LaybuyClient.GetOrder
+  fullName: Yort.Laybuy.InStore.LaybuyClient.GetOrder
+- uid: Yort.Laybuy.InStore.ILaybuyClient.GetOrder(Yort.Laybuy.InStore.OrderRequest)
+  commentId: M:Yort.Laybuy.InStore.ILaybuyClient.GetOrder(Yort.Laybuy.InStore.OrderRequest)
+  parent: Yort.Laybuy.InStore.ILaybuyClient
+  name: GetOrder(OrderRequest)
+  nameWithType: ILaybuyClient.GetOrder(OrderRequest)
+  fullName: Yort.Laybuy.InStore.ILaybuyClient.GetOrder(Yort.Laybuy.InStore.OrderRequest)
+  spec.csharp:
+  - uid: Yort.Laybuy.InStore.ILaybuyClient.GetOrder(Yort.Laybuy.InStore.OrderRequest)
+    name: GetOrder
+    nameWithType: ILaybuyClient.GetOrder
+    fullName: Yort.Laybuy.InStore.ILaybuyClient.GetOrder
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Yort.Laybuy.InStore.OrderRequest
+    name: OrderRequest
+    nameWithType: OrderRequest
+    fullName: Yort.Laybuy.InStore.OrderRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Yort.Laybuy.InStore.ILaybuyClient.GetOrder(Yort.Laybuy.InStore.OrderRequest)
+    name: GetOrder
+    nameWithType: ILaybuyClient.GetOrder
+    fullName: Yort.Laybuy.InStore.ILaybuyClient.GetOrder
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Yort.Laybuy.InStore.OrderRequest
+    name: OrderRequest
+    nameWithType: OrderRequest
+    fullName: Yort.Laybuy.InStore.OrderRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task{Yort.Laybuy.InStore.OrderResponse}
+  commentId: T:System.Threading.Tasks.Task{Yort.Laybuy.InStore.OrderResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<OrderResponse>
+  nameWithType: Task<OrderResponse>
+  fullName: System.Threading.Tasks.Task<Yort.Laybuy.InStore.OrderResponse>
+  nameWithType.vb: Task(Of OrderResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Yort.Laybuy.InStore.OrderResponse)
+  name.vb: Task(Of OrderResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Yort.Laybuy.InStore.OrderResponse
+    name: OrderResponse
+    nameWithType: OrderResponse
+    fullName: Yort.Laybuy.InStore.OrderResponse
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Yort.Laybuy.InStore.OrderResponse
+    name: OrderResponse
+    nameWithType: OrderResponse
+    fullName: Yort.Laybuy.InStore.OrderResponse
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Yort.Laybuy.InStore.OrderStatusRequest
   commentId: T:Yort.Laybuy.InStore.OrderStatusRequest
   parent: Yort.Laybuy.InStore
@@ -987,28 +1142,22 @@ references:
   name: OrderStatusResponse
   nameWithType: OrderStatusResponse
   fullName: Yort.Laybuy.InStore.OrderStatusResponse
-- uid: Yort.Laybuy.InStore.OrderStatusRequest.MerchantReference
-  commentId: P:Yort.Laybuy.InStore.OrderStatusRequest.MerchantReference
-  isExternal: true
-- uid: Yort.Laybuy.InStore.OrderStatusRequest.OrderId
-  commentId: P:Yort.Laybuy.InStore.OrderStatusRequest.OrderId
-  isExternal: true
-- uid: Yort.Laybuy.InStore.LaybuyClient.GetStatus*
-  commentId: Overload:Yort.Laybuy.InStore.LaybuyClient.GetStatus
-  name: GetStatus
-  nameWithType: LaybuyClient.GetStatus
-  fullName: Yort.Laybuy.InStore.LaybuyClient.GetStatus
-- uid: Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
-  commentId: M:Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+- uid: Yort.Laybuy.InStore.LaybuyClient.GetOrderStatus*
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyClient.GetOrderStatus
+  name: GetOrderStatus
+  nameWithType: LaybuyClient.GetOrderStatus
+  fullName: Yort.Laybuy.InStore.LaybuyClient.GetOrderStatus
+- uid: Yort.Laybuy.InStore.ILaybuyClient.GetOrderStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+  commentId: M:Yort.Laybuy.InStore.ILaybuyClient.GetOrderStatus(Yort.Laybuy.InStore.OrderStatusRequest)
   parent: Yort.Laybuy.InStore.ILaybuyClient
-  name: GetStatus(OrderStatusRequest)
-  nameWithType: ILaybuyClient.GetStatus(OrderStatusRequest)
-  fullName: Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+  name: GetOrderStatus(OrderStatusRequest)
+  nameWithType: ILaybuyClient.GetOrderStatus(OrderStatusRequest)
+  fullName: Yort.Laybuy.InStore.ILaybuyClient.GetOrderStatus(Yort.Laybuy.InStore.OrderStatusRequest)
   spec.csharp:
-  - uid: Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
-    name: GetStatus
-    nameWithType: ILaybuyClient.GetStatus
-    fullName: Yort.Laybuy.InStore.ILaybuyClient.GetStatus
+  - uid: Yort.Laybuy.InStore.ILaybuyClient.GetOrderStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+    name: GetOrderStatus
+    nameWithType: ILaybuyClient.GetOrderStatus
+    fullName: Yort.Laybuy.InStore.ILaybuyClient.GetOrderStatus
   - name: (
     nameWithType: (
     fullName: (
@@ -1020,10 +1169,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Yort.Laybuy.InStore.ILaybuyClient.GetStatus(Yort.Laybuy.InStore.OrderStatusRequest)
-    name: GetStatus
-    nameWithType: ILaybuyClient.GetStatus
-    fullName: Yort.Laybuy.InStore.ILaybuyClient.GetStatus
+  - uid: Yort.Laybuy.InStore.ILaybuyClient.GetOrderStatus(Yort.Laybuy.InStore.OrderStatusRequest)
+    name: GetOrderStatus
+    nameWithType: ILaybuyClient.GetOrderStatus
+    fullName: Yort.Laybuy.InStore.ILaybuyClient.GetOrderStatus
   - name: (
     nameWithType: (
     fullName: (

@@ -8,7 +8,7 @@ namespace Yort.Laybuy.InStore
 	/// <summary>
 	/// Represents a refund previously made against an order.
 	/// </summary>
-	/// <seealso cref="OrderStatusResponse.Refunds"/>
+	/// <seealso cref="OrderResponse.Refunds"/>
 	public class LaybuyOrderRefund
 	{
 		/// <summary>

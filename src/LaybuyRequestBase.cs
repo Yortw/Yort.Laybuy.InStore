@@ -21,6 +21,10 @@ namespace Yort.Laybuy.InStore
 		/// Sets any properties on this object that are null to the appropriate defaults, if possible.
 		/// </summary>
 		/// <param name="settings">The settings used to construct the <see cref="LaybuyClient"/> instance that is about to send this request.</param>
-		public abstract void SetDefaults(LaybuyClientConfiguration settings);
+		/// <remarks>
+		/// <para>The base implementation of this method does nothing, it should be overriden by derived classes that have defaults which can have suitable defaults applied.
+		/// This method is not abstract so as not to force derived classes to implement and document an empty versions when there are no defaults that can be applied.</para>
+		/// </remarks>
+		public virtual void SetDefaults(LaybuyClientConfiguration settings) { }
 	}
 }

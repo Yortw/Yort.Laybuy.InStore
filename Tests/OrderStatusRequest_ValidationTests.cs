@@ -10,59 +10,15 @@ namespace Yort.Laybuy.InStore.Tests
 	{
 
 		[TestMethod]
-		public void RequiresOrderIdIfMerchantReferenceBlank()
+		public void RequiresMerchantReferenceIsNotBlank()
 		{
 			var request = new OrderStatusRequest()
 			{
-				OrderId = null,
-				MerchantReference = null
-			};
-
-			//Throws when order id is null
-			Assert.ThrowsException<ArgumentException>
-			(
-				() =>
-				{
-					request.Validate();
-				}
-			);
-
-			//Throws when order id is zero is null
-			request.OrderId = 0;
-			Assert.ThrowsException<ArgumentOutOfRangeException>
-			(
-				() =>
-				{
-					request.Validate();
-				}
-			);
-
-			request.OrderId = -1;
-			//Throws when order is negative
-			Assert.ThrowsException<ArgumentOutOfRangeException>
-			(
-				() =>
-				{
-					request.Validate();
-				}
-			);
-
-			//Does not throw when order is is positive
-			request.OrderId = 123456;
-			request.Validate();
-		}
-
-		[TestMethod]
-		public void RequiresMerchantReferenceIfOrderIdIsNull()
-		{
-			var request = new OrderStatusRequest()
-			{
-				OrderId = null,
 				MerchantReference = null
 			};
 
 			//Throws when merchant reference is null
-			Assert.ThrowsException<ArgumentException>
+			Assert.ThrowsException<ArgumentNullException>
 			(
 				() =>
 				{
@@ -70,8 +26,8 @@ namespace Yort.Laybuy.InStore.Tests
 				}
 			);
 
+			//Throws when order id is empty string
 			request.MerchantReference = String.Empty;
-			//Throws when merchant reference is negative
 			Assert.ThrowsException<ArgumentException>
 			(
 				() =>
@@ -80,8 +36,8 @@ namespace Yort.Laybuy.InStore.Tests
 				}
 			);
 
-			//Does not throw when merchant reference is not blank
-			request.MerchantReference = System.Guid.NewGuid().ToString();
+			//Does not throw when merchante reference is nto blank.
+			request.MerchantReference = "12355";
 			request.Validate();
 		}
 

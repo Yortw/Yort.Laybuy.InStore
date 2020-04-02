@@ -1,0 +1,788 @@
+### YamlMime:ManagedReference
+items:
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus
+  commentId: T:Yort.Laybuy.InStore.LaybuyOrderStatus
+  id: LaybuyOrderStatus
+  parent: Yort.Laybuy.InStore
+  children:
+  - Yort.Laybuy.InStore.LaybuyOrderStatus.Cancelled
+  - Yort.Laybuy.InStore.LaybuyOrderStatus.Completed
+  - Yort.Laybuy.InStore.LaybuyOrderStatus.Declined
+  - Yort.Laybuy.InStore.LaybuyOrderStatus.Error
+  - Yort.Laybuy.InStore.LaybuyOrderStatus.Expired
+  - Yort.Laybuy.InStore.LaybuyOrderStatus.IsApproved(System.String)
+  - Yort.Laybuy.InStore.LaybuyOrderStatus.IsFailed(System.String)
+  - Yort.Laybuy.InStore.LaybuyOrderStatus.IsPendingStatus(System.String)
+  - Yort.Laybuy.InStore.LaybuyOrderStatus.Processing
+  - Yort.Laybuy.InStore.LaybuyOrderStatus.Waiting
+  langs:
+  - csharp
+  - vb
+  name: LaybuyOrderStatus
+  nameWithType: LaybuyOrderStatus
+  fullName: Yort.Laybuy.InStore.LaybuyOrderStatus
+  type: Class
+  source:
+    remote:
+      path: src/LaybuyOrderStatus.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: LaybuyOrderStatus
+    path: LaybuyOrderStatus.cs
+    startLine: 9
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nProvides a set of known order &apos;statuses&apos; as returned when using the <xref href=\"Yort.Laybuy.InStore.LaybuyClient.GetOrder(Yort.Laybuy.InStore.OrderRequest)\" data-throw-if-not-resolved=\"false\"></xref> with a merchant reference.\n"
+  example: []
+  syntax:
+    content: public static class LaybuyOrderStatus
+    content.vb: Public Module LaybuyOrderStatus
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus.Cancelled
+  commentId: F:Yort.Laybuy.InStore.LaybuyOrderStatus.Cancelled
+  id: Cancelled
+  parent: Yort.Laybuy.InStore.LaybuyOrderStatus
+  langs:
+  - csharp
+  - vb
+  name: Cancelled
+  nameWithType: LaybuyOrderStatus.Cancelled
+  fullName: Yort.Laybuy.InStore.LaybuyOrderStatus.Cancelled
+  type: Field
+  source:
+    remote:
+      path: src/LaybuyOrderStatus.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: Cancelled
+    path: LaybuyOrderStatus.cs
+    startLine: 15
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nThe customer or merchant cancelled the order.\nThis should be treated as a failure case, and a new order placed if payment via Laybuy is still required.\n"
+  example: []
+  syntax:
+    content: public const string Cancelled = "CANCELLED"
+    return:
+      type: System.String
+    content.vb: Public Const Cancelled As String = "CANCELLED"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus.Completed
+  commentId: F:Yort.Laybuy.InStore.LaybuyOrderStatus.Completed
+  id: Completed
+  parent: Yort.Laybuy.InStore.LaybuyOrderStatus
+  langs:
+  - csharp
+  - vb
+  name: Completed
+  nameWithType: LaybuyOrderStatus.Completed
+  fullName: Yort.Laybuy.InStore.LaybuyOrderStatus.Completed
+  type: Field
+  source:
+    remote:
+      path: src/LaybuyOrderStatus.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: Completed
+    path: LaybuyOrderStatus.cs
+    startLine: 20
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nThe order has been fully processed and payment approved. This is the ultimate success status for a Laybuy order.\n"
+  example: []
+  syntax:
+    content: public const string Completed = "COMPLETED"
+    return:
+      type: System.String
+    content.vb: Public Const Completed As String = "COMPLETED"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus.Declined
+  commentId: F:Yort.Laybuy.InStore.LaybuyOrderStatus.Declined
+  id: Declined
+  parent: Yort.Laybuy.InStore.LaybuyOrderStatus
+  langs:
+  - csharp
+  - vb
+  name: Declined
+  nameWithType: LaybuyOrderStatus.Declined
+  fullName: Yort.Laybuy.InStore.LaybuyOrderStatus.Declined
+  type: Field
+  source:
+    remote:
+      path: src/LaybuyOrderStatus.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: Declined
+    path: LaybuyOrderStatus.cs
+    startLine: 26
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nThe order was declined by Laybuy or the payment processor (i.e exceeded credit limit, insufficient funds, expired card etc).\nThis should be treated as a failure case, and a new order placed (with any account/card issue corrected first) if payment via Laybuy is still required.\n"
+  example: []
+  syntax:
+    content: public const string Declined = "DECLINED"
+    return:
+      type: System.String
+    content.vb: Public Const Declined As String = "DECLINED"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus.Expired
+  commentId: F:Yort.Laybuy.InStore.LaybuyOrderStatus.Expired
+  id: Expired
+  parent: Yort.Laybuy.InStore.LaybuyOrderStatus
+  langs:
+  - csharp
+  - vb
+  name: Expired
+  nameWithType: LaybuyOrderStatus.Expired
+  fullName: Yort.Laybuy.InStore.LaybuyOrderStatus.Expired
+  type: Field
+  source:
+    remote:
+      path: src/LaybuyOrderStatus.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: Expired
+    path: LaybuyOrderStatus.cs
+    startLine: 32
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nThe order expired before being completed. Typically orders expire ten minutes after the link is sent to the customer.\nThis should be treated as a failure case, and a new order placed if payment via Laybuy is still required.\n"
+  example: []
+  syntax:
+    content: public const string Expired = "EXPIRED"
+    return:
+      type: System.String
+    content.vb: Public Const Expired As String = "EXPIRED"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus.Error
+  commentId: F:Yort.Laybuy.InStore.LaybuyOrderStatus.Error
+  id: Error
+  parent: Yort.Laybuy.InStore.LaybuyOrderStatus
+  langs:
+  - csharp
+  - vb
+  name: Error
+  nameWithType: LaybuyOrderStatus.Error
+  fullName: Yort.Laybuy.InStore.LaybuyOrderStatus.Error
+  type: Field
+  source:
+    remote:
+      path: src/LaybuyOrderStatus.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: Error
+    path: LaybuyOrderStatus.cs
+    startLine: 38
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nSome kind of error occurred, additional information about the error should be included in the response. \nThis should be treated as a failure case, and a new order placed (with any corrected input if required) if payment via Laybuy is still required.\n"
+  example: []
+  syntax:
+    content: public const string Error = "ERROR"
+    return:
+      type: System.String
+    content.vb: Public Const Error As String = "ERROR"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus.Processing
+  commentId: F:Yort.Laybuy.InStore.LaybuyOrderStatus.Processing
+  id: Processing
+  parent: Yort.Laybuy.InStore.LaybuyOrderStatus
+  langs:
+  - csharp
+  - vb
+  name: Processing
+  nameWithType: LaybuyOrderStatus.Processing
+  fullName: Yort.Laybuy.InStore.LaybuyOrderStatus.Processing
+  type: Field
+  source:
+    remote:
+      path: src/LaybuyOrderStatus.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: Processing
+    path: LaybuyOrderStatus.cs
+    startLine: 44
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nLayby has received order approval from the customer and is processing the payment, no work is required from the merchant/integration except to keep polling.\nThis status should be treating as a &apos;pending&apos; and the status rechecked in another 5-10 seconds until a non-pending status occurs.\n"
+  example: []
+  syntax:
+    content: public const string Processing = "PROCESSING"
+    return:
+      type: System.String
+    content.vb: Public Const Processing As String = "PROCESSING"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus.Waiting
+  commentId: F:Yort.Laybuy.InStore.LaybuyOrderStatus.Waiting
+  id: Waiting
+  parent: Yort.Laybuy.InStore.LaybuyOrderStatus
+  langs:
+  - csharp
+  - vb
+  name: Waiting
+  nameWithType: LaybuyOrderStatus.Waiting
+  fullName: Yort.Laybuy.InStore.LaybuyOrderStatus.Waiting
+  type: Field
+  source:
+    remote:
+      path: src/LaybuyOrderStatus.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: Waiting
+    path: LaybuyOrderStatus.cs
+    startLine: 50
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nLayby is awaiting order approval from the customer. This can take some time, especially if the customer has to sign up to Laybuy first etc.\nThis status should be treating as a &apos;pending&apos; and the status rechecked in another 5-10 seconds until a non-pending status occurs.\n"
+  example: []
+  syntax:
+    content: public const string Waiting = "WAITING"
+    return:
+      type: System.String
+    content.vb: Public Const Waiting As String = "WAITING"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus.IsPendingStatus(System.String)
+  commentId: M:Yort.Laybuy.InStore.LaybuyOrderStatus.IsPendingStatus(System.String)
+  id: IsPendingStatus(System.String)
+  parent: Yort.Laybuy.InStore.LaybuyOrderStatus
+  langs:
+  - csharp
+  - vb
+  name: IsPendingStatus(String)
+  nameWithType: LaybuyOrderStatus.IsPendingStatus(String)
+  fullName: Yort.Laybuy.InStore.LaybuyOrderStatus.IsPendingStatus(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/LaybuyOrderStatus.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: IsPendingStatus
+    path: LaybuyOrderStatus.cs
+    startLine: 61
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nDetermines whether if <code data-dev-comment-type=\"paramref\" class=\"paramref\">status</code> indicating a pending status and status polling should continue at the next interval.\n"
+  example: []
+  syntax:
+    content: public static bool IsPendingStatus(string status)
+    parameters:
+    - id: status
+      type: System.String
+      description: The status to check.
+    return:
+      type: System.Boolean
+      description: "\n<code>true</code> if <code data-dev-comment-type=\"paramref\" class=\"paramref\">status</code> has a case insensitive match to <xref href=\"Yort.Laybuy.InStore.LaybuyOrderStatus.Processing\" data-throw-if-not-resolved=\"false\"></xref> or <xref href=\"Yort.Laybuy.InStore.LaybuyOrderStatus.Waiting\" data-throw-if-not-resolved=\"false\"></xref>; otherwise, <code>false</code>.\n"
+    content.vb: Public Shared Function IsPendingStatus(status As String) As Boolean
+  overload: Yort.Laybuy.InStore.LaybuyOrderStatus.IsPendingStatus*
+  seealso:
+  - linkId: Yort.Laybuy.InStore.LaybuyOrderStatus.IsFailed(System.String)
+    commentId: M:Yort.Laybuy.InStore.LaybuyOrderStatus.IsFailed(System.String)
+  - linkId: Yort.Laybuy.InStore.LaybuyOrderStatus.IsApproved(System.String)
+    commentId: M:Yort.Laybuy.InStore.LaybuyOrderStatus.IsApproved(System.String)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus.IsFailed(System.String)
+  commentId: M:Yort.Laybuy.InStore.LaybuyOrderStatus.IsFailed(System.String)
+  id: IsFailed(System.String)
+  parent: Yort.Laybuy.InStore.LaybuyOrderStatus
+  langs:
+  - csharp
+  - vb
+  name: IsFailed(String)
+  nameWithType: LaybuyOrderStatus.IsFailed(String)
+  fullName: Yort.Laybuy.InStore.LaybuyOrderStatus.IsFailed(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/LaybuyOrderStatus.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: IsFailed
+    path: LaybuyOrderStatus.cs
+    startLine: 75
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nDetermines whether the specified status indicates a final, non-pending state, that has not resulted in successful payment/an order being created.\n"
+  example: []
+  syntax:
+    content: public static bool IsFailed(string status)
+    parameters:
+    - id: status
+      type: System.String
+      description: The status to check.
+    return:
+      type: System.Boolean
+      description: "\n<code>true</code> if the specified status is not any of the pending or approved statuses; otherwise, <code>false</code>.\n"
+    content.vb: Public Shared Function IsFailed(status As String) As Boolean
+  overload: Yort.Laybuy.InStore.LaybuyOrderStatus.IsFailed*
+  seealso:
+  - linkId: Yort.Laybuy.InStore.LaybuyOrderStatus.IsPendingStatus(System.String)
+    commentId: M:Yort.Laybuy.InStore.LaybuyOrderStatus.IsPendingStatus(System.String)
+  - linkId: Yort.Laybuy.InStore.LaybuyOrderStatus.IsApproved(System.String)
+    commentId: M:Yort.Laybuy.InStore.LaybuyOrderStatus.IsApproved(System.String)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus.IsApproved(System.String)
+  commentId: M:Yort.Laybuy.InStore.LaybuyOrderStatus.IsApproved(System.String)
+  id: IsApproved(System.String)
+  parent: Yort.Laybuy.InStore.LaybuyOrderStatus
+  langs:
+  - csharp
+  - vb
+  name: IsApproved(String)
+  nameWithType: LaybuyOrderStatus.IsApproved(String)
+  fullName: Yort.Laybuy.InStore.LaybuyOrderStatus.IsApproved(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/LaybuyOrderStatus.cs
+      branch: master
+      repo: https://github.com/Yortw/Yort.Laybuy.InStore
+    id: IsApproved
+    path: LaybuyOrderStatus.cs
+    startLine: 89
+  assemblies:
+  - Yort.Laybuy.InStore
+  namespace: Yort.Laybuy.InStore
+  summary: "\nDetermines whether the specified status indicates an approved/completed payment/order.\n"
+  example: []
+  syntax:
+    content: public static bool IsApproved(string status)
+    parameters:
+    - id: status
+      type: System.String
+      description: The status to check.
+    return:
+      type: System.Boolean
+      description: "\n<code>true</code> if <code data-dev-comment-type=\"paramref\" class=\"paramref\">status</code> is a case insensitive match to <xref href=\"Yort.Laybuy.InStore.LaybuyOrderStatus.Completed\" data-throw-if-not-resolved=\"false\"></xref>; otherwise, <code>false</code>.\n"
+    content.vb: Public Shared Function IsApproved(status As String) As Boolean
+  overload: Yort.Laybuy.InStore.LaybuyOrderStatus.IsApproved*
+  seealso:
+  - linkId: Yort.Laybuy.InStore.LaybuyOrderStatus.IsPendingStatus(System.String)
+    commentId: M:Yort.Laybuy.InStore.LaybuyOrderStatus.IsPendingStatus(System.String)
+  - linkId: Yort.Laybuy.InStore.LaybuyOrderStatus.IsFailed(System.String)
+    commentId: M:Yort.Laybuy.InStore.LaybuyOrderStatus.IsFailed(System.String)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Yort.Laybuy.InStore.LaybuyClient.GetOrder(Yort.Laybuy.InStore.OrderRequest)
+  commentId: M:Yort.Laybuy.InStore.LaybuyClient.GetOrder(Yort.Laybuy.InStore.OrderRequest)
+  isExternal: true
+- uid: Yort.Laybuy.InStore
+  commentId: N:Yort.Laybuy.InStore
+  name: Yort.Laybuy.InStore
+  nameWithType: Yort.Laybuy.InStore
+  fullName: Yort.Laybuy.InStore
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus.Processing
+  commentId: F:Yort.Laybuy.InStore.LaybuyOrderStatus.Processing
+  isExternal: true
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus.Waiting
+  commentId: F:Yort.Laybuy.InStore.LaybuyOrderStatus.Waiting
+  isExternal: true
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus.IsFailed(System.String)
+  commentId: M:Yort.Laybuy.InStore.LaybuyOrderStatus.IsFailed(System.String)
+  isExternal: true
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus.IsApproved(System.String)
+  commentId: M:Yort.Laybuy.InStore.LaybuyOrderStatus.IsApproved(System.String)
+  isExternal: true
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus.IsPendingStatus*
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyOrderStatus.IsPendingStatus
+  name: IsPendingStatus
+  nameWithType: LaybuyOrderStatus.IsPendingStatus
+  fullName: Yort.Laybuy.InStore.LaybuyOrderStatus.IsPendingStatus
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus.IsPendingStatus(System.String)
+  commentId: M:Yort.Laybuy.InStore.LaybuyOrderStatus.IsPendingStatus(System.String)
+  isExternal: true
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus.IsFailed*
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyOrderStatus.IsFailed
+  name: IsFailed
+  nameWithType: LaybuyOrderStatus.IsFailed
+  fullName: Yort.Laybuy.InStore.LaybuyOrderStatus.IsFailed
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus.Completed
+  commentId: F:Yort.Laybuy.InStore.LaybuyOrderStatus.Completed
+  isExternal: true
+- uid: Yort.Laybuy.InStore.LaybuyOrderStatus.IsApproved*
+  commentId: Overload:Yort.Laybuy.InStore.LaybuyOrderStatus.IsApproved
+  name: IsApproved
+  nameWithType: LaybuyOrderStatus.IsApproved
+  fullName: Yort.Laybuy.InStore.LaybuyOrderStatus.IsApproved

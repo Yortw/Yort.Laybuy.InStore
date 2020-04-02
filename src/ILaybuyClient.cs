@@ -19,18 +19,36 @@ namespace Yort.Laybuy.InStore
 		/// <param name="request">A <see cref="CreateOrderRequest"/> with details of the Laybuy to create.</param>
 		/// <returns>A <see cref="CreateOrderResponse"/> indicating the outcome of the request.</returns>
 		/// <exception cref="LaybuyApiException">Thrown if Laybuy sends a valid response but the response itself indicates an error. See the exception's message property for details.</exception>
-		/// <seealso cref="GetStatus(OrderStatusRequest)"/>
+		/// <seealso cref="GetOrder(OrderRequest)"/>
 		/// <seealso cref="Cancel(CancelOrderRequest)"/>
 		/// <seealso cref="Refund(RefundRequest)"/>
 		Task<CreateOrderResponse> Create(CreateOrderRequest request);
 
 		/// <summary>
-		/// Gets the status of a Laybuy previously created via <see cref="Create"/>.
+		/// Gets the full details of a Laybuy order previously created via <see cref="Create"/>.
 		/// </summary>
-		/// <param name="request">A <see cref="OrderStatusRequest"/> with details of the Laybuy to retrieve the status of.</param>
+		/// <param name="request">A <see cref="OrderRequest"/> with details of the Laybuy order to retrieve the status of.</param>
+		/// <remarks>
+		/// <para>This method will only return valid details for a completed order, orders in any other status will return an error indicating the order is not found. This makes it 
+		/// unsuitable for status checking/polling. See <see cref="GetOrderStatus(OrderStatusRequest)"/>.</para>
+		/// </remarks>
+		/// <returns>A <see cref="OrderResponse"/> indicating the outcome of the request.</returns>
+		/// <exception cref="LaybuyApiException">Thrown if Laybuy sends a valid response but the response itself indicates an error. See the exception's message property for details.</exception>
+		/// <see cref="GetOrderStatus(OrderStatusRequest)"/>
+		Task<OrderResponse> GetOrder(OrderRequest request);
+
+		/// <summary>
+		/// Gets the status of a Laybuy order previously created via <see cref="Create"/>.
+		/// </summary>
+		/// <param name="request">A <see cref="OrderStatusRequest"/> with details of the Laybuy order to retrieve the status of.</param>
+		/// <remarks>
+		/// <para>This method will only return the status of the order, and an error message if appropriate. Once this method returns a <see cref="LaybuyOrderStatus.Completed"/> 
+		/// result the full details of the order can be retrived using <see cref="GetOrder(OrderRequest)"/>.</para>
+		/// </remarks>
 		/// <returns>A <see cref="OrderStatusResponse"/> indicating the outcome of the request.</returns>
 		/// <exception cref="LaybuyApiException">Thrown if Laybuy sends a valid response but the response itself indicates an error. See the exception's message property for details.</exception>
-		Task<OrderStatusResponse> GetStatus(OrderStatusRequest request);
+		/// <seealso cref="GetOrder(OrderRequest)"/>
+		Task<OrderStatusResponse> GetOrderStatus(OrderStatusRequest request);
 
 		/// <summary>
 		/// Refunds an amount of money against a Laybuy previously created via <see cref="Create"/>.

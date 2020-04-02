@@ -5,7 +5,6 @@ items:
   id: LaybuyStatus
   parent: Yort.Laybuy.InStore
   children:
-  - Yort.Laybuy.InStore.LaybuyStatus.Cancelled
   - Yort.Laybuy.InStore.LaybuyStatus.Error
   - Yort.Laybuy.InStore.LaybuyStatus.Success
   langs:
@@ -112,41 +111,6 @@ items:
     return:
       type: System.String
     content.vb: Public Const Error As String = "ERROR"
-  modifiers.csharp:
-  - public
-  - const
-  modifiers.vb:
-  - Public
-  - Const
-- uid: Yort.Laybuy.InStore.LaybuyStatus.Cancelled
-  commentId: F:Yort.Laybuy.InStore.LaybuyStatus.Cancelled
-  id: Cancelled
-  parent: Yort.Laybuy.InStore.LaybuyStatus
-  langs:
-  - csharp
-  - vb
-  name: Cancelled
-  nameWithType: LaybuyStatus.Cancelled
-  fullName: Yort.Laybuy.InStore.LaybuyStatus.Cancelled
-  type: Field
-  source:
-    remote:
-      path: src/LaybuyStatus.cs
-      branch: master
-      repo: https://github.com/Yortw/Yort.Laybuy.InStore
-    id: Cancelled
-    path: LaybuyStatus.cs
-    startLine: 23
-  assemblies:
-  - Yort.Laybuy.InStore
-  namespace: Yort.Laybuy.InStore
-  summary: "\nIndicates a transaction has been cancelled.\n"
-  example: []
-  syntax:
-    content: public const string Cancelled = "CANCELLED"
-    return:
-      type: System.String
-    content.vb: Public Const Cancelled As String = "CANCELLED"
   modifiers.csharp:
   - public
   - const

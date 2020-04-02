@@ -5,7 +5,6 @@ items:
   id: CancelOrderRequest
   parent: Yort.Laybuy.InStore
   children:
-  - Yort.Laybuy.InStore.CancelOrderRequest.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
   - Yort.Laybuy.InStore.CancelOrderRequest.Token
   - Yort.Laybuy.InStore.CancelOrderRequest.Validate
   langs:
@@ -37,6 +36,7 @@ items:
   - System.Object
   - Yort.Laybuy.InStore.LaybuyRequestBase
   inheritedMembers:
+  - Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetHashCode
@@ -87,45 +87,6 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: Yort.Laybuy.InStore.CancelOrderRequest.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
-  commentId: M:Yort.Laybuy.InStore.CancelOrderRequest.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
-  id: SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
-  parent: Yort.Laybuy.InStore.CancelOrderRequest
-  langs:
-  - csharp
-  - vb
-  name: SetDefaults(LaybuyClientConfiguration)
-  nameWithType: CancelOrderRequest.SetDefaults(LaybuyClientConfiguration)
-  fullName: Yort.Laybuy.InStore.CancelOrderRequest.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
-  type: Method
-  source:
-    remote:
-      path: src/CancelOrderRequest.cs
-      branch: master
-      repo: https://github.com/Yortw/Yort.Laybuy.InStore
-    id: SetDefaults
-    path: CancelOrderRequest.cs
-    startLine: 21
-  assemblies:
-  - Yort.Laybuy.InStore
-  namespace: Yort.Laybuy.InStore
-  summary: "\nSets any properties on this object that are null to the appropriate defaults, if possible.\n"
-  example: []
-  syntax:
-    content: public override void SetDefaults(LaybuyClientConfiguration settings)
-    parameters:
-    - id: settings
-      type: Yort.Laybuy.InStore.LaybuyClientConfiguration
-      description: The settings used to construct the <xref href="Yort.Laybuy.InStore.LaybuyClient" data-throw-if-not-resolved="false"></xref> instance that is about to send this request.
-    content.vb: Public Overrides Sub SetDefaults(settings As LaybuyClientConfiguration)
-  overridden: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
-  overload: Yort.Laybuy.InStore.CancelOrderRequest.SetDefaults*
-  modifiers.csharp:
-  - public
-  - override
-  modifiers.vb:
-  - Public
-  - Overrides
 - uid: Yort.Laybuy.InStore.CancelOrderRequest.Validate
   commentId: M:Yort.Laybuy.InStore.CancelOrderRequest.Validate
   id: Validate
@@ -144,7 +105,7 @@ items:
       repo: https://github.com/Yortw/Yort.Laybuy.InStore
     id: Validate
     path: CancelOrderRequest.cs
-    startLine: 31
+    startLine: 23
   assemblies:
   - Yort.Laybuy.InStore
   namespace: Yort.Laybuy.InStore
@@ -217,6 +178,42 @@ references:
   name: LaybuyRequestBase
   nameWithType: LaybuyRequestBase
   fullName: Yort.Laybuy.InStore.LaybuyRequestBase
+- uid: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+  commentId: M:Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+  parent: Yort.Laybuy.InStore.LaybuyRequestBase
+  name: SetDefaults(LaybuyClientConfiguration)
+  nameWithType: LaybuyRequestBase.SetDefaults(LaybuyClientConfiguration)
+  fullName: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+  spec.csharp:
+  - uid: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+    name: SetDefaults
+    nameWithType: LaybuyRequestBase.SetDefaults
+    fullName: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Yort.Laybuy.InStore.LaybuyClientConfiguration
+    name: LaybuyClientConfiguration
+    nameWithType: LaybuyClientConfiguration
+    fullName: Yort.Laybuy.InStore.LaybuyClientConfiguration
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
+    name: SetDefaults
+    nameWithType: LaybuyRequestBase.SetDefaults
+    fullName: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Yort.Laybuy.InStore.LaybuyClientConfiguration
+    name: LaybuyClientConfiguration
+    nameWithType: LaybuyClientConfiguration
+    fullName: Yort.Laybuy.InStore.LaybuyClientConfiguration
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -520,58 +517,6 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: Yort.Laybuy.InStore.LaybuyClient
-  commentId: T:Yort.Laybuy.InStore.LaybuyClient
-  name: LaybuyClient
-  nameWithType: LaybuyClient
-  fullName: Yort.Laybuy.InStore.LaybuyClient
-- uid: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
-  commentId: M:Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
-  parent: Yort.Laybuy.InStore.LaybuyRequestBase
-  name: SetDefaults(LaybuyClientConfiguration)
-  nameWithType: LaybuyRequestBase.SetDefaults(LaybuyClientConfiguration)
-  fullName: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
-  spec.csharp:
-  - uid: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
-    name: SetDefaults
-    nameWithType: LaybuyRequestBase.SetDefaults
-    fullName: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: Yort.Laybuy.InStore.LaybuyClientConfiguration
-    name: LaybuyClientConfiguration
-    nameWithType: LaybuyClientConfiguration
-    fullName: Yort.Laybuy.InStore.LaybuyClientConfiguration
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults(Yort.Laybuy.InStore.LaybuyClientConfiguration)
-    name: SetDefaults
-    nameWithType: LaybuyRequestBase.SetDefaults
-    fullName: Yort.Laybuy.InStore.LaybuyRequestBase.SetDefaults
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: Yort.Laybuy.InStore.LaybuyClientConfiguration
-    name: LaybuyClientConfiguration
-    nameWithType: LaybuyClientConfiguration
-    fullName: Yort.Laybuy.InStore.LaybuyClientConfiguration
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Yort.Laybuy.InStore.CancelOrderRequest.SetDefaults*
-  commentId: Overload:Yort.Laybuy.InStore.CancelOrderRequest.SetDefaults
-  name: SetDefaults
-  nameWithType: CancelOrderRequest.SetDefaults
-  fullName: Yort.Laybuy.InStore.CancelOrderRequest.SetDefaults
-- uid: Yort.Laybuy.InStore.LaybuyClientConfiguration
-  commentId: T:Yort.Laybuy.InStore.LaybuyClientConfiguration
-  parent: Yort.Laybuy.InStore
-  name: LaybuyClientConfiguration
-  nameWithType: LaybuyClientConfiguration
-  fullName: Yort.Laybuy.InStore.LaybuyClientConfiguration
 - uid: Yort.Laybuy.InStore.LaybuyRequestBase.Validate
   commentId: M:Yort.Laybuy.InStore.LaybuyRequestBase.Validate
   parent: Yort.Laybuy.InStore.LaybuyRequestBase
