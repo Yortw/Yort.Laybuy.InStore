@@ -25,7 +25,7 @@ jobs:
     - name: Build with dotnet (src\Yort.Laybuy.InStore.sln)
       run: dotnet build src\Yort.Laybuy.InStore.sln --configuration Release --nologo
     - name: Run Tests
-      run: dotnet test src\Yort.Laybuy.InStore.sln --verbosity normal --collect:"XPlat Code Coverage" /p:CoverletOutputFormat=cobertura /p:CoverletOutput="Tests/TestResults/"
+      run: dotnet test src\Yort.Laybuy.InStore.sln --verbosity normal --collect:"XPlat Code Coverage" /p:CoverletOutputFormat=cobertura /p:CoverletOutput="Tests/TestResults/" /p:exclude-by-attribute="GeneratedCode"
     - name: Install Report Generator
       run: dotnet tool install -g dotnet-reportgenerator-globaltool
     - name: Generate Code Coverage Report
