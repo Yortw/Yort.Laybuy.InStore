@@ -1,3 +1,6 @@
+# This project is archived
+Laybuy have ceased trading and their services are no longer available.
+
 # Yort.Laybuy.InStore
 
 # Status
